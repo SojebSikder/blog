@@ -6,7 +6,7 @@ import './style.css';
 
 import Footer from '../../partials/footer/Footer';
 import Auth from '../../../api/Auth';
-import CustomError from '../../messages/CustomError';
+import { CustomError } from '../../messages/CustomMsg';
 
 
 export default function Index() {
@@ -24,6 +24,8 @@ export default function Index() {
     }
 
     const handleLogin = () => {
+
+        setError_message(null);
 
         if (email == "" || password == "") {
 

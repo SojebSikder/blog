@@ -2227,29 +2227,29 @@ var Blog = {
 
 /***/ }),
 
-/***/ "./resources/js/app/components/messages/CustomError.js":
-/*!*************************************************************!*\
-  !*** ./resources/js/app/components/messages/CustomError.js ***!
-  \*************************************************************/
+/***/ "./resources/js/app/components/messages/CustomMsg.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/app/components/messages/CustomMsg.js ***!
+  \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ CustomError)
+/* harmony export */   "CustomError": () => (/* binding */ CustomError)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
-function CustomError(props) {
+var CustomError = function CustomError(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "alert alert-danger",
       children: props.msg
     })
   });
-}
+};
 
 /***/ }),
 
@@ -2451,7 +2451,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/components/pages/login/style.css");
 /* harmony import */ var _partials_footer_Footer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../partials/footer/Footer */ "./resources/js/app/components/partials/footer/Footer.js");
 /* harmony import */ var _api_Auth__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../api/Auth */ "./resources/js/app/api/Auth.js");
-/* harmony import */ var _messages_CustomError__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../messages/CustomError */ "./resources/js/app/components/messages/CustomError.js");
+/* harmony import */ var _messages_CustomMsg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../messages/CustomMsg */ "./resources/js/app/components/messages/CustomMsg.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -2501,6 +2501,8 @@ function Index() {
   };
 
   var handleLogin = function handleLogin() {
+    setError_message(null);
+
     if (email == "" || password == "") {
       setError_message("Please enter login credentials");
       return false;
@@ -2528,7 +2530,7 @@ function Index() {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h1", {
             className: "h3 mb-3 fw-normal",
             children: "Please sign in"
-          }), error_message ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_messages_CustomError__WEBPACK_IMPORTED_MODULE_6__.default, {
+          }), error_message ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_messages_CustomMsg__WEBPACK_IMPORTED_MODULE_6__.CustomError, {
             msg: error_message
           }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
             className: "form-floating",
