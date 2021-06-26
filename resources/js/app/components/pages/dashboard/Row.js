@@ -21,7 +21,7 @@ function Row(props) {
                         <div className="d-flex justify-content-center">
                             <div className="card" style={{ width: "18rem" }}>
 
-                                {blog.image == null ? "" : <img src={Constant.BLOG_URL + "/" + blog.image} className="card-img-top" alt={blog.title} />}
+                                {blog.image == null ? "" : <img src={Constant.BLOG_URL + blog.image} className="card-img-top" alt={blog.title} />}
                                 <div className="card-body">
                                     <h5 className="card-title">{blog.title}</h5>
                                     <p className="card-text">{blog.body}</p>
