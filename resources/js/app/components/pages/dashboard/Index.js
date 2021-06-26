@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 
 // Components
-import Navbar from '../../partials/Navbar';;
+import Navbar from '../../partials/Navbar';
+import Footer from '../../partials/footer/Footer';
 import Row from './Row';
 
 export default function Index() {
@@ -11,11 +12,11 @@ export default function Index() {
             <Navbar />
             <div className="container">
                 <div className="">
-                    <h1>Dashboard</h1>
-
+                    {/* Display blogs */}
                     <Row />
                 </div>
             </div>
+            <Footer />
 
         </>
     )

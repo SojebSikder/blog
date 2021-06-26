@@ -24,29 +24,6 @@ const blogReducer = function (state = initialState, action) {
     }
 };
 
-/**
- * handle field change
- */
-function handleChange(state, action) {
-    if (action.field !== 'is_admin') {
-        return {
-            ...state,
-            user: { ...state.user, [action.field]: action.data }
-        };
-    } else {
-        let checked = state.user.is_admin;
 
-        if (action.checked == true) {
-            checked = 1;
-        } else if (action.checked == false) {
-            checked = 0;
-        }
-
-        return {
-            ...state,
-            user: { ...state.user, is_admin: checked }
-        };
-    }
-}
 
 export default blogReducer;
