@@ -7,3 +7,10 @@ export const CustomError = (props) => {
         </div>
     )
 }
+export const CustomSuccess = (props) => {
+    return (
+        <div>
+            <div className="alert alert-success">{props.msg}</div>
+        </div>
+    )
+}

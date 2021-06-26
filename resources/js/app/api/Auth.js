@@ -1,14 +1,15 @@
 import axios from "axios";
+import Config from "../config/app_config";
 const Auth = {
     login: (data, successCb, failCb) => {
-        axios.post('/login', data).then(response => {
+        axios.post(Config.getApiUrl() + '/login', data).then(response => {
             successCb(response);
         }).catch(err => {
             failCb(err);
         });
     },
     logout: (successCb, failCb) => {
-        axios.get('/logout', { headers: { Authorization: 'Bearer ' + localStorage.getItem("user.api_token") } })
+        axios.get(Config.getApiUrl() + '/logout', { headers: { Authorization: 'Bearer ' + localStorage.getItem("user.api_token") } })
             .then(response => {
                 localStorage.clear();
                 successCb(response);

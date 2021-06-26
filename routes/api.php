@@ -19,8 +19,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Data
-Route::get('data/{id}/restore', [App\Http\Controllers\api\DataController::class, 'restore']);
-Route::get('data/{id}/delete', [App\Http\Controllers\api\DataController::class, 'forceDestroy']);
+Route::get('/data/{id}/restore', [App\Http\Controllers\api\DataController::class, 'restore']);
+Route::get('/data/{id}/delete', [App\Http\Controllers\api\DataController::class, 'forceDestroy']);
 Route::resource("data", App\Http\Controllers\api\DataController::class);
+
+Route::post('/login', [App\Http\Controllers\api\UserController::class, 'login']);
+Route::post('/register', [App\Http\Controllers\api\UserController::class, 'register']);
+
+Route::resource("user", App\Http\Controllers\api\UserController::class);
 
 Route::resource("blog", App\Http\Controllers\api\BlogController::class);

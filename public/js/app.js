@@ -2105,13 +2105,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Routes)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _components_pages_landing_Index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/pages/landing/Index */ "./resources/js/app/components/pages/landing/Index.js");
 /* harmony import */ var _components_pages_login_Index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/pages/login/Index */ "./resources/js/app/components/pages/login/Index.js");
 /* harmony import */ var _components_pages_register_Index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/pages/register/Index */ "./resources/js/app/components/pages/register/Index.js");
 /* harmony import */ var _components_pages_dashboard_Index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/pages/dashboard/Index */ "./resources/js/app/components/pages/dashboard/Index.js");
-/* harmony import */ var _components_messages_Error404__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/messages/Error404 */ "./resources/js/app/components/messages/Error404.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_pages_profile_Index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/pages/profile/Index */ "./resources/js/app/components/pages/profile/Index.js");
+/* harmony import */ var _components_messages_Error404__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/messages/Error404 */ "./resources/js/app/components/messages/Error404.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
  // Pages
 
@@ -2122,24 +2123,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function Routes() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_router__WEBPACK_IMPORTED_MODULE_7__.Switch, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_7__.Route, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_router__WEBPACK_IMPORTED_MODULE_8__.Switch, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
       exact: true,
       path: "/",
       component: _components_pages_dashboard_Index__WEBPACK_IMPORTED_MODULE_4__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_7__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
       exact: true,
       path: "/login",
       component: _components_pages_login_Index__WEBPACK_IMPORTED_MODULE_2__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_7__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
       exact: true,
       path: "/register",
       component: _components_pages_register_Index__WEBPACK_IMPORTED_MODULE_3__.default
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_7__.Route, {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
+      exact: true,
+      path: "/profile",
+      component: _components_pages_profile_Index__WEBPACK_IMPORTED_MODULE_5__.default
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_8__.Route, {
       exact: true,
       path: "/*",
-      component: _components_messages_Error404__WEBPACK_IMPORTED_MODULE_5__.default
+      component: _components_messages_Error404__WEBPACK_IMPORTED_MODULE_6__.default
     })]
   });
 }
@@ -2159,17 +2165,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _config_app_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/app_config */ "./resources/js/app/config/app_config.js");
+
 
 var Auth = {
   login: function login(data, successCb, failCb) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default().post('/login', data).then(function (response) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().post(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/login', data).then(function (response) {
       successCb(response);
     })["catch"](function (err) {
       failCb(err);
     });
   },
   logout: function logout(successCb, failCb) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get('/logout', {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/logout', {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem("user.api_token")
       }
@@ -2236,7 +2244,8 @@ var Blog = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "CustomError": () => (/* binding */ CustomError)
+/* harmony export */   "CustomError": () => (/* binding */ CustomError),
+/* harmony export */   "CustomSuccess": () => (/* binding */ CustomSuccess)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
@@ -2246,6 +2255,14 @@ var CustomError = function CustomError(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "alert alert-danger",
+      children: props.msg
+    })
+  });
+};
+var CustomSuccess = function CustomSuccess(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "alert alert-success",
       children: props.msg
     })
   });
@@ -2476,7 +2493,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function Index() {
+function Index(props) {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState2 = _slicedToArray(_useState, 2),
       email = _useState2[0],
@@ -2492,6 +2509,11 @@ function Index() {
       error_message = _useState6[0],
       setError_message = _useState6[1];
 
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState8 = _slicedToArray(_useState7, 2),
+      message = _useState8[0],
+      setMessage = _useState8[1];
+
   var handleEmailChange = function handleEmailChange(e) {
     setEmail(e.target.value);
   };
@@ -2501,6 +2523,7 @@ function Index() {
   };
 
   var handleLogin = function handleLogin() {
+    setMessage(null);
     setError_message(null);
 
     if (email == "" || password == "") {
@@ -2512,7 +2535,20 @@ function Index() {
       email: email,
       password: password
     };
-    _api_Auth__WEBPACK_IMPORTED_MODULE_5__.default.login(data, function (res) {}, function (err) {});
+    _api_Auth__WEBPACK_IMPORTED_MODULE_5__.default.login(data, function (res) {
+      if (res.data.success == true) {
+        setMessage("Login Successfully");
+        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("userType", res.data.user.user_type);
+        props.history.push("/profile");
+      } else {
+        setError_message("Something went wrong");
+      }
+    }, function (err) {
+      if (err) {
+        setError_message(err.response.data.message);
+      }
+    });
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
@@ -2532,6 +2568,8 @@ function Index() {
             children: "Please sign in"
           }), error_message ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_messages_CustomMsg__WEBPACK_IMPORTED_MODULE_6__.CustomError, {
             msg: error_message
+          }) : null, message ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_messages_CustomMsg__WEBPACK_IMPORTED_MODULE_6__.CustomSuccess, {
+            msg: message
           }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
             className: "form-floating",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("input", {
@@ -2580,6 +2618,29 @@ function Index() {
         })
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_partials_footer_Footer__WEBPACK_IMPORTED_MODULE_4__.default, {})]
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/app/components/pages/profile/Index.js":
+/*!************************************************************!*\
+  !*** ./resources/js/app/components/pages/profile/Index.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Index)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+function Index() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: "Profile Page"
   });
 }
 

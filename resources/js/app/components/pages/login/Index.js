@@ -6,14 +6,15 @@ import './style.css';
 
 import Footer from '../../partials/footer/Footer';
 import Auth from '../../../api/Auth';
-import { CustomError } from '../../messages/CustomMsg';
+import { CustomSuccess, CustomError } from '../../messages/CustomMsg';
 
 
-export default function Index() {
+export default function Index(props) {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error_message, setError_message] = useState('')
+    const [message, setMessage] = useState('')
 
 
     const handleEmailChange = (e) => {
@@ -25,6 +26,7 @@ export default function Index() {
 
     const handleLogin = () => {
 
+        setMessage(null);
         setError_message(null);
 
         if (email == "" || password == "") {
@@ -38,8 +40,18 @@ export default function Index() {
             password: password,
         }
         Auth.login(data, (res) => {
-
+            if (res.data.success == true) {
+                setMessage("Login Successfully");
+                localStorage.setItem("token", res.data.token);
+                localStorage.setItem("userType", res.data.user.user_type);
+                props.history.push("/profile");
+            } else {
+                setError_message("Something went wrong");
+            }
         }, (err) => {
+            if (err) {
+                setError_message(err.response.data.message);
+            }
 
         });
     }
@@ -58,6 +70,9 @@ export default function Index() {
 
                         {
                             error_message ? <CustomError msg={error_message} /> : null
+                        }
+                        {
+                            message ? <CustomSuccess msg={message} /> : null
                         }
                         <div className="form-floating">
                             <input
