@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import * as Constant from '../../../config/constant'
 import './style.css';
 
+import Footer from '../../partials/footer/Footer';
+
 
 export default function Index() {
 
@@ -61,10 +63,11 @@ export default function Index() {
                         <button className="w-100 btn btn-lg btn-primary" type="button">Sign in</button>
                         <br />
                         <Link to="/register" style={{ margin: "10px 0px 10px 0px" }} className="w-100 btn btn-lg btn-success">Sign up</Link>
-                        <p className="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
                     </form>
                 </main>
             </div>
+
+            <Footer />
 
         </>
     )

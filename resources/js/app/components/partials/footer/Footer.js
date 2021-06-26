@@ -41,7 +41,7 @@ export default function Footer() {
                 </div>
                 <div className="container">
                     <div className="copyright">
-                        &copy; Copyright <strong>SojebSoft</strong>. All Rights Reserved
+                        &copy; Copyright 2021 <strong>SojebSoft</strong>. All Rights Reserved
                     </div>
                     <div className="credits">
                         Maintain by <a href="http://sojebsoft.ml">SojebSoft</a>
