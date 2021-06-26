@@ -30,7 +30,7 @@ class CreateUsersTable extends Migration
             $table->enum('is_online', ['true', 'false'])->nullable();
             $table->enum('status', ['allow', 'deny'])->nullable();
             $table->string('user_type')->nullable();
-            //$table->enum('user_type', ['user', 'student', 'teacher', 'manager', 'admin', 'su_admin']);
+            //$table->enum('user_type', ['user', 'manager', 'admin', 'su_admin']);
             $table->text('api_token')->nullable()->default(null);
             $table->rememberToken();
             $table->timestamps();

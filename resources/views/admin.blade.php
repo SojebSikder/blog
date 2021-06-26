@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>School Management System | Admin</title>
+    <title>Blog | Admin</title>
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="{{ asset('css/app.js') }}">
 
