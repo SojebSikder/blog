@@ -1,18 +1,22 @@
 import React, { useEffect } from 'react'
 
 // Components
-import ReduxExample from './ReduxExample';
-import Container from '../../../../components/elements/Container';
 import Navbar from '../../partials/Navbar';;
+import Row from './Row';
 
 export default function Index() {
 
     return (
         <>
             <Navbar />
-            <div className="col-xs-6 col-md-6 col-sm">
-                <h1>Dashboard</h1>
+            <div className="container">
+                <div className="">
+                    <h1>Dashboard</h1>
+
+                    <Row />
+                </div>
             </div>
+
         </>
     )
 }

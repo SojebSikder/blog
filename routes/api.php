@@ -22,3 +22,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('data/{id}/restore', [App\Http\Controllers\api\DataController::class, 'restore']);
 Route::get('data/{id}/delete', [App\Http\Controllers\api\DataController::class, 'forceDestroy']);
 Route::resource("data", App\Http\Controllers\api\DataController::class);
+
+Route::resource("blog", App\Http\Controllers\api\BlogController::class);

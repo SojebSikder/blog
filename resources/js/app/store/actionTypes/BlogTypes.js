@@ -1,0 +1,3 @@
+export const LIST_BLOG = 'LIST_BLOG';
+export const LIST_BLOG_SUCCESS = 'LIST_BLOG_SUCCESS';
+export const LIST_BLOG_FAILURE = 'LIST_BLOG_FAILURE';
