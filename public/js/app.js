@@ -2188,18 +2188,42 @@ var Auth = {
       failCb(err);
       alert(err.response.data.message);
     });
+    localStorage.clear();
   },
-  checkAuth: function checkAuth(successCb, failCb) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default().get('/check-auth', {
+  updateUser: function updateUser(data, successCb, failCb) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().post(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getUrl() + '/update_user', data, {
       headers: {
-        Authorization: 'Bearer ' + localStorage.getItem("user.api_token")
+        Authorization: 'Bearer ' + localStorage.getItem("token")
       }
     }).then(function (response) {
       successCb(response);
     })["catch"](function (err) {
       failCb(err);
     });
-  }
+  },
+  checkAuth: function checkAuth(successCb, failCb) {
+    if (localStorage.getItem("token") != null) {
+      axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getUrl() + '/check-auth', {
+        headers: {
+          Authorization: 'Bearer ' + localStorage.getItem("token")
+        }
+      }).then(function (res) {
+        successCb(res);
+      })["catch"](function (err) {
+        failCb(err);
+      });
+    } else {
+      return false;
+    }
+  } // checkAuth: (successCb, failCb) => {
+  //     axios.get('/check-auth', { headers: { Authorization: 'Bearer ' + localStorage.getItem("user.api_token") } })
+  //         .then(response => {
+  //             successCb(response);
+  //         }).catch(err => {
+  //             failCb(err);
+  //         });
+  // }
+
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Auth);
 
