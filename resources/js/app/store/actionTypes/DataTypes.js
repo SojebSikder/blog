@@ -1,0 +1,3 @@
+export const LIST_DATA = 'LIST_DATA';
+export const LIST_DATA_SUCCESS = 'LIST_DATA_SUCCESS';
+export const LIST_DATA_FAILURE = 'LIST_DATA_FAILURE';
