@@ -11,7 +11,7 @@ export default function Index() {
         <>
             <Navbar />
             <div className="col-xs-6 col-md-6 col-sm">
-                Dashboard
+                <h1>Dashboard</h1>
             </div>
         </>
     )
