@@ -4,18 +4,15 @@ import React, { useEffect } from 'react'
 import ReduxExample from './ReduxExample';
 import Container from '../../../../components/elements/Container';
 import Navbar from '../../partials/Navbar';;
-import Sidebar from '../../partials/Sidebar';
 
 export default function Index() {
 
     return (
         <>
             <Navbar />
-            {/* <Sidebar /> */}
-            <Container>
+            <div className="col-xs-6 col-md-6 col-sm">
                 Dashboard
-                <ReduxExample />
-            </Container>
+            </div>
         </>
     )
 }

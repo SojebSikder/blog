@@ -7,7 +7,7 @@ export default function Index() {
     }
     return (
         <div>
-            Welcome to School Management System
+            Welcome to Blog
             <Button value="Hello World" onClick={handleAlert} />
         </div>
     )
