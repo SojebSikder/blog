@@ -14,7 +14,11 @@ class CreateRepliesTable extends Migration
     public function up()
     {
         Schema::create('replies', function (Blueprint $table) {
-            $table->id();
+            // $table->id();
+            $table->string('id')->primary()->nullable();
+            $table->string('comment_id')->references('id')->on('comments')->onDelete('set null');
+            $table->text('body');
+
             $table->timestamps();
         });
     }

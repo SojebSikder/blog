@@ -14,7 +14,8 @@ class CreateBlogsTable extends Migration
     public function up()
     {
         Schema::create('blogs', function (Blueprint $table) {
-            $table->id();
+            // $table->id();
+            $table->string('id')->primary()->nullable();
 
             $table->string('user_id')->references('id')->on('users')->onDelete('set null');
             $table->string('title');
