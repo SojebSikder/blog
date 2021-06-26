@@ -2281,7 +2281,7 @@ function Row(props) {
             style: {
               width: "18rem"
             },
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+            children: [blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
               src: _config_constant__WEBPACK_IMPORTED_MODULE_2__.BLOG_URL + "/" + blog.image,
               className: "card-img-top",
               alt: blog.title
