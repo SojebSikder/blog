@@ -2265,41 +2265,48 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function Row(props) {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     props.listBlogs();
-  }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-    className: "d-flex justify-content-center",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "card",
-      style: {
-        width: "18rem"
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-        src: _config_constant__WEBPACK_IMPORTED_MODULE_2__.BLOG_URL + "/logo.png",
-        className: "card-img-top",
-        alt: "logo.png"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "card-body",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
-          className: "card-title",
-          children: "What is django"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
-          className: "card-text",
-          children: "Django is a web framework written in python."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
-          to: "/",
-          className: "btn btn-primary",
-          children: "Read more"
-        })]
-      })]
+  }, []); // console.log(props.blogs)
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: props.blogs.map(function (blog) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "d-flex justify-content-center",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "card",
+            style: {
+              width: "18rem"
+            },
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+              src: _config_constant__WEBPACK_IMPORTED_MODULE_2__.BLOG_URL + "/" + blog.image,
+              className: "card-img-top",
+              alt: blog.title
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+              className: "card-body",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h5", {
+                className: "card-title",
+                children: blog.title
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+                className: "card-text",
+                children: blog.body
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+                to: "/blog/" + blog.id,
+                className: "btn btn-primary",
+                children: "Read more"
+              })]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {})]
+      }, blog.id);
     })
   });
 }
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
-  console.log(state.blog.blogs);
   return {
     blogs: state.blog.blogs
   };
@@ -2309,8 +2316,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     listBlogs: function listBlogs(page) {
       return dispatch((0,_store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_3__.listBlogs)(page));
-    } //setPostDefaults: () => dispatch(setPostDefaults())
-
+    }
   };
 };
 
