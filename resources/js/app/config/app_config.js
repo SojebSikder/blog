@@ -1,5 +1,12 @@
 const Config = {
     /**
+     * Get app Name
+     * @returns 
+     */
+    getAppName: () => {
+        return 'Blog';
+    },
+    /**
      * Get base url
      * @returns 
      */
