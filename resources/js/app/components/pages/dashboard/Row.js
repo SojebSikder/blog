@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
-import ReactMarkdown from 'react-markdown';
+import Markdown from '../../../../styles/Markdown';
 // config
 import * as Constant from '../../../config/constant';
 // action
@@ -26,7 +26,13 @@ function Row(props) {
                                 {blog.image == null ? "" : <img src={Constant.BLOG_URL + blog.image} className="card-img-top" alt={blog.title} />}
                                 <div className="card-body">
                                     <h5 className="card-title">{blog.title}</h5>
-                                    <p className="card-text">{blog.body}</p>
+
+                                    {/* <p className="card-text">{blog.body}</p> */}
+
+                                    <Markdown>
+                                        {blog.body}
+                                    </Markdown>
+
                                     <Link to={"/blog/" + blog.id} className="btn btn-primary">Read more</Link>
                                 </div>
                             </div>
