@@ -21,7 +21,10 @@ function Row(props) {
                 return (
                     <div key={blog.id}>
                         <div className="d-flex justify-content-center">
-                            <div className="card" style={{ width: "18rem" }}>
+                            <div className="card" style={{
+                                // width: "18rem" 
+                                width: "50%",
+                            }}>
 
                                 {blog.image == null ? "" : <img src={Constant.BLOG_URL + blog.image} className="card-img-top" alt={blog.title} />}
                                 <div className="card-body">
@@ -33,7 +36,7 @@ function Row(props) {
                                         {blog.body}
                                     </Markdown>
 
-                                    <Link to={"/blog/" + blog.id} className="btn btn-primary">Read more</Link>
+                                    <Link to={"/blog/" + blog.user.username + "/" + blog.id} className="btn btn-primary">Read more</Link>
                                 </div>
                             </div>
                         </div>
