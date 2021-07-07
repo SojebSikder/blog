@@ -7,6 +7,7 @@ import Markdown from '../../../../styles/Markdown';
 import * as Constant from '../../../config/constant';
 // action
 import { listBlogs } from "../../../store/actions/BlogActions";
+import DataUtil from '../../../util/Data';
 
 function Row(props) {
 
@@ -33,7 +34,7 @@ function Row(props) {
                                     {/* <p className="card-text">{blog.body}</p> */}
 
                                     <Markdown>
-                                        {blog.body}
+                                        {DataUtil.textShorten(blog.body, 400)}
                                     </Markdown>
 
                                     <Link to={"/blog/" + blog.user.username + "/" + blog.id} className="btn btn-primary">Read more</Link>
