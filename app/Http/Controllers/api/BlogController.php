@@ -22,7 +22,15 @@ class BlogController extends Controller
     {
         // Uses: (web, app)
         // Fetch all blog by id (web, app)
-        $result = Blog::with('category', 'user')->orderBy('id', 'DESC')->get();
+        $result = Blog::with(array('category', 'user' => function ($query) {
+            $query->select('id', 'username');
+        }))
+            ->orderBy('id', 'DESC')
+            ->get();
+
+        // $result->makeHidden(['user:api_token']);
+
+
         return response()->json(['data' => $result], 200);
     }
 

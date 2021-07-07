@@ -27,7 +27,13 @@ function Row(props) {
                                 width: "50%",
                             }}>
 
-                                {blog.image == null ? "" : <img src={Constant.BLOG_URL + blog.image} className="card-img-top" alt={blog.title} />}
+                                {
+                                    blog.image == null ? "" :
+                                        <img src={Constant.BLOG_URL + blog.image}
+                                            className="card-img-top"
+                                            alt={blog.title}
+                                        />
+                                }
                                 <div className="card-body">
                                     <h5 className="card-title">{blog.title}</h5>
 
@@ -37,7 +43,13 @@ function Row(props) {
                                         {DataUtil.textShorten(blog.body, 400)}
                                     </Markdown>
 
-                                    <Link to={"/blog/" + blog.user.username + "/" + blog.id} className="btn btn-primary">Read more</Link>
+                                    <Link
+                                        to={"/blog/" + blog.user.username + "/" + blog.id}
+                                        className="btn btn-primary"
+                                    >
+                                        Read more
+                                    </Link>
+
                                 </div>
                             </div>
                         </div>
