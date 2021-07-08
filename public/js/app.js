@@ -2147,7 +2147,7 @@ function Routes() {
       component: _components_pages_profile_Index__WEBPACK_IMPORTED_MODULE_5__.default
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
       exact: true,
-      path: "/blog/:name/:id",
+      path: "/blog/:username/:blogname",
       component: _components_pages_dashboard_View__WEBPACK_IMPORTED_MODULE_6__.default
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_9__.Route, {
       exact: true,
@@ -2281,6 +2281,20 @@ var Blog = {
   },
   showOne: function showOne(id) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + "/blog/" + id, {
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem("api_token")
+      }
+    });
+  },
+
+  /**
+   * Show using Username and Blog Name
+   * @param {*} username 
+   * @param {*} blog_name 
+   * @returns 
+   */
+  showByUserAndName: function showByUserAndName(username, blog_name) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + "/blog?username=" + username + "&name=" + blog_name, {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem("api_token")
       }
@@ -2447,7 +2461,7 @@ function Row(props) {
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_styles_Markdown__WEBPACK_IMPORTED_MODULE_2__.default, {
                 children: _util_Data__WEBPACK_IMPORTED_MODULE_5__.default.textShorten(blog.body, 400)
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
-                to: "/blog/" + blog.user.username + "/" + blog.id,
+                to: "/blog/" + blog.user.username + "/" + blog.name,
                 className: "btn btn-primary",
                 children: "Read more"
               })]
@@ -2514,7 +2528,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function View(props) {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    props.showBlog(props.match.params.id);
+    props.showBlog(props.match.params.username, props.match.params.blogname);
   }, []); // console.log(props.blogs)
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
@@ -2560,8 +2574,8 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    showBlog: function showBlog(page) {
-      return dispatch((0,_store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_6__.showBlog)(page));
+    showBlog: function showBlog(username, blog_name) {
+      return dispatch((0,_store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_6__.showBlog)(username, blog_name));
     }
   };
 };
@@ -3415,19 +3429,19 @@ function listBlogs() {
   };
 }
 /**
- * show blog action
- *
- * @param id
- * @returns {Function}
+ * Show blog using username and blog name
+ * @param {*} username 
+ * @param {*} blog_name 
+ * @returns 
  */
 
 
-function showBlog(id) {
+function showBlog(username, blog_name) {
   return function (dispatch, getState) {
     dispatch({
       type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG
     });
-    _api_Blog__WEBPACK_IMPORTED_MODULE_1__.default.showOne(id).then(function (response) {
+    _api_Blog__WEBPACK_IMPORTED_MODULE_1__.default.showByUserAndName(username, blog_name).then(function (response) {
       dispatch({
         type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG_SUCCESS,
         data: response.data.data

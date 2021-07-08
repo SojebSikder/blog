@@ -14,7 +14,7 @@ import DataUtil from '../../../util/Data';
 function View(props) {
 
     useEffect(() => {
-        props.showBlog(props.match.params.id);
+        props.showBlog(props.match.params.username, props.match.params.blogname);
     }, [])
     // console.log(props.blogs)
     return (
@@ -71,7 +71,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch) => {
 
     return {
-        showBlog: (page) => dispatch(showBlog(page)),
+        showBlog: (username, blog_name) => dispatch(showBlog(username, blog_name)),
     };
 };
 

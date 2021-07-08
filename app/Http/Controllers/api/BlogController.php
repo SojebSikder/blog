@@ -45,7 +45,7 @@ class BlogController extends Controller
                 ->orderBy('id', 'DESC')
                 ->where('user_id', $user->id)
                 ->where('name', $blog_name)
-                ->get();
+                ->first();
 
             // $result->makeHidden(['user:api_token']);
             return response()->json(['data' => $result], 200);

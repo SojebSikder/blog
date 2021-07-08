@@ -23,7 +23,7 @@ export default function Routes() {
             <Route exact path='/register' component={Register} />
             <Route exact path='/profile' component={Profile} />
 
-            <Route exact path='/blog/:name/:id' component={Blog} />
+            <Route exact path='/blog/:username/:blogname' component={Blog} />
 
             {/* <Route exact path='/dashboard' component={Dashboard} /> */}
             <Route exact path="/*" component={Error404} />

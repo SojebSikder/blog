@@ -31,12 +31,12 @@ function listBlogs(page = 1) {
 }
 
 /**
- * show blog action
- *
- * @param id
- * @returns {Function}
+ * Show blog using username and blog name
+ * @param {*} username 
+ * @param {*} blog_name 
+ * @returns 
  */
-function showBlog(id) {
+function showBlog(username, blog_name) {
     return function (dispatch, getState) {
 
         dispatch({
@@ -44,7 +44,7 @@ function showBlog(id) {
         });
 
 
-        Blog.showOne(id).then(response => {
+        Blog.showByUserAndName(username, blog_name).then(response => {
             dispatch({
                 type: BlogTypes.SHOW_BLOG_SUCCESS,
                 data: response.data.data

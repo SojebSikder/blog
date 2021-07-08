@@ -44,7 +44,7 @@ function Row(props) {
                                     </Markdown>
 
                                     <Link
-                                        to={"/blog/" + blog.user.username + "/" + blog.id}
+                                        to={"/blog/" + blog.user.username + "/" + blog.name}
                                         className="btn btn-primary"
                                     >
                                         Read more
