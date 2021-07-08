@@ -2713,6 +2713,7 @@ function Index(props) {
       if (res.data.success == true) {
         setMessage("Login Successfully");
         localStorage.setItem("token", res.data.token);
+        localStorage.setItem("username", res.data.user.username);
         localStorage.setItem("userType", res.data.user.user_type);
         props.history.push("/profile");
       } else {
@@ -3183,15 +3184,15 @@ function Navbar(props) {
                 role: "button",
                 "data-bs-toggle": "dropdown",
                 "aria-expanded": "false",
-                children: user.username
+                children: localStorage.getItem('username')
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
                 className: "dropdown-menu",
                 "aria-labelledby": "navbarDropdown",
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
                     className: "dropdown-item",
-                    to: "#",
-                    children: "Action"
+                    to: "/profile",
+                    children: user.name
                   })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
