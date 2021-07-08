@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
 import Markdown from '../../../../styles/Markdown';
+import Navbar from '../../partials/Navbar';
+import Footer from '../../partials/footer/Footer';
 // config
 import * as Constant from '../../../config/constant';
 // action
@@ -18,41 +20,41 @@ function View(props) {
     return (
 
         <>
-            <div key={props.blog.id}>
-                <div className="d-flex justify-content-center">
-                    <div className="card" style={{
-                        // width: "18rem" 
-                        width: "50%",
-                    }}>
+            <Navbar />
+            <div className="container">
+                <div className="">
+                    {/* Display blogs */}
+                    <div key={props.blog.id}>
+                        <div className="d-flex justify-content-center">
+                            <div className="card" style={{
+                                // width: "18rem" 
+                                width: "50%",
+                            }}>
 
-                        {
-                            props.blog.image == null ? "" :
-                                <img src={Constant.BLOG_URL + props.blog.image}
-                                    className="card-img-top"
-                                    alt={blog.title}
-                                />
-                        }
-                        <div className="card-body">
-                            <h5 className="card-title">{props.blog.title}</h5>
+                                {
+                                    props.blog.image == null ? "" :
+                                        <img src={Constant.BLOG_URL + props.blog.image}
+                                            className="card-img-top"
+                                            alt={blog.title}
+                                        />
+                                }
+                                <div className="card-body">
+                                    <h5 className="card-title">{props.blog.title}</h5>
 
-                            {/* <p className="card-text">{blog.body}</p> */}
+                                    <Markdown>
+                                        {props.blog.body}
+                                    </Markdown>
 
-                            <Markdown>
-                                {props.blog.body}
-                            </Markdown>
-
-                            {/* <Link
-                                to={"/blog/" + props.blogs.user.username + "/" + props.blogs.id}
-                                className="btn btn-primary"
-                            >
-                                Read more
-                            </Link> */}
-
+                                </div>
+                            </div>
                         </div>
+                        <br />
                     </div>
                 </div>
-                <br />
             </div>
+
+            <Footer />
+
         </>
     )
 }

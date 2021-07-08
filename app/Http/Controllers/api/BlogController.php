@@ -5,7 +5,9 @@ namespace App\Http\Controllers\api;
 use App\Http\Controllers\Controller;
 use App\Lib\FileLib;
 use App\Models\Blog;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
 
 class BlogController extends Controller
 {
@@ -18,20 +20,47 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        // Uses: (web, app)
-        // Fetch all blog by id (web, app)
-        $result = Blog::with(array('category', 'user' => function ($query) {
-            $query->select('id', 'username');
-        }))
-            ->orderBy('id', 'DESC')
-            ->get();
+        if ($request->Input('name')) {
 
-        // $result->makeHidden(['user:api_token']);
+            // Uses: (web, app)
+            // Fetch blog by username and blog name (web, app)
 
+            $blog_name = $request->Input('name');
+            $username = $request->Input('username');
 
-        return response()->json(['data' => $result], 200);
+            if (!User::where('username', '=', $username)->exists()) {
+                return response()->json(['message' => "Not Found"], 404);
+            }
+            if (!Blog::where('name', '=', $blog_name)->exists()) {
+                return response()->json(['message' => "Not Found"], 404);
+            }
+
+            $user = User::where('username', $username)->first();
+
+            $result = Blog::with(array('category', 'user' => function ($query) use ($username) {
+                $query->select('id', 'username');
+            }))
+                ->orderBy('id', 'DESC')
+                ->where('user_id', $user->id)
+                ->where('name', $blog_name)
+                ->get();
+
+            // $result->makeHidden(['user:api_token']);
+            return response()->json(['data' => $result], 200);
+        } else {
+            // Uses: (web, app)
+            // Fetch all blog (web, app)
+            $result = Blog::with(array('category', 'user' => function ($query) {
+                $query->select('id', 'username');
+            }))
+                ->orderBy('id', 'DESC')
+                ->get();
+
+            // $result->makeHidden(['user:api_token']);
+            return response()->json(['data' => $result], 200);
+        }
     }
 
     /**
