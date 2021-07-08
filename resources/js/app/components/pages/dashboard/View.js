@@ -28,7 +28,15 @@ function View(props) {
                         <div className="d-flex justify-content-center">
                             <div className="card" style={{
                                 // width: "18rem" 
-                                width: "50%",
+                                width: "80%",
+                                lineHeight: 1.8,
+                                margin: 0,
+                                padding: 0,
+                                border: 0,
+                                outline: 0,
+                                fontSize: "100%",
+                                verticalAlign: "baseline",
+                                background: "0 0",
                             }}>
 
                                 {

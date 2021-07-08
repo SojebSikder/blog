@@ -2081,13 +2081,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Routes */ "./resources/js/app/Routes.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/style.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
 
 
 
 function Index() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Routes__WEBPACK_IMPORTED_MODULE_1__.default, {})
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Routes__WEBPACK_IMPORTED_MODULE_1__.default, {})
   });
 }
 
@@ -2543,7 +2545,15 @@ function View(props) {
               className: "card",
               style: {
                 // width: "18rem" 
-                width: "50%"
+                width: "80%",
+                lineHeight: 1.8,
+                margin: 0,
+                padding: 0,
+                border: 0,
+                outline: 0,
+                fontSize: "100%",
+                verticalAlign: "baseline",
+                background: "0 0"
               },
               children: [props.blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
                 src: _config_constant__WEBPACK_IMPORTED_MODULE_5__.BLOG_URL + props.blog.image,
@@ -8456,6 +8466,30 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "        #footer{\r\n            background: #52575c;\r\n            padding: 0 0 30px 0;\r\n            color: rgba(255, 255, 255, 0.933);\r\n            font-size: 14px;\r\n        }\r\n        #footer .footer-top{\r\n            background: #45474b;\r\n            padding: 60px 0 30px 0;\r\n        }\r\n        #footer .footer-top .footer-info{\r\n            margin-bottom: 30px;\r\n        }\r\n        #footer .footer-top .footer-info h3{\r\n           font-size: 34px;\r\n           margin: 0 0 20px 0;\r\n           padding: 2px 0 2px 0;\r\n           line-height: 1;\r\n           font-family: \"Monstreet\" , sans-serif;\r\n           color: #fff;\r\n           font-weight: 400;\r\n           letter-spacing: 3px;\r\n           text-transform: uppercase;  \r\n        }\r\n        #footer .footer-top .footer-info p{\r\n            font-size: 13px;\r\n            line-height: 24px;\r\n            margin-bottom: 0;\r\n            font-family: \"Monstreet\" sans-serif;\r\n            color:#eef5ff;\r\n        }\r\n        #footer .footer-top .social-links a{\r\n            font-size: 18px;\r\n            display: inline-block;\r\n            background: #007bff;\r\n            color:white;\r\n            line-height: 1;\r\n            padding: 8px 0;\r\n            margin-right: 4px;\r\n            border-radius: 50%;\r\n            text-align: center;\r\n            width: 36px;\r\n            height: 36px;\r\n            transition: 0.2s;\r\n        }\r\n        #footer .footer-top .social-links a:hove{\r\n            background: #0067d5;\r\n            color:white;\r\n        } \r\n        #footer .footer-top h4{\r\n            font-size: 14px;\r\n            font-weight: bold;\r\n            color: white;\r\n            text-transform: uppercase;\r\n            position:relative;\r\n            padding-bottom: 10px;\r\n        }\r\n        #footer .footer-top .footer-links{\r\n            margin-bottom: 30px;\r\n        }\r\n        #footer .footer-top .footer-links ul{\r\n            list-style: none;\r\n            margin: 0;\r\n            padding: 0;\r\n        }\r\n        #footer .footer-top .footer-links ul li{\r\n            padding: 8px 0;\r\n        }\r\n        #footer .footer-top .footer-links ul li:first-child{\r\n            padding-top: 0;\r\n        }\r\n        #footer .footer-top .footer-links ul a{\r\n            color: #ecf5ff;\r\n        }\r\n        #footer .footer-top .footer-links ul a:hover{\r\n            color: #74b5fc;\r\n        }\r\n        #footer .footer-top .footer-contact{\r\n            margin-bottom: 30px;\r\n        }\r\n         #footer .footer-top .footer-contact p{\r\n            line-height: 26px;\r\n        }\r\n        #footer .footer-top .footer-newsletter{\r\n            margin-bottom: 38px;\r\n        }\r\n         #footer .footer-top .footer-newsletter input[type=\"email\"]{\r\n           border: 0;\r\n           padding: 6px 8px;\r\n           width: 65%; \r\n        }\r\n         #footer .footer-top .footer-newsletter input[type=\"submit\"]{\r\n           background: #007bff;\r\n           border: 0;\r\n           padding: 6px 0;\r\n           width: 35%; \r\n           text-align: center;\r\n           color: white;\r\n           transition: 0.3s;\r\n           cursor: pointer;\r\n        }\r\n         #footer .footer-top .footer-newsletter input[type=\"submit\"]:hover{\r\n           background: #0062cc;\r\n         }\r\n         #footer .copyright{\r\n             text-align: center;\r\n             padding-top: 30px;\r\n         }\r\n         #footer .credits{\r\n            text-align: center;\r\n            font-size: 13px;\r\n            color: #f1f7ff;\r\n         }\r\n         #footer .credits a{\r\n             color: #bfddfe;\r\n         }\r\n         #footer .credits a:hover{\r\n             color: #f1f7ff;\r\n         }", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/app/style.css":
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/app/style.css ***!
+  \**********************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "body{\r\n    font-family: Inter,sans-serif;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -91567,6 +91601,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./style.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/app/components/partials/footer/style.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_style_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_style_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/app/style.css":
+/*!************************************!*\
+  !*** ./resources/js/app/style.css ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_1_node_modules_postcss_loader_dist_cjs_js_ruleSet_1_rules_6_oneOf_1_use_2_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!../../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./style.css */ "./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[6].oneOf[1].use[2]!./resources/js/app/style.css");
 
             
 
