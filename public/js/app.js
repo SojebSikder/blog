@@ -2278,6 +2278,13 @@ var Blog = {
         Authorization: 'Bearer ' + localStorage.getItem("api_token")
       }
     });
+  },
+  showOne: function showOne(id) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + "/blog/" + id, {
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem("api_token")
+      }
+    });
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Blog);
@@ -2479,17 +2486,77 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ View)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _styles_Markdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../styles/Markdown */ "./resources/js/styles/Markdown.js");
+/* harmony import */ var _config_constant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../config/constant */ "./resources/js/app/config/constant.js");
+/* harmony import */ var _store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../store/actions/BlogActions */ "./resources/js/app/store/actions/BlogActions.js");
+/* harmony import */ var _util_Data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../util/Data */ "./resources/js/app/util/Data.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+ // config
+
+ // action
+
+
+
+
+
 
 
 function View(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: "View blogs"
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    props.showBlog(props.match.params.id);
+  }, []); // console.log(props.blogs)
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+        className: "d-flex justify-content-center",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+          className: "card",
+          style: {
+            // width: "18rem" 
+            width: "50%"
+          },
+          children: [props.blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+            src: _config_constant__WEBPACK_IMPORTED_MODULE_3__.BLOG_URL + props.blog.image,
+            className: "card-img-top",
+            alt: blog.title
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+            className: "card-body",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h5", {
+              className: "card-title",
+              children: props.blog.title
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_styles_Markdown__WEBPACK_IMPORTED_MODULE_2__.default, {
+              children: props.blog.body
+            })]
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("br", {})]
+    }, props.blog.id)
   });
 }
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    blog: state.blog.blog
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    showBlog: function showBlog(page) {
+      return dispatch((0,_store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_4__.showBlog)(page));
+    }
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, mapDispatchToProps)(View));
 
 /***/ }),
 
@@ -3140,7 +3207,7 @@ function Footer() {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h4", {
                 children: "Our Newsletter"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h6", {
-                children: "We will let you know new contest and blogs. Subscribe now!"
+                children: "We will let you know new contents. Subscribe now!"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
                 action: "",
                 method: "post",
@@ -3248,11 +3315,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LIST_BLOG": () => (/* binding */ LIST_BLOG),
 /* harmony export */   "LIST_BLOG_SUCCESS": () => (/* binding */ LIST_BLOG_SUCCESS),
-/* harmony export */   "LIST_BLOG_FAILURE": () => (/* binding */ LIST_BLOG_FAILURE)
+/* harmony export */   "LIST_BLOG_FAILURE": () => (/* binding */ LIST_BLOG_FAILURE),
+/* harmony export */   "SHOW_BLOG": () => (/* binding */ SHOW_BLOG),
+/* harmony export */   "SHOW_BLOG_SUCCESS": () => (/* binding */ SHOW_BLOG_SUCCESS),
+/* harmony export */   "SHOW_BLOG_FAILURE": () => (/* binding */ SHOW_BLOG_FAILURE)
 /* harmony export */ });
 var LIST_BLOG = 'LIST_BLOG';
 var LIST_BLOG_SUCCESS = 'LIST_BLOG_SUCCESS';
 var LIST_BLOG_FAILURE = 'LIST_BLOG_FAILURE';
+var SHOW_BLOG = 'SHOW_BLOG';
+var SHOW_BLOG_SUCCESS = 'SHOW_BLOG_SUCCESS';
+var SHOW_BLOG_FAILURE = 'SHOW_BLOG_FAILURE';
 
 /***/ }),
 
@@ -3301,7 +3374,8 @@ var LIST_DATA_FAILURE = 'LIST_DATA_FAILURE';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "listBlogs": () => (/* binding */ listBlogs)
+/* harmony export */   "listBlogs": () => (/* binding */ listBlogs),
+/* harmony export */   "showBlog": () => (/* binding */ showBlog)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/BlogTypes */ "./resources/js/app/store/actionTypes/BlogTypes.js");
 /* harmony import */ var _api_Blog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../api/Blog */ "./resources/js/app/api/Blog.js");
@@ -3325,6 +3399,32 @@ function listBlogs() {
     })["catch"](function (error) {
       dispatch({
         type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.LIST_BLOG_FAILURE,
+        error: error.response.data
+      });
+    });
+  };
+}
+/**
+ * show blog action
+ *
+ * @param id
+ * @returns {Function}
+ */
+
+
+function showBlog(id) {
+  return function (dispatch, getState) {
+    dispatch({
+      type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG
+    });
+    _api_Blog__WEBPACK_IMPORTED_MODULE_1__.default.showOne(id).then(function (response) {
+      dispatch({
+        type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG_SUCCESS,
+        data: response.data.data
+      });
+    })["catch"](function (error) {
+      dispatch({
+        type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG_FAILURE,
         error: error.response.data
       });
     });
@@ -3355,7 +3455,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var initialState = {
-  blogs: []
+  blogs: [],
+  blog: []
 };
 
 var blogReducer = function blogReducer() {
@@ -3372,6 +3473,18 @@ var blogReducer = function blogReducer() {
       });
 
     case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.LIST_BLOG_FAILURE:
+      return _objectSpread({}, state);
+    // Show one
+
+    case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG:
+      return _objectSpread({}, state);
+
+    case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG_SUCCESS:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        blog: action.data
+      });
+
+    case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG_FAILURE:
       return _objectSpread({}, state);
 
     default:

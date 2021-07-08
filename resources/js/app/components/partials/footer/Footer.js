@@ -29,7 +29,7 @@ export default function Footer() {
                             </div>
                             <div className="col-lg-3 col-md-6 footer-newsletter">
                                 <h4>Our Newsletter</h4>
-                                <h6>We will let you know new contest and blogs. Subscribe now!</h6>
+                                <h6>We will let you know new contents. Subscribe now!</h6>
                                 <hr />
                                 <form action="" method="post">
                                     <input type="email" name="news-email" id="" placeholder="E-Mail" />

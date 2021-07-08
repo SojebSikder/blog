@@ -2,6 +2,7 @@ import * as BlogTypes from '../actionTypes/BlogTypes';
 
 const initialState = {
     blogs: [],
+    blog: [],
 };
 
 const blogReducer = function (state = initialState, action) {
@@ -16,6 +17,20 @@ const blogReducer = function (state = initialState, action) {
                 blogs: action.data,
             };
         case BlogTypes.LIST_BLOG_FAILURE:
+            return {
+                ...state,
+            };
+        // Show one
+        case BlogTypes.SHOW_BLOG:
+            return {
+                ...state,
+            };
+        case BlogTypes.SHOW_BLOG_SUCCESS:
+            return {
+                ...state,
+                blog: action.data,
+            };
+        case BlogTypes.SHOW_BLOG_FAILURE:
             return {
                 ...state,
             };
