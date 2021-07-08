@@ -1,6 +1,7 @@
 import axios from "axios";
 import Config from "../config/app_config";
 const Auth = {
+    
     getUserByToken: (successCb, failCb) => {
         axios.get(Config.getApiUrl() + '/user?client=1', { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
             .then(response => {
@@ -17,13 +18,16 @@ const Auth = {
         });
     },
     logout: (successCb, failCb) => {
-        axios.get(Config.getApiUrl() + '/logout', { headers: { Authorization: 'Bearer ' + localStorage.getItem("user.api_token") } })
+        axios.get(Config.getApiUrl() + '/logout?token=' + localStorage.getItem("token"), { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
             .then(response => {
                 localStorage.clear();
                 successCb(response);
             }).catch(err => {
                 failCb(err);
-                alert(err.response.data.message);
+                if (err.data) {
+                    alert(err.response.data.message);
+                }
+
             });
         localStorage.clear();
     },

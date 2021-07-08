@@ -33,9 +33,16 @@ class UserController extends Controller
         if (!auth("api")->user()) {
             return response()->json(['message' => 'Unauthorize'], 500);
         }
+        if ($request->input('client') == "1") {
+            // Uinsg in app (client side)
+            $result = User::where('id', auth("api")->user()->id)->first();
+            $result->makeHidden(['api_token']);
+            return response()->json(['data' => $result], 200);
+        } else {
 
-        $result = User::orderBy('created_at', 'DESC')->get();
-        return response()->json(['data' => $result], 200);
+            $result = User::orderBy('created_at', 'DESC')->get();
+            return response()->json(['data' => $result], 200);
+        }
     }
 
 

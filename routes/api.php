@@ -27,5 +27,6 @@ Route::post('/login', [App\Http\Controllers\api\UserController::class, 'login'])
 Route::post('/register', [App\Http\Controllers\api\UserController::class, 'register']);
 
 Route::resource("user", App\Http\Controllers\api\UserController::class);
+Route::get('/logout', [App\Http\Controllers\api\UserController::class, 'logout']);
 
 Route::resource("blog", App\Http\Controllers\api\BlogController::class);
