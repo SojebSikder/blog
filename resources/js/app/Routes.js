@@ -10,6 +10,9 @@ import Register from './components/pages/register/Index';
 import Dashboard from './components/pages/dashboard/Index';
 import Profile from './components/pages/profile/Index';
 
+// Write
+import Write from './components/pages/write/Index';
+
 // Blog
 import Blog from './components/pages/dashboard/View';
 
@@ -22,8 +25,9 @@ export default function Routes() {
             <Route exact path='/login' component={Login} />
             <Route exact path='/register' component={Register} />
             <Route exact path='/profile' component={Profile} />
-
+            
             <Route exact path='/blog/:username/:blogname' component={Blog} />
+            <Route exact path='/write' component={Write} />
 
             {/* <Route exact path='/dashboard' component={Dashboard} /> */}
             <Route exact path="/*" component={Error404} />
