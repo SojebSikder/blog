@@ -9,6 +9,8 @@ import * as Constant from '../../../config/constant';
 import { listBlogs } from "../../../store/actions/BlogActions";
 import DataUtil from '../../../util/Data';
 
+import './style.css';
+
 function Row(props) {
 
     useEffect(() => {
@@ -35,7 +37,7 @@ function Row(props) {
                                         />
                                 }
                                 <div className="card-body">
-                                    <h5 className="card-title">{blog.title}</h5>
+                                    <h5 className="title card-title">{blog.title}</h5>
 
                                     {/* <p className="card-text">{blog.body}</p> */}
 

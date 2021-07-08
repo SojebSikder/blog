@@ -11,6 +11,8 @@ import * as Constant from '../../../config/constant';
 import { showBlog } from "../../../store/actions/BlogActions";
 import DataUtil from '../../../util/Data';
 
+import './style.css';
+
 function View(props) {
 
     useEffect(() => {
@@ -26,28 +28,19 @@ function View(props) {
                     {/* Display blogs */}
                     <div key={props.blog.id}>
                         <div className="d-flex justify-content-center">
-                            <div className="card" style={{
+                            <div className="body card" style={{
                                 // width: "18rem" 
-                                width: "80%",
-                                lineHeight: 1.8,
-                                margin: 0,
-                                padding: 0,
-                                border: 0,
-                                outline: 0,
-                                fontSize: "100%",
-                                verticalAlign: "baseline",
-                                background: "0 0",
                             }}>
 
                                 {
                                     props.blog.image == null ? "" :
                                         <img src={Constant.BLOG_URL + props.blog.image}
-                                            className="card-img-top"
-                                            alt={blog.title}
+                                            className="cover-image card-img-top"
+                                            alt={props.blog.title}
                                         />
                                 }
                                 <div className="card-body">
-                                    <h5 className="card-title">{props.blog.title}</h5>
+                                    <h5 className="title card-title">{props.blog.title}</h5>
 
                                     <Markdown>
                                         {props.blog.body}

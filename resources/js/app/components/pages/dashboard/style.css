@@ -1,0 +1,23 @@
+.title{
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.24;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.body{
+    width: 80%;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
+}
+
+.cover-image{
+    width: 50%;
+}
