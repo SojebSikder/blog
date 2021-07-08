@@ -74,6 +74,7 @@ class UserController extends Controller
 
         $password = bcrypt($request->password);
         $name = $request->name;
+        $username = $request->username;
         $email = $request->email;
         $phone = $request->phone;
 
@@ -85,6 +86,17 @@ class UserController extends Controller
             // }
         } else {
             return response()->json(['message' => 'Name is required  :('], 201);
+        }
+
+
+        if ($request->input('username')) {
+            if (!User::where('username', '=', $request->input('username'))->exists()) {
+                $request->request->add(['username' => $username]);
+            } else {
+                return response()->json(['message' => 'Username already teken. Please choose another  :('], 201);
+            }
+        } else {
+            return response()->json(['message' => 'Username is required  :('], 201);
         }
 
 
@@ -110,6 +122,7 @@ class UserController extends Controller
 
         $created->id = $createId;
         $created->name = $request->input('name');
+        $created->username = $request->input('username');
         $created->email = $request->input('email');
         $created->phone = $request->input('phone');
         $created->password = $password;
@@ -269,11 +282,15 @@ class UserController extends Controller
 
 
             if ($request->input('name')) {
+                $user->name = $request->input('name');
+            }
 
-                if (!User::where('name', '=', $request->input('name'))->exists()) {
-                    $user->name = $request->input('name');
+            if ($request->input('username')) {
+
+                if (!User::where('username', '=', $request->input('username'))->exists()) {
+                    $user->username = $request->input('username');
                 } else {
-                    //return response()->json(['message' => 'Name already teken. Please choose another  :('], 201);
+                    return response()->json(['message' => 'Username already teken. Please choose another  :('], 201);
                 }
             }
 
@@ -281,7 +298,7 @@ class UserController extends Controller
                 if (!User::where('email', '=', $request->input('email'))->exists()) {
                     $user->email = $request->input('email');
                 } else {
-                    //return response()->json(['message' => 'Email already teken. Please choose another  :('], 201);
+                    return response()->json(['message' => 'Email already teken. Please choose another  :('], 201);
                 }
             }
 

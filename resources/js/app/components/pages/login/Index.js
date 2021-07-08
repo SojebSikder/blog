@@ -95,11 +95,12 @@ export default function Index(props) {
                             <label htmlFor="floatingPassword">Password</label>
                         </div>
 
-                        <div className="checkbox mb-3">
+                        {/* <div className="checkbox mb-3">
                             <label>
                                 <input type="checkbox" value="remember-me" /> Remember me
                             </label>
-                        </div>
+                        </div> */}
+                        
                         <button
                             className="w-100 btn btn-lg btn-primary"
                             type="button"

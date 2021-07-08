@@ -1,6 +1,14 @@
 import axios from "axios";
 import Config from "../config/app_config";
 const Auth = {
+    getUserByToken: (successCb, failCb) => {
+        axios.get(Config.getApiUrl() + '/user?client=1', { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
+            .then(response => {
+                successCb(response);
+            }).catch(err => {
+                failCb(err);
+            });
+    },
     login: (data, successCb, failCb) => {
         axios.post(Config.getApiUrl() + '/login', data).then(response => {
             successCb(response);
@@ -28,6 +36,14 @@ const Auth = {
             }).catch(err => {
                 failCb(err);
             });
+    },
+
+    register: (data, successCb, failCb) => {
+        axios.post(Config.getApiUrl() + '/register', data).then(response => {
+            successCb(response);
+        }).catch(err => {
+            failCb(err);
+        });
     },
 
     checkAuth: (successCb, failCb) => {
