@@ -28,7 +28,7 @@ function View(props) {
                     {/* Display blogs */}
                     <div key={props.blog.id}>
                         <div className="d-flex justify-content-center">
-                            <div className="body card" style={{
+                            <div className="content card" style={{
                                 // width: "18rem" 
                             }}>
 
