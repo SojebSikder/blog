@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { Link, withRouter } from "react-router-dom";
-import Auth from '../../api/Auth';
+// config
+import * as Constant from '../../../config/constant';
+import Auth from '../../../api/Auth';
+import './style.css';
 
 
 function Navbar(props) {
@@ -42,9 +45,10 @@ function Navbar(props) {
 
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-                            </li>
+                            </li> */}
+
                             {localStorage.getItem('token') == null ? (
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/login">Login</Link>
@@ -64,12 +68,47 @@ function Navbar(props) {
                             </li> */}
 
                             {localStorage.getItem('token') == null ? null : (
-                                <li className="nav-item dropdown">
-                                    <Link className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        {localStorage.getItem('username')}
+                                <li
+                                    className="nav-item dropdown"
+                                    style={{ right: "-900%", }}
+                                >
+                                    <Link
+                                        className="nav-link dropdown-toggle"
+                                        to="#"
+                                        id="navbarDropdown"
+                                        role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >
+                                        <img
+                                            className="profile-min"
+                                            src={Constant.BLOG_URL + "logo.png"} alt="" />
                                     </Link>
-                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><Link className="dropdown-item" to="/profile">{user.name}</Link></li>
+                                    <ul
+                                        className="dropdown-menu"
+                                        aria-labelledby="navbarDropdown"
+                                    >
+                                        <li>
+                                            <div className="row">
+                                                {/* <img
+                                                    className="profile-min"
+                                                    src={Constant.BLOG_URL + "logo.png"} alt="" /> */}
+                                                <div className="col">
+                                                    <Link
+                                                        className="dropdown-item"
+                                                        to="/profile"
+                                                    >
+                                                        {user.name}
+                                                        <br />
+                                                        {localStorage.getItem('username')}
+                                                    </Link>
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <hr />
+
+
                                         <li><Link className="dropdown-item" to="/write">Wrie Story</Link></li>
                                         <li><hr className="dropdown-divider" /></li>
                                         <li>

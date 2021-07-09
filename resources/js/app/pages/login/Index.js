@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import * as Constant from '../../config/constant'
 import './style.css';
 
-import Navbar from '../../components/partials/Navbar';
+import Navbar from '../../components/partials/navbar/Navbar';
 import Footer from '../../components/partials/footer/Footer';
 import Auth from '../../api/Auth';
 import { CustomSuccess, CustomError } from '../../components/messages/CustomMsg';

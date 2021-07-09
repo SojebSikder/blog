@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 
-import Navbar from '../../components/partials/Navbar';
+import Navbar from '../../components/partials/navbar/Navbar';
 import Footer from '../../components/partials/footer/Footer';
 
 import MarkdownEditor from '../../components/markdown/MarkdownEditor';
@@ -129,14 +129,17 @@ export default function Index() {
                                     Publish
                                 </button>
 
-                                <div style={{ margin: "50px", }}>
+                                <div 
+                                // style={{ margin: "50px", }}
+                                >
                                     <label className="label"
                                         htmlFor="title"
                                     >
                                         Title:
                                     </label>
                                     <input
-                                        className="label"
+                                        // className="label"
+                                        className="form-control"
                                         type="text"
                                         id="title"
                                         placeholder="Title here"
@@ -198,14 +201,14 @@ export default function Index() {
                                     onChange={onChange}
                                 />
 
-                                <div style={{ margin: "50px", }}>
+                                <div>
                                     <label className="label"
                                         htmlFor="keywords"
                                     >
                                         Keywords:
                                     </label>
                                     <input
-                                        className="label"
+                                        className="form-control"
                                         type="keywords"
                                         id="keywords"
                                         placeholder="Keywords here"

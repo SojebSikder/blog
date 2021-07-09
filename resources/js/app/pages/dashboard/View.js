@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
 import Markdown from '../../components/markdown/Markdown';
-import Navbar from '../../components/partials/Navbar';
+import Navbar from '../../components/partials/navbar/Navbar';
 import Footer from '../../components/partials/footer/Footer';
 // config
 import * as Constant from '../../config/constant';

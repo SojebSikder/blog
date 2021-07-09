@@ -1,0 +1,12 @@
+.profile-min{
+    position: relative;
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+    border-style: none;
+    background-color: #fff;
+    border: 1px #000000;
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
