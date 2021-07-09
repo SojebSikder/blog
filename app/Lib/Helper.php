@@ -2,6 +2,7 @@
 
 namespace App\Lib;
 
+use App\Models\Blog;
 use App\Models\User;
 
 trait Helper
@@ -13,6 +14,19 @@ trait Helper
             '@', '*', '^', '"', "'"
         ), '-', $string);
     }
+
+    // public function getUniqueUrl($url)
+    // {
+    //     $slug = str_slug(trim($url), '-');
+
+    //     $existingCount = Blog::where('url', 'like', $slug . '-%')->count();
+
+    //     if ($existingCount) {
+    //         return $slug . '-' . ($existingCount);
+    //     }
+
+    //     return $slug;
+    // }
 
     public function generateBarcodeNumber()
     {

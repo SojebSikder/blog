@@ -8,13 +8,16 @@ import MarkdownEditor from '../../components/markdown/MarkdownEditor';
 import { CustomSuccess, CustomError } from '../../components/messages/CustomMsg';
 
 import BlogApi from '../../api/Blog';
+import CategoryApi from '../../api/Category';
 
 import './style.css';
+import DataUtil from '../../util/Data';
 
 
 
 export default function Index() {
 
+    const [categories, setCategories] = useState([]);
     const [textInput, setTextInput] = useState({
         title: '',
         name: '',
@@ -37,6 +40,16 @@ export default function Index() {
         // console.log(event.target.files[0]);
     };
 
+    const handleTitle = (event) => {
+        setTextInput({
+            ["title"]: event.target.value,
+            ["name"]: DataUtil.replace(event.target.value, " ", "-").toLowerCase(),
+        });
+    }
+
+    /**
+     * Body element handle
+     */
     const onChange = (content) => {
         // console.log('onChange', content);
         setBody(content);
@@ -69,13 +82,23 @@ export default function Index() {
 
         BlogApi.add(data, (res) => {
             setMessage('Posted successfully');
-            reset();
         }, (err) => {
             if (err) {
                 setError_message(err.response.data.message);
             }
         });
     }
+
+    useEffect(() => {
+        CategoryApi.getAll((res) => {
+            setCategories(res.data.data);
+        }, (err) => {
+            if (err) {
+                setError_message(err.response.data.message);
+            }
+        });
+    }, [])
+
     return (
         <>
             <Navbar />
@@ -91,7 +114,6 @@ export default function Index() {
                             {
                                 message ? <CustomSuccess msg={message} /> : null
                             }
-
 
                             <div style={{ margin: "80px", }}>
 
@@ -118,11 +140,60 @@ export default function Index() {
                                         type="text"
                                         id="title"
                                         placeholder="Title here"
+                                        name="title"
+                                        value={textInput.title}
+                                        onChange={handleTitle}
                                     />
+                                    <h6>{textInput.name}</h6>
                                 </div>
 
+                                <input
+                                    accept="image/*"
+                                    style={{ display: "none" }}
+                                    id="contained-button-file"
+                                    name="image"
+                                    value=""
+                                    onChange={onFileChange}
+                                    type="file"
+
+                                />
+                                <label
+                                    htmlFor="contained-button-file"
+                                    className="btn btn-primary"
+                                >
+                                    Upload Featured Photo
+                                </label>
+
+                                <br />
+
+                                {/* Dropdown */}
+
+                                <div className="form-floating">
+                                    <select name="category_id"
+                                        value={textInput.category_id}
+                                        onChange={handleTextInput}
+                                        className="form-select"
+                                        aria-label="Default select example"
+                                    >
+                                        {categories.map((category) => {
+                                            return (
+                                                <option key={category.id}
+                                                    value={category.id}
+                                                >
+                                                    {category.title}
+                                                </option>
+                                            )
+                                        })}
+
+                                    </select>
+                                </div>
+
+                                {/* End Dropdown */}
+
+                                <br />
+
                                 <MarkdownEditor
-                                    value="some value"
+                                    value={body}
                                     name="body"
                                     onChange={onChange}
                                 />
@@ -138,6 +209,8 @@ export default function Index() {
                                         type="keywords"
                                         id="keywords"
                                         placeholder="Keywords here"
+                                        value={textInput.keywords}
+                                        onChange={handleTextInput}
                                     />
                                 </div>
 

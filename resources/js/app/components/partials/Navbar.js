@@ -59,9 +59,9 @@ function Navbar(props) {
 
 
 
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <Link className="nav-link" to="/">Link</Link>
-                            </li>
+                            </li> */}
 
                             {localStorage.getItem('token') == null ? null : (
                                 <li className="nav-item dropdown">
@@ -70,7 +70,7 @@ function Navbar(props) {
                                     </Link>
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><Link className="dropdown-item" to="/profile">{user.name}</Link></li>
-                                        <li><Link className="dropdown-item" to="#">Another action</Link></li>
+                                        <li><Link className="dropdown-item" to="/write">Wrie Story</Link></li>
                                         <li><hr className="dropdown-divider" /></li>
                                         <li>
                                             <button

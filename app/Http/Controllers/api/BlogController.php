@@ -7,7 +7,8 @@ use App\Lib\FileLib;
 use App\Models\Blog;
 use App\Models\User;
 use Illuminate\Http\Request;
-use Symfony\Component\Console\Input\Input;
+
+use App\Lib\Helper;
 
 class BlogController extends Controller
 {
@@ -94,7 +95,15 @@ class BlogController extends Controller
         $result->id = uniqid(true);
         $result->user_id = auth("api")->user()->id;
         $result->title = $request->Input('title');
-        $result->name = $request->Input('name');
+
+
+        if (!Blog::where('name', '=', $request->input('name'))->exists()) {
+            $result->name = $request->Input('name');
+        } else {
+            $result->name = $this->getUniqueUrl($request->Input('name'));
+        }
+
+
         $result->body = html_entity_decode($request->Input('body'));
         $result->keywords = $request->Input('keywords');
         $result->category_id = $request->input('category_id');
@@ -198,5 +207,18 @@ class BlogController extends Controller
         FileLib::removeImage($result);
         $result->delete();
         return response()->json(['message' => 'Deleted successfully'], 200);
+    }
+
+    public function getUniqueUrl($url)
+    {
+        $slug = str_slug(trim($url), '-');
+
+        $existingCount = Blog::where('url', 'like', $slug . '-%')->count();
+
+        if ($existingCount) {
+            return $slug . '-' . ($existingCount);
+        }
+
+        return $slug;
     }
 }

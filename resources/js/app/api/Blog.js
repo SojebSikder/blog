@@ -22,7 +22,7 @@ const Blog = {
 
     //Raw
     add: (data, successCb, failCb) => {
-        axios.post(Config.getUrl() + '/blog', data, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
+        axios.post(Config.getApiUrl() + '/blog', data, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
             .then(response => {
                 successCb(response);
             }).catch(err => {
@@ -30,7 +30,7 @@ const Blog = {
             });
     },
     getAll: (successCb, failCb) => {
-        axios.get(Config.getUrl() + '/blog', { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
+        axios.get(Config.getApiUrl() + '/blog', { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
             .then(response => {
                 successCb(response);
             }).catch(err => {
@@ -39,7 +39,7 @@ const Blog = {
     },
 
     getById: (id, successCb, failCb) => {
-        axios.get(Config.getUrl() + '/blog/' + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
+        axios.get(Config.getApiUrl() + '/blog/' + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
             .then(response => {
                 successCb(response);
             }).catch(err => {
@@ -48,7 +48,7 @@ const Blog = {
     },
     update: (id, data, successCb, failCb) => {
 
-        axios.post(Config.getUrl() + '/blog/' + id, data, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
+        axios.post(Config.getApiUrl() + '/blog/' + id, data, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
             .then(response => {
                 successCb(response);
             }).catch(err => {
@@ -57,7 +57,7 @@ const Blog = {
     },
 
     deleteById: (id, successCb, failCb) => {
-        axios.delete(Config.getUrl() + '/blog/' + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
+        axios.delete(Config.getApiUrl() + '/blog/' + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
             .then(response => {
                 successCb(response);
             }).catch(err => {
