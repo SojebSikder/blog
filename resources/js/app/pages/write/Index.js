@@ -7,6 +7,8 @@ import Footer from '../../components/partials/footer/Footer';
 import MarkdownEditor from '../../components/markdown/MarkdownEditor';
 import { CustomSuccess, CustomError } from '../../components/messages/CustomMsg';
 
+import BlogApi from '../../api/Blog';
+
 import './style.css';
 
 
@@ -66,7 +68,7 @@ export default function Index() {
         data.append('category_id', textInput.category_id == null ? "1" : textInput.category_id);
 
         BlogApi.add(data, (res) => {
-            setMessage('Blog added successfully');
+            setMessage('Posted successfully');
             reset();
         }, (err) => {
             if (err) {
@@ -93,14 +95,26 @@ export default function Index() {
 
                             <div style={{ margin: "80px", }}>
 
+                                <button
+                                    style={{
+                                        float: "right",
+                                        marginTop: "20px",
+                                    }}
+                                    className="btn btn-outline-primary"
+                                    type="button"
+                                    onClick={handleAddBlog}
+                                >
+                                    Publish
+                                </button>
+
                                 <div style={{ margin: "50px", }}>
-                                    <label className="title"
+                                    <label className="label"
                                         htmlFor="title"
                                     >
                                         Title:
                                     </label>
                                     <input
-                                        className="title"
+                                        className="label"
                                         type="text"
                                         id="title"
                                         placeholder="Title here"
@@ -113,18 +127,22 @@ export default function Index() {
                                     onChange={onChange}
                                 />
 
+                                <div style={{ margin: "50px", }}>
+                                    <label className="label"
+                                        htmlFor="keywords"
+                                    >
+                                        Keywords:
+                                    </label>
+                                    <input
+                                        className="label"
+                                        type="keywords"
+                                        id="keywords"
+                                        placeholder="Keywords here"
+                                    />
+                                </div>
 
-                                <button
-                                    style={{
-                                        float: "right",
-                                        marginTop: "10px",
-                                    }}
-                                    className="btn btn-outline-primary"
-                                    type="button"
-                                    onClick={handleAddBlog}
-                                >
-                                    Submit
-                                </button>
+
+
                             </div>
                         </div>
 
