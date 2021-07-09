@@ -13,7 +13,7 @@ import './style.css';
 export default function Index() {
 
     const onChange = (content) => {
-        console.log('onChange', content);
+        // console.log('onChange', content);
     }
     return (
         <>

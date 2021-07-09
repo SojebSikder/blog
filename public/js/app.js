@@ -3508,8 +3508,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Index() {
-  var onChange = function onChange(content) {
-    console.log('onChange', content);
+  var onChange = function onChange(content) {// console.log('onChange', content);
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
