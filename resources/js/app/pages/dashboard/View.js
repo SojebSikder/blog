@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
-import Markdown from '../../../styles/Markdown';
+import Markdown from '../../components/markdown/Markdown';
 import Navbar from '../../components/partials/Navbar';
 import Footer from '../../components/partials/footer/Footer';
 // config

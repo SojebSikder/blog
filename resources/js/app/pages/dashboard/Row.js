@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
-import Markdown from '../../../styles/Markdown';
+import Markdown from '../../components/markdown/Markdown';
 // config
 import * as Constant from '../../config/constant';
 // action
