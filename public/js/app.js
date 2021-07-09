@@ -2377,12 +2377,15 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function MarkdownEditor(_ref) {
-  var onChange = _ref.onChange;
+  var name = _ref.name,
+      value = _ref.value,
+      onChange = _ref.onChange;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)((react_summernote__WEBPACK_IMPORTED_MODULE_1___default()), {
-      value: "Default value",
+      name: name,
+      value: value,
       options: {
-        lang: 'ru-RU',
+        lang: 'en-EU',
         height: 350,
         dialogsInBody: true,
         toolbar: [['style', ['style']], ['font', ['bold', 'underline', 'clear']], ['fontname', ['fontname']], ['para', ['ul', 'ol', 'paragraph']], // ['table', ['table']],
@@ -2411,22 +2414,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
+
 var CustomError = function CustomError(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "alert alert-danger",
-      children: props.msg
+  return (
+    /*#__PURE__*/
+    // <div>
+    //     <div className="alert alert-danger">{props.msg}</div>
+    // </div>
+    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "alert alert-danger alert-dismissible fade show",
+      role: "alert",
+      children: [props.msg, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+        type: "button",
+        className: "btn-close",
+        "data-bs-dismiss": "alert",
+        "aria-label": "Close"
+      })]
     })
-  });
+  );
 };
 var CustomSuccess = function CustomSuccess(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "alert alert-success",
-      children: props.msg
+  return (
+    /*#__PURE__*/
+    // <div>
+    //     <div className="alert alert-success">{props.msg}</div>
+    // </div>
+    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "alert alert-success alert-dismissible fade show",
+      role: "alert",
+      children: [props.msg, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+        type: "button",
+        className: "btn-close",
+        "data-bs-dismiss": "alert",
+        "aria-label": "Close"
+      })]
     })
-  });
+  );
 };
+{
+  /* <div class="alert alert-warning alert-dismissible fade show" role="alert">
+   <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div> */
+}
 
 /***/ }),
 
@@ -3496,8 +3526,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_partials_Navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/partials/Navbar */ "./resources/js/app/components/partials/Navbar.js");
 /* harmony import */ var _components_partials_footer_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/partials/footer/Footer */ "./resources/js/app/components/partials/footer/Footer.js");
 /* harmony import */ var _components_markdown_MarkdownEditor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/markdown/MarkdownEditor */ "./resources/js/app/components/markdown/MarkdownEditor.js");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/pages/write/style.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_messages_CustomMsg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/messages/CustomMsg */ "./resources/js/app/components/messages/CustomMsg.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/pages/write/style.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 
 
@@ -3508,52 +3558,132 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Index() {
-  var onChange = function onChange(content) {// console.log('onChange', content);
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+    title: '',
+    name: '',
+    keywords: '',
+    category_id: '',
+    published: ''
+  }),
+      _useState2 = _slicedToArray(_useState, 2),
+      textInput = _useState2[0],
+      setTextInput = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      body = _useState4[0],
+      setBody = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState6 = _slicedToArray(_useState5, 2),
+      image = _useState6[0],
+      setImage = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState8 = _slicedToArray(_useState7, 2),
+      error_message = _useState8[0],
+      setError_message = _useState8[1];
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState10 = _slicedToArray(_useState9, 2),
+      message = _useState10[0],
+      setMessage = _useState10[1];
+
+  var handleTextInput = function handleTextInput(event) {
+    setTextInput(_objectSpread(_objectSpread({}, textInput), {}, _defineProperty({}, event.target.name, event.target.value)));
   };
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_partials_Navbar__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+  var onFileChange = function onFileChange(event) {
+    setImage(event.target.files[0]); // console.log(event.target.files[0]);
+  };
+
+  var onChange = function onChange(content) {
+    // console.log('onChange', content);
+    setBody(content);
+  }; // Methods for handling add post
+
+
+  var handleAddBlog = function handleAddBlog() {
+    setMessage(null);
+    setError_message(null);
+
+    if (textInput.title == "" || body == "") {
+      setError_message("Please enter required field");
+      return false;
+    }
+
+    var data = new FormData();
+    data.append('title', textInput.title);
+    data.append('body', textInput.body);
+    data.append('name', textInput.name);
+    data.append('keywords', textInput.keywords);
+
+    if (image.name) {
+      data.append('image', image, image.name);
+    }
+
+    data.append('published', textInput.publish == true ? 1 : 0);
+    data.append('category_id', textInput.category_id == null ? "1" : textInput.category_id);
+    BlogApi.add(data, function (res) {
+      setMessage('Blog added successfully');
+      reset();
+    }, function (err) {
+      if (err) {
+        setError_message(err.response.data.message);
+      }
+    });
+  };
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_partials_Navbar__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
       className: "container",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
         className: "",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
           className: "d-flex justify-content-center",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
             className: "col",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+            children: [error_message ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_messages_CustomMsg__WEBPACK_IMPORTED_MODULE_4__.CustomError, {
+              msg: error_message
+            }) : null, message ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_messages_CustomMsg__WEBPACK_IMPORTED_MODULE_4__.CustomSuccess, {
+              msg: message
+            }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
               style: {
                 margin: "80px"
               },
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
                 style: {
                   margin: "50px"
                 },
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("label", {
                   className: "title",
                   htmlFor: "title",
                   children: "Title:"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
                   className: "title",
                   type: "text",
                   id: "title",
                   placeholder: "Title here"
                 })]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_markdown_MarkdownEditor__WEBPACK_IMPORTED_MODULE_3__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_markdown_MarkdownEditor__WEBPACK_IMPORTED_MODULE_3__.default, {
+                value: "some value",
+                name: "body",
                 onChange: onChange
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
                 style: {
                   "float": "right",
                   marginTop: "10px"
                 },
                 className: "btn btn-outline-primary",
                 type: "button",
+                onClick: handleAddBlog,
                 children: "Submit"
               })]
-            })
+            })]
           })
         })
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_partials_footer_Footer__WEBPACK_IMPORTED_MODULE_2__.default, {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_components_partials_footer_Footer__WEBPACK_IMPORTED_MODULE_2__.default, {})]
   });
 }
 

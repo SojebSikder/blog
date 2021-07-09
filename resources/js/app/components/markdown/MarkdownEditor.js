@@ -3,13 +3,14 @@ import ReactSummernote from 'react-summernote';
 import 'react-summernote/dist/react-summernote.css'; // import styles
 import 'react-summernote/lang/summernote-es-EU';
 
-export default function MarkdownEditor({ onChange }) {
+export default function MarkdownEditor({ name, value, onChange }) {
     return (
         <>
             <ReactSummernote
-                value="Default value"
+                name={name}
+                value={value}
                 options={{
-                    lang: 'ru-RU',
+                    lang: 'en-EU',
                     height: 350,
                     dialogsInBody: true,
                     toolbar: [
