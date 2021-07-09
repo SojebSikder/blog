@@ -2,19 +2,19 @@ import React from 'react'
 import { Route, Switch } from 'react-router'
 
 // Pages
-import Landing from './components/pages/landing/Index';
+import Landing from './pages/landing/Index';
 
-import Login from './components/pages/login/Index';
-import Register from './components/pages/register/Index';
+import Login from './pages/login/Index';
+import Register from './pages/register/Index';
 
-import Dashboard from './components/pages/dashboard/Index';
-import Profile from './components/pages/profile/Index';
+import Dashboard from './pages/dashboard/Index';
+import Profile from './pages/profile/Index';
 
 // Write
-import Write from './components/pages/write/Index';
+import Write from './pages/write/Index';
 
 // Blog
-import Blog from './components/pages/dashboard/View';
+import Blog from './pages/dashboard/View';
 
 import Error404 from './components/messages/Error404';
 

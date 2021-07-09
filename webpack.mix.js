@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const webpack = require("webpack");
 
 /*
  |--------------------------------------------------------------------------
@@ -16,4 +17,12 @@ mix.disableNotifications();
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/admin.js', 'public/js')
     .react()
-    .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .webpackConfig({
+        plugins: [
+            new webpack.ProvidePlugin({
+                $: "jquery",
+                jQuery: "jquery"
+            })
+        ]
+    });

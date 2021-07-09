@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
-import Markdown from '../../../../styles/Markdown';
+import Markdown from '../../../styles/Markdown';
 // config
-import * as Constant from '../../../config/constant';
+import * as Constant from '../../config/constant';
 // action
-import { listBlogs } from "../../../store/actions/BlogActions";
-import DataUtil from '../../../util/Data';
+import { listBlogs } from "../../store/actions/BlogActions";
+import DataUtil from '../../util/Data';
 
 import './style.css';
 

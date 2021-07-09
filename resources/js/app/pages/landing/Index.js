@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from "../../../../components/elements/Button";
+import Button from "../../../components/elements/Button";
 
 export default function Index() {
     const handleAlert = () => {

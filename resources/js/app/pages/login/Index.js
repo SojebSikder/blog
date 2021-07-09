@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../../partials/Navbar';
 import { Link } from "react-router-dom";
-import * as Constant from '../../../config/constant'
+import * as Constant from '../../config/constant'
 import './style.css';
 
-import Footer from '../../partials/footer/Footer';
-import Auth from '../../../api/Auth';
-import { CustomSuccess, CustomError } from '../../messages/CustomMsg';
+import Navbar from '../../components/partials/Navbar';
+import Footer from '../../components/partials/footer/Footer';
+import Auth from '../../api/Auth';
+import { CustomSuccess, CustomError } from '../../components/messages/CustomMsg';
 
 
 export default function Index(props) {

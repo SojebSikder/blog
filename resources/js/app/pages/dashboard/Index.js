@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 
 // Components
-import Navbar from '../../partials/Navbar';
-import Footer from '../../partials/footer/Footer';
+import Navbar from '../../components/partials/Navbar';
+import Footer from '../../components/partials/footer/Footer';
 import Row from './Row';
 
 export default function Index() {
