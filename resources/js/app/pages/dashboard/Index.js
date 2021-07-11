@@ -14,13 +14,16 @@ export default function Index() {
             <div className="container">
                 <div className="">
                     <div className="d-flex justify-content-center">
-                        <Link
-                            style={{ margin: " 20px 50px 50px 50px", }}
-                            className="btn btn-primary"
-                            to="/write"
-                        >
-                            Write something?
-                        </Link>
+                        {localStorage.getItem('token') == null ? null : (
+                            <Link
+                                style={{ margin: " 20px 50px 50px 50px", }}
+                                className="btn btn-primary"
+                                to="/write"
+                            >
+                                Write something?
+                            </Link>
+                        )}
+
                     </div>
                     {/* Display blogs */}
                     <Row />

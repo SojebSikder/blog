@@ -169,7 +169,7 @@ export default function Index() {
 
                                 <br />
 
-                                {/* Dropdown */}
+                                {/* language Dropdown */}
 
                                 <div className="form-floating">
                                     <select name="category_id"
@@ -191,7 +191,31 @@ export default function Index() {
                                     </select>
                                 </div>
 
-                                {/* End Dropdown */}
+                                {/* End language Dropdown */}
+                                
+                                {/* Category Dropdown */}
+
+                                <div className="form-floating">
+                                    <select name="category_id"
+                                        value={textInput.category_id}
+                                        onChange={handleTextInput}
+                                        className="form-select"
+                                        aria-label="Default select example"
+                                    >
+                                        {categories.map((category) => {
+                                            return (
+                                                <option key={category.id}
+                                                    value={category.id}
+                                                >
+                                                    {category.title}
+                                                </option>
+                                            )
+                                        })}
+
+                                    </select>
+                                </div>
+
+                                {/* End Category Dropdown */}
 
                                 <br />
 
