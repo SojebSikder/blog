@@ -22,6 +22,10 @@ class Blog extends Model
     {
         return $this->belongsTo(Category::class, 'category_id');
     }
+    public function language()
+    {
+        return $this->belongsTo(Language::class, 'language_id');
+    }
 
     public function user()
     {

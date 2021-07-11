@@ -2610,9 +2610,10 @@ __webpack_require__.r(__webpack_exports__);
 function Markdown(_ref) {
   var children = _ref.children;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)((react_markdown__WEBPACK_IMPORTED_MODULE_1___default()), {
-      remarkPlugins: [(remark_gfm__WEBPACK_IMPORTED_MODULE_2___default())],
-      children: children
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+      dangerouslySetInnerHTML: {
+        __html: children
+      }
     })
   });
 }
@@ -3107,22 +3108,19 @@ __webpack_require__.r(__webpack_exports__);
 
 function Index() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-      className: "container",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-        className: "",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-          className: "d-flex justify-content-center",
-          children: localStorage.getItem('token') == null ? null : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
-            style: {
-              margin: " 20px 50px 50px 50px"
-            },
-            className: "btn btn-primary",
-            to: "/write",
-            children: "Write something?"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Row__WEBPACK_IMPORTED_MODULE_3__.default, {})]
-      })
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "container-fluid",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "d-flex justify-content-center",
+        children: localStorage.getItem('token') == null ? null : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+          style: {
+            margin: " 20px 50px 50px 50px"
+          },
+          className: "btn btn-primary",
+          to: "/write",
+          children: "Write something?"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Row__WEBPACK_IMPORTED_MODULE_3__.default, {})]
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_partials_footer_Footer__WEBPACK_IMPORTED_MODULE_2__.default, {})]
   });
 }
@@ -3177,9 +3175,14 @@ function Row(props) {
             className: "card",
             style: {
               // width: "18rem" 
-              width: "50%"
+              // width: "50%",
+              width: "80%"
             },
             children: [blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+              style: {
+                width: "200px",
+                margin: "0 auto"
+              },
               src: _config_constant__WEBPACK_IMPORTED_MODULE_3__.BLOG_URL + blog.image,
               className: "card-img-top",
               alt: blog.title
@@ -3190,7 +3193,7 @@ function Row(props) {
                 children: blog.title
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_markdown_Markdown__WEBPACK_IMPORTED_MODULE_2__.default, {
                 children: _util_Data__WEBPACK_IMPORTED_MODULE_5__.default.textShorten(blog.body, 400)
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
                 to: "/blog/" + blog.user.username + "/" + blog.name,
                 className: "btn btn-primary",
                 children: "Read more"
@@ -3914,7 +3917,7 @@ function Index() {
 
     var data = new FormData();
     data.append('title', textInput.title);
-    data.append('body', textInput.body);
+    data.append('body', body);
     data.append('name', textInput.name);
     data.append('keywords', textInput.keywords);
 
@@ -3924,6 +3927,7 @@ function Index() {
 
     data.append('published', textInput.publish == true ? 1 : 0);
     data.append('category_id', textInput.category_id == null ? "1" : textInput.category_id);
+    data.append('language_id', textInput.language_id == null ? "1" : textInput.language_id);
     _api_Blog__WEBPACK_IMPORTED_MODULE_5__.default.add(data, function (res) {
       setMessage('Posted successfully');
     }, function (err) {

@@ -107,6 +107,7 @@ class BlogController extends Controller
         $result->body = html_entity_decode($request->Input('body'));
         $result->keywords = $request->Input('keywords');
         $result->category_id = $request->input('category_id');
+        $result->language_id = $request->input('language_id');
         $result->published = $request->input('published');
 
         if ($request->hasFile('image')) {
@@ -168,6 +169,7 @@ class BlogController extends Controller
         $result->body = html_entity_decode($request->Input('body'));
         $result->keywords = $request->Input('keywords');
         $result->category_id = $request->input('category_id');
+        $result->language_id = $request->input('language_id');
         $result->published = $request->input('published');
 
         if ($request->hasFile('image')) {

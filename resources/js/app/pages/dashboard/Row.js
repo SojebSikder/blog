@@ -26,12 +26,18 @@ function Row(props) {
                         <div className="d-flex justify-content-center">
                             <div className="card" style={{
                                 // width: "18rem" 
-                                width: "50%",
+                                // width: "50%",
+                                width: "80%",
                             }}>
 
                                 {
                                     blog.image == null ? "" :
-                                        <img src={Constant.BLOG_URL + blog.image}
+                                        <img
+                                            style={{
+                                                width: "200px",
+                                                margin: "0 auto",
+                                            }}
+                                            src={Constant.BLOG_URL + blog.image}
                                             className="card-img-top"
                                             alt={blog.title}
                                         />
@@ -44,6 +50,7 @@ function Row(props) {
                                     <Markdown>
                                         {DataUtil.textShorten(blog.body, 400)}
                                     </Markdown>
+                                    <br />
 
                                     <Link
                                         to={"/blog/" + blog.user.username + "/" + blog.name}

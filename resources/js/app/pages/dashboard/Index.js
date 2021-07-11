@@ -11,8 +11,8 @@ export default function Index() {
     return (
         <>
             <Navbar />
-            <div className="container">
-                <div className="">
+            <div className="container-fluid">
+                {/* <div className=""> */}
                     <div className="d-flex justify-content-center">
                         {localStorage.getItem('token') == null ? null : (
                             <Link
@@ -27,7 +27,7 @@ export default function Index() {
                     </div>
                     {/* Display blogs */}
                     <Row />
-                </div>
+                {/* </div> */}
             </div>
             <Footer />
 

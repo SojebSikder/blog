@@ -25,6 +25,7 @@ class CreateBlogsTable extends Migration
             $table->text('keywords')->nullable();
 
             $table->unsignedBigInteger('category_id')->nullable()->references('id')->on('blog_categories')->onDelete('set null');
+            $table->unsignedBigInteger('language_id')->nullable()->references('id')->on('languages')->onDelete('set null');
             $table->tinyInteger('published')->default(1)->comment('1=published 2=draft');
 
             $table->timestamps();

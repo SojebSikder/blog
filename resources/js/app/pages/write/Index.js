@@ -73,7 +73,7 @@ export default function Index() {
         const data = new FormData();
 
         data.append('title', textInput.title);
-        data.append('body', textInput.body);
+        data.append('body', body);
         data.append('name', textInput.name);
         data.append('keywords', textInput.keywords);
         if (image.name) {
@@ -82,6 +82,7 @@ export default function Index() {
 
         data.append('published', textInput.publish == true ? 1 : 0);
         data.append('category_id', textInput.category_id == null ? "1" : textInput.category_id);
+        data.append('language_id', textInput.language_id == null ? "1" : textInput.language_id);
 
         BlogApi.add(data, (res) => {
             setMessage('Posted successfully');
