@@ -30,4 +30,5 @@ Route::resource("user", App\Http\Controllers\api\UserController::class);
 Route::get('/logout', [App\Http\Controllers\api\UserController::class, 'logout']);
 
 Route::resource("category", App\Http\Controllers\api\CategoryController::class);
+Route::resource("language", App\Http\Controllers\api\LanguageController::class);
 Route::resource("blog", App\Http\Controllers\api\BlogController::class);
