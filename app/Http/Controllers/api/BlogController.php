@@ -41,7 +41,7 @@ class BlogController extends Controller
             $user = User::where('username', $username)->first();
 
             $result = Blog::with(array('category', 'user' => function ($query) use ($username) {
-                $query->select('id', 'username');
+                $query->select('id', 'username', 'image');
             }))
                 ->orderBy('id', 'DESC')
                 ->where('user_id', $user->id)

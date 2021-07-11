@@ -21,6 +21,7 @@ class UserSeeder extends Seeder
             'username' => 'sojebsikder',
             'email' => 'sojebsikder@gmail.com',
             'phone' => '01833962595',
+            'image' => 'logo.png',
             'password' => bcrypt('sojeb123'),
         ]);
     }

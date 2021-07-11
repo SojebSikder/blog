@@ -3083,12 +3083,14 @@ var Config = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "BLOG_URL": () => (/* binding */ BLOG_URL)
+/* harmony export */   "BLOG_URL": () => (/* binding */ BLOG_URL),
+/* harmony export */   "PROFILE_URL": () => (/* binding */ PROFILE_URL)
 /* harmony export */ });
 /* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app_config */ "./resources/js/app/config/app_config.js");
  // URL Constant
 
 var BLOG_URL = _app_config__WEBPACK_IMPORTED_MODULE_0__.default.getBaseUrl() + "/uploads/blog/";
+var PROFILE_URL = _app_config__WEBPACK_IMPORTED_MODULE_0__.default.getBaseUrl() + "/uploads/profile/";
 
 /***/ }),
 
@@ -3256,7 +3258,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../store/actions/BlogActions */ "./resources/js/app/store/actions/BlogActions.js");
 /* harmony import */ var _util_Data__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../util/Data */ "./resources/js/app/util/Data.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/pages/dashboard/style.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _api_Blog__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../api/Blog */ "./resources/js/app/api/Blog.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
@@ -3273,41 +3276,58 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function View(props) {
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+  // const [blog, setBlog] = useState({});
+  var updateUi = function updateUi() {
+    // Blog.showByUserAndName(props.match.params.username, props.match.params.blogname)
+    //     .then(response => {
+    //         setBlog(response.data.data);
+    //     }).catch(error => {
+    //     });
     props.showBlog(props.match.params.username, props.match.params.blogname);
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    updateUi(); // props.showBlog(props.match.params.username, props.match.params.blogname);
   }, []); // console.log(props.blogs)
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_3__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
       className: "container",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
         className: "",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
             className: "d-flex justify-content-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
               className: "content card",
               style: {// width: "18rem" 
               },
-              children: [props.blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("img", {
+              children: [props.blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
                 src: _config_constant__WEBPACK_IMPORTED_MODULE_5__.BLOG_URL + props.blog.image,
                 className: "cover-image card-img-top",
                 alt: props.blog.title
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("div", {
                 className: "card-body",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("h5", {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("h5", {
                   className: "title card-title",
                   children: props.blog.title
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_markdown_Markdown__WEBPACK_IMPORTED_MODULE_2__.default, {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+                    src: _config_constant__WEBPACK_IMPORTED_MODULE_5__.PROFILE_URL + props.blog,
+                    className: "card-img-top",
+                    alt: props.blog.title
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_markdown_Markdown__WEBPACK_IMPORTED_MODULE_2__.default, {
                   children: props.blog.body
                 })]
               })]
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("br", {})]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {})]
         }, props.blog.id)
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_components_partials_footer_Footer__WEBPACK_IMPORTED_MODULE_4__.default, {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_components_partials_footer_Footer__WEBPACK_IMPORTED_MODULE_4__.default, {})]
   });
 }
 

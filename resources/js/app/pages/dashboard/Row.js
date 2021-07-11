@@ -46,7 +46,6 @@ function Row(props) {
                                     <h5 className="title card-title">{blog.title}</h5>
 
                                     {/* <p className="card-text">{blog.body}</p> */}
-
                                     <Markdown>
                                         {DataUtil.textShorten(blog.body, 400)}
                                     </Markdown>
