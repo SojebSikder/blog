@@ -103,75 +103,86 @@ export default function Index() {
         <>
             <Navbar />
             <div className="container">
-                <div className="">
-                    <div className="d-flex justify-content-center">
-                        {/* Write to us */}
-                        <div className="col">
 
-                            {
-                                error_message ? <CustomError msg={error_message} /> : null
-                            }
-                            {
-                                message ? <CustomSuccess msg={message} /> : null
-                            }
+                <div className="d-flex justify-content-center">
+                    {/* Write to us */}
+                    <div className="col">
 
-                            <div style={{ margin: "80px", }}>
+                        {
+                            error_message ? <CustomError msg={error_message} /> : null
+                        }
+                        {
+                            message ? <CustomSuccess msg={message} /> : null
+                        }
 
-                                <button
-                                    style={{
-                                        float: "right",
-                                        marginTop: "20px",
-                                    }}
-                                    className="btn btn-outline-primary"
-                                    type="button"
-                                    onClick={handleAddBlog}
+                        <div
+                        // style={{ margin: "80px", }}
+                        >
+
+                            <button
+                                style={{
+                                    float: "right",
+                                    marginTop: "20px",
+                                }}
+                                className="btn btn-outline-primary"
+                                type="button"
+                                onClick={handleAddBlog}
+                            >
+                                Publish
+                            </button>
+
+                            <div
+                            // style={{ margin: "50px", }}
+                            >
+                                <label className="label"
+                                    htmlFor="title"
                                 >
-                                    Publish
-                                </button>
-
-                                <div 
-                                // style={{ margin: "50px", }}
-                                >
-                                    <label className="label"
-                                        htmlFor="title"
-                                    >
-                                        Title:
-                                    </label>
-                                    <input
-                                        // className="label"
-                                        className="form-control"
-                                        type="text"
-                                        id="title"
-                                        placeholder="Title here"
-                                        name="title"
-                                        value={textInput.title}
-                                        onChange={handleTitle}
-                                    />
-                                    <h6>{textInput.name}</h6>
-                                </div>
-
-                                <input
-                                    accept="image/*"
-                                    style={{ display: "none" }}
-                                    id="contained-button-file"
-                                    name="image"
-                                    value=""
-                                    onChange={onFileChange}
-                                    type="file"
-
-                                />
-                                <label
-                                    htmlFor="contained-button-file"
-                                    className="btn btn-primary"
-                                >
-                                    Upload Featured Photo
+                                    Title:
                                 </label>
+                                <input
+                                    // className="label"
+                                    className="form-control"
+                                    type="text"
+                                    id="title"
+                                    placeholder="Title here"
+                                    name="title"
+                                    value={textInput.title}
+                                    onChange={handleTitle}
+                                />
+                                <h6>{textInput.name}</h6>
+                            </div>
 
-                                <br />
+                            <input
+                                accept="image/*"
+                                style={{ display: "none" }}
+                                id="contained-button-file"
+                                name="image"
+                                value=""
+                                onChange={onFileChange}
+                                type="file"
 
+                            />
+                            <label
+                                htmlFor="contained-button-file"
+                                className="btn btn-primary"
+                            >
+                                Upload Featured Photo
+                            </label>
+
+                            <br />
+
+                            <div
+                                style={{ flexWrap: "nowrap", }}
+                                className="row"
+                            >
                                 {/* language Dropdown */}
 
-                                <div className="form-floating">
+                                <div
+                                    style={{
+                                        width: "50%",
+                                    }}
+                                    className="form-floating"
+                                >
                                     <select name="category_id"
                                         value={textInput.category_id}
                                         onChange={handleTextInput}
@@ -192,10 +203,15 @@ export default function Index() {
                                 </div>
 
                                 {/* End language Dropdown */}
-                                
+
                                 {/* Category Dropdown */}
 
-                                <div className="form-floating">
+                                <div
+                                    style={{
+                                        width: "50%",
+                                    }}
+                                    className="form-floating"
+                                >
                                     <select name="category_id"
                                         value={textInput.category_id}
                                         onChange={handleTextInput}
@@ -216,39 +232,42 @@ export default function Index() {
                                 </div>
 
                                 {/* End Category Dropdown */}
-
-                                <br />
-
-                                <MarkdownEditor
-                                    value={body}
-                                    name="body"
-                                    onChange={onChange}
-                                />
-
-                                <div>
-                                    <label className="label"
-                                        htmlFor="keywords"
-                                    >
-                                        Keywords:
-                                    </label>
-                                    <input
-                                        className="form-control"
-                                        type="keywords"
-                                        id="keywords"
-                                        placeholder="Keywords here"
-                                        value={textInput.keywords}
-                                        onChange={handleTextInput}
-                                    />
-                                </div>
-
-
-
                             </div>
+
+
+
+                            <br />
+
+                            <MarkdownEditor
+                                value={body}
+                                name="body"
+                                onChange={onChange}
+                            />
+
+                            <div>
+                                <label className="label"
+                                    htmlFor="keywords"
+                                >
+                                    Keywords:
+                                </label>
+                                <input
+                                    className="form-control"
+                                    type="keywords"
+                                    id="keywords"
+                                    placeholder="Keywords here"
+                                    value={textInput.keywords}
+                                    onChange={handleTextInput}
+                                />
+                            </div>
+
+
+
                         </div>
-
-
                     </div>
+
+
                 </div>
+
             </div>
             <Footer />
         </>

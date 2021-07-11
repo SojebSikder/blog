@@ -43,88 +43,90 @@ function Navbar(props) {
                     </button>
 
 
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            {/* <li className="nav-item">
+                    <div className="collapse justify-content-center navbar-collapse" id="navbarSupportedContent">
+                        <div>
+                            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                                {/* <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li> */}
 
-                            {localStorage.getItem('token') == null ? (
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/login">Login</Link>
-                                </li>
-                            ) : null}
+                                {localStorage.getItem('token') == null ? (
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/login">Login</Link>
+                                    </li>
+                                ) : null}
 
-                            {localStorage.getItem('token') == null ? (
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/register">Register</Link>
-                                </li>
-                            ) : null}
+                                {localStorage.getItem('token') == null ? (
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/register">Register</Link>
+                                    </li>
+                                ) : null}
 
 
 
-                            {/* <li className="nav-item">
+                                {/* <li className="nav-item">
                                 <Link className="nav-link" to="/">Link</Link>
                             </li> */}
 
-                            {localStorage.getItem('token') == null ? null : (
-                                <li
-                                    className="nav-item dropdown"
-                                    style={{ right: "-900%", }}
-                                >
-                                    <Link
-                                        className="nav-link dropdown-toggle"
-                                        to="#"
-                                        id="navbarDropdown"
-                                        role="button"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
+                                {localStorage.getItem('token') == null ? null : (
+                                    <li
+                                        className="nav-item dropdown"
+                                        // style={{ right: "150%", }}
                                     >
-                                        <img
-                                            className="profile-min"
-                                            src={Constant.BLOG_URL + "logo.png"} alt="" />
-                                    </Link>
-                                    <ul
-                                        className="dropdown-menu"
-                                        aria-labelledby="navbarDropdown"
-                                    >
-                                        <li>
-                                            <div className="row">
-                                                {/* <img
+                                        <Link
+                                            className="nav-link dropdown-toggle"
+                                            to="#"
+                                            id="navbarDropdown"
+                                            role="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false"
+                                        >
+                                            <img
+                                                className="profile-min"
+                                                src={Constant.BLOG_URL + "logo.png"} alt="" />
+                                        </Link>
+                                        <ul
+                                            className="dropdown-menu"
+                                            aria-labelledby="navbarDropdown"
+                                        >
+                                            <li>
+                                                <div className="row">
+                                                    {/* <img
                                                     className="profile-min"
                                                     src={Constant.BLOG_URL + "logo.png"} alt="" /> */}
-                                                <div className="col">
-                                                    <Link
-                                                        className="dropdown-item"
-                                                        to="/profile"
-                                                    >
-                                                        {user.name}
-                                                        <br />
-                                                        {localStorage.getItem('username')}
-                                                    </Link>
+                                                    <div className="col">
+                                                        <Link
+                                                            className="dropdown-item"
+                                                            to="/profile"
+                                                        >
+                                                            {user.name}
+                                                            <br />
+                                                            {localStorage.getItem('username')}
+                                                        </Link>
+                                                    </div>
                                                 </div>
-                                            </div>
 
-                                        </li>
-                                        <hr />
-
-
-                                        <li><Link className="dropdown-item" to="/write">Wrie Story</Link></li>
-                                        <li><hr className="dropdown-divider" /></li>
-                                        <li>
-                                            <button
-                                                className="dropdown-item"
-                                                onClick={logout}
-                                            >
-                                                Logout
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </li>
-                            )}
+                                            </li>
+                                            <hr />
 
 
-                        </ul>
+                                            <li><Link className="dropdown-item" to="/write">Wrie Story</Link></li>
+                                            <li><hr className="dropdown-divider" /></li>
+                                            <li>
+                                                <button
+                                                    className="dropdown-item"
+                                                    onClick={logout}
+                                                >
+                                                    Logout
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                )}
+
+
+                            </ul>
+                        </div>
 
                     </div>
                 </div>
