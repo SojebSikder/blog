@@ -9252,7 +9252,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".title{\r\n    font-size: 34px;\r\n    font-weight: 600;\r\n    line-height: 1.24;\r\n    margin-top: 20px;\r\n    color: rgb(0, 0, 0);\r\n}\r\n\r\n.content{\r\n    width: 80%;\r\n    line-height: 1.8;\r\n    margin: 0;\r\n    padding: 0;\r\n    border: 0;\r\n    outline: 0;\r\n    font-size: 100%;\r\n    vertical-align: baseline;\r\n    background: 0 0;\r\n}\r\n\r\n.cover-image{\r\n    width: 50%;\r\n    margin: 0 auto;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".title{\r\n    font-size: 34px;\r\n    font-weight: 600;\r\n    line-height: 1.24;\r\n    margin-top: 20px;\r\n    color: rgb(0, 0, 0);\r\n}\r\n\r\n.content{\r\n    width: 80%;\r\n    line-height: 1.8;\r\n    margin: 0;\r\n    padding: 0;\r\n    border: 0;\r\n    outline: 0;\r\n    /* font-size: 100%; */\r\n    font-size: 21px;\r\n    vertical-align: baseline;\r\n    background: 0 0;\r\n}\r\n\r\n.cover-image{\r\n    width: 50%;\r\n    margin: 0 auto;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
