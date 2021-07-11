@@ -56,7 +56,7 @@ class BlogSeeder extends Seeder
             tools for generating Google Sitemaps
             built-in mitigation for cross-site request forgery, cross-site scripting, SQL injection, password cracking and other typical web attacks, most of them turned on by default[22][23]
             a framework for creating GIS applications',
-            'name' => 'hello-world',
+            'name' => 'what-is-django',
             'published' => '1',
         ]);
     }
