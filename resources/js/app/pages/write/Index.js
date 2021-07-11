@@ -9,6 +9,7 @@ import { CustomSuccess, CustomError } from '../../components/messages/CustomMsg'
 
 import BlogApi from '../../api/Blog';
 import CategoryApi from '../../api/Category';
+import LanguageApi from '../../api/Language';
 
 import './style.css';
 import DataUtil from '../../util/Data';
@@ -18,11 +19,13 @@ import DataUtil from '../../util/Data';
 export default function Index() {
 
     const [categories, setCategories] = useState([]);
+    const [languages, setLanguages] = useState([]);
     const [textInput, setTextInput] = useState({
         title: '',
         name: '',
         keywords: '',
         category_id: '',
+        language_id: '',
         published: '',
     });
     const [body, setBody] = useState('');
@@ -89,7 +92,8 @@ export default function Index() {
         });
     }
 
-    useEffect(() => {
+    const updateUi = () => {
+        // Fetch category
         CategoryApi.getAll((res) => {
             setCategories(res.data.data);
         }, (err) => {
@@ -97,6 +101,18 @@ export default function Index() {
                 setError_message(err.response.data.message);
             }
         });
+        // Fetch Language
+        LanguageApi.getAll((res) => {
+            setLanguages(res.data.data);
+        }, (err) => {
+            if (err) {
+                setError_message(err.response.data.message);
+            }
+        });
+    }
+
+    useEffect(() => {
+        updateUi();
     }, [])
 
     return (
@@ -183,18 +199,18 @@ export default function Index() {
                                     }}
                                     className="form-floating"
                                 >
-                                    <select name="category_id"
-                                        value={textInput.category_id}
+                                    <select name="language_id"
+                                        value={textInput.language_id}
                                         onChange={handleTextInput}
                                         className="form-select"
                                         aria-label="Default select example"
                                     >
-                                        {categories.map((category) => {
+                                        {languages.map((language) => {
                                             return (
-                                                <option key={category.id}
-                                                    value={category.id}
+                                                <option key={language.id}
+                                                    value={language.id}
                                                 >
-                                                    {category.title}
+                                                    {language.title}
                                                 </option>
                                             )
                                         })}
