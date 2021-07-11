@@ -276,6 +276,7 @@ export default function Index() {
                                     onChange={handleTextInput}
                                 />
                             </div>
+                            <br />
 
 
 
@@ -286,7 +287,6 @@ export default function Index() {
                 </div>
 
             </div>
-            <Footer />
         </>
     )
 }

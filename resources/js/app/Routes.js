@@ -13,6 +13,7 @@ import Profile from './pages/profile/Index';
 
 // Write
 import Write from './pages/write/Index';
+import Stories from './pages/profile/stories/Index';
 
 // Blog
 import Blog from './pages/dashboard/View';
@@ -27,7 +28,10 @@ export default function Routes() {
             <Route exact path='/login' component={Login} />
             <Route exact path='/register' component={Register} />
             
-            <AuthenticatedRoute exact path='/profile' component={Profile} />
+            {/* <AuthenticatedRoute exact path='/profile' component={Profile} /> */}
+            
+            <Route exact path='/user/:username' component={Profile} />
+            <Route exact path='/:username/stories' component={Stories} />
             
             <Route exact path='/blog/:username/:blogname' component={Blog} />
             <AuthenticatedRoute exact path='/write' component={Write} />

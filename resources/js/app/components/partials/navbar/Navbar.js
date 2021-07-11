@@ -35,15 +35,31 @@ function Navbar(props) {
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">Blog</Link>
                     <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <input
+                            className="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                        />
                     </form>
 
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button
+                        className="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
 
-                    <div className="collapse justify-content-center navbar-collapse" id="navbarSupportedContent">
+                    <div
+                        className="collapse justify-content-center navbar-collapse"
+                        id="navbarSupportedContent"
+                    >
                         <div>
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 {/* <li className="nav-item">
@@ -71,7 +87,7 @@ function Navbar(props) {
                                 {localStorage.getItem('token') == null ? null : (
                                     <li
                                         className="nav-item dropdown"
-                                        // style={{ right: "150%", }}
+                                    // style={{ right: "150%", }}
                                     >
                                         <Link
                                             className="nav-link dropdown-toggle"
@@ -97,7 +113,7 @@ function Navbar(props) {
                                                     <div className="col">
                                                         <Link
                                                             className="dropdown-item"
-                                                            to="/profile"
+                                                            to={"/user/" + user.name}
                                                         >
                                                             {user.name}
                                                             <br />
@@ -110,7 +126,22 @@ function Navbar(props) {
                                             <hr />
 
 
-                                            <li><Link className="dropdown-item" to="/write">Wrie Story</Link></li>
+                                            <li>
+                                                <Link
+                                                    className="dropdown-item"
+                                                    to="/write"
+                                                >
+                                                    Wrie Story
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link
+                                                    className="dropdown-item"
+                                                    to={"/" + localStorage.getItem('username') + "/stories"}
+                                                >
+                                                    My Stories
+                                                </Link>
+                                            </li>
                                             <li><hr className="dropdown-divider" /></li>
                                             <li>
                                                 <button

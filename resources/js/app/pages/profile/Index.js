@@ -2,16 +2,15 @@ import React from 'react'
 import Navbar from '../../components/partials/navbar/Navbar';
 import Footer from '../../components/partials/footer/Footer';
 
-export default function Index() {
+export default function Index(props) {
     return (
         <>
             <Navbar />
             <div className="container">
-                <div className="">
-                    Profile Page
-                </div>
+
+                Profile Page of {props.match.params.username}
+
             </div>
-            <Footer />
 
         </>
     )
