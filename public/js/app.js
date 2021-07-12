@@ -2992,7 +2992,7 @@ function Navbar(props) {
                         className: "col",
                         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
                           className: "dropdown-item",
-                          to: "/user/" + user.name,
+                          to: "/user/" + user.username,
                           children: [user.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), localStorage.getItem('username')]
                         })
                       })
@@ -3591,9 +3591,92 @@ __webpack_require__.r(__webpack_exports__);
 
 function Index() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "container",
-      children: "Stories"
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "d-flex",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "flex-row",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+            style: {
+              display: "inline"
+            },
+            children: "My Stories"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+            className: "btn btn-primary",
+            children: "Write Story"
+          })]
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
+        className: "nav nav-tabs",
+        id: "myTab",
+        role: "tablist",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          className: "nav-item",
+          role: "presentation",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+            className: "nav-link active",
+            id: "drafts-tab",
+            "data-bs-toggle": "tab",
+            "data-bs-target": "#drafts",
+            type: "button",
+            role: "tab",
+            "aria-controls": "drafts",
+            "aria-selected": "true",
+            children: "Drafts"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          className: "nav-item",
+          role: "presentation",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+            className: "nav-link",
+            id: "published-tab",
+            "data-bs-toggle": "tab",
+            "data-bs-target": "#published",
+            type: "button",
+            role: "tab",
+            "aria-controls": "published",
+            "aria-selected": "false",
+            children: "Published"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+          className: "nav-item",
+          role: "presentation",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+            className: "nav-link",
+            id: "Responses-tab",
+            "data-bs-toggle": "tab",
+            "data-bs-target": "#Responses",
+            type: "button",
+            role: "tab",
+            "aria-controls": "Responses",
+            "aria-selected": "false",
+            children: "Responses"
+          })
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "tab-content",
+        id: "myTabContent",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "tab-pane fade show active",
+          id: "drafts",
+          role: "tabpanel",
+          "aria-labelledby": "drafts-tab",
+          children: "Drafts"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "tab-pane fade",
+          id: "published",
+          role: "tabpanel",
+          "aria-labelledby": "published-tab",
+          children: "Published"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "tab-pane fade",
+          id: "Responses",
+          role: "tabpanel",
+          "aria-labelledby": "Responses-tab",
+          children: "Responses"
+        })]
+      })]
     })]
   });
 }

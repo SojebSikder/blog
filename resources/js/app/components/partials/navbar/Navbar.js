@@ -113,7 +113,7 @@ function Navbar(props) {
                                                     <div className="col">
                                                         <Link
                                                             className="dropdown-item"
-                                                            to={"/user/" + user.name}
+                                                            to={"/user/" + user.username}
                                                         >
                                                             {user.name}
                                                             <br />
