@@ -31,7 +31,7 @@ export default function Routes() {
             {/* <AuthenticatedRoute exact path='/profile' component={Profile} /> */}
             
             <Route exact path='/user/:username' component={Profile} />
-            <Route exact path='/:username/stories' component={Stories} />
+            <Route exact path='/me/stories' component={Stories} />
             
             <Route exact path='/blog/:username/:blogname' component={Blog} />
             <AuthenticatedRoute exact path='/write' component={Write} />

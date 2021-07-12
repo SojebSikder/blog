@@ -137,7 +137,7 @@ function Navbar(props) {
                                             <li>
                                                 <Link
                                                     className="dropdown-item"
-                                                    to={"/" + localStorage.getItem('username') + "/stories"}
+                                                    to={"/me/stories"}
                                                 >
                                                     My Stories
                                                 </Link>

@@ -2209,7 +2209,7 @@ function Routes() {
       component: _pages_profile_Index__WEBPACK_IMPORTED_MODULE_6__.default
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_12__.Route, {
       exact: true,
-      path: "/:username/stories",
+      path: "/me/stories",
       component: _pages_profile_stories_Index__WEBPACK_IMPORTED_MODULE_8__.default
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_12__.Route, {
       exact: true,
@@ -3006,7 +3006,7 @@ function Navbar(props) {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
                       className: "dropdown-item",
-                      to: "/" + localStorage.getItem('username') + "/stories",
+                      to: "/me/stories",
                       children: "My Stories"
                     })
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
@@ -3361,22 +3361,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Index)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _components_elements_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/elements/Button */ "./resources/js/components/elements/Button.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 function Index() {
-  var handleAlert = function handleAlert() {
-    alert("Hello World");
-  };
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    children: ["Welcome to Blog", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_components_elements_Button__WEBPACK_IMPORTED_MODULE_1__.default, {
-      value: "Hello World",
-      onClick: handleAlert
-    })]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: "Welcome to Blog"
   });
 }
 
@@ -4566,47 +4556,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/components/elements/Button.js":
-/*!****************************************************!*\
-  !*** ./resources/js/components/elements/Button.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Button)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-
-/**
- * Button Element
- * @param {*} props 
- * @returns 
- */
-
-
-
-function Button(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
-      type: props.type,
-      className: props.className,
-      onClick: props.onClick,
-      children: props.value
-    })
-  });
-}
-Button.defaultProps = {
-  type: 'button',
-  value: '',
-  className: 'btn btn-primary',
-  onClick: function onClick() {}
-};
 
 /***/ }),
 
