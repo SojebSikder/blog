@@ -131,7 +131,7 @@ function Navbar(props) {
                                                     className="dropdown-item"
                                                     to="/write"
                                                 >
-                                                    Wrie Story
+                                                    Write Story
                                                 </Link>
                                             </li>
                                             <li>

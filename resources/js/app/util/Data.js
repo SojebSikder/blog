@@ -26,7 +26,12 @@ const DataUtil = {
 
     replace: (str, search, replacement) => {
         return str.split(search).join(replacement)
-    }
+    },
+    readingTime: (text, wpm = 225) => {
+        const words = text.trim().split(/\s+/).length;
+        const time = Math.ceil(words / wpm);
+        return time;
+    },
 
 
 
