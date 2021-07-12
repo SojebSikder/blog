@@ -32,6 +32,9 @@ const DataUtil = {
         const time = Math.ceil(words / wpm);
         return time;
     },
+    date: (date) => {
+        new Date(date).toLocaleDateString("en-US")
+    },
 
 
 

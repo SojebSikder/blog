@@ -71,7 +71,7 @@ function View(props) {
                                             />
                                         ) : (
                                             <>
-                                                <Link to={"/user/"+props.blog.user.username}>
+                                                <Link to={"/user/" + props.blog.user.username}>
                                                     <img
                                                         src={Constant.PROFILE_URL + props.blog.user.image}
                                                         className="profile-min card-img-top"
@@ -89,6 +89,20 @@ function View(props) {
                                                 >
                                                     {props.blog.user.username}
                                                 </Link>
+                                                <span
+                                                    style={{
+                                                        margin: "10px",
+                                                        textDecoration: "none",
+                                                        fontSize: "14px",
+                                                    }}
+                                                >
+                                                    <a>
+                                                        <p style={{ display: "inline", }}>
+                                                            <span style={{ margin: "0 7px", }}>·</span>
+                                                            {DataUtil.date(props.blog.created_at)}
+                                                        </p>
+                                                    </a>
+                                                </span>
                                                 <span
                                                     style={{
                                                         margin: "10px",

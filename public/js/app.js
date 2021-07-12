@@ -3461,6 +3461,25 @@ function View(props) {
                               margin: "0 7px"
                             },
                             children: "\xB7"
+                          }), _util_Data__WEBPACK_IMPORTED_MODULE_7__.default.date(props.blog.created_at)]
+                        })
+                      })
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
+                      style: {
+                        margin: "10px",
+                        textDecoration: "none",
+                        fontSize: "14px"
+                      },
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("a", {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)("p", {
+                          style: {
+                            display: "inline"
+                          },
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("span", {
+                            style: {
+                              margin: "0 7px"
+                            },
+                            children: "\xB7"
                           }), _util_Data__WEBPACK_IMPORTED_MODULE_7__.default.readingTime(props.blog.body), " min read"]
                         })
                       })
@@ -4754,6 +4773,9 @@ var DataUtil = {
     var words = text.trim().split(/\s+/).length;
     var time = Math.ceil(words / wpm);
     return time;
+  },
+  date: function date(_date) {
+    new Date(_date).toLocaleDateString("en-US");
   }
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DataUtil);
