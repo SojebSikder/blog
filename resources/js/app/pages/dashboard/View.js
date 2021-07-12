@@ -16,24 +16,13 @@ import Blog from '../../api/Blog';
 
 function View(props) {
 
-    // const [blog, setBlog] = useState({});
-
     const updateUi = () => {
-        // Blog.showByUserAndName(props.match.params.username, props.match.params.blogname)
-        //     .then(response => {
-        //         setBlog(response.data.data);
-        //     }).catch(error => {
-
-        //     });
-
         props.showBlog(props.match.params.username, props.match.params.blogname);
     }
 
     useEffect(() => {
         updateUi();
-        // props.showBlog(props.match.params.username, props.match.params.blogname);
     }, [])
-    // console.log(props.blogs)
     return (
 
         <>
@@ -58,8 +47,15 @@ function View(props) {
                                     <h5 className="title card-title">{props.blog.title}</h5>
 
                                     <div>
+                                        {/* Author Profile photo */}
+                                        {props.blog.user.image == null ? Constant.PROFILE_URL + "logo.png" :
+                                            Constant.PROFILE_URL + props.blog.user.image
+                                        }
                                         <img
-                                            src={Constant.PROFILE_URL + props.blog}
+                                            src={
+                                                props.blog.user.image == null ? Constant.PROFILE_URL + "logo.png" :
+                                                    Constant.PROFILE_URL + props.blog.user.image
+                                            }
                                             className="card-img-top"
                                             alt={props.blog.title}
                                         />

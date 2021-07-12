@@ -20,6 +20,7 @@ import { Provider } from "react-redux";
 import thunkMiddleware from "redux-thunk";
 import rootReducer from './app/store/reducers/RootReducer';
 
+import ErrorBoundary from './ErrorBoundary';
 import Index from './app/Index';
 
 
@@ -27,9 +28,12 @@ const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
 
 if (document.getElementById('app')) {
    ReactDOM.render(
-      <Provider store={store}>
-         <Router><Index /></Router>
-      </Provider>, document.getElementById('app')
+      <ErrorBoundary>
+         <Provider store={store}>
+            <Router><Index /></Router>
+         </Provider>
+      </ErrorBoundary>
+      , document.getElementById('app')
    );
 }
 
