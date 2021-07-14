@@ -35,6 +35,17 @@ const DataUtil = {
     date: (date) => {
         new Date(date).toLocaleDateString("en-US")
     },
+    /**
+     * Copy text to clipboard
+     * @param {*} text 
+     */
+    copyText: (text) => {
+        var copyText = text;
+        // copyText.select();
+        // copyText.setSelectionRange(0, 99999);
+        // document.execCommand("copy");
+        navigator.clipboard.writeText(copyText);
+    },
 
 
 

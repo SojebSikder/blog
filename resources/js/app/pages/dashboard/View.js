@@ -13,6 +13,7 @@ import DataUtil from '../../util/Data';
 
 import './style.css';
 import Blog from '../../api/Blog';
+import Config from '../../config/app_config';
 
 function View(props) {
 
@@ -37,6 +38,7 @@ function View(props) {
 
     useEffect(() => {
         updateUi();
+        // console.log(props);
     }, [])
     return (
 
@@ -119,6 +121,35 @@ function View(props) {
                                                 </span>
                                             </>
                                         )}
+
+                                        {/* Share kit */}
+                                        <div
+                                            style={{ display: "inline", }}
+                                            className="dropdown"
+                                        >
+                                            <a className="btn btn-secondary dropdown-toggle"
+                                                href="#" role="button"
+                                                id="dropdownMenuLink"
+                                                data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Share
+                                            </a>
+
+                                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <li><a className="dropdown-item" href="#">Twitter</a></li>
+                                                <li><a className="dropdown-item" href="#">Facebook</a></li>
+                                                <li>
+                                                    <button
+                                                        className="dropdown-item"
+                                                        onClick={DataUtil.copyText(Config.getBaseUrl() + props.location.pathname)}
+                                                    >
+                                                        Copy link
+                                                    </button>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        {/* End Share Kit */}
 
                                     </div>
 
