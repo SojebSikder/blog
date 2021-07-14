@@ -3629,9 +3629,9 @@ function Index(props) {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("username", res.data.user.username);
         localStorage.setItem("userType", res.data.user.user_type);
-        props.history.push("/profile");
+        props.history.push("/");
       } else {
-        setError_message("Something went wrong");
+        setError_message("Something went wrong :(");
       }
     }, function (err) {
       if (err) {
