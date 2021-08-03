@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import Navbar from '../../../components/partials/navbar/Navbar'
 
+import Button from '../../../components/button';
+
 export default function Index() {
     return (
         <>
@@ -21,12 +23,21 @@ export default function Index() {
                             </div>
 
                             <div className="col">
-                                <Link
+                                {/* <Link
                                     className="btn btn-primary"
                                     to="/write"
                                 >
                                     Write Story
-                                </Link>
+                                </Link> */}
+                                <Button
+                                    isLink="true"
+                                    style={{
+                                        textDecoration: "none",
+                                    }}
+                                    to="/write"
+                                >
+                                    Write Story
+                                </Button>
                             </div>
                         </div>
                         {/* <div className="row">
@@ -56,6 +67,9 @@ export default function Index() {
                                     role="tab"
                                     aria-controls="drafts"
                                     aria-selected="true"
+                                    style={{
+                                        color: "#10b981",
+                                    }}
                                 >
                                     Drafts
                                 </button>
@@ -70,6 +84,9 @@ export default function Index() {
                                     role="tab"
                                     aria-controls="published"
                                     aria-selected="false"
+                                    style={{
+                                        color: "#10b981",
+                                    }}
                                 >
                                     Published
                                 </button>
@@ -84,6 +101,9 @@ export default function Index() {
                                     role="tab"
                                     aria-controls="Responses"
                                     aria-selected="false"
+                                    style={{
+                                        color: "#10b981",
+                                    }}
                                 >
                                     Responses
                                 </button>

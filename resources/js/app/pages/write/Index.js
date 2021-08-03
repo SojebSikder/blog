@@ -188,6 +188,10 @@ export default function Index() {
                             <label
                                 htmlFor="contained-button-file"
                                 className="btn btn-primary"
+                                style={{
+                                    borderColor: "#10b981",
+                                    background: "#10b981",
+                                }}
                             >
                                 Upload Featured Photo
                             </label>
