@@ -7,10 +7,13 @@ export default function Index() {
         <>
             <Navbar />
             <div className="container">
+
+
                 <div className="d-flex justify-content-center">
 
-
                     <div className="col">
+
+                        <div style={{ marginTop: "2rem", }}></div>
 
                         <div className="row justify-content-between">
                             <div className="col">

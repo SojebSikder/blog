@@ -51,11 +51,15 @@ function Row(props) {
                                         {DataUtil.textShorten(blog.body, 400)}
                                     </Markdown>
                                     <br />
+                                    <br />
 
                                     <Button
                                         isLink="true"
                                         to={"/blog/" + blog.user.username + "/" + blog.name}
                                         className="btn btn-primary"
+                                        // style={{
+                                        //     textDecoration: "none"
+                                        // }}
                                         style={{
                                             textDecoration: "none"
                                         }}

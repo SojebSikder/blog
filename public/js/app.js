@@ -3231,10 +3231,13 @@ function Row(props) {
                 children: blog.title
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_markdown_Markdown__WEBPACK_IMPORTED_MODULE_2__.default, {
                 children: _util_Data__WEBPACK_IMPORTED_MODULE_5__.default.textShorten(blog.body, 400)
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_button__WEBPACK_IMPORTED_MODULE_6__.default, {
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_components_button__WEBPACK_IMPORTED_MODULE_6__.default, {
                 isLink: "true",
                 to: "/blog/" + blog.user.username + "/" + blog.name,
-                className: "btn btn-primary",
+                className: "btn btn-primary" // style={{
+                //     textDecoration: "none"
+                // }}
+                ,
                 style: {
                   textDecoration: "none"
                 },
@@ -3738,7 +3741,11 @@ function Index() {
         className: "d-flex justify-content-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "col",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            style: {
+              marginTop: "2rem"
+            }
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             className: "row justify-content-between",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
               className: "col",
