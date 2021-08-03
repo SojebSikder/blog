@@ -3,6 +3,8 @@ import { Link, withRouter } from "react-router-dom";
 // config
 import * as Constant from '../../../config/constant';
 import Auth from '../../../api/Auth';
+
+import Input from '../../input';
 import './style.css';
 
 
@@ -31,7 +33,13 @@ function Navbar(props) {
     return (
         <>
 
-            <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <nav
+                className="navbar navbar-expand-lg navbar-dark sticky-top bg-green-500"
+                style={{
+                    color: "white",
+                    // backgroundColor: "#e3f2fd",
+                }}
+            >
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">Blog</Link>
                     <form className="d-flex">
@@ -41,6 +49,12 @@ function Navbar(props) {
                             placeholder="Search"
                             aria-label="Search"
                         />
+                        {/* <Input
+                        className="form-control"
+                            type="text"
+                            placeholder="Search"
+                            aria-label="Search"
+                        /> */}
                     </form>
 
                     <button

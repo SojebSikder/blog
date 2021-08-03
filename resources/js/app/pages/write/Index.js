@@ -11,6 +11,11 @@ import BlogApi from '../../api/Blog';
 import CategoryApi from '../../api/Category';
 import LanguageApi from '../../api/Language';
 
+// Style Component
+import Button from '../../components/button';
+
+
+
 import './style.css';
 import DataUtil from '../../util/Data';
 
@@ -147,6 +152,7 @@ export default function Index() {
                             >
                                 Publish
                             </button>
+
 
                             <div
                             // style={{ margin: "50px", }}

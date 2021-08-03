@@ -9,6 +9,7 @@ import * as Constant from '../../config/constant';
 import { listBlogs } from "../../store/actions/BlogActions";
 import DataUtil from '../../util/Data';
 
+import Button from '../../components/button';
 import './style.css';
 
 function Row(props) {
@@ -51,12 +52,17 @@ function Row(props) {
                                     </Markdown>
                                     <br />
 
-                                    <Link
+                                    <Button
+                                        isLink="true"
                                         to={"/blog/" + blog.user.username + "/" + blog.name}
                                         className="btn btn-primary"
+                                        style={{
+                                            textDecoration: "none"
+                                        }}
                                     >
                                         Read more
-                                    </Link>
+                                    </Button>
+
 
                                 </div>
                             </div>
