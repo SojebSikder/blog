@@ -12,21 +12,22 @@ export default function Index() {
         <>
             <Navbar />
             <div className="container-fluid">
-                {/* <div className=""> */}
-                    <div className="d-flex justify-content-center">
-                        {localStorage.getItem('token') == null ? null : (
-                            <Link
-                                style={{ margin: " 20px 50px 50px 50px", }}
-                                className="btn btn-primary"
-                                to="/write"
-                            >
-                                Write something?
-                            </Link>
-                        )}
 
-                    </div>
-                    {/* Display blogs */}
-                    <Row />
+                {/* <div className=""> */}
+                <div className="d-flex justify-content-center">
+                    {localStorage.getItem('token') == null ? null : (
+                        <Link
+                            style={{ margin: " 20px 50px 50px 50px", }}
+                            className="btn btn-primary"
+                            to="/write"
+                        >
+                            Write something?
+                        </Link>
+                    )}
+
+                </div>
+                {/* Display blogs */}
+                <Row />
                 {/* </div> */}
             </div>
             <Footer />
