@@ -11279,6 +11279,48 @@ function trim(str) {
 
 /***/ }),
 
+/***/ "./node_modules/is-buffer/index.js":
+/*!*****************************************!*\
+  !*** ./node_modules/is-buffer/index.js ***!
+  \*****************************************/
+/***/ ((module) => {
+
+/*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+module.exports = function isBuffer (obj) {
+  return obj != null && obj.constructor != null &&
+    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/is-plain-obj/index.js":
+/*!********************************************!*\
+  !*** ./node_modules/is-plain-obj/index.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+"use strict";
+
+
+module.exports = value => {
+	if (Object.prototype.toString.call(value) !== '[object Object]') {
+		return false;
+	}
+
+	const prototype = Object.getPrototypeOf(value);
+	return prototype === null || prototype === Object.prototype;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/jquery/dist/jquery.js":
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
@@ -82889,15 +82931,10 @@ if (false) {} else {
 
 const React = __webpack_require__(/*! react */ "./node_modules/react/index.js")
 const ReactIs = __webpack_require__(/*! react-is */ "./node_modules/react-markdown/node_modules/react-is/index.js")
-// @ts-ignore remove when typed
 const svg = __webpack_require__(/*! property-information/svg */ "./node_modules/property-information/svg.js")
-// @ts-ignore remove when typed
 const find = __webpack_require__(/*! property-information/find */ "./node_modules/property-information/find.js")
-// @ts-ignore remove when typed
 const hastToReact = __webpack_require__(/*! property-information/hast-to-react.json */ "./node_modules/property-information/hast-to-react.json")
-// @ts-ignore remove when typed
 const spaces = __webpack_require__(/*! space-separated-tokens */ "./node_modules/space-separated-tokens/index.js")
-// @ts-ignore remove when typed
 const commas = __webpack_require__(/*! comma-separated-tokens */ "./node_modules/comma-separated-tokens/index.js")
 const style = __webpack_require__(/*! style-to-object */ "./node_modules/style-to-object/index.js")
 
@@ -82916,7 +82953,7 @@ exports.hastChildrenToReact = childrenToReact
  */
 
 /**
- * @typedef {Object} Info
+ * @typedef Info
  * @property {string?} space
  * @property {string?} attribute
  * @property {string?} property
@@ -82930,16 +82967,16 @@ exports.hastChildrenToReact = childrenToReact
  * @property {boolean} mustUseProperty
  * @property {boolean} defined
  *
- * @typedef {Object} Schema
+ * @typedef Schema
  * @property {Object.<string, Info>} property
  * @property {Object.<string, string>} normal
  * @property {string?} space
  *
- * @typedef {Object} Raw
+ * @typedef Raw
  * @property {'raw'} type
  * @property {string} value
  *
- * @typedef {Object} Context
+ * @typedef Context
  * @property {TransformOptions} options
  * @property {Schema} schema
  * @property {number} listDepth
@@ -82960,15 +82997,13 @@ exports.hastChildrenToReact = childrenToReact
  * @param {string} href
  * @param {Array.<Comment|Element|Text>} children
  * @param {string?} title
- * @returns {string}
+ * @returns {string|undefined}
  *
  * @typedef {keyof IntrinsicElements} ReactMarkdownNames
  *
- * @typedef {{ [key: string]: unknown, className?: string }} ReactBaseProps
- *
  * To do: is `data-sourcepos` typeable?
  *
- * @typedef {Object} ReactMarkdownProps
+ * @typedef ReactMarkdownProps
  * @property {Element} node
  * @property {string} key
  * @property {ReactNode[]} children
@@ -82976,39 +83011,35 @@ exports.hastChildrenToReact = childrenToReact
  * @property {number} [index] Passed when `options.includeElementIndex` is given
  * @property {number} [siblingCount] Passed when `options.includeElementIndex` is given
  *
- * @callback NormalComponent
- * @param {ReactBaseProps & ReactMarkdownProps} props
- * @returns {ReactNode}
- *
  * @callback CodeComponent
- * @param {ReactBaseProps & ReactMarkdownProps & {inline?: boolean}} props
+ * @param {JSX.IntrinsicElements['code'] & ReactMarkdownProps & {inline?: boolean}} props
  * @returns {ReactNode}
  *
  * @callback HeadingComponent
- * @param {ReactBaseProps & ReactMarkdownProps & {level: number}} props
+ * @param {JSX.IntrinsicElements['h1'] & ReactMarkdownProps & {level: number}} props
  * @returns {ReactNode}
  *
  * @callback LiComponent
- * @param {ReactBaseProps & ReactMarkdownProps & {checked: boolean|null, index: number, ordered: boolean}} props
+ * @param {JSX.IntrinsicElements['li'] & ReactMarkdownProps & {checked: boolean|null, index: number, ordered: boolean}} props
  * @returns {ReactNode}
  *
  * @callback OrderedListComponent
- * @param {ReactBaseProps & ReactMarkdownProps & {depth: number, ordered: true}} props
+ * @param {JSX.IntrinsicElements['ol'] & ReactMarkdownProps & {depth: number, ordered: true}} props
  * @returns {ReactNode}
  *
  * @callback TableCellComponent
- * @param {ReactBaseProps & ReactMarkdownProps & {style?: Object.<string, unknown>, isHeader: boolean}} props
+ * @param {JSX.IntrinsicElements['table'] & ReactMarkdownProps & {style?: Object.<string, unknown>, isHeader: boolean}} props
  * @returns {ReactNode}
  *
  * @callback TableRowComponent
- * @param {ReactBaseProps & ReactMarkdownProps & {isHeader: boolean}} props
+ * @param {JSX.IntrinsicElements['tr'] & ReactMarkdownProps & {isHeader: boolean}} props
  * @returns {ReactNode}
  *
  * @callback UnorderedListComponent
- * @param {ReactBaseProps & ReactMarkdownProps & {depth: number, ordered: false}} props
+ * @param {JSX.IntrinsicElements['ul'] & ReactMarkdownProps & {depth: number, ordered: false}} props
  * @returns {ReactNode}
  *
- * @typedef {Object} SpecialComponents
+ * @typedef SpecialComponents
  * @property {CodeComponent|ReactMarkdownNames} code
  * @property {HeadingComponent|ReactMarkdownNames} h1
  * @property {HeadingComponent|ReactMarkdownNames} h2
@@ -83023,17 +83054,17 @@ exports.hastChildrenToReact = childrenToReact
  * @property {TableRowComponent|ReactMarkdownNames} tr
  * @property {UnorderedListComponent|ReactMarkdownNames} ul
  *
- * @typedef {Record<Exclude<ReactMarkdownNames, keyof SpecialComponents>, NormalComponent|ReactMarkdownNames>} NormalComponents
- * @typedef {Partial<NormalComponents & SpecialComponents>} Components
+ * @typedef {{[TagName in keyof IntrinsicElements]: TagName | ((props: IntrinsicElements[TagName] & ReactMarkdownProps) => ReactNode)}} NormalComponents
+ * @typedef {Partial<Omit<NormalComponents, keyof SpecialComponents> & SpecialComponents>} Components
  */
 
 /**
- * @typedef {Object} TransformOptions
+ * @typedef TransformOptions
  * @property {boolean} [sourcePos=false]
  * @property {boolean} [rawSourcePos=false]
  * @property {boolean} [skipHtml=false]
  * @property {boolean} [includeElementIndex=false]
- * @property {false|TransformLink} [transformLinkUri]
+ * @property {null|false|TransformLink} [transformLinkUri]
  * @property {TransformImage} [transformImageUri]
  * @property {string|TransformLinkTarget} [linkTarget]
  * @property {Components} [components]
@@ -83072,10 +83103,10 @@ function childrenToReact(context, node) {
         children.push(child.value)
       }
     }
-    // @ts-ignore `raw` nodes are non-standard
+    // @ts-expect-error `raw` nodes are non-standard
     else if (child.type === 'raw' && !context.options.skipHtml) {
       // Default behavior is to show (encoded) HTML.
-      // @ts-ignore `raw` nodes are non-standard
+      // @ts-expect-error `raw` nodes are non-standard
       children.push(child.value)
     }
   }
@@ -83093,7 +83124,7 @@ function toReact(context, node, index, parent) {
   const options = context.options
   const parentSchema = context.schema
   /** @type {ReactMarkdownNames} */
-  // @ts-ignore assume a known HTML/SVG element.
+  // @ts-expect-error assume a known HTML/SVG element.
   const name = node.tagName
   /** @type {Object.<string, unknown>} */
   const properties = {}
@@ -83106,10 +83137,13 @@ function toReact(context, node, index, parent) {
     context.schema = schema
   }
 
-  for (property in node.properties) {
-    /* istanbul ignore else - prototype polution. */
-    if (own.call(node.properties, property)) {
-      addProperty(properties, property, node.properties[property], context)
+  /* istanbul ignore else - types say they’re optional. */
+  if (node.properties) {
+    for (property in node.properties) {
+      /* istanbul ignore else - prototype polution. */
+      if (own.call(node.properties, property)) {
+        addProperty(properties, property, node.properties[property], context)
+      }
     }
   }
 
@@ -83132,7 +83166,6 @@ function toReact(context, node, index, parent) {
     start: {line: null, column: null, offset: null},
     end: {line: null, column: null, offset: null}
   }
-  /** @type {NormalComponent|SpecialComponents[keyof SpecialComponents]|ReactMarkdownNames} */
   const component =
     options.components && own.call(options.components, name)
       ? options.components[name]
@@ -83155,21 +83188,26 @@ function toReact(context, node, index, parent) {
   if (name === 'a' && options.linkTarget) {
     properties.target =
       typeof options.linkTarget === 'function'
-        ? // @ts-ignore assume `href` is a string
+        ? // @ts-expect-error assume `href` is a string
           options.linkTarget(properties.href, node.children, properties.title)
         : options.linkTarget
   }
 
   if (name === 'a' && options.transformLinkUri) {
     properties.href = options.transformLinkUri(
-      // @ts-ignore assume `href` is a string
+      // @ts-expect-error assume `href` is a string
       properties.href,
       node.children,
       properties.title
     )
   }
 
-  if (!basic && name === 'code' && parent.tagName !== 'pre') {
+  if (
+    !basic &&
+    name === 'code' &&
+    parent.type === 'element' &&
+    parent.tagName !== 'pre'
+  ) {
     properties.inline = true
   }
 
@@ -83187,16 +83225,17 @@ function toReact(context, node, index, parent) {
 
   if (name === 'img' && options.transformImageUri) {
     properties.src = options.transformImageUri(
-      // @ts-ignore assume `src` is a string
+      // @ts-expect-error assume `src` is a string
       properties.src,
       properties.alt,
       properties.title
     )
   }
 
-  if (!basic && name === 'li') {
+  if (!basic && name === 'li' && parent.type === 'element') {
     const input = getInputElement(node)
-    properties.checked = input ? Boolean(input.properties.checked) : null
+    properties.checked =
+      input && input.properties ? Boolean(input.properties.checked) : null
     properties.index = getElementsBeforeCount(parent, node)
     properties.ordered = parent.tagName === 'ol'
   }
@@ -83209,7 +83248,7 @@ function toReact(context, node, index, parent) {
   if (name === 'td' || name === 'th') {
     if (properties.align) {
       if (!properties.style) properties.style = {}
-      // @ts-ignore assume `style` is an object
+      // @ts-expect-error assume `style` is an object
       properties.style.textAlign = properties.align
       delete properties.align
     }
@@ -83219,7 +83258,7 @@ function toReact(context, node, index, parent) {
     }
   }
 
-  if (!basic && name === 'tr') {
+  if (!basic && name === 'tr' && parent.type === 'element') {
     properties.isHeader = Boolean(parent.tagName === 'thead')
   }
 
@@ -83311,13 +83350,14 @@ function addProperty(props, prop, value, ctx) {
     result = parseStyle(result)
   }
 
-  if (info.space) {
+  /* istanbul ignore else - types say they’re optional. */
+  if (info.space && info.property) {
     props[
       own.call(hastToReact, info.property)
         ? hastToReact[info.property]
         : info.property
     ] = result
-  } else {
+  } else if (info.attribute) {
     props[info.attribute] = result
   }
 }
@@ -83332,7 +83372,7 @@ function parseStyle(value) {
 
   try {
     style(value, iterator)
-  } catch (/** @type {Error} */ _) {
+  } catch (/** @type {unknown} */ _) {
     // Silent.
   }
 
@@ -83357,7 +83397,7 @@ function styleReplacer(_, $1) {
 }
 
 /**
- * @param {Position} pos
+ * @param {Position|{start: {line: null, column: null, offset: null}, end: {line: null, column: null, offset: null}}} pos
  * @returns {string}
  */
 function flattenPosition(pos) {
@@ -83392,10 +83432,9 @@ const unified = __webpack_require__(/*! unified */ "./node_modules/unified/index
 const parse = __webpack_require__(/*! remark-parse */ "./node_modules/remark-parse/index.js")
 const remarkRehype = __webpack_require__(/*! remark-rehype */ "./node_modules/remark-rehype/index.js")
 const PropTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js")
-// @ts-ignore remove when typed
 const html = __webpack_require__(/*! property-information/html */ "./node_modules/property-information/html.js")
-const filter = __webpack_require__(/*! ./rehype-filter */ "./node_modules/react-markdown/src/rehype-filter.js")
-const uriTransformer = __webpack_require__(/*! ./uri-transformer */ "./node_modules/react-markdown/src/uri-transformer.js")
+const filter = __webpack_require__(/*! ./rehype-filter.js */ "./node_modules/react-markdown/src/rehype-filter.js")
+const uriTransformer = __webpack_require__(/*! ./uri-transformer.js */ "./node_modules/react-markdown/src/uri-transformer.js")
 const childrenToReact = __webpack_require__(/*! ./ast-to-react.js */ "./node_modules/react-markdown/src/ast-to-react.js").hastChildrenToReact
 
 /**
@@ -83406,15 +83445,15 @@ const childrenToReact = __webpack_require__(/*! ./ast-to-react.js */ "./node_mod
  * @typedef {import('./rehype-filter.js').RehypeFilterOptions} FilterOptions
  * @typedef {import('./ast-to-react.js').TransformOptions} TransformOptions
  *
- * @typedef {Object} CoreOptions
+ * @typedef CoreOptions
  * @property {string} children
  *
- * @typedef {Object} PluginOptions
+ * @typedef PluginOptions
  * @property {PluggableList} [plugins=[]] **deprecated**: use `remarkPlugins` instead
  * @property {PluggableList} [remarkPlugins=[]]
  * @property {PluggableList} [rehypePlugins=[]]
  *
- * @typedef {Object} LayoutOptions
+ * @typedef LayoutOptions
  * @property {string} [className]
  *
  * @typedef {CoreOptions & PluginOptions & LayoutOptions & FilterOptions & TransformOptions} ReactMarkdownOptions
@@ -83427,7 +83466,7 @@ const changelog =
   'https://github.com/remarkjs/react-markdown/blob/main/changelog.md'
 
 /**
- * @typedef {Object} Deprecation
+ * @typedef Deprecation
  * @property {string} id
  * @property {string} [to]
  */
@@ -83501,7 +83540,7 @@ function ReactMarkdown(options) {
   }
 
   /** @type {Root} */
-  // @ts-ignore we’ll throw if it isn’t a root next.
+  // @ts-expect-error we’ll throw if it isn’t a root next.
   const hastNode = processor.runSync(processor.parse(file), file)
 
   if (hastNode.type !== 'root') {
@@ -83575,11 +83614,10 @@ ReactMarkdown.uriTransformer = uriTransformer
 
 const visit = __webpack_require__(/*! unist-util-visit */ "./node_modules/unist-util-visit/index.js")
 
-const splice = [].splice
-
 module.exports = rehypeFilter
 
 /**
+ * @typedef {import('unist').Node} Node
  * @typedef {import('hast').Root} Root
  * @typedef {import('hast').Element} Element
  *
@@ -83587,9 +83625,9 @@ module.exports = rehypeFilter
  * @param {Element} element
  * @param {number} index
  * @param {Element|Root} parent
- * @returns {boolean}
+ * @returns {boolean|undefined}
  *
- * @typedef {Object} RehypeFilterOptions
+ * @typedef RehypeFilterOptions
  * @property {Array.<string>} [allowedElements]
  * @property {Array.<string>} [disallowedElements=[]]
  * @property {AllowElement} [allowElement]
@@ -83597,7 +83635,7 @@ module.exports = rehypeFilter
  */
 
 /**
- * @param {RehypeFilterOptions} options
+ * @type {import('unified').Plugin<[RehypeFilterOptions]>}
  */
 function rehypeFilter(options) {
   if (options.allowedElements && options.disallowedElements) {
@@ -83606,27 +83644,27 @@ function rehypeFilter(options) {
     )
   }
 
-  return options.allowedElements ||
+  if (
+    options.allowedElements ||
     options.disallowedElements ||
     options.allowElement
-    ? transform
-    : undefined
-
-  /**
-   * @param {Root} tree
-   */
-  function transform(tree) {
-    visit(tree, 'element', onelement)
+  ) {
+    return (tree) => {
+      const node = /** @type {Root} */ (tree)
+      visit(node, 'element', onelement)
+    }
   }
 
   /**
-   * @param {Element} node
-   * @param {number} index
-   * @param {Element|Root} parent
+   * @param {Node} node_
+   * @param {number|null|undefined} index
+   * @param {Node|null|undefined} parent_
    * @returns {number|void}
    */
-  function onelement(node, index, parent) {
-    /** @type {boolean} */
+  function onelement(node_, index, parent_) {
+    const node = /** @type {Element} */ (node_)
+    const parent = /** @type {Element|Root} */ (parent_)
+    /** @type {boolean|undefined} */
     let remove
 
     if (options.allowedElements) {
@@ -83635,19 +83673,17 @@ function rehypeFilter(options) {
       remove = options.disallowedElements.includes(node.tagName)
     }
 
-    if (!remove && options.allowElement) {
+    if (!remove && options.allowElement && typeof index === 'number') {
       remove = !options.allowElement(node, index, parent)
     }
 
-    if (remove) {
-      /** @type {Array.<unknown>} */
-      let parameters = [index, 1]
-
+    if (remove && typeof index === 'number') {
       if (options.unwrapDisallowed && node.children) {
-        parameters = parameters.concat(node.children)
+        parent.children.splice(index, 1, ...node.children)
+      } else {
+        parent.children.splice(index, 1)
       }
 
-      splice.apply(parent.children, parameters)
       return index
     }
 
@@ -86595,452 +86631,13 @@ if (true) {
 
 /***/ }),
 
-/***/ "./node_modules/react-router/node_modules/isarray/index.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/react-router/node_modules/isarray/index.js ***!
-  \*****************************************************************/
-/***/ ((module) => {
-
-module.exports = Array.isArray || function (arr) {
-  return Object.prototype.toString.call(arr) == '[object Array]';
-};
-
-
-/***/ }),
-
 /***/ "./node_modules/react-router/node_modules/path-to-regexp/index.js":
 /*!************************************************************************!*\
   !*** ./node_modules/react-router/node_modules/path-to-regexp/index.js ***!
   \************************************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ (() => {
 
-var isarray = __webpack_require__(/*! isarray */ "./node_modules/react-router/node_modules/isarray/index.js")
-
-/**
- * Expose `pathToRegexp`.
- */
-module.exports = pathToRegexp
-module.exports.parse = parse
-module.exports.compile = compile
-module.exports.tokensToFunction = tokensToFunction
-module.exports.tokensToRegExp = tokensToRegExp
-
-/**
- * The main path matching regexp utility.
- *
- * @type {RegExp}
- */
-var PATH_REGEXP = new RegExp([
-  // Match escaped characters that would otherwise appear in future matches.
-  // This allows the user to escape special characters that won't transform.
-  '(\\\\.)',
-  // Match Express-style parameters and un-named parameters with a prefix
-  // and optional suffixes. Matches appear as:
-  //
-  // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
-  // "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
-  // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
-  '([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))'
-].join('|'), 'g')
-
-/**
- * Parse a string for the raw tokens.
- *
- * @param  {string}  str
- * @param  {Object=} options
- * @return {!Array}
- */
-function parse (str, options) {
-  var tokens = []
-  var key = 0
-  var index = 0
-  var path = ''
-  var defaultDelimiter = options && options.delimiter || '/'
-  var res
-
-  while ((res = PATH_REGEXP.exec(str)) != null) {
-    var m = res[0]
-    var escaped = res[1]
-    var offset = res.index
-    path += str.slice(index, offset)
-    index = offset + m.length
-
-    // Ignore already escaped sequences.
-    if (escaped) {
-      path += escaped[1]
-      continue
-    }
-
-    var next = str[index]
-    var prefix = res[2]
-    var name = res[3]
-    var capture = res[4]
-    var group = res[5]
-    var modifier = res[6]
-    var asterisk = res[7]
-
-    // Push the current path onto the tokens.
-    if (path) {
-      tokens.push(path)
-      path = ''
-    }
-
-    var partial = prefix != null && next != null && next !== prefix
-    var repeat = modifier === '+' || modifier === '*'
-    var optional = modifier === '?' || modifier === '*'
-    var delimiter = res[2] || defaultDelimiter
-    var pattern = capture || group
-
-    tokens.push({
-      name: name || key++,
-      prefix: prefix || '',
-      delimiter: delimiter,
-      optional: optional,
-      repeat: repeat,
-      partial: partial,
-      asterisk: !!asterisk,
-      pattern: pattern ? escapeGroup(pattern) : (asterisk ? '.*' : '[^' + escapeString(delimiter) + ']+?')
-    })
-  }
-
-  // Match any characters still remaining.
-  if (index < str.length) {
-    path += str.substr(index)
-  }
-
-  // If the path exists, push it onto the end.
-  if (path) {
-    tokens.push(path)
-  }
-
-  return tokens
-}
-
-/**
- * Compile a string to a template function for the path.
- *
- * @param  {string}             str
- * @param  {Object=}            options
- * @return {!function(Object=, Object=)}
- */
-function compile (str, options) {
-  return tokensToFunction(parse(str, options), options)
-}
-
-/**
- * Prettier encoding of URI path segments.
- *
- * @param  {string}
- * @return {string}
- */
-function encodeURIComponentPretty (str) {
-  return encodeURI(str).replace(/[\/?#]/g, function (c) {
-    return '%' + c.charCodeAt(0).toString(16).toUpperCase()
-  })
-}
-
-/**
- * Encode the asterisk parameter. Similar to `pretty`, but allows slashes.
- *
- * @param  {string}
- * @return {string}
- */
-function encodeAsterisk (str) {
-  return encodeURI(str).replace(/[?#]/g, function (c) {
-    return '%' + c.charCodeAt(0).toString(16).toUpperCase()
-  })
-}
-
-/**
- * Expose a method for transforming tokens into the path function.
- */
-function tokensToFunction (tokens, options) {
-  // Compile all the tokens into regexps.
-  var matches = new Array(tokens.length)
-
-  // Compile all the patterns before compilation.
-  for (var i = 0; i < tokens.length; i++) {
-    if (typeof tokens[i] === 'object') {
-      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$', flags(options))
-    }
-  }
-
-  return function (obj, opts) {
-    var path = ''
-    var data = obj || {}
-    var options = opts || {}
-    var encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent
-
-    for (var i = 0; i < tokens.length; i++) {
-      var token = tokens[i]
-
-      if (typeof token === 'string') {
-        path += token
-
-        continue
-      }
-
-      var value = data[token.name]
-      var segment
-
-      if (value == null) {
-        if (token.optional) {
-          // Prepend partial segment prefixes.
-          if (token.partial) {
-            path += token.prefix
-          }
-
-          continue
-        } else {
-          throw new TypeError('Expected "' + token.name + '" to be defined')
-        }
-      }
-
-      if (isarray(value)) {
-        if (!token.repeat) {
-          throw new TypeError('Expected "' + token.name + '" to not repeat, but received `' + JSON.stringify(value) + '`')
-        }
-
-        if (value.length === 0) {
-          if (token.optional) {
-            continue
-          } else {
-            throw new TypeError('Expected "' + token.name + '" to not be empty')
-          }
-        }
-
-        for (var j = 0; j < value.length; j++) {
-          segment = encode(value[j])
-
-          if (!matches[i].test(segment)) {
-            throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received `' + JSON.stringify(segment) + '`')
-          }
-
-          path += (j === 0 ? token.prefix : token.delimiter) + segment
-        }
-
-        continue
-      }
-
-      segment = token.asterisk ? encodeAsterisk(value) : encode(value)
-
-      if (!matches[i].test(segment)) {
-        throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')
-      }
-
-      path += token.prefix + segment
-    }
-
-    return path
-  }
-}
-
-/**
- * Escape a regular expression string.
- *
- * @param  {string} str
- * @return {string}
- */
-function escapeString (str) {
-  return str.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1')
-}
-
-/**
- * Escape the capturing group by escaping special characters and meaning.
- *
- * @param  {string} group
- * @return {string}
- */
-function escapeGroup (group) {
-  return group.replace(/([=!:$\/()])/g, '\\$1')
-}
-
-/**
- * Attach the keys as a property of the regexp.
- *
- * @param  {!RegExp} re
- * @param  {Array}   keys
- * @return {!RegExp}
- */
-function attachKeys (re, keys) {
-  re.keys = keys
-  return re
-}
-
-/**
- * Get the flags for a regexp from the options.
- *
- * @param  {Object} options
- * @return {string}
- */
-function flags (options) {
-  return options && options.sensitive ? '' : 'i'
-}
-
-/**
- * Pull out keys from a regexp.
- *
- * @param  {!RegExp} path
- * @param  {!Array}  keys
- * @return {!RegExp}
- */
-function regexpToRegexp (path, keys) {
-  // Use a negative lookahead to match only capturing groups.
-  var groups = path.source.match(/\((?!\?)/g)
-
-  if (groups) {
-    for (var i = 0; i < groups.length; i++) {
-      keys.push({
-        name: i,
-        prefix: null,
-        delimiter: null,
-        optional: false,
-        repeat: false,
-        partial: false,
-        asterisk: false,
-        pattern: null
-      })
-    }
-  }
-
-  return attachKeys(path, keys)
-}
-
-/**
- * Transform an array into a regexp.
- *
- * @param  {!Array}  path
- * @param  {Array}   keys
- * @param  {!Object} options
- * @return {!RegExp}
- */
-function arrayToRegexp (path, keys, options) {
-  var parts = []
-
-  for (var i = 0; i < path.length; i++) {
-    parts.push(pathToRegexp(path[i], keys, options).source)
-  }
-
-  var regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options))
-
-  return attachKeys(regexp, keys)
-}
-
-/**
- * Create a path regexp from string input.
- *
- * @param  {string}  path
- * @param  {!Array}  keys
- * @param  {!Object} options
- * @return {!RegExp}
- */
-function stringToRegexp (path, keys, options) {
-  return tokensToRegExp(parse(path, options), keys, options)
-}
-
-/**
- * Expose a function for taking tokens and returning a RegExp.
- *
- * @param  {!Array}          tokens
- * @param  {(Array|Object)=} keys
- * @param  {Object=}         options
- * @return {!RegExp}
- */
-function tokensToRegExp (tokens, keys, options) {
-  if (!isarray(keys)) {
-    options = /** @type {!Object} */ (keys || options)
-    keys = []
-  }
-
-  options = options || {}
-
-  var strict = options.strict
-  var end = options.end !== false
-  var route = ''
-
-  // Iterate over the tokens and create our regexp string.
-  for (var i = 0; i < tokens.length; i++) {
-    var token = tokens[i]
-
-    if (typeof token === 'string') {
-      route += escapeString(token)
-    } else {
-      var prefix = escapeString(token.prefix)
-      var capture = '(?:' + token.pattern + ')'
-
-      keys.push(token)
-
-      if (token.repeat) {
-        capture += '(?:' + prefix + capture + ')*'
-      }
-
-      if (token.optional) {
-        if (!token.partial) {
-          capture = '(?:' + prefix + '(' + capture + '))?'
-        } else {
-          capture = prefix + '(' + capture + ')?'
-        }
-      } else {
-        capture = prefix + '(' + capture + ')'
-      }
-
-      route += capture
-    }
-  }
-
-  var delimiter = escapeString(options.delimiter || '/')
-  var endsWithDelimiter = route.slice(-delimiter.length) === delimiter
-
-  // In non-strict mode we allow a slash at the end of match. If the path to
-  // match already ends with a slash, we remove it for consistency. The slash
-  // is valid at the end of a path match, not in the middle. This is important
-  // in non-ending mode, where "/test/" shouldn't match "/test//route".
-  if (!strict) {
-    route = (endsWithDelimiter ? route.slice(0, -delimiter.length) : route) + '(?:' + delimiter + '(?=$))?'
-  }
-
-  if (end) {
-    route += '$'
-  } else {
-    // In non-ending mode, we need the capturing groups to match as much as
-    // possible by using a positive lookahead to the end or next path segment.
-    route += strict && endsWithDelimiter ? '' : '(?=' + delimiter + '|$)'
-  }
-
-  return attachKeys(new RegExp('^' + route, flags(options)), keys)
-}
-
-/**
- * Normalize the given path string, returning a regular expression.
- *
- * An empty array can be passed in for the keys, which will hold the
- * placeholder key descriptions. For example, using `/user/:id`, `keys` will
- * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
- *
- * @param  {(string|RegExp|Array)} path
- * @param  {(Array|Object)=}       keys
- * @param  {Object=}               options
- * @return {!RegExp}
- */
-function pathToRegexp (path, keys, options) {
-  if (!isarray(keys)) {
-    options = /** @type {!Object} */ (keys || options)
-    keys = []
-  }
-
-  options = options || {}
-
-  if (path instanceof RegExp) {
-    return regexpToRegexp(path, /** @type {!Array} */ (keys))
-  }
-
-  if (isarray(path)) {
-    return arrayToRegexp(/** @type {!Array} */ (path), /** @type {!Array} */ (keys), options)
-  }
-
-  return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
-}
-
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'E:\\My Program\\Web\\blog\\node_modules\\react-router\\node_modules\\path-to-regexp\\index.js'");
 
 /***/ }),
 
@@ -105832,9 +105429,9 @@ function wrap(fn, callback) {
 
 
 var bail = __webpack_require__(/*! bail */ "./node_modules/bail/index.js")
-var buffer = __webpack_require__(/*! is-buffer */ "./node_modules/unified/node_modules/is-buffer/index.js")
+var buffer = __webpack_require__(/*! is-buffer */ "./node_modules/is-buffer/index.js")
 var extend = __webpack_require__(/*! extend */ "./node_modules/extend/index.js")
-var plain = __webpack_require__(/*! is-plain-obj */ "./node_modules/unified/node_modules/is-plain-obj/index.js")
+var plain = __webpack_require__(/*! is-plain-obj */ "./node_modules/is-plain-obj/index.js")
 var trough = __webpack_require__(/*! trough */ "./node_modules/trough/index.js")
 var vfile = __webpack_require__(/*! vfile */ "./node_modules/vfile/index.js")
 
@@ -105874,6 +105471,10 @@ function pipelineStringify(p, ctx) {
   if (result === undefined || result === null) {
     // Empty.
   } else if (typeof result === 'string' || buffer(result)) {
+    if ('value' in ctx.file) {
+      ctx.file.value = result
+    }
+
     ctx.file.contents = result
   } else {
     ctx.file.result = result
@@ -106285,48 +105886,6 @@ function assertDone(name, asyncName, complete) {
     )
   }
 }
-
-
-/***/ }),
-
-/***/ "./node_modules/unified/node_modules/is-buffer/index.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/unified/node_modules/is-buffer/index.js ***!
-  \**************************************************************/
-/***/ ((module) => {
-
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-module.exports = function isBuffer (obj) {
-  return obj != null && obj.constructor != null &&
-    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/unified/node_modules/is-plain-obj/index.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/unified/node_modules/is-plain-obj/index.js ***!
-  \*****************************************************************/
-/***/ ((module) => {
-
-"use strict";
-
-
-module.exports = value => {
-	if (Object.prototype.toString.call(value) !== '[object Object]') {
-		return false;
-	}
-
-	const prototype = Object.getPrototypeOf(value);
-	return prototype === null || prototype === Object.prototype;
-};
 
 
 /***/ }),
@@ -107562,20 +107121,9 @@ function cwd() {
 /*!************************************************************!*\
   !*** ./node_modules/vfile/node_modules/is-buffer/index.js ***!
   \************************************************************/
-/***/ ((module) => {
+/***/ (() => {
 
-/*!
- * Determine if an object is a Buffer
- *
- * @author   Feross Aboukhadijeh <https://feross.org>
- * @license  MIT
- */
-
-module.exports = function isBuffer (obj) {
-  return obj != null && obj.constructor != null &&
-    typeof obj.constructor.isBuffer === 'function' && obj.constructor.isBuffer(obj)
-}
-
+throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'E:\\My Program\\Web\\blog\\node_modules\\vfile\\node_modules\\is-buffer\\index.js'");
 
 /***/ }),
 
