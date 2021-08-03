@@ -66,7 +66,13 @@ export default function Index(props) {
                 <main className="form-signin">
 
                     <form>
-                        <img className="mb-4" src={Constant.BLOG_URL + "logo.png"} alt="" width="72" height="57" />
+                        <img
+                            className="mb-4"
+                            src={Constant.BLOG_URL + "logo.png"}
+                            width="72"
+                            height="57"
+                            style={{ marginLeft: "7rem", }}
+                        />
                         <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
                         {
@@ -101,7 +107,7 @@ export default function Index(props) {
                                 <input type="checkbox" value="remember-me" /> Remember me
                             </label>
                         </div> */}
-                        
+
                         <button
                             className="w-100 btn btn-lg btn-primary"
                             type="button"

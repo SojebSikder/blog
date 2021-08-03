@@ -3625,9 +3625,11 @@ function Index(props) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
             className: "mb-4",
             src: _config_constant__WEBPACK_IMPORTED_MODULE_1__.BLOG_URL + "logo.png",
-            alt: "",
             width: "72",
-            height: "57"
+            height: "57",
+            style: {
+              marginLeft: "7rem"
+            }
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h1", {
             className: "h3 mb-3 fw-normal",
             children: "Please sign in"
@@ -3995,9 +3997,11 @@ function Index() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
             className: "mb-4",
             src: _config_constant__WEBPACK_IMPORTED_MODULE_1__.BLOG_URL + "logo.png",
-            alt: "",
             width: "72",
-            height: "57"
+            height: "57",
+            style: {
+              marginLeft: "7rem"
+            }
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("h1", {
             className: "h3 mb-3 fw-normal",
             children: "Sign up. It's free"

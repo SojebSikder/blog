@@ -87,7 +87,13 @@ export default function Index() {
             <div className="body text-center">
                 <main className="form-signin">
                     <form>
-                        <img className="mb-4" src={Constant.BLOG_URL + "logo.png"} alt="" width="72" height="57" />
+                        <img
+                            className="mb-4"
+                            src={Constant.BLOG_URL + "logo.png"}
+                            width="72"
+                            height="57"
+                            style={{ marginLeft: "7rem", }}
+                        />
                         <h1 className="h3 mb-3 fw-normal">Sign up. It's free</h1>
 
                         {

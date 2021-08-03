@@ -70,6 +70,7 @@ function View(props) {
                                             <img
                                                 src={Constant.PROFILE_URL + "logo.png"}
                                                 className="profile-min card-img-top"
+                                                
                                             />
                                         ) : (
                                             <>
