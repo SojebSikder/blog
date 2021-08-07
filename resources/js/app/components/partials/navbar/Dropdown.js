@@ -1,28 +1,37 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react'
 import './style.css';
 
 export function Dropdown({ children }) {
+
+    const open = () => {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    useEffect(() => {
+        /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    }, [])
+
     return (
-        <div id="content" className="relative inline-block text-left">
+        <div id="content" onClick={open} className="relative inline-block text-left">
             {children}
-        </div>
-    )
-}
-
-
-export function DropdownTrig({ children, ...rest }) {
-    return (
-        <div>
-            <Link
-                {...rest}
-                className="text-gray-700 block px-4 py-2 text-sm"
-                role="menuitem"
-                tabIndex="-1"
-                id="menu-item-0"
-            >
-                {children}
-            </Link>
         </div>
     )
 }
@@ -42,10 +51,10 @@ export function DropdownContent({ children, ...rest }) {
         </div>
     )
 }
-export function DropdownItem({ children, ...rest }) {
+export function DropdownTrig({ children, ...rest }) {
     return (
         <div>
-            <Link
+            <div
                 {...rest}
                 className="text-gray-700 block px-4 py-2 text-sm"
                 role="menuitem"
@@ -53,7 +62,22 @@ export function DropdownItem({ children, ...rest }) {
                 id="menu-item-0"
             >
                 {children}
-            </Link>
+            </div>
+        </div>
+    )
+}
+export function DropdownItem({ children, ...rest }) {
+    return (
+        <div>
+            <div
+                {...rest}
+                className="dropdown-item text-gray-700 block px-4 py-2 text-sm"
+                role="menuitem"
+                tabIndex="-1"
+                id="menu-item-0"
+            >
+                {children}
+            </div>
         </div>
     )
 }

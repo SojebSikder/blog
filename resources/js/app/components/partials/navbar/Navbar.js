@@ -45,11 +45,12 @@ function Navbar(props) {
                     <Link className="navbar-brand" to="/">Blog</Link>
                     <form className="d-flex">
                         <input
-                            className="me-2 w-full h-full px-3 text-gray-300 bg-gray-600 rounded-lg focus:outline-none"
+                            className="me-2 w-full h-full px-3 rounded-lg focus:outline-none"
                             type="search"
                             placeholder="Search"
                             aria-label="Search"
                             style={{
+                                color: "black",
                                 width: "30vw",
                                 height: "40px",
                             }}
@@ -110,16 +111,54 @@ function Navbar(props) {
 
 
 
-                                <Dropdown>
+                                {/* <Dropdown>
                                     <DropdownTrig to="#">
                                         <img
                                             className="profile-min"
                                             src={Constant.BLOG_URL + "logo.png"} alt="" />
                                     </DropdownTrig>
                                     <DropdownContent>
-                                        <DropdownItem to="http://google.com">Profile</DropdownItem>
+
+                                        <DropdownItem to="">
+
+                                            <div className="row">
+
+                                                <div className="col">
+                                                    <Link
+                                                        className="dropdown-item"
+                                                        to={"/user/" + user.username}
+                                                    >
+                                                        {user.name}
+                                                        <br />
+                                                        {localStorage.getItem('username')}
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </DropdownItem>
+
+                                        <DropdownItem>
+                                            <Link to="/write">Write Story</Link>
+                                        </DropdownItem>
+
+                                        <DropdownItem>
+                                            <Link to="/me/stories">My Stories</Link>
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <button
+                                                onClick={logout}
+                                            >
+                                                Logout
+                                            </button>
+                                        </DropdownItem>
+
+                                        <DropdownItem>
+                                            <Link to="http://google.com">Hello World</Link>
+                                            <Link to="/google.com">Hello google</Link>
+                                            Profile
+                                        </DropdownItem>
+
                                     </DropdownContent>
-                                </Dropdown>
+                                </Dropdown> */}
 
 
                                 {localStorage.getItem('token') == null ? null : (
@@ -142,6 +181,7 @@ function Navbar(props) {
                                         <ul
                                             className="dropdown-menu"
                                             aria-labelledby="navbarDropdown"
+                                            style={{ left: "-100px", }}
                                         >
                                             <li>
                                                 <div className="row">

@@ -2885,12 +2885,11 @@ function Footer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Dropdown": () => (/* binding */ Dropdown),
-/* harmony export */   "DropdownTrig": () => (/* binding */ DropdownTrig),
 /* harmony export */   "DropdownContent": () => (/* binding */ DropdownContent),
+/* harmony export */   "DropdownTrig": () => (/* binding */ DropdownTrig),
 /* harmony export */   "DropdownItem": () => (/* binding */ DropdownItem)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/components/partials/navbar/style.css");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["children"],
@@ -2910,32 +2909,46 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
-
 function Dropdown(_ref) {
   var children = _ref.children;
+
+  var open = function open() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    } // Close the dropdown if the user clicks outside of it
+
+
+    window.onclick = function (event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    };
+  }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     id: "content",
+    onClick: open,
     className: "relative inline-block text-left",
     children: children
   });
 }
-function DropdownTrig(_ref2) {
+function DropdownContent(_ref2) {
   var children = _ref2.children,
       rest = _objectWithoutProperties(_ref2, _excluded);
-
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, _objectSpread(_objectSpread({}, rest), {}, {
-      className: "text-gray-700 block px-4 py-2 text-sm",
-      role: "menuitem",
-      tabIndex: "-1",
-      id: "menu-item-0",
-      children: children
-    }))
-  });
-}
-function DropdownContent(_ref3) {
-  var children = _ref3.children,
-      rest = _objectWithoutProperties(_ref3, _excluded2);
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", _objectSpread(_objectSpread({}, rest), {}, {
     className: "origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none",
@@ -2947,13 +2960,27 @@ function DropdownContent(_ref3) {
     children: children
   }));
 }
+function DropdownTrig(_ref3) {
+  var children = _ref3.children,
+      rest = _objectWithoutProperties(_ref3, _excluded2);
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", _objectSpread(_objectSpread({}, rest), {}, {
+      className: "text-gray-700 block px-4 py-2 text-sm",
+      role: "menuitem",
+      tabIndex: "-1",
+      id: "menu-item-0",
+      children: children
+    }))
+  });
+}
 function DropdownItem(_ref4) {
   var children = _ref4.children,
       rest = _objectWithoutProperties(_ref4, _excluded3);
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, _objectSpread(_objectSpread({}, rest), {}, {
-      className: "text-gray-700 block px-4 py-2 text-sm",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", _objectSpread(_objectSpread({}, rest), {}, {
+      className: "dropdown-item text-gray-700 block px-4 py-2 text-sm",
       role: "menuitem",
       tabIndex: "-1",
       id: "menu-item-0",
@@ -3075,11 +3102,12 @@ function Navbar(props) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("form", {
           className: "d-flex",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
-            className: "me-2 w-full h-full px-3 text-gray-300 bg-gray-600 rounded-lg focus:outline-none",
+            className: "me-2 w-full h-full px-3 rounded-lg focus:outline-none",
             type: "search",
             placeholder: "Search",
             "aria-label": "Search",
             style: {
+              color: "black",
               width: "30vw",
               height: "40px"
             }
@@ -3115,21 +3143,7 @@ function Navbar(props) {
                   to: "/register",
                   children: "Register"
                 })
-              }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__.Dropdown, {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__.DropdownTrig, {
-                  to: "#",
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
-                    className: "profile-min",
-                    src: _config_constant__WEBPACK_IMPORTED_MODULE_1__.BLOG_URL + "logo.png",
-                    alt: ""
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__.DropdownContent, {
-                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__.DropdownItem, {
-                    to: "http://google.com",
-                    children: "Profile"
-                  })
-                })]
-              }), localStorage.getItem('token') == null ? null : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
+              }) : null, localStorage.getItem('token') == null ? null : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("li", {
                 className: "nav-item dropdown" // style={{ right: "150%", }}
                 ,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Link, {
@@ -3147,6 +3161,9 @@ function Navbar(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("ul", {
                   className: "dropdown-menu",
                   "aria-labelledby": "navbarDropdown",
+                  style: {
+                    left: "-100px"
+                  },
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("li", {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
                       className: "row",
