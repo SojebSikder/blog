@@ -38,6 +38,7 @@ function View(props) {
 
     useEffect(() => {
         updateUi();
+        window.scrollTo(0, 0);
         // console.log(props);
     }, [])
     return (
@@ -70,7 +71,7 @@ function View(props) {
                                             <img
                                                 src={Constant.PROFILE_URL + "logo.png"}
                                                 className="profile-min card-img-top"
-                                                
+
                                             />
                                         ) : (
                                             <>
