@@ -2890,6 +2890,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "DropdownItem": () => (/* binding */ DropdownItem)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/components/partials/navbar/style.css");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["children"],
@@ -2909,6 +2910,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 
 
+
 function Dropdown(_ref) {
   var children = _ref.children;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -2922,7 +2924,7 @@ function DropdownTrig(_ref2) {
       rest = _objectWithoutProperties(_ref2, _excluded);
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", _objectSpread(_objectSpread({}, rest), {}, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, _objectSpread(_objectSpread({}, rest), {}, {
       className: "text-gray-700 block px-4 py-2 text-sm",
       role: "menuitem",
       tabIndex: "-1",
@@ -2950,7 +2952,7 @@ function DropdownItem(_ref4) {
       rest = _objectWithoutProperties(_ref4, _excluded3);
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", _objectSpread(_objectSpread({}, rest), {}, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, _objectSpread(_objectSpread({}, rest), {}, {
       className: "text-gray-700 block px-4 py-2 text-sm",
       role: "menuitem",
       tabIndex: "-1",
@@ -3115,10 +3117,15 @@ function Navbar(props) {
                 })
               }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__.Dropdown, {
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__.DropdownTrig, {
-                  children: "Hello World"
+                  to: "#",
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+                    className: "profile-min",
+                    src: _config_constant__WEBPACK_IMPORTED_MODULE_1__.BLOG_URL + "logo.png",
+                    alt: ""
+                  })
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__.DropdownContent, {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_Dropdown__WEBPACK_IMPORTED_MODULE_4__.DropdownItem, {
-                    href: "http://google.com",
+                    to: "http://google.com",
                     children: "Profile"
                   })
                 })]

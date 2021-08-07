@@ -111,11 +111,13 @@ function Navbar(props) {
 
 
                                 <Dropdown>
-                                    <DropdownTrig>
-                                        Hello World
+                                    <DropdownTrig to="#">
+                                        <img
+                                            className="profile-min"
+                                            src={Constant.BLOG_URL + "logo.png"} alt="" />
                                     </DropdownTrig>
                                     <DropdownContent>
-                                        <DropdownItem href="http://google.com">Profile</DropdownItem>
+                                        <DropdownItem to="http://google.com">Profile</DropdownItem>
                                     </DropdownContent>
                                 </Dropdown>
 

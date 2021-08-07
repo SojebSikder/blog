@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import './style.css';
 
 export function Dropdown({ children }) {
@@ -13,7 +14,7 @@ export function Dropdown({ children }) {
 export function DropdownTrig({ children, ...rest }) {
     return (
         <div>
-            <a
+            <Link
                 {...rest}
                 className="text-gray-700 block px-4 py-2 text-sm"
                 role="menuitem"
@@ -21,7 +22,7 @@ export function DropdownTrig({ children, ...rest }) {
                 id="menu-item-0"
             >
                 {children}
-            </a>
+            </Link>
         </div>
     )
 }
@@ -44,7 +45,7 @@ export function DropdownContent({ children, ...rest }) {
 export function DropdownItem({ children, ...rest }) {
     return (
         <div>
-            <a
+            <Link
                 {...rest}
                 className="text-gray-700 block px-4 py-2 text-sm"
                 role="menuitem"
@@ -52,7 +53,7 @@ export function DropdownItem({ children, ...rest }) {
                 id="menu-item-0"
             >
                 {children}
-            </a>
+            </Link>
         </div>
     )
 }
