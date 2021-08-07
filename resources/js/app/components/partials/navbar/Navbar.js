@@ -5,6 +5,7 @@ import * as Constant from '../../../config/constant';
 import Auth from '../../../api/Auth';
 
 import Input from '../../input';
+import { Dropdown, DropdownTrig, DropdownContent, DropdownItem } from './Dropdown';
 import './style.css';
 
 
@@ -44,10 +45,14 @@ function Navbar(props) {
                     <Link className="navbar-brand" to="/">Blog</Link>
                     <form className="d-flex">
                         <input
-                            className="form-control me-2"
+                            className="me-2 w-full h-full px-3 text-gray-300 bg-gray-600 rounded-lg focus:outline-none"
                             type="search"
                             placeholder="Search"
                             aria-label="Search"
+                            style={{
+                                width: "30vw",
+                                height: "40px",
+                            }}
                         />
                         {/* <Input
                         className="form-control"
@@ -55,6 +60,7 @@ function Navbar(props) {
                             placeholder="Search"
                             aria-label="Search"
                         /> */}
+
                     </form>
 
                     <button
@@ -70,8 +76,12 @@ function Navbar(props) {
                     </button>
 
 
-                    <div
+                    {/* <div
                         className="collapse justify-content-center navbar-collapse"
+                        id="navbarSupportedContent"
+                    > */}
+                    <div
+                        className="collapse justify-content-end navbar-collapse"
                         id="navbarSupportedContent"
                     >
                         <div>
@@ -98,6 +108,18 @@ function Navbar(props) {
                                 <Link className="nav-link" to="/">Link</Link>
                             </li> */}
 
+
+
+                                <Dropdown>
+                                    <DropdownTrig>
+                                        Hello World
+                                    </DropdownTrig>
+                                    <DropdownContent>
+                                        <DropdownItem href="http://google.com">Profile</DropdownItem>
+                                    </DropdownContent>
+                                </Dropdown>
+
+
                                 {localStorage.getItem('token') == null ? null : (
                                     <li
                                         className="nav-item dropdown"
@@ -121,9 +143,7 @@ function Navbar(props) {
                                         >
                                             <li>
                                                 <div className="row">
-                                                    {/* <img
-                                                    className="profile-min"
-                                                    src={Constant.BLOG_URL + "logo.png"} alt="" /> */}
+
                                                     <div className="col">
                                                         <Link
                                                             className="dropdown-item"
@@ -175,7 +195,7 @@ function Navbar(props) {
 
                     </div>
                 </div>
-            </nav>
+            </nav >
         </>
     )
 }

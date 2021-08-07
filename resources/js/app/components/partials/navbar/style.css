@@ -10,3 +10,12 @@
     max-width: 100%;
     height: auto;
 }
+
+#menu-content{
+    display: none;
+}
+
+
+#content:hover #menu-content {
+    display: block;
+}
