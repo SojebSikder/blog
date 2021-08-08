@@ -25,7 +25,7 @@ class UserController extends Controller
     public function __construct()
     {
         //$this->middleware('auth:api', ['except' => ['login', 'register', 'refresh', 'logout']]);
-        $this->middleware('auth:api', ['except' => ['login', 'register', 'refresh', 'checkAuth']]);
+        $this->middleware('auth:api', ['except' => ['show', 'login', 'register', 'refresh', 'checkAuth']]);
     }
 
     public function index(Request $request)

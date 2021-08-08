@@ -1,7 +1,7 @@
 import axios from "axios";
 import Config from "../config/app_config";
 const Auth = {
-    
+
     getUserByToken: (successCb, failCb) => {
         axios.get(Config.getApiUrl() + '/user?client=1', { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
             .then(response => {
