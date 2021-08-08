@@ -17,8 +17,8 @@ export const Index = (props) => {
         <>
             <Navbar />
             <div className="container">
-                <h1>{props.blog.title}</h1>
-                <h1>{props.user.name}</h1>
+                {/* <h1>{props.blog.title}</h1>
+                <h1>{props.user.name}</h1> */}
 
                 <div className="grid grid-cols-12">
                     <aside className="col-span-12 mb-5 md:mb-0 md:col-span-3">
@@ -34,13 +34,14 @@ export const Index = (props) => {
                             <h2 className="flex items-center text-2xl dark:text-gray-200">
                                 <span className="inline-block w-2 h-2 mr-2 rounded-full bg-green-500"></span>
 
-                                Sojeb Sikder
-                            </h2> <p className="text-gray-600 dark:text-gray-400">@sojebsikder</p>
+                                {props.user.name}
+                            </h2> <p className="text-gray-600 dark:text-gray-400">@{props.user.username}</p>
                             <p className="mt-2 dark:text-gray-300">
 
                             </p>
                         </div>
-                        <div className="mt-4">
+
+                        {/* <div className="mt-4">
                             <div className="flex items-center mb-2">
                                 <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24"
                                     strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg"
@@ -52,27 +53,40 @@ export const Index = (props) => {
                                 <a target="_blank" href="http://www.github.com/sojebsikder"
                                     className="text-gray-800 dark:text-gray-400">sojebsikder</a>
                             </div>
-                        </div>
-                        <div className="mt-5">
+                        </div> */}
+
+                        {/* <div className="mt-5">
                             <h3 className="text-base font-bold text-gray-800 dark:text-gray-400">
                                 আমার অন্যান্য সোশাল লিংকসমুহ
                             </h3>
                             <div className="flex space-x-2">
 
                             </div>
-                        </div>
+                        </div> */}
+
                     </aside>
 
                     <main className="col-span-12 md:col-span-9 md:px-4">
                         <div className="min-h-screen p-4 bg-white rounded shadow dark:bg-gray-800 dark:text-white">
                             <div className="flex mb-4 border-b">
-                                <a href="/sojebsikder" className="active-tab nuxt-link-active" aria-current="page">
+                                <a
+                                    href="/sojebsikder"
+                                    className="active-tab nuxt-link-active"
+                                    aria-current="page"
+                                >
                                     <div className="flex items-center pb-2 mr-3 cursor-pointer profile-tab-button">
                                         <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="mr-2 text-gray-800 dark:text-gray-300">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                        <span>প্রোফাইল</span></div></a>
-                                <a href="/sojebsikder/diaries" className="">
-                                    <div className="flex items-center pb-2 border-b-2 border-transparent cursor-pointer profile-tab-button">
+                                        <span>প্রোফাইল</span>
+                                    </div>
+                                </a>
+                                <a
+                                    href="/sojebsikder/diaries"
+                                    className=""
+                                >
+                                    <div
+                                        className="flex items-center pb-2 border-b-2 border-transparent cursor-pointer profile-tab-button"
+                                    >
                                         <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="mr-2 text-gray-800 dark:text-gray-300">
                                             <path strokeLinecap="round" strokeLinejoin="round"
                                                 strokeWidth="2"
