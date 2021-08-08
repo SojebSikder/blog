@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
+// Components
 import Markdown from '../../components/markdown/Markdown';
+import Spinner from '../../components/spinner'
 // config
 import * as Constant from '../../config/constant';
 // action
@@ -21,7 +23,7 @@ function Row(props) {
     return (
 
         <>
-            {props.blogs.map((blog) => {
+            {props.spinner == true ? <Spinner /> : props.blogs.map((blog) => {
                 return (
                     <div key={blog.id}>
                         <div className="d-flex justify-content-center">
@@ -85,7 +87,8 @@ function Row(props) {
 const mapStateToProps = (state, ownProps) => {
 
     return {
-        blogs: state.blog.blogs
+        blogs: state.blog.blogs,
+        spinner: state.blog.spinner
     };
 };
 
