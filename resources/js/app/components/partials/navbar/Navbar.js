@@ -91,6 +91,14 @@ function Navbar(props) {
                                 <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li> */}
 
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                                        </svg>
+                                    </Link>
+                                </li>
+
                                 {localStorage.getItem('token') == null ? (
                                     <li className="nav-item">
                                         <Link className="nav-link" to="/login">Login</Link>
@@ -104,76 +112,15 @@ function Navbar(props) {
                                 ) : null}
 
 
-
                                 {/* <li className="nav-item">
                                 <Link className="nav-link" to="/">Link</Link>
-                            </li> */}
+                                </li> */}
 
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                                        </svg>
-                                    </Link>
-                                </li>
-
-
-
-
-                                {/* <Dropdown>
-                                    <DropdownTrig to="#">
-                                        <img
-                                            className="profile-min"
-                                            src={Constant.BLOG_URL + "logo.png"} alt="" />
-                                    </DropdownTrig>
-                                    <DropdownContent>
-
-                                        <DropdownItem to="">
-
-                                            <div className="row">
-
-                                                <div className="col">
-                                                    <Link
-                                                        className="dropdown-item"
-                                                        to={"/user/" + user.username}
-                                                    >
-                                                        {user.name}
-                                                        <br />
-                                                        {localStorage.getItem('username')}
-                                                    </Link>
-                                                </div>
-                                            </div>
-                                        </DropdownItem>
-
-                                        <DropdownItem>
-                                            <Link to="/write">Write Story</Link>
-                                        </DropdownItem>
-
-                                        <DropdownItem>
-                                            <Link to="/me/stories">My Stories</Link>
-                                        </DropdownItem>
-                                        <DropdownItem>
-                                            <button
-                                                onClick={logout}
-                                            >
-                                                Logout
-                                            </button>
-                                        </DropdownItem>
-
-                                        <DropdownItem>
-                                            <Link to="http://google.com">Hello World</Link>
-                                            <Link to="/google.com">Hello google</Link>
-                                            Profile
-                                        </DropdownItem>
-
-                                    </DropdownContent>
-                                </Dropdown> */}
 
 
                                 {localStorage.getItem('token') == null ? null : (
                                     <li
                                         className="nav-item dropdown"
-                                    // style={{ right: "150%", }}
                                     >
                                         <Link
                                             className="nav-link dropdown-toggle"
