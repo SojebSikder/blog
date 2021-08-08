@@ -24,9 +24,15 @@ export const Index = (props) => {
                     <aside className="col-span-12 mb-5 md:mb-0 md:col-span-3">
                         <div className="rounded w-72 md:w-full">
                             <div className="object-cover w-full h-auto overflow-hidden rounded">
-                                <img src="https://res.cloudinary.com/techdiary-dev/image/fetch/c_scale,f_auto,q_auto,w_300/https://lh3.googleusercontent.com/a-/AOh14GgvGj-kvMMSh1w0CMDyR4qpNSLSId5XTXmz4fhVqQ%3Ds96-c"
-                                    alt="sojebsikder" crop="scale" width="300" fetchformat="auto" quality="auto"
-                                    loading="lazy" className="w-full h-auto"
+                                <img
+                                    src="https://res.cloudinary.com/techdiary-dev/image/fetch/c_scale,f_auto,q_auto,w_300/https://lh3.googleusercontent.com/a-/AOh14GgvGj-kvMMSh1w0CMDyR4qpNSLSId5XTXmz4fhVqQ%3Ds96-c"
+                                    alt="sojebsikder"
+                                    crop="scale"
+                                    width="300"
+                                    fetchformat="auto"
+                                    quality="auto"
+                                    loading="lazy"
+                                    className="w-full h-auto"
                                 />
                             </div>
                         </div>
@@ -102,7 +108,7 @@ export const Index = (props) => {
                                 <div>
                                     <div className="readme-content dark:bg-gray-800">
                                         <div className="markdown">
-                                            <h1>Hello, I am Sojeb Sikder</h1>
+                                            <h1>{props.user.about_me}</h1>
                                         </div>
                                     </div>
                                 </div>

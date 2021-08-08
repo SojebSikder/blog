@@ -4061,7 +4061,7 @@ var Index = function Index(props) {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
                     className: "markdown",
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("h1", {
-                      children: "Hello, I am Sojeb Sikder"
+                      children: props.user.about_me
                     })
                   })
                 })
