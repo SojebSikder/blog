@@ -48,7 +48,9 @@ function View(props) {
         return (
             <>
                 <Navbar />
-                <Spinner />
+                <div className="d-flex justify-content-center" style={{ height: "500px" }}>
+                    <Spinner />
+                </div>
                 <Footer />
             </>
 

@@ -19,67 +19,78 @@ function Row(props) {
     useEffect(() => {
         props.listBlogs();
     }, [])
-    // console.log(props.blogs)
-    return (
 
-        <>
-            {props.spinner == true ? <Spinner /> : props.blogs.map((blog) => {
-                return (
-                    <div key={blog.id}>
-                        <div className="d-flex justify-content-center">
-                            <div className="card" style={{
-                                // width: "18rem" 
-                                // width: "50%",
-                                width: "80%",
-                            }}>
+    if (props.spinner == true) {
+        return (
+            <>
+                <div className="d-flex justify-content-center" style={{ height: "500px" }}>
+                    <Spinner />
+                </div>
 
-                                {
-                                    blog.image == null ? "" :
-                                        <img
+            </>
+        );
+    } else {
+        return (
+
+            <>
+                {props.blogs.map((blog) => {
+                    return (
+                        <div key={blog.id}>
+                            <div className="d-flex justify-content-center">
+                                <div className="card" style={{
+                                    // width: "18rem" 
+                                    // width: "50%",
+                                    width: "80%",
+                                }}>
+
+                                    {
+                                        blog.image == null ? "" :
+                                            <img
+                                                style={{
+                                                    width: "200px",
+                                                    margin: "0 auto",
+                                                }}
+                                                src={Constant.BLOG_URL + blog.image}
+                                                className="card-img-top"
+                                                alt={blog.title}
+                                            />
+                                    }
+                                    <div className="card-body">
+                                        <h5 className="title card-title">{blog.title}</h5>
+
+                                        {/* <p className="card-text">{blog.body}</p> */}
+                                        <Markdown>
+                                            {DataUtil.textShorten(blog.body, 400)}
+                                        </Markdown>
+                                        <br />
+                                        <br />
+
+                                        <Button
+                                            isLink="true"
+                                            to={"/blog/" + blog.user.username + "/" + blog.name}
+                                            className="btn btn-primary"
+                                            // style={{
+                                            //     textDecoration: "none"
+                                            // }}
                                             style={{
-                                                width: "200px",
-                                                margin: "0 auto",
+                                                textDecoration: "none"
                                             }}
-                                            src={Constant.BLOG_URL + blog.image}
-                                            className="card-img-top"
-                                            alt={blog.title}
-                                        />
-                                }
-                                <div className="card-body">
-                                    <h5 className="title card-title">{blog.title}</h5>
-
-                                    {/* <p className="card-text">{blog.body}</p> */}
-                                    <Markdown>
-                                        {DataUtil.textShorten(blog.body, 400)}
-                                    </Markdown>
-                                    <br />
-                                    <br />
-
-                                    <Button
-                                        isLink="true"
-                                        to={"/blog/" + blog.user.username + "/" + blog.name}
-                                        className="btn btn-primary"
-                                        // style={{
-                                        //     textDecoration: "none"
-                                        // }}
-                                        style={{
-                                            textDecoration: "none"
-                                        }}
-                                    >
-                                        Read more
-                                    </Button>
+                                        >
+                                            Read more
+                                        </Button>
 
 
+                                    </div>
                                 </div>
                             </div>
+                            <br />
                         </div>
-                        <br />
-                    </div>
-                )
-            })}
+                    )
+                })}
 
-        </>
-    )
+            </>
+        )
+    }
 }
 
 
