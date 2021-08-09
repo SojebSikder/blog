@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import { showBlog } from "../../store/actions/BlogActions";
 import { showUser } from "../../store/actions/UserActions";
 
+// components
+import Spinner from '../../components/spinner';
 import Navbar from '../../components/partials/navbar/Navbar';
 import Footer from '../../components/partials/footer/Footer';
 
@@ -13,6 +15,18 @@ export const Index = (props) => {
         props.showBlog("sojebsikder", "what-is-django");
         props.showUser("1");
     }, [])
+
+    if (props.spinner == true) {
+        return (
+            <>
+                <Navbar />
+                <div className="d-flex justify-content-center" style={{ height: "500px" }}>
+                    <Spinner />
+                </div>
+            </>
+
+        );
+    }
     return (
         <>
             <Navbar />
@@ -126,7 +140,7 @@ export const Index = (props) => {
 }
 
 const mapStateToProps = (state, ownProps) => ({
-
+    spinner: state.user.spinner,
     blog: state.blog.blog,
     user: state.user.user
 })
