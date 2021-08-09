@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 // action
 import { showBlog } from "../../store/actions/BlogActions";
 import { showUser } from "../../store/actions/UserActions";
-
+// config
+import * as Constant from '../../config/constant';
 // components
 import Spinner from '../../components/spinner';
 import Navbar from '../../components/partials/navbar/Navbar';
@@ -39,8 +40,8 @@ export const Index = (props) => {
                         <div className="rounded w-72 md:w-full">
                             <div className="object-cover w-full h-auto overflow-hidden rounded">
                                 <img
-                                    src="https://res.cloudinary.com/techdiary-dev/image/fetch/c_scale,f_auto,q_auto,w_300/https://lh3.googleusercontent.com/a-/AOh14GgvGj-kvMMSh1w0CMDyR4qpNSLSId5XTXmz4fhVqQ%3Ds96-c"
-                                    alt="sojebsikder"
+                                    src={Constant.PROFILE_URL + props.user.image}
+                                    alt={props.user.username}
                                     crop="scale"
                                     width="300"
                                     fetchformat="auto"
