@@ -72,6 +72,31 @@ function addUser(title, cb) {
 /**
  * show user action
  */
+function showUserByUsername(id) {
+    return function (dispatch, getState) {
+
+        dispatch({
+            type: UserTypes.SHOW_USER_BY_USERNAME
+        });
+
+        User.showOneByUsername(id).then(response => {
+            dispatch({
+                type: UserTypes.SHOW_USER_BY_USERNAME_SUCCESS,
+                data: response.data
+            });
+
+        }).catch(error => {
+            dispatch({
+                type: UserTypes.SHOW_USER_BY_USERNAME_FAILURE,
+                error: error.response.data
+            });
+        });
+    }
+}
+
+/**
+ * show user action
+ */
 function showUser(id) {
     return function (dispatch, getState) {
 
@@ -182,6 +207,7 @@ export {
     setUserDefaults,
     listUsers,
     addUser,
+    showUserByUsername,
     showUser,
     editUser,
     deleteUser,

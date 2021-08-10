@@ -33,11 +33,21 @@ class UserController extends Controller
         if (!auth("api")->user()) {
             return response()->json(['message' => 'Unauthorize'], 500);
         }
+
         if ($request->input('client') == "1") {
             // Using in (web, app) (client side)
             $result = User::where('id', auth("api")->user()->id)->first();
             $result->makeHidden(['api_token']);
             return response()->json(['data' => $result], 200);
+            //
+        } else if ($request->input('username')) {
+            // fetch data by username
+            // using in (web, app)
+            $username = $request->input('username');
+            $result = User::where('username', $username)->first();
+            $result->makeHidden(['api_token']);
+            return response()->json(['data' => $result], 200);
+            //
         } else {
 
             $result = User::orderBy('created_at', 'DESC')->get();

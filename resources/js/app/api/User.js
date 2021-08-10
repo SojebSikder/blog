@@ -11,6 +11,9 @@ const User = {
     showOne: (id) => {
         return axios.get(Config.getApiUrl() + '/user/' + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
+    showOneByUsername: (username) => {
+        return axios.get(Config.getApiUrl() + '/user?username=' + username, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
+    },
     edit: (payload, id) => {
         return axios.put(Config.getApiUrl() + '/user/' + id, payload, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
