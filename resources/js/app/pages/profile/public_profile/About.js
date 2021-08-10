@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
 
-export default function About() {
+// action
+import { showUserByUsername } from "../../../store/actions/UserActions";
+
+export const About = (props) => {
+    useEffect(() => {
+        props.showUserByUsername(props.match.params.username);
+    }, [])
+
     return (
         <>
             <main className="col-span-12 md:col-span-9 md:px-4">
@@ -8,7 +16,7 @@ export default function About() {
                     <div className="readme-content dark:bg-gray-800">
                         <div className="markdown">
                             {/* <h1>{props.user.about_me}</h1> */}
-                            <h1>About</h1>
+                            <h1>{props.user.about_me}</h1>
                         </div>
                     </div>
                 </div>
@@ -16,3 +24,17 @@ export default function About() {
         </>
     )
 }
+
+const mapStateToProps = (state) => ({
+    spinner: state.user.spinner,
+    user: state.user.user
+})
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        showUserByUsername: (id) => dispatch(showUserByUsername(id)),
+    };
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(About)

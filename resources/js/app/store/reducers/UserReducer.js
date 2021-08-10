@@ -73,21 +73,18 @@ const userReducer = function (state = initialState, action) {
         case UserTypes.SHOW_USER_BY_USERNAME:
             return {
                 ...state,
-                spinner: true,
-                create_update_spinner: true
+                // spinner: true,
             };
         case UserTypes.SHOW_USER_BY_USERNAME_SUCCESS:
             return {
                 ...state,
-                spinner: false,
-                create_update_spinner: false,
+                // spinner: false,
                 user: { ...action.data.data }
             };
         case UserTypes.SHOW_USER_BY_USERNAME_FAILURE:
             return {
                 ...state,
-                spinner: false,
-                create_update_spinner: false,
+                // spinner: false,
                 error_message: action.error.message
             };
 

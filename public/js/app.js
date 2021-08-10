@@ -4233,31 +4233,57 @@ function ProfileRoutes() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ About)
+/* harmony export */   "About": () => (/* binding */ About),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _store_actions_UserActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../store/actions/UserActions */ "./resources/js/app/store/actions/UserActions.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+ // action
 
 
 
-function About() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("main", {
+
+var About = function About(props) {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    props.showUserByUsername(props.match.params.username);
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("main", {
       className: "col-span-12 md:col-span-9 md:px-4",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "readme-content dark:bg-gray-800",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "markdown",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-              children: "About"
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h1", {
+              children: props.user.about_me
             })
           })
         })
       })
     })
   });
-}
+};
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    spinner: state.user.spinner,
+    user: state.user.user
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    showUserByUsername: function showUserByUsername(id) {
+      return dispatch((0,_store_actions_UserActions__WEBPACK_IMPORTED_MODULE_2__.showUserByUsername)(id));
+    }
+  };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, mapDispatchToProps)(About));
 
 /***/ }),
 
@@ -5690,22 +5716,17 @@ var userReducer = function userReducer() {
       });
 
     case _actionTypes_UserTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_USER_BY_USERNAME:
-      return _objectSpread(_objectSpread({}, state), {}, {
-        spinner: true,
-        create_update_spinner: true
-      });
+      return _objectSpread({}, state);
 
     case _actionTypes_UserTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_USER_BY_USERNAME_SUCCESS:
       return _objectSpread(_objectSpread({}, state), {}, {
-        spinner: false,
-        create_update_spinner: false,
+        // spinner: false,
         user: _objectSpread({}, action.data.data)
       });
 
     case _actionTypes_UserTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_USER_BY_USERNAME_FAILURE:
       return _objectSpread(_objectSpread({}, state), {}, {
-        spinner: false,
-        create_update_spinner: false,
+        // spinner: false,
         error_message: action.error.message
       });
 
