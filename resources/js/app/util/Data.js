@@ -33,7 +33,7 @@ const DataUtil = {
         return time;
     },
     date: (date) => {
-        new Date(date).toLocaleDateString("en-US")
+        return new Date(date).toLocaleDateString("en-US")
     },
     /**
      * Copy text to clipboard

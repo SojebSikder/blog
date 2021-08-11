@@ -4379,7 +4379,9 @@ var Stories = function Stories(props) {
               children: props.user.blogs.map(function (blog) {
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_StoryCard__WEBPACK_IMPORTED_MODULE_3__.default, {
-                    title: blog.title
+                    title: blog.title,
+                    date: blog.created_at,
+                    link: "/blog/" + props.match.params.username + "/" + blog.name
                   })
                 }, blog.id);
               })
@@ -4422,14 +4424,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ StoryCard)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _util_Data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../util/Data */ "./resources/js/app/util/Data.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
-function StoryCard(_ref) {
-  var title = _ref.title;
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-      children: title
+
+
+
+function StoryCard(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("main", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "mt-4 dark:bg-gray-800",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "flex mb-4 transition-all duration-500 ease-in-out rounded hover:bg-gray-100 dark:hover:bg-gray-700",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "ml-3",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h3", {
+              className: "text-lg text-gray-700 dark:text-gray-100",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
+                to: props.link,
+                className: "",
+                children: props.title
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+              className: "mt-3 text-sm font-bold text-gray-600 dark:text-gray-200",
+              children: _util_Data__WEBPACK_IMPORTED_MODULE_1__.default.date(props.date)
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "grid mt-4 place-content-center"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {})]
+      })
     })
   });
 }
@@ -6012,7 +6039,7 @@ var DataUtil = {
     return time;
   },
   date: function date(_date) {
-    new Date(_date).toLocaleDateString("en-US");
+    return new Date(_date).toLocaleDateString("en-US");
   },
 
   /**
@@ -10787,7 +10814,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "/* ::selection { \r\n    background-color: rgb(140, 4, 252); #E13300\r\n    color: white; \r\n}\r\n::-moz-selection { \r\n    background-color: rgb(140, 4, 252); \r\n    color: white; \r\n} */\r\n::-moz-selection { \r\n    background-color: #2488e6;\r\n    color: white; \r\n}\r\n::selection { \r\n    background-color: #2488e6;\r\n    color: white; \r\n}\r\n::-moz-selection { \r\n    background-color: #2488e6; \r\n    color: white; \r\n}\r\n\r\nbody{\r\n    font-family: Inter,sans-serif;\r\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "/* ::selection { \r\n    background-color: rgb(140, 4, 252); #E13300\r\n    color: white; \r\n}\r\n::-moz-selection { \r\n    background-color: rgb(140, 4, 252); \r\n    color: white; \r\n} */\r\n::-moz-selection { \r\n    background-color: #2488e6;\r\n    color: white; \r\n}\r\n::selection { \r\n    background-color: #2488e6;\r\n    color: white; \r\n}\r\n::-moz-selection { \r\n    background-color: #2488e6; \r\n    color: white; \r\n}\r\n\r\nbody{\r\n    font-family: Inter,sans-serif;\r\n}\r\n\r\na{\r\n    text-decoration: none;\r\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

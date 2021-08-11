@@ -36,6 +36,8 @@ export const Stories = (props) => {
 
                                             <StoryCard
                                                 title={blog.title}
+                                                date={blog.created_at}
+                                                link={"/blog/" + props.match.params.username + "/" + blog.name}
                                             />
 
                                         </div>
