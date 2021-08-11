@@ -4376,7 +4376,13 @@ var Stories = function Stories(props) {
             className: "readme-content dark:bg-gray-800",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               className: "markdown",
-              children: console.log(props.user.blogs)
+              children: props.user.blogs.map(function (blog) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_StoryCard__WEBPACK_IMPORTED_MODULE_3__.default, {
+                    title: blog.title
+                  })
+                }, blog.id);
+              })
             })
           })
         })
@@ -4388,7 +4394,7 @@ var Stories = function Stories(props) {
 var mapStateToProps = function mapStateToProps(state) {
   return {
     userStoriesSpinner: state.user.userStoriesSpinner,
-    user: state.user.user
+    user: state.user.userStories
   };
 };
 
@@ -5759,11 +5765,12 @@ var initialState = {
   //     is_admin: 0
   // },
   user: [],
+  userStories: [],
   success_message: "",
   error_message: "",
   validation_errors: {},
   spinner: false,
-  userStoriesSpinner: false,
+  userStoriesSpinner: true,
   list_spinner: false,
   create_update_spinner: false
 };
@@ -5832,6 +5839,7 @@ var userReducer = function userReducer() {
       return _objectSpread(_objectSpread({}, state), {}, {
         // spinner: false,
         userStoriesSpinner: false,
+        userStories: _objectSpread({}, action.data.data),
         user: _objectSpread({}, action.data.data)
       });
 

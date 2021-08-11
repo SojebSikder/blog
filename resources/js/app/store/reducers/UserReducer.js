@@ -10,11 +10,12 @@ const initialState = {
     //     is_admin: 0
     // },
     user: [],
+    userStories: [],
     success_message: "",
     error_message: "",
     validation_errors: {},
     spinner: false,
-    userStoriesSpinner: false,
+    userStoriesSpinner: true,
     list_spinner: false,
     create_update_spinner: false
 };
@@ -82,6 +83,7 @@ const userReducer = function (state = initialState, action) {
                 ...state,
                 // spinner: false,
                 userStoriesSpinner: false,
+                userStories: { ...action.data.data },
                 user: { ...action.data.data }
             };
         case UserTypes.SHOW_USER_BY_USERNAME_FAILURE:

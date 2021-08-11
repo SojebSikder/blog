@@ -23,8 +23,6 @@ export const Stories = (props) => {
             </>
         );
     } else {
-
-
         return (
             <>
                 <main className="col-span-12 md:col-span-9 md:px-4">
@@ -32,17 +30,17 @@ export const Stories = (props) => {
                         <div className="readme-content dark:bg-gray-800">
                             <div className="markdown">
 
-                                {console.log(props.user.blogs)}
-                                {/* {props.user.blogs.length == 0 ? "No Stories" : props.user.blogs.map((blog) => {
+                                {props.user.blogs.map((blog) => {
                                     return (
-                                        <>
+                                        <div key={blog.id}>
+
                                             <StoryCard
                                                 title={blog.title}
                                             />
 
-                                        </>
+                                        </div>
                                     )
-                                })} */}
+                                })}
 
 
                             </div>
@@ -56,7 +54,7 @@ export const Stories = (props) => {
 
 const mapStateToProps = (state) => ({
     userStoriesSpinner: state.user.userStoriesSpinner,
-    user: state.user.user
+    user: state.user.userStories
 })
 
 const mapDispatchToProps = (dispatch) => {
