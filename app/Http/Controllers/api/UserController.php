@@ -44,8 +44,19 @@ class UserController extends Controller
             // fetch data by username
             // using in (web, app)
             $username = $request->input('username');
-            $result = User::where('username', $username)->first();
-            $result->makeHidden(['api_token']);
+            $result = User::with('blogs')->where('username', $username)->first();
+            $result->makeHidden([
+                'api_token',
+                'email_verified_at',
+                'id',
+                'phone',
+                'status',
+                'created_at',
+                'updated_at',
+                'device_token',
+                'user_type',
+
+            ]);
             return response()->json(['data' => $result], 200);
             //
         } else {

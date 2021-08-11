@@ -46,10 +46,10 @@ class User extends Authenticatable implements JWTSubject
     ];
 
 
-
-
-
-
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class, 'user_id', 'id');
+    }
 
 
     public static function checkToken($token)

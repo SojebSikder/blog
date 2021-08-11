@@ -7,6 +7,13 @@ const Config = {
         return 'Blog';
     },
     /**
+     * Get app slogan
+     * @returns 
+     */
+    getAppSlogan: () => {
+        return 'Discover ideas';
+    },
+    /**
      * Get base url
      * @returns 
      */

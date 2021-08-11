@@ -14,6 +14,7 @@ const initialState = {
     error_message: "",
     validation_errors: {},
     spinner: false,
+    userStoriesSpinner: false,
     list_spinner: false,
     create_update_spinner: false
 };
@@ -74,17 +75,20 @@ const userReducer = function (state = initialState, action) {
             return {
                 ...state,
                 // spinner: true,
+                userStoriesSpinner: true,
             };
         case UserTypes.SHOW_USER_BY_USERNAME_SUCCESS:
             return {
                 ...state,
                 // spinner: false,
+                userStoriesSpinner: false,
                 user: { ...action.data.data }
             };
         case UserTypes.SHOW_USER_BY_USERNAME_FAILURE:
             return {
                 ...state,
                 // spinner: false,
+                userStoriesSpinner: false,
                 error_message: action.error.message
             };
 

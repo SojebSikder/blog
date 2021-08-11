@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import { Link, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux'
 // action
-import { showBlog } from "../../store/actions/BlogActions";
 import { showUser, showUserByUsername } from "../../store/actions/UserActions";
 // config
 import * as Constant from '../../config/constant';
@@ -16,8 +15,6 @@ import ProfileRoutes from './ProfileRoutes';
 
 export const Index = (props) => {
     useEffect(() => {
-        props.showBlog("sojebsikder", "what-is-django");
-        // props.showUser("1");
         props.showUserByUsername(props.match.params.username);
     }, [])
 
@@ -137,13 +134,11 @@ export const Index = (props) => {
 
 const mapStateToProps = (state, ownProps) => ({
     spinner: state.user.spinner,
-    blog: state.blog.blog,
     user: state.user.user
 })
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        showBlog: (username, blog_name) => dispatch(showBlog(username, blog_name)),
         showUser: (id) => dispatch(showUser(id)),
         showUserByUsername: (id) => dispatch(showUserByUsername(id)),
     };

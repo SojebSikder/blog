@@ -19,6 +19,10 @@ import Stories from './pages/profile/stories/Index';
 // Blog
 import Blog from './pages/dashboard/View';
 
+// Public pages
+import About from './pages/about';
+import Contact from './pages/contact';
+
 import Error404 from './components/messages/Error404';
 
 
@@ -37,6 +41,10 @@ export default function Routes() {
 
             <Route exact path='/blog/:username/:blogname' component={Blog} />
             <AuthenticatedRoute exact path='/write' component={Write} />
+
+            {/* Public pages */}
+            <Route exact path='/about' component={About} />
+            <Route exact path='/contact' component={Contact} />
 
             {/* <Route exact path='/dashboard' component={Dashboard} /> */}
             <Route exact path="/*" component={Error404} />

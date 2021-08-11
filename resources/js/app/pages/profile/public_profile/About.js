@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-
 // action
 import { showUserByUsername } from "../../../store/actions/UserActions";
 
 export const About = (props) => {
+
     useEffect(() => {
         props.showUserByUsername(props.match.params.username);
     }, [])

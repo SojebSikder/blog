@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
-
 // Components
 import Markdown from '../../components/markdown/Markdown';
 import Navbar from '../../components/partials/navbar/Navbar';
@@ -14,35 +13,42 @@ import { showBlog } from "../../store/actions/BlogActions";
 import DataUtil from '../../util/Data';
 
 import './style.css';
-import Blog from '../../api/Blog';
+// import Blog from '../../api/Blog';
 import Config from '../../config/app_config';
+import Header from '../../util/Header';
 
 function View(props) {
 
-    const [blog, setBlog] = useState([]);
+    const setMeta = () => {
+        Header.title(props.blog.title + " - " + Config.getAppName());
+        Header.setMeta('description', props.blog.body);
+        Header.setMeta('keywords', props.blog.keyword);
+    }
 
     const updateUi = () => {
         props.showBlog(props.match.params.username, props.match.params.blogname);
+
 
         // Blog.showByUserAndName(props.match.params.username, props.match.params.blogname)
         //     .then(response => {
         //         setBlog(response.data.data);
         //         console.log(response.data.data.user.image);
-
         //     }).catch(error => {
         //         if (eror) {
         //             alert(error.response.data);
-
         //         }
-
         //     });
     }
 
     useEffect(() => {
         updateUi();
         window.scrollTo(0, 0);
-        // console.log(props);
+
+        return () => {
+
+        }
     }, [])
+
 
     if (props.spinner == true) {
         return (
@@ -59,6 +65,7 @@ function View(props) {
         return (
 
             <>
+                {/* {setMeta()} */}
                 <Navbar />
                 <div className="container">
                     <div className="">
