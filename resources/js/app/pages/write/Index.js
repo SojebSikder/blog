@@ -31,7 +31,9 @@ export default function Index() {
         keywords: '',
         category_id: '',
         language_id: '',
-        published: '',
+    });
+    const [checkbox, setCheckbox] = useState({
+        published: true,
     });
     const [body, setBody] = useState('');
     const [image, setImage] = useState('');
@@ -39,10 +41,20 @@ export default function Index() {
     const [error_message, setError_message] = useState('')
     const [message, setMessage] = useState('')
 
+    /**
+     * Text Element handle
+     */
     const handleTextInput = (event) => {
         setTextInput({ ...textInput, [event.target.name]: event.target.value });
     };
+    // for checkbox
+    const handleCheckbox = (event) => {
+        setCheckbox({ ...checkbox, [event.target.name]: event.target.checked });
+    };
 
+    /**
+     * Upload image handle
+     */
     const onFileChange = (event) => {
         setImage(event.target.files[0]);
         // console.log(event.target.files[0]);
@@ -85,7 +97,8 @@ export default function Index() {
             data.append('image', image, image.name);
         }
 
-        data.append('published', textInput.publish == true ? 1 : 0);
+        // data.append('published', textInput.publish == true ? 1 : 0);
+        data.append('published', checkbox.published == true ? 1 : 2);
         data.append('category_id', textInput.category_id == null ? "1" : textInput.category_id);
         data.append('language_id', textInput.language_id == null ? "1" : textInput.language_id);
 
@@ -148,10 +161,32 @@ export default function Index() {
                                 }}
                                 className="btn btn-outline-primary"
                                 type="button"
+                                name="save"
                                 onClick={handleAddBlog}
                             >
-                                Publish
+                                Save
                             </button>
+
+
+                            <div
+                                className="form-check"
+                                style={{
+                                    float: "right",
+                                    marginTop: "20px",
+                                }}
+                            >
+                                <input
+                                    id="flexCheckDefault"
+                                    className="form-check-input"
+                                    type="checkbox"
+                                    name="published"
+                                    onChange={handleCheckbox}
+                                    checked={checkbox.published}
+                                />
+                                <label className="form-check-label" htmlFor="flexCheckDefault">
+                                    Publish
+                                </label>
+                            </div>
 
 
                             <div

@@ -44,6 +44,7 @@ class BlogController extends Controller
                 $query->select('id', 'username', 'image');
             }))
                 ->orderBy('id', 'DESC')
+                ->where('published', 1)
                 ->where('user_id', $user->id)
                 ->where('name', $blog_name)
                 ->first();
@@ -57,6 +58,7 @@ class BlogController extends Controller
                 $query->select('id', 'username');
             }))
                 ->orderBy('id', 'DESC')
+                ->where('published', 1)
                 ->get();
 
             // $result->makeHidden(['user:api_token']);

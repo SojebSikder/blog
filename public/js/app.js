@@ -4916,36 +4916,55 @@ function Index() {
     name: '',
     keywords: '',
     category_id: '',
-    language_id: '',
-    published: ''
+    language_id: ''
   }),
       _useState6 = _slicedToArray(_useState5, 2),
       textInput = _useState6[0],
       setTextInput = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+    published: true
+  }),
       _useState8 = _slicedToArray(_useState7, 2),
-      body = _useState8[0],
-      setBody = _useState8[1];
+      checkbox = _useState8[0],
+      setCheckbox = _useState8[1];
 
   var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState10 = _slicedToArray(_useState9, 2),
-      image = _useState10[0],
-      setImage = _useState10[1];
+      body = _useState10[0],
+      setBody = _useState10[1];
 
   var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState12 = _slicedToArray(_useState11, 2),
-      error_message = _useState12[0],
-      setError_message = _useState12[1];
+      image = _useState12[0],
+      setImage = _useState12[1];
 
   var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState14 = _slicedToArray(_useState13, 2),
-      message = _useState14[0],
-      setMessage = _useState14[1];
+      error_message = _useState14[0],
+      setError_message = _useState14[1];
+
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState16 = _slicedToArray(_useState15, 2),
+      message = _useState16[0],
+      setMessage = _useState16[1];
+  /**
+   * Text Element handle
+   */
+
 
   var handleTextInput = function handleTextInput(event) {
     setTextInput(_objectSpread(_objectSpread({}, textInput), {}, _defineProperty({}, event.target.name, event.target.value)));
+  }; // for checkbox
+
+
+  var handleCheckbox = function handleCheckbox(event) {
+    setCheckbox(_objectSpread(_objectSpread({}, checkbox), {}, _defineProperty({}, event.target.name, event.target.checked)));
   };
+  /**
+   * Upload image handle
+   */
+
 
   var onFileChange = function onFileChange(event) {
     setImage(event.target.files[0]); // console.log(event.target.files[0]);
@@ -4984,9 +5003,10 @@ function Index() {
 
     if (image.name) {
       data.append('image', image, image.name);
-    }
+    } // data.append('published', textInput.publish == true ? 1 : 0);
 
-    data.append('published', textInput.publish == true ? 1 : 0);
+
+    data.append('published', checkbox.published == true ? 1 : 2);
     data.append('category_id', textInput.category_id == null ? "1" : textInput.category_id);
     data.append('language_id', textInput.language_id == null ? "1" : textInput.language_id);
     _api_Blog__WEBPACK_IMPORTED_MODULE_5__.default.add(data, function (res) {
@@ -5039,8 +5059,27 @@ function Index() {
               },
               className: "btn btn-outline-primary",
               type: "button",
+              name: "save",
               onClick: handleAddBlog,
-              children: "Publish"
+              children: "Save"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+              className: "form-check",
+              style: {
+                "float": "right",
+                marginTop: "20px"
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("input", {
+                id: "flexCheckDefault",
+                className: "form-check-input",
+                type: "checkbox",
+                name: "published",
+                onChange: handleCheckbox,
+                checked: checkbox.published
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("label", {
+                className: "form-check-label",
+                htmlFor: "flexCheckDefault",
+                children: "Publish"
+              })]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("label", {
                 className: "label",
