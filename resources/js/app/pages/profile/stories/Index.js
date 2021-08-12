@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
+import { connect } from 'react-redux'
 import { Link } from "react-router-dom";
+// Components
 import Navbar from '../../../components/partials/navbar/Navbar'
-
 import Button from '../../../components/button';
+import ProfileRoutes from '../ProfileRoutes';
 
-export default function Index() {
 
-    
+export const Index = (props) => {
+
 
     useEffect(() => {
 
@@ -47,23 +49,53 @@ export default function Index() {
                                 </Button>
                             </div>
                         </div>
-                        {/* <div className="row">
-                            <div>
-                                <h1>My Stories</h1>
+
+
+                        <main className="col-span-12 md:col-span-9 md:px-4">
+                            <div className="min-h-screen p-4 bg-white rounded shadow dark:bg-gray-800 dark:text-white">
+                                <div className="flex mb-4 border-b">
+                                    <Link
+                                        to={"/me/stories"}
+                                        className="active-tab nuxt-link-active"
+                                        aria-current="page"
+                                    >
+                                        <div
+                                            className="flex items-center pb-2 mr-3 cursor-pointer profile-tab-button"
+                                        >
+                                            <span>Drafts</span>
+                                        </div>
+                                    </Link>
+                                    <Link
+                                        to={"/me/stories/public"}
+                                        className=""
+                                    >
+                                        <div
+                                            // className="flex items-center pb-2 border-b-2 border-transparent cursor-pointer profile-tab-button"
+                                            className="flex items-center pb-2 mr-3 cursor-pointer profile-tab-button"
+                                        >
+                                            <span>Published</span>
+                                        </div>
+                                    </Link>
+                                    {/* <Link
+                                        to={"/me/stories/responses"}
+                                        className=""
+                                    >
+                                        <div
+                                            // className="flex items-center pb-2 border-b-2 border-transparent cursor-pointer profile-tab-button"
+                                            className="flex items-center pb-2 mr-3 cursor-pointer profile-tab-button"
+                                        >
+                                            <span>Responses</span>
+                                        </div>
+                                    </Link> */}
+                                </div>
+
+                                <ProfileRoutes />
+
                             </div>
-
-                            <div>
-                                <button
-                                    className="btn btn-primary"
-                                >
-                                    Write Story
-                                </button>
-                            </div>
-
-                        </div> */}
+                        </main>
 
 
-                        <ul className="nav nav-tabs" id="myTab" role="tablist">
+                        {/* <ul className="nav nav-tabs" id="myTab" role="tablist">
                             <li className="nav-item" role="presentation">
                                 <button
                                     className="nav-link active"
@@ -145,7 +177,8 @@ export default function Index() {
                                 Responses
                             </div>
 
-                        </div>
+                        </div> */}
+
                     </div>
                 </div>
             </div>
@@ -153,3 +186,13 @@ export default function Index() {
         </>
     )
 }
+
+const mapStateToProps = (state) => ({
+
+})
+
+const mapDispatchToProps = {
+
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Index)
