@@ -5063,7 +5063,7 @@ function Index() {
     data.append('category_id', textInput.category_id == null ? "1" : textInput.category_id);
     data.append('language_id', textInput.language_id == null ? "1" : textInput.language_id);
     _api_Blog__WEBPACK_IMPORTED_MODULE_5__.default.add(data, function (res) {
-      setMessage('Posted successfully');
+      setMessage(res.data.message);
     }, function (err) {
       if (err) {
         setError_message(err.response.data.message);

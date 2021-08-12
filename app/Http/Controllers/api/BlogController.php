@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 use App\Lib\Helper;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
@@ -57,7 +58,7 @@ class BlogController extends Controller
             $result = Blog::with(array('category', 'user' => function ($query) {
                 $query->select('id', 'username');
             }))
-                ->orderBy('id', 'DESC')
+                ->orderBy('created_at', 'DESC')
                 ->where('published', 1)
                 ->get();
 
@@ -98,19 +99,26 @@ class BlogController extends Controller
         $result->user_id = auth("api")->user()->id;
         $result->title = $request->Input('title');
 
-
-        if (!Blog::where('name', '=', $request->input('name'))->exists()) {
+        // Check if blog name exist in current user
+        if (!Blog::where('user_id', auth("api")->user()->id)->where('name', '=', $request->input('name'))->exists()) {
             $result->name = $request->Input('name');
         } else {
             $result->name = $this->getUniqueUrl($request->Input('name'));
         }
 
-
         $result->body = html_entity_decode($request->Input('body'));
-        $result->keywords = $request->Input('keywords');
-        $result->category_id = $request->input('category_id');
-        $result->language_id = $request->input('language_id');
-        $result->published = $request->input('published');
+        if ($request->Input('keywords')) {
+            $result->keywords = $request->Input('keywords');
+        }
+        if ($request->input('category_id')) {
+            $result->category_id = $request->input('category_id');
+        }
+        if ($request->input('language_id')) {
+            $result->language_id = $request->input('language_id');
+        }
+        if ($request->input('published')) {
+            $result->published = $request->input('published');
+        }
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -123,7 +131,7 @@ class BlogController extends Controller
 
         return response()->json([
             'success' => true,
-            'message' => 'Created successfully'
+            'message' => 'Saved successfully'
         ], 201);
     }
 
@@ -215,9 +223,9 @@ class BlogController extends Controller
 
     public function getUniqueUrl($url)
     {
-        $slug = str_slug(trim($url), '-');
+        $slug = Str::slug(trim($url), '-');
 
-        $existingCount = Blog::where('url', 'like', $slug . '-%')->count();
+        $existingCount = Blog::where('name', 'like', "%{$slug}%")->count();
 
         if ($existingCount) {
             return $slug . '-' . ($existingCount);

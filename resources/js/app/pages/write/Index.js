@@ -103,7 +103,7 @@ export default function Index() {
         data.append('language_id', textInput.language_id == null ? "1" : textInput.language_id);
 
         BlogApi.add(data, (res) => {
-            setMessage('Posted successfully');
+            setMessage(res.data.message);
         }, (err) => {
             if (err) {
                 setError_message(err.response.data.message);
