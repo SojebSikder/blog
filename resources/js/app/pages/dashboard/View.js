@@ -57,7 +57,7 @@ function View(props) {
                 <div className="d-flex justify-content-center" style={{ height: "500px" }}>
                     <Spinner />
                 </div>
-                <Footer />
+                {/* <Footer /> */}
             </>
 
         );
@@ -189,7 +189,7 @@ function View(props) {
                     </div>
                 </div>
 
-                <Footer />
+                {/* <Footer /> */}
 
             </>
         )
