@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 // Components
 import Markdown from '../../components/markdown/Markdown';
 import Navbar from '../../components/partials/navbar/Navbar';
@@ -15,15 +16,15 @@ import DataUtil from '../../util/Data';
 import './style.css';
 // import Blog from '../../api/Blog';
 import Config from '../../config/app_config';
-import Header from '../../util/Header';
+// import Header from '../../util/Header';
 
 function View(props) {
 
-    const setMeta = () => {
-        Header.title(props.blog.title + " - " + Config.getAppName());
-        Header.setMeta('description', props.blog.body);
-        Header.setMeta('keywords', props.blog.keyword);
-    }
+    // const setMeta = () => {
+    //     Header.title(props.blog.title + " - " + Config.getAppName());
+    //     Header.setMeta('description', props.blog.body);
+    //     Header.setMeta('keywords', props.blog.keyword);
+    // }
 
     const updateUi = () => {
         props.showBlog(props.match.params.username, props.match.params.blogname);
@@ -43,10 +44,6 @@ function View(props) {
     useEffect(() => {
         updateUi();
         window.scrollTo(0, 0);
-
-        return () => {
-
-        }
     }, [])
 
 
@@ -65,8 +62,12 @@ function View(props) {
         return (
 
             <>
-                {/* {setMeta()} */}
                 <Navbar />
+                <Helmet>
+                    <title>{props.blog.title + " - " + Config.getAppName()}</title>
+                    <meta name="description" content={props.blog.body} />
+                    <meta name="keywords" content={props.blog.keyword} />
+                </Helmet>
                 <div className="container">
                     <div className="">
                         {/* Display blogs */}

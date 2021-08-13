@@ -7,6 +7,8 @@ import Auth from '../../../api/Auth';
 import Input from '../../input';
 import { Dropdown, DropdownTrig, DropdownContent, DropdownItem } from './Dropdown';
 import './style.css';
+import { Helmet } from 'react-helmet';
+import Config from '../../../config/app_config';
 
 
 function Navbar(props) {
@@ -33,6 +35,11 @@ function Navbar(props) {
 
     return (
         <>
+            <Helmet>
+                <title>{Config.getAppName()}</title>
+                <meta name="description" content={Config.getAppSlogan()} />
+                <meta name="keywords" content={Config.getAppName()} />
+            </Helmet>
 
             <nav
                 className="navbar navbar-expand-lg navbar-dark sticky-top bg-green-500"
