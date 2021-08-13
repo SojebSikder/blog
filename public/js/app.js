@@ -2280,14 +2280,23 @@ var Blog = {
     var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
     return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + "/blog?limit=" + page, {
       headers: {
-        Authorization: 'Bearer ' + localStorage.getItem("api_token")
+        Authorization: 'Bearer ' + localStorage.getItem("token")
+      }
+    });
+  },
+  // Daft
+  listDraft: function listDraft() {
+    var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + "/blog?draft=1&limit=" + page, {
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem("token")
       }
     });
   },
   showOne: function showOne(id) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + "/blog/" + id, {
       headers: {
-        Authorization: 'Bearer ' + localStorage.getItem("api_token")
+        Authorization: 'Bearer ' + localStorage.getItem("token")
       }
     });
   },
@@ -2301,7 +2310,7 @@ var Blog = {
   showByUserAndName: function showByUserAndName(username, blog_name) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + "/blog?username=" + username + "&name=" + blog_name, {
       headers: {
-        Authorization: 'Bearer ' + localStorage.getItem("api_token")
+        Authorization: 'Bearer ' + localStorage.getItem("token")
       }
     });
   },
@@ -4522,23 +4531,60 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../store/actions/BlogActions */ "./resources/js/app/store/actions/BlogActions.js");
+/* harmony import */ var _components_spinner__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../components/spinner */ "./resources/js/app/components/spinner/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+ // action
+
+ // components
+
 
 
 
 var Drafts = function Drafts(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+  var updateUi = function updateUi() {
+    props.showDraft();
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    updateUi();
+  }, []);
+
+  if (props.spinner == true) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "d-flex justify-content-center",
+        style: {
+          height: "500px"
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_spinner__WEBPACK_IMPORTED_MODULE_3__.default, {})
+      })
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h1", {
       children: "Drafts"
     })
   });
 };
 
 var mapStateToProps = function mapStateToProps(state) {
-  return {};
+  return {
+    spinner: state.blog.spinner,
+    draft: state.blog.draft
+  };
 };
 
-var mapDispatchToProps = {};
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    showDraft: function showDraft() {
+      return dispatch((0,_store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_2__.showDraft)());
+    }
+  };
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, mapDispatchToProps)(Drafts));
 
 /***/ }),
@@ -5274,14 +5320,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "LIST_BLOG_FAILURE": () => (/* binding */ LIST_BLOG_FAILURE),
 /* harmony export */   "SHOW_BLOG": () => (/* binding */ SHOW_BLOG),
 /* harmony export */   "SHOW_BLOG_SUCCESS": () => (/* binding */ SHOW_BLOG_SUCCESS),
-/* harmony export */   "SHOW_BLOG_FAILURE": () => (/* binding */ SHOW_BLOG_FAILURE)
+/* harmony export */   "SHOW_BLOG_FAILURE": () => (/* binding */ SHOW_BLOG_FAILURE),
+/* harmony export */   "SHOW_DRAFT": () => (/* binding */ SHOW_DRAFT),
+/* harmony export */   "SHOW_DRAFT_SUCCESS": () => (/* binding */ SHOW_DRAFT_SUCCESS),
+/* harmony export */   "SHOW_DRAFT_FAILURE": () => (/* binding */ SHOW_DRAFT_FAILURE)
 /* harmony export */ });
+// show all blog
 var LIST_BLOG = 'LIST_BLOG';
 var LIST_BLOG_SUCCESS = 'LIST_BLOG_SUCCESS';
-var LIST_BLOG_FAILURE = 'LIST_BLOG_FAILURE';
+var LIST_BLOG_FAILURE = 'LIST_BLOG_FAILURE'; // Show single blog
+
 var SHOW_BLOG = 'SHOW_BLOG';
 var SHOW_BLOG_SUCCESS = 'SHOW_BLOG_SUCCESS';
-var SHOW_BLOG_FAILURE = 'SHOW_BLOG_FAILURE';
+var SHOW_BLOG_FAILURE = 'SHOW_BLOG_FAILURE'; // Draft
+
+var SHOW_DRAFT = 'SHOW_DRAFT';
+var SHOW_DRAFT_SUCCESS = 'SHOW_DRAFT_SUCCESS';
+var SHOW_DRAFT_FAILURE = 'SHOW_DRAFT_FAILURE';
 
 /***/ }),
 
@@ -5386,14 +5441,15 @@ var RESET_USER_FIELDS = 'RESET_USER_FIELDS';
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "listBlogs": () => (/* binding */ listBlogs),
-/* harmony export */   "showBlog": () => (/* binding */ showBlog)
+/* harmony export */   "showBlog": () => (/* binding */ showBlog),
+/* harmony export */   "showDraft": () => (/* binding */ showDraft)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/BlogTypes */ "./resources/js/app/store/actionTypes/BlogTypes.js");
 /* harmony import */ var _api_Blog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../api/Blog */ "./resources/js/app/api/Blog.js");
 
 
 /**
- * list Data action
+ * list blog action
  */
 
 function listBlogs() {
@@ -5431,6 +5487,30 @@ function showBlog(username, blog_name) {
     _api_Blog__WEBPACK_IMPORTED_MODULE_1__.default.showByUserAndName(username, blog_name).then(function (response) {
       dispatch({
         type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG_SUCCESS,
+        data: response.data.data
+      });
+    })["catch"](function (error) {
+      dispatch({
+        type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG_FAILURE,
+        error: error.response.data
+      });
+    });
+  };
+}
+/**
+ * Show current user draft action
+ */
+
+
+function showDraft() {
+  var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  return function (dispatch, getState) {
+    dispatch({
+      type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_DRAFT
+    });
+    _api_Blog__WEBPACK_IMPORTED_MODULE_1__.default.listDraft(page).then(function (response) {
+      dispatch({
+        type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_DRAFT_SUCCESS,
         data: response.data.data
       });
     })["catch"](function (error) {
@@ -5678,6 +5758,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var initialState = {
   blogs: [],
   blog: [],
+  draft: [],
   spinner: false
 };
 
@@ -5716,6 +5797,24 @@ var blogReducer = function blogReducer() {
       });
 
     case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG_FAILURE:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spinner: false,
+        error_message: action.error
+      });
+    // Show current user draft
+
+    case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_DRAFT:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spinner: true
+      });
+
+    case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_DRAFT_SUCCESS:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spinner: false,
+        draft: action.data
+      });
+
+    case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_DRAFT_FAILURE:
       return _objectSpread(_objectSpread({}, state), {}, {
         spinner: false,
         error_message: action.error

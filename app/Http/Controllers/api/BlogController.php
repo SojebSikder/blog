@@ -52,6 +52,24 @@ class BlogController extends Controller
 
             // $result->makeHidden(['user:api_token']);
             return response()->json(['data' => $result], 200);
+        } else if ($request->Input('draft')) {
+            // Uses: (web, app)
+            // Fetch all draft from current logged user (web, app)
+
+            if (!auth("api")->user()) {
+                return response()->json(['message' => 'Unauthorize'], 500);
+            }
+
+            $result = Blog::with(array('category', 'user' => function ($query) {
+                $query->select('id', 'username');
+            }))
+                ->orderBy('created_at', 'DESC')
+                ->where('user_id', auth("api")->user()->id)
+                ->where('published', 2)
+                ->get();
+
+            // $result->makeHidden(['user:api_token']);
+            return response()->json(['data' => $result], 200);
         } else {
             // Uses: (web, app)
             // Fetch all blog (web, app)

@@ -45,6 +45,9 @@ class UserController extends Controller
             // using in (web, app)
             $username = $request->input('username');
             $result = User::with('blogs')->where('username', $username)->first();
+
+            $result->blogs->makeHidden(['user_id', 'updated_at']);
+
             $result->makeHidden([
                 'api_token',
                 'email_verified_at',

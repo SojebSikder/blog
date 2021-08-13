@@ -5,7 +5,7 @@ import Blog from '../../api/Blog';
 
 
 /**
- * list Data action
+ * list blog action
  */
 function listBlogs(page = 1) {
 
@@ -59,9 +59,36 @@ function showBlog(username, blog_name) {
     }
 }
 
+/**
+ * Show current user draft action
+ */
+function showDraft(page = 1) {
+    return function (dispatch, getState) {
+        dispatch({
+            type: BlogTypes.SHOW_DRAFT
+        });
+
+        Blog.listDraft(page).then(response => {
+            dispatch({
+                type: BlogTypes.SHOW_DRAFT_SUCCESS,
+                data: response.data.data
+            });
+
+        }).catch(error => {
+            dispatch({
+                type: BlogTypes.SHOW_BLOG_FAILURE,
+                error: error.response.data
+            });
+        });
+
+
+    }
+}
+
 
 
 export {
     listBlogs,
     showBlog,
+    showDraft,
 };

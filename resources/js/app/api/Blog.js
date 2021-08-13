@@ -4,10 +4,14 @@ import Config from "../config/app_config";
 const Blog = {
     // For redux
     list: (page = 1) => {
-        return axios.get(Config.getApiUrl() + "/blog?limit=" + page, { headers: { Authorization: 'Bearer ' + localStorage.getItem("api_token") } });
+        return axios.get(Config.getApiUrl() + "/blog?limit=" + page, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
+    },
+    // Daft
+    listDraft: (page = 1) => {
+        return axios.get(Config.getApiUrl() + "/blog?draft=1&limit=" + page, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
     showOne: (id) => {
-        return axios.get(Config.getApiUrl() + "/blog/" + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("api_token") } });
+        return axios.get(Config.getApiUrl() + "/blog/" + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
 
     /**
@@ -17,7 +21,7 @@ const Blog = {
      * @returns 
      */
     showByUserAndName: (username, blog_name) => {
-        return axios.get(Config.getApiUrl() + "/blog?username=" + username + "&name=" + blog_name, { headers: { Authorization: 'Bearer ' + localStorage.getItem("api_token") } });
+        return axios.get(Config.getApiUrl() + "/blog?username=" + username + "&name=" + blog_name, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
 
     //Raw

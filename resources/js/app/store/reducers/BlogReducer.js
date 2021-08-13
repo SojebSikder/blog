@@ -3,6 +3,7 @@ import * as BlogTypes from '../actionTypes/BlogTypes';
 const initialState = {
     blogs: [],
     blog: [],
+    draft: [],
     spinner: false,
 };
 
@@ -43,6 +44,28 @@ const blogReducer = function (state = initialState, action) {
                 spinner: false,
                 error_message: action.error
             };
+
+
+        // Show current user draft
+        case BlogTypes.SHOW_DRAFT:
+            return {
+                ...state,
+                spinner: true
+            };
+        case BlogTypes.SHOW_DRAFT_SUCCESS:
+            return {
+                ...state,
+                spinner: false,
+                draft: action.data,
+            };
+        case BlogTypes.SHOW_DRAFT_FAILURE:
+            return {
+                ...state,
+                spinner: false,
+                error_message: action.error
+            };
+
+
         default:
             return state;
     }
