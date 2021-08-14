@@ -230,8 +230,9 @@ export default function Index() {
                             >
                                 Upload Featured Photo
                             </label>
+                            <p>*max: 2MB</p>
 
-                            <br />
+                            {/* <br /> */}
 
                             <div
                                 style={{ flexWrap: "nowrap", }}
