@@ -1,16 +1,43 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 // action
 import { showDraft } from "../../../store/actions/BlogActions";
+// api
+import Blog from '../../../api/Blog';
 // components
 import StoryCard from '../public_profile/components/StoryCard';
 import Spinner from '../../../components/spinner';
+import { CustomSuccess, CustomError } from '../../../components/messages/CustomMsg';
 
 export const Drafts = (props) => {
+
+    const [error_message, setError_message] = useState('')
+    const [message, setMessage] = useState('')
+
+    const deleteById = (id) => {
+        setMessage(null);
+        setError_message(null);
+
+        var bool = confirm('Are you sure to delete (this cannot be undone)');
+
+        if (bool) {
+            Blog.deleteById(id)
+                .then((res) => {
+                    setMessage('Deleted Blog Successfully');
+                    updateUi();
+                }).catch((err) => {
+                    if (err) {
+                        setError_message(err.response.data.message);
+                    }
+                });
+        }
+    }
+
     const updateUi = () => {
         props.showDraft();
     }
+
     useEffect(() => {
         updateUi();
     }, [])
@@ -34,6 +61,12 @@ export const Drafts = (props) => {
 
             <main className="col-span-12 md:col-span-9 md:px-4">
                 <div>
+                    {
+                        error_message ? <CustomError msg={error_message} /> : null
+                    }
+                    {
+                        message ? <CustomSuccess msg={message} /> : null
+                    }
                     <div className="readme-content dark:bg-gray-800">
                         <div className="markdown">
 
@@ -54,11 +87,10 @@ export const Drafts = (props) => {
                                                 Edit
                                             </Link>
                                             <span style={{ marginLeft: "20px", }}></span>
-
-                                            <a href="#"
+                                            <button onClick={() => deleteById(blog.user_id)}
                                                 className="mr-2 text-sm font-bold text-red-400 hover:underline">
                                                 Delete
-                                            </a>
+                                            </button>
 
                                         </StoryCard>
 

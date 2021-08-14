@@ -205,7 +205,7 @@ class BlogController extends Controller
         ]);
 
         $result = Blog::where('id', $id)->first();
- 
+
         if ($request->Input('title')) {
             $result->title = $request->Input('title');
         }
@@ -261,15 +261,25 @@ class BlogController extends Controller
     public function destroy($id)
     {
         //
-        if (auth("api")->user()->user_type != "admin") {
+        // if (auth("api")->user()->user_type != "admin") {
+        //     return response()->json(['message' => 'Unauthorize'], 500);
+        // }
+        if (!auth("api")->user()) {
             return response()->json(['message' => 'Unauthorize'], 500);
         }
+
+        $user_id = auth("api")->user()->id;
+
         $result = Blog::where('id', $id)->first();
 
-        // remove image
-        FileLib::removeImage($result);
-        $result->delete();
-        return response()->json(['message' => 'Deleted successfully'], 200);
+        if ($user_id == $result->user_id) {
+            // remove image
+            FileLib::removeImage($result);
+            $result->delete();
+            return response()->json(['message' => 'Deleted successfully'], 200);
+        } else {
+            return response()->json(["message" => "You're not able to proceed :("], 200);
+        }
     }
 
     public function getUniqueUrl($url)

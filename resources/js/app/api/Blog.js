@@ -60,13 +60,8 @@ const Blog = {
             });
     },
 
-    deleteById: (id, successCb, failCb) => {
-        axios.delete(Config.getApiUrl() + '/blog/' + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
-            .then(response => {
-                successCb(response);
-            }).catch(err => {
-                failCb(err);
-            });
+    deleteById: (id) => {
+        return axios.delete(Config.getApiUrl() + '/blog/' + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
 }
 
