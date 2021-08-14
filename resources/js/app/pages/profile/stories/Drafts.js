@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 // action
 import { showDraft } from "../../../store/actions/BlogActions";
@@ -43,14 +44,15 @@ export const Drafts = (props) => {
                                         <StoryCard
                                             title={blog.title}
                                             date={blog.created_at}
-                                            link={"/blog/" + props.match.params.username + "/" + blog.name}
+                                            link="#"
+                                        // link={"/blog/" + blog.user.username + "/" + blog.name}
                                         >
                                             <span style={{ marginLeft: "20px", }}></span>
-                                            <a href="/dashboard/diaries/do-not-delete-this-s7SEsY/edit"
+                                            <Link to={"/edit/" + blog.name}
                                                 className="font-bold text-indigo-600 hover:text-indigo-900"
                                             >
                                                 Edit
-                                            </a>
+                                            </Link>
                                             <span style={{ marginLeft: "20px", }}></span>
 
                                             <a href="#"

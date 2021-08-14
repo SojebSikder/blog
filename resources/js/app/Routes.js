@@ -14,6 +14,7 @@ import ProfileStories from './pages/profile/Index';
 
 // Write
 import Write from './pages/write/Index';
+import Edit from './pages/write/Edit';
 import Stories from './pages/profile/stories/Index';
 
 // Blog
@@ -42,6 +43,7 @@ export default function Routes() {
 
             <Route exact path='/blog/:username/:blogname' component={Blog} />
             <AuthenticatedRoute exact path='/write' component={Write} />
+            <AuthenticatedRoute exact path='/edit/:slug' component={Edit} />
 
             {/* Public pages */}
             <Route exact path='/about' component={About} />

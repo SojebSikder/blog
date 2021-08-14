@@ -21,6 +21,7 @@ class CreateBlogsTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->string('image')->nullable();
+            // name is slug. Unique field
             $table->string('name')->unique()->nullable();
             $table->text('keywords')->nullable();
 
