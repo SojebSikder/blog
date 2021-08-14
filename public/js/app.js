@@ -4647,7 +4647,7 @@ var Drafts = function Drafts(props) {
                     }
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
                     onClick: function onClick() {
-                      return deleteById(blog.user_id);
+                      return deleteById(blog.id);
                     },
                     className: "mr-2 text-sm font-bold text-red-400 hover:underline",
                     children: "Delete"

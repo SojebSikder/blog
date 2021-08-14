@@ -87,7 +87,7 @@ export const Drafts = (props) => {
                                                 Edit
                                             </Link>
                                             <span style={{ marginLeft: "20px", }}></span>
-                                            <button onClick={() => deleteById(blog.user_id)}
+                                            <button onClick={() => deleteById(blog.id)}
                                                 className="mr-2 text-sm font-bold text-red-400 hover:underline">
                                                 Delete
                                             </button>
