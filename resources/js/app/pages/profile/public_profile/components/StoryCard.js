@@ -16,6 +16,7 @@ export default function StoryCard(props) {
                                 >
                                     {props.title}
                                 </Link>
+                                {props.children}
                             </h3>
                             <p className="mt-3 text-sm font-bold text-gray-600 dark:text-gray-200">
                                 {DataUtil.date(props.date)}

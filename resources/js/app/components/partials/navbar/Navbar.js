@@ -50,6 +50,8 @@ function Navbar(props) {
             >
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">Blog</Link>
+
+
                     <form className="d-flex">
                         <input
                             className="me-2 w-full h-full px-3 rounded-lg focus:outline-none"
@@ -62,13 +64,6 @@ function Navbar(props) {
                                 height: "40px",
                             }}
                         />
-                        {/* <Input
-                        className="form-control"
-                            type="text"
-                            placeholder="Search"
-                            aria-label="Search"
-                        /> */}
-
                     </form>
 
                     <button
@@ -156,7 +151,8 @@ function Navbar(props) {
                                                         >
                                                             {user.name}
                                                             <br />
-                                                            {localStorage.getItem('username')}
+                                                            {user.username}
+                                                            {/* {localStorage.getItem('username')} */}
                                                         </Link>
                                                     </div>
                                                 </div>
