@@ -318,6 +318,7 @@ export default function Index() {
                                     type="keywords"
                                     id="keywords"
                                     placeholder="Keywords here"
+                                    name="keywords"
                                     value={textInput.keywords}
                                     onChange={handleTextInput}
                                 />

@@ -52,7 +52,7 @@ const Blog = {
     },
     update: (id, data, successCb, failCb) => {
 
-        axios.post(Config.getApiUrl() + '/blog/' + id, data, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
+        axios.put(Config.getApiUrl() + '/blog/' + id, data, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } })
             .then(response => {
                 successCb(response);
             }).catch(err => {

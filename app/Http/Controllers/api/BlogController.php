@@ -113,8 +113,11 @@ class BlogController extends Controller
         }
 
         // Validation
+        // $request->validate([
+        //     'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $result = new Blog();
@@ -196,14 +199,39 @@ class BlogController extends Controller
             return response()->json(['message' => 'Unauthorize'], 500);
         }
 
+        // Validation
+        $request->validate([
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
         $result = Blog::where('id', $id)->first();
-        $result->title = $request->Input('title');
-        $result->name = $request->Input('name');
-        $result->body = html_entity_decode($request->Input('body'));
-        $result->keywords = $request->Input('keywords');
-        $result->category_id = $request->input('category_id');
-        $result->language_id = $request->input('language_id');
-        $result->published = $request->input('published');
+ 
+        if ($request->Input('title')) {
+            $result->title = $request->Input('title');
+        }
+
+        // Check if blog name exist in current user
+        if (!Blog::where('user_id', auth("api")->user()->id)->where('name', '=', $request->input('name'))->exists()) {
+            $result->name = $request->Input('name');
+        } else {
+            $result->name = $this->getUniqueUrl($request->Input('name'));
+        }
+        if ($request->Input('body')) {
+            $result->body = html_entity_decode($request->Input('body'));
+        }
+
+        if ($request->Input('keywords')) {
+            $result->keywords = $request->Input('keywords');
+        }
+        if ($request->input('category_id')) {
+            $result->category_id = $request->input('category_id');
+        }
+        if ($request->input('language_id')) {
+            $result->language_id = $request->input('language_id');
+        }
+        if ($request->input('published')) {
+            $result->published = $request->input('published');
+        }
 
         if ($request->hasFile('image')) {
             // remove image

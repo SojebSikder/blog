@@ -88,10 +88,19 @@ export default function Edit(props) {
 
         const data = new FormData();
 
-        data.append('title', textInput.title);
-        data.append('body', body);
-        data.append('name', textInput.name);
-        data.append('keywords', textInput.keywords);
+        if (textInput.title) {
+            data.append('title', textInput.title);
+        }
+        if (body) {
+            data.append('body', body);
+        }
+        if(textInput.name){
+            data.append('name', textInput.name);
+        }
+        if(textInput.keywords){
+            data.append('keywords', textInput.keywords);
+        }
+        
         if (image.name) {
             data.append('image', image, image.name);
         }
@@ -101,7 +110,9 @@ export default function Edit(props) {
         data.append('category_id', textInput.category_id == null ? "1" : textInput.category_id);
         data.append('language_id', textInput.language_id == null ? "1" : textInput.language_id);
 
-        BlogApi.add(data, (res) => {
+        data.append('_method', 'PATCH');
+
+        BlogApi.update(props.match.params.id, data, (res) => {
             setMessage(res.data.message);
         }, (err) => {
             if (err) {
@@ -128,11 +139,21 @@ export default function Edit(props) {
             }
         });
 
-        console.log("Hello World")
 
         // Fetch blog by id
         Blog.showOne(props.match.params.id).then((res) => {
             console.log(res.data.data);
+            setCheckbox({
+                ["published"]: res.data.data.published == 1 ? true : false,
+            });
+            setTextInput({
+                ["title"]: res.data.data.title,
+                ["name"]: res.data.data.name,
+                ["keywords"]: res.data.data.keywords,
+            });
+
+            setBody(res.data.data.body);
+
         }).catch((err) => {
             if (err) {
                 setError_message(err.response.data.message);
@@ -329,6 +350,7 @@ export default function Edit(props) {
                                     type="keywords"
                                     id="keywords"
                                     placeholder="Keywords here"
+                                    name="keywords"
                                     value={textInput.keywords}
                                     onChange={handleTextInput}
                                 />

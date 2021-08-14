@@ -2355,7 +2355,7 @@ var Blog = {
     });
   },
   update: function update(id, data, successCb, failCb) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default().post(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/blog/' + id, data, {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().put(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/blog/' + id, data, {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem("token")
       }
@@ -5165,10 +5165,22 @@ function Edit(props) {
     }
 
     var data = new FormData();
-    data.append('title', textInput.title);
-    data.append('body', body);
-    data.append('name', textInput.name);
-    data.append('keywords', textInput.keywords);
+
+    if (textInput.title) {
+      data.append('title', textInput.title);
+    }
+
+    if (body) {
+      data.append('body', body);
+    }
+
+    if (textInput.name) {
+      data.append('name', textInput.name);
+    }
+
+    if (textInput.keywords) {
+      data.append('keywords', textInput.keywords);
+    }
 
     if (image.name) {
       data.append('image', image, image.name);
@@ -5178,7 +5190,8 @@ function Edit(props) {
     data.append('published', checkbox.published == true ? 1 : 2);
     data.append('category_id', textInput.category_id == null ? "1" : textInput.category_id);
     data.append('language_id', textInput.language_id == null ? "1" : textInput.language_id);
-    _api_Blog__WEBPACK_IMPORTED_MODULE_5__.default.add(data, function (res) {
+    data.append('_method', 'PATCH');
+    _api_Blog__WEBPACK_IMPORTED_MODULE_5__.default.update(props.match.params.id, data, function (res) {
       setMessage(res.data.message);
     }, function (err) {
       if (err) {
@@ -5203,11 +5216,15 @@ function Edit(props) {
       if (err) {
         setError_message(err.response.data.message);
       }
-    });
-    console.log("Hello World"); // Fetch blog by id
+    }); // Fetch blog by id
 
     _api_Blog__WEBPACK_IMPORTED_MODULE_5__.default.showOne(props.match.params.id).then(function (res) {
+      var _setTextInput2;
+
       console.log(res.data.data);
+      setCheckbox(_defineProperty({}, "published", res.data.data.published == 1 ? true : false));
+      setTextInput((_setTextInput2 = {}, _defineProperty(_setTextInput2, "title", res.data.data.title), _defineProperty(_setTextInput2, "name", res.data.data.name), _defineProperty(_setTextInput2, "keywords", res.data.data.keywords), _setTextInput2));
+      setBody(res.data.data.body);
     })["catch"](function (err) {
       if (err) {
         setError_message(err.response.data.message);
@@ -5351,6 +5368,7 @@ function Edit(props) {
                 type: "keywords",
                 id: "keywords",
                 placeholder: "Keywords here",
+                name: "keywords",
                 value: textInput.keywords,
                 onChange: handleTextInput
               })]
@@ -5694,6 +5712,7 @@ function Index() {
                 type: "keywords",
                 id: "keywords",
                 placeholder: "Keywords here",
+                name: "keywords",
                 value: textInput.keywords,
                 onChange: handleTextInput
               })]
