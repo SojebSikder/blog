@@ -112,6 +112,11 @@ class BlogController extends Controller
             return response()->json(['message' => 'Unauthorize'], 500);
         }
 
+        // Validation
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
         $result = new Blog();
         $result->id = uniqid(true);
         $result->user_id = auth("api")->user()->id;
