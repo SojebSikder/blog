@@ -94,13 +94,13 @@ export default function Edit(props) {
         if (body) {
             data.append('body', body);
         }
-        if(textInput.name){
+        if (textInput.name) {
             data.append('name', textInput.name);
         }
-        if(textInput.keywords){
+        if (textInput.keywords) {
             data.append('keywords', textInput.keywords);
         }
-        
+
         if (image.name) {
             data.append('image', image, image.name);
         }
@@ -142,7 +142,7 @@ export default function Edit(props) {
 
         // Fetch blog by id
         Blog.showOne(props.match.params.id).then((res) => {
-            console.log(res.data.data);
+
             setCheckbox({
                 ["published"]: res.data.data.published == 1 ? true : false,
             });
@@ -151,8 +151,8 @@ export default function Edit(props) {
                 ["name"]: res.data.data.name,
                 ["keywords"]: res.data.data.keywords,
             });
-
             setBody(res.data.data.body);
+            setImage(res.data.data.image);
 
         }).catch((err) => {
             if (err) {

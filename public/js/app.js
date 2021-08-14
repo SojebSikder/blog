@@ -5221,10 +5221,10 @@ function Edit(props) {
     _api_Blog__WEBPACK_IMPORTED_MODULE_5__.default.showOne(props.match.params.id).then(function (res) {
       var _setTextInput2;
 
-      console.log(res.data.data);
       setCheckbox(_defineProperty({}, "published", res.data.data.published == 1 ? true : false));
       setTextInput((_setTextInput2 = {}, _defineProperty(_setTextInput2, "title", res.data.data.title), _defineProperty(_setTextInput2, "name", res.data.data.name), _defineProperty(_setTextInput2, "keywords", res.data.data.keywords), _setTextInput2));
       setBody(res.data.data.body);
+      setImage(res.data.data.image);
     })["catch"](function (err) {
       if (err) {
         setError_message(err.response.data.message);
