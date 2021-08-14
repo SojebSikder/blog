@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 export const CustomError = (props) => {
+
+    const [status, setStatus] = useState('');
+    useEffect(() => {
+        setStatus('show');
+    }, [])
+
     return (
         // <div>
         //     <div className="alert alert-danger">{props.msg}</div>
         // </div>
-        <div className="alert alert-danger alert-dismissible fade show" role="alert">
+        <div className={"alert alert-danger alert-dismissible fade " + status} role="alert">
             {props.msg}
             <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
