@@ -2146,7 +2146,7 @@ function Routes() {
       component: _pages_write_Index__WEBPACK_IMPORTED_MODULE_7__.default
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_AuthenticatedRoute__WEBPACK_IMPORTED_MODULE_1__.default, {
       exact: true,
-      path: "/edit/:slug",
+      path: "/edit/:id",
       component: _pages_write_Edit__WEBPACK_IMPORTED_MODULE_8__.default
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router__WEBPACK_IMPORTED_MODULE_15__.Route, {
       exact: true,
@@ -4594,7 +4594,7 @@ var Drafts = function Drafts(props) {
                       marginLeft: "20px"
                     }
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_6__.Link, {
-                    to: "/edit/" + blog.name,
+                    to: "/edit/" + blog.id,
                     className: "font-bold text-indigo-600 hover:text-indigo-900",
                     children: "Edit"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
@@ -5068,7 +5068,8 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function Edit() {
+
+function Edit(props) {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       categories = _useState2[0],
@@ -5199,6 +5200,15 @@ function Edit() {
     _api_Language__WEBPACK_IMPORTED_MODULE_7__.default.getAll(function (res) {
       setLanguages(res.data.data);
     }, function (err) {
+      if (err) {
+        setError_message(err.response.data.message);
+      }
+    });
+    console.log("Hello World"); // Fetch blog by id
+
+    _api_Blog__WEBPACK_IMPORTED_MODULE_5__.default.showOne(props.match.params.id).then(function (res) {
+      console.log(res.data.data);
+    })["catch"](function (err) {
       if (err) {
         setError_message(err.response.data.message);
       }

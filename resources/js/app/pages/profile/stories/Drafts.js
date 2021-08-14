@@ -48,7 +48,7 @@ export const Drafts = (props) => {
                                         // link={"/blog/" + blog.user.username + "/" + blog.name}
                                         >
                                             <span style={{ marginLeft: "20px", }}></span>
-                                            <Link to={"/edit/" + blog.name}
+                                            <Link to={"/edit/" + blog.id}
                                                 className="font-bold text-indigo-600 hover:text-indigo-900"
                                             >
                                                 Edit

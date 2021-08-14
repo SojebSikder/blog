@@ -43,7 +43,7 @@ export default function Routes() {
 
             <Route exact path='/blog/:username/:blogname' component={Blog} />
             <AuthenticatedRoute exact path='/write' component={Write} />
-            <AuthenticatedRoute exact path='/edit/:slug' component={Edit} />
+            <AuthenticatedRoute exact path='/edit/:id' component={Edit} />
 
             {/* Public pages */}
             <Route exact path='/about' component={About} />

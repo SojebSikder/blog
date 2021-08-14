@@ -14,14 +14,13 @@ import LanguageApi from '../../api/Language';
 // Style Component
 import Button from '../../components/button';
 
-
-
 import './style.css';
 import DataUtil from '../../util/Data';
+import Blog from '../../api/Blog';
 
 
 
-export default function Edit() {
+export default function Edit(props) {
 
     const [categories, setCategories] = useState([]);
     const [languages, setLanguages] = useState([]);
@@ -128,6 +127,18 @@ export default function Edit() {
                 setError_message(err.response.data.message);
             }
         });
+
+        console.log("Hello World")
+
+        // Fetch blog by id
+        Blog.showOne(props.match.params.id).then((res) => {
+            console.log(res.data.data);
+        }).catch((err) => {
+            if (err) {
+                setError_message(err.response.data.message);
+            }
+        });
+
     }
 
     useEffect(() => {
