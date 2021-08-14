@@ -43,8 +43,8 @@ export default function Index(props) {
             if (res.data.success == true) {
                 setMessage("Login Successfully");
                 localStorage.setItem("token", res.data.token);
-                localStorage.setItem("username", res.data.user.username);
-                localStorage.setItem("userType", res.data.user.user_type);
+                // localStorage.setItem("username", res.data.user.username);
+                // localStorage.setItem("userType", res.data.user.user_type);
                 props.history.push("/");
             } else {
                 setError_message("Something went wrong :(");
