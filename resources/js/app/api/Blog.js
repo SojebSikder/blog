@@ -10,6 +10,10 @@ const Blog = {
     listDraft: (page = 1) => {
         return axios.get(Config.getApiUrl() + "/blog?draft=1&limit=" + page, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
+    // published
+    listPublished: (page = 1) => {
+        return axios.get(Config.getApiUrl() + "/blog?published=1&limit=" + page, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
+    },
     showOne: (id) => {
         return axios.get(Config.getApiUrl() + "/blog/" + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },

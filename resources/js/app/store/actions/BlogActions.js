@@ -58,7 +58,31 @@ function showBlog(username, blog_name) {
         });
     }
 }
+/**
+ * Show current user published action
+ */
+function showPublished(page = 1) {
+    return function (dispatch, getState) {
+        dispatch({
+            type: BlogTypes.SHOW_PUBLISHED
+        });
 
+        Blog.listPublished(page).then(response => {
+            dispatch({
+                type: BlogTypes.SHOW_PUBLISHED_SUCCESS,
+                data: response.data.data
+            });
+
+        }).catch(error => {
+            dispatch({
+                type: BlogTypes.SHOW_PUBLISHED_FAILURE,
+                error: error.response.data
+            });
+        });
+
+
+    }
+}
 /**
  * Show current user draft action
  */
@@ -76,7 +100,7 @@ function showDraft(page = 1) {
 
         }).catch(error => {
             dispatch({
-                type: BlogTypes.SHOW_BLOG_FAILURE,
+                type: BlogTypes.SHOW_DRAFT_FAILURE,
                 error: error.response.data
             });
         });
@@ -90,5 +114,6 @@ function showDraft(page = 1) {
 export {
     listBlogs,
     showBlog,
+    showPublished,
     showDraft,
 };

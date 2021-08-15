@@ -1,9 +1,14 @@
 import * as BlogTypes from '../actionTypes/BlogTypes';
 
 const initialState = {
+    // List all valid blog in home page
     blogs: [],
+    // for single blog
     blog: [],
+    // For draft
     draft: [],
+    // This is for published post
+    publishedBlog: [],
     spinner: false,
 };
 
@@ -45,6 +50,25 @@ const blogReducer = function (state = initialState, action) {
                 error_message: action.error
             };
 
+
+        // Show current user published
+        case BlogTypes.SHOW_PUBLISHED:
+            return {
+                ...state,
+                spinner: true
+            };
+        case BlogTypes.SHOW_PUBLISHED_SUCCESS:
+            return {
+                ...state,
+                spinner: false,
+                publishedBlog: action.data,
+            };
+        case BlogTypes.SHOW_PUBLISHED_FAILURE:
+            return {
+                ...state,
+                spinner: false,
+                error_message: action.error
+            };
 
         // Show current user draft
         case BlogTypes.SHOW_DRAFT:

@@ -2299,6 +2299,15 @@ var Blog = {
       }
     });
   },
+  // published
+  listPublished: function listPublished() {
+    var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + "/blog?published=1&limit=" + page, {
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem("token")
+      }
+    });
+  },
   showOne: function showOne(id) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + "/blog/" + id, {
       headers: {
@@ -4786,24 +4795,151 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../store/actions/BlogActions */ "./resources/js/app/store/actions/BlogActions.js");
+/* harmony import */ var _api_Blog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../api/Blog */ "./resources/js/app/api/Blog.js");
+/* harmony import */ var _public_profile_components_StoryCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public_profile/components/StoryCard */ "./resources/js/app/pages/profile/public_profile/components/StoryCard.js");
+/* harmony import */ var _components_spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../components/spinner */ "./resources/js/app/components/spinner/index.js");
+/* harmony import */ var _components_messages_CustomMsg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../components/messages/CustomMsg */ "./resources/js/app/components/messages/CustomMsg.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+ // action
+
+ // api
+
+ // components
+
+
+
+
 
 
 
 var Published = function Published(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
-      children: "Published"
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      error_message = _useState2[0],
+      setError_message = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState4 = _slicedToArray(_useState3, 2),
+      message = _useState4[0],
+      setMessage = _useState4[1];
+
+  var deleteById = function deleteById(id) {
+    setMessage(null);
+    setError_message(null);
+    var bool = confirm('Are you sure to delete (this cannot be undone)');
+
+    if (bool) {
+      _api_Blog__WEBPACK_IMPORTED_MODULE_3__.default.deleteById(id).then(function (res) {
+        setMessage('Deleted Blog Successfully');
+        updateUi();
+      })["catch"](function (err) {
+        if (err) {
+          setError_message(err.response.data.message);
+        }
+      });
+    }
+  };
+
+  var updateUi = function updateUi() {
+    props.showPublished();
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    updateUi();
+  }, []);
+
+  if (props.spinner == true) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+        className: "d-flex justify-content-center",
+        style: {
+          height: "500px"
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_spinner__WEBPACK_IMPORTED_MODULE_5__.default, {})
+      })
+    });
+  }
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("main", {
+      className: "col-span-12 md:col-span-9 md:px-4",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+        children: [error_message ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_messages_CustomMsg__WEBPACK_IMPORTED_MODULE_6__.CustomError, {
+          msg: error_message
+        }) : null, message ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_components_messages_CustomMsg__WEBPACK_IMPORTED_MODULE_6__.CustomSuccess, {
+          msg: message
+        }) : null, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+          className: "readme-content dark:bg-gray-800",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+            className: "markdown",
+            children: props.publishedBlog.map(function (blog) {
+              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_public_profile_components_StoryCard__WEBPACK_IMPORTED_MODULE_4__.default, {
+                  title: blog.title,
+                  date: blog.created_at,
+                  link: "#" // link={"/blog/" + blog.user.username + "/" + blog.name}
+                  ,
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+                    style: {
+                      marginLeft: "20px"
+                    }
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
+                    to: "/edit/" + blog.id,
+                    className: "font-bold text-indigo-600 hover:text-indigo-900",
+                    children: "Edit"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
+                    style: {
+                      marginLeft: "20px"
+                    }
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("button", {
+                    onClick: function onClick() {
+                      return deleteById(blog.id);
+                    },
+                    className: "mr-2 text-sm font-bold text-red-400 hover:underline",
+                    children: "Delete"
+                  })]
+                })
+              }, blog.id);
+            })
+          })
+        })]
+      })
     })
   });
 };
 
 var mapStateToProps = function mapStateToProps(state) {
-  return {};
+  return {
+    spinner: state.blog.spinner,
+    publishedBlog: state.blog.publishedBlog
+  };
 };
 
-var mapDispatchToProps = {};
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    showPublished: function showPublished() {
+      return dispatch((0,_store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_2__.showPublished)());
+    }
+  };
+};
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,react_redux__WEBPACK_IMPORTED_MODULE_1__.connect)(mapStateToProps, mapDispatchToProps)(Published));
 
 /***/ }),
@@ -5775,6 +5911,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "SHOW_BLOG": () => (/* binding */ SHOW_BLOG),
 /* harmony export */   "SHOW_BLOG_SUCCESS": () => (/* binding */ SHOW_BLOG_SUCCESS),
 /* harmony export */   "SHOW_BLOG_FAILURE": () => (/* binding */ SHOW_BLOG_FAILURE),
+/* harmony export */   "SHOW_PUBLISHED": () => (/* binding */ SHOW_PUBLISHED),
+/* harmony export */   "SHOW_PUBLISHED_SUCCESS": () => (/* binding */ SHOW_PUBLISHED_SUCCESS),
+/* harmony export */   "SHOW_PUBLISHED_FAILURE": () => (/* binding */ SHOW_PUBLISHED_FAILURE),
 /* harmony export */   "SHOW_DRAFT": () => (/* binding */ SHOW_DRAFT),
 /* harmony export */   "SHOW_DRAFT_SUCCESS": () => (/* binding */ SHOW_DRAFT_SUCCESS),
 /* harmony export */   "SHOW_DRAFT_FAILURE": () => (/* binding */ SHOW_DRAFT_FAILURE)
@@ -5787,6 +5926,10 @@ var LIST_BLOG_FAILURE = 'LIST_BLOG_FAILURE'; // Show single blog
 var SHOW_BLOG = 'SHOW_BLOG';
 var SHOW_BLOG_SUCCESS = 'SHOW_BLOG_SUCCESS';
 var SHOW_BLOG_FAILURE = 'SHOW_BLOG_FAILURE'; // Draft
+
+var SHOW_PUBLISHED = 'SHOW_PUBLISHED';
+var SHOW_PUBLISHED_SUCCESS = 'SHOW_PUBLISHED_SUCCESS';
+var SHOW_PUBLISHED_FAILURE = 'SHOW_PUBLISHED_FAILURE'; // Draft
 
 var SHOW_DRAFT = 'SHOW_DRAFT';
 var SHOW_DRAFT_SUCCESS = 'SHOW_DRAFT_SUCCESS';
@@ -5896,6 +6039,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "listBlogs": () => (/* binding */ listBlogs),
 /* harmony export */   "showBlog": () => (/* binding */ showBlog),
+/* harmony export */   "showPublished": () => (/* binding */ showPublished),
 /* harmony export */   "showDraft": () => (/* binding */ showDraft)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/BlogTypes */ "./resources/js/app/store/actionTypes/BlogTypes.js");
@@ -5952,6 +6096,30 @@ function showBlog(username, blog_name) {
   };
 }
 /**
+ * Show current user published action
+ */
+
+
+function showPublished() {
+  var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
+  return function (dispatch, getState) {
+    dispatch({
+      type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_PUBLISHED
+    });
+    _api_Blog__WEBPACK_IMPORTED_MODULE_1__.default.listPublished(page).then(function (response) {
+      dispatch({
+        type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_PUBLISHED_SUCCESS,
+        data: response.data.data
+      });
+    })["catch"](function (error) {
+      dispatch({
+        type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_PUBLISHED_FAILURE,
+        error: error.response.data
+      });
+    });
+  };
+}
+/**
  * Show current user draft action
  */
 
@@ -5969,7 +6137,7 @@ function showDraft() {
       });
     })["catch"](function (error) {
       dispatch({
-        type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG_FAILURE,
+        type: _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_DRAFT_FAILURE,
         error: error.response.data
       });
     });
@@ -6210,9 +6378,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var initialState = {
+  // List all valid blog in home page
   blogs: [],
+  // for single blog
   blog: [],
+  // For draft
   draft: [],
+  // This is for published post
+  publishedBlog: [],
   spinner: false
 };
 
@@ -6251,6 +6424,24 @@ var blogReducer = function blogReducer() {
       });
 
     case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_BLOG_FAILURE:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spinner: false,
+        error_message: action.error
+      });
+    // Show current user published
+
+    case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_PUBLISHED:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spinner: true
+      });
+
+    case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_PUBLISHED_SUCCESS:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spinner: false,
+        publishedBlog: action.data
+      });
+
+    case _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__.SHOW_PUBLISHED_FAILURE:
       return _objectSpread(_objectSpread({}, state), {}, {
         spinner: false,
         error_message: action.error
