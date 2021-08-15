@@ -70,7 +70,7 @@ export const Published = (props) => {
                     <div className="readme-content dark:bg-gray-800">
                         <div className="markdown">
 
-                            {props.publishedBlog.map((blog) => {
+                            {props.publishedBlog.length == 0 ? "Empty" : props.publishedBlog.map((blog) => {
                                 return (
                                     <div key={blog.id}>
 

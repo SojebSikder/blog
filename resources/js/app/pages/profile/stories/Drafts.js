@@ -70,7 +70,7 @@ export const Drafts = (props) => {
                     <div className="readme-content dark:bg-gray-800">
                         <div className="markdown">
 
-                            {props.draft.map((blog) => {
+                            {props.draft.length == 0 ? "Empty" : props.draft.map((blog) => {
                                 return (
                                     <div key={blog.id}>
 

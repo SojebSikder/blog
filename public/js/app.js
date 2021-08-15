@@ -4622,7 +4622,7 @@ var Drafts = function Drafts(props) {
           className: "readme-content dark:bg-gray-800",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
             className: "markdown",
-            children: props.draft.map(function (blog) {
+            children: props.draft.length == 0 ? "Empty" : props.draft.map(function (blog) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_public_profile_components_StoryCard__WEBPACK_IMPORTED_MODULE_4__.default, {
                   title: blog.title,
@@ -4889,7 +4889,7 @@ var Published = function Published(props) {
           className: "readme-content dark:bg-gray-800",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
             className: "markdown",
-            children: props.publishedBlog.map(function (blog) {
+            children: props.publishedBlog.length == 0 ? "Empty" : props.publishedBlog.map(function (blog) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_public_profile_components_StoryCard__WEBPACK_IMPORTED_MODULE_4__.default, {
                   title: blog.title,
