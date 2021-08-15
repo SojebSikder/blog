@@ -27,10 +27,28 @@ class CreateUsersTable extends Migration
             $table->text('about_me')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->dateTime('last_login')->nullable();
 
             $table->enum('is_online', ['true', 'false'])->nullable();
+            /**
+             * This is from authority
+             */
             $table->enum('status', ['allow', 'deny'])->nullable();
-            $table->string('user_type')->nullable();
+
+            /**
+             * 1 = active
+             * 2 = deactive
+             */
+            // $table->enum('is_active', ['1', '2'])->nullable();
+            $table->tinyInteger('is_active')->nullable();
+            /**
+             * 1 = user - Normal user
+             * 2 = admin - can checks specific system
+             * 3 = super user - can checks, changes all system
+             * 4 = 
+             */
+            // $table->string('user_type')->nullable();
+            $table->tinyInteger('user_type')->nullable();
             //$table->enum('user_type', ['user', 'manager', 'admin', 'su_admin']);
             $table->text('api_token')->nullable()->default(null);
             $table->rememberToken();
