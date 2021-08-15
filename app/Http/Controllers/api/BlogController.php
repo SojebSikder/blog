@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 
 use App\Lib\Helper;
+use Carbon\Carbon;
 use Illuminate\Support\Str;
 
 class BlogController extends Controller
@@ -70,7 +71,6 @@ class BlogController extends Controller
 
             // $result->makeHidden(['user:api_token']);
             return response()->json(['data' => $result], 200);
-
         } else if ($request->Input('published')) {
             // Uses: (web, app)
             // Fetch all published post from current logged user (web, app)
@@ -88,7 +88,6 @@ class BlogController extends Controller
                 ->get();
 
             return response()->json(['data' => $result], 200);
-            
         } else {
             // Uses: (web, app)
             // Fetch all blog (web, app)
@@ -263,6 +262,8 @@ class BlogController extends Controller
 
             $result->image = $filename;
         }
+
+        $result->updated_at = Carbon::now()->toDateTimeString();
         $result->save();
 
         return response()->json([

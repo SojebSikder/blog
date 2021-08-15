@@ -197,6 +197,8 @@ class UserController extends Controller
 
         // Save token to database
         $userModel = User::find(Auth::id());
+
+        $userModel->last_login = Carbon::now()->toDateTimeString();
         $userModel->api_token = $jwt_token;
         $userModel->save();
 
