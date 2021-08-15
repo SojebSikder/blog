@@ -30,7 +30,7 @@ export const Stories = (props) => {
                         <div className="readme-content dark:bg-gray-800">
                             <div className="markdown">
 
-                                {props.user.blogs.map((blog) => {
+                                {props.user.blogs.length == 0 ? "Empty" : props.user.blogs.map((blog) => {
                                     return (
                                         <div key={blog.id}>
 

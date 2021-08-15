@@ -4428,7 +4428,7 @@ var Stories = function Stories(props) {
             className: "readme-content dark:bg-gray-800",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               className: "markdown",
-              children: props.user.blogs.map(function (blog) {
+              children: props.user.blogs.length == 0 ? "Empty" : props.user.blogs.map(function (blog) {
                 return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
                   children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_StoryCard__WEBPACK_IMPORTED_MODULE_3__.default, {
                     title: blog.title,
