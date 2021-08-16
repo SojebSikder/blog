@@ -41,7 +41,8 @@ function Row(props) {
                                 <div className="card" style={{
                                     // width: "18rem" 
                                     // width: "50%",
-                                    width: "80%",
+                                    // width: "80%",
+                                    width: "30rem",
                                 }}>
 
                                     {

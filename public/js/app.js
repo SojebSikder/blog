@@ -3605,7 +3605,8 @@ function Row(props) {
               style: {
                 // width: "18rem" 
                 // width: "50%",
-                width: "80%"
+                // width: "80%",
+                width: "30rem"
               },
               children: [blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
                 style: {
