@@ -3623,14 +3623,22 @@ function Row(props) {
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("div", {
                   children: blog.user == null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
                     src: _config_constant__WEBPACK_IMPORTED_MODULE_5__.PROFILE_URL + "logo.png",
-                    className: "profile-min card-img-top"
+                    className: "profile-min card-img-top",
+                    style: {
+                      display: "inline"
+                    }
                   }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.Fragment, {
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Link, {
                       to: "/user/" + blog.user.username,
-                      children: blog.user.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
-                        src: _config_constant__WEBPACK_IMPORTED_MODULE_5__.PROFILE_URL + blog.user.image,
-                        className: "profile-min card-img-top",
-                        alt: blog.user.username
+                      children: blog.user.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.Fragment, {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("img", {
+                          src: _config_constant__WEBPACK_IMPORTED_MODULE_5__.PROFILE_URL + blog.user.image,
+                          className: "profile-min card-img-top",
+                          alt: blog.user.username,
+                          style: {
+                            display: "inline"
+                          }
+                        })
                       })
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_11__.Link, {
                       style: {
@@ -3828,7 +3836,10 @@ function View(props) {
                 children: [props.blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
                   src: _config_constant__WEBPACK_IMPORTED_MODULE_7__.BLOG_URL + props.blog.image,
                   className: "cover-image card-img-top",
-                  alt: props.blog.title
+                  alt: props.blog.title,
+                  style: {
+                    display: "inline"
+                  }
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                   className: "card-body",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("h5", {
@@ -3837,14 +3848,20 @@ function View(props) {
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)("div", {
                     children: [props.blog.user == null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
                       src: _config_constant__WEBPACK_IMPORTED_MODULE_7__.PROFILE_URL + "logo.png",
-                      className: "profile-min card-img-top"
+                      className: "profile-min card-img-top",
+                      style: {
+                        display: "inline"
+                      }
                     }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.Fragment, {
                       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Link, {
                         to: "/user/" + props.blog.user.username,
                         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)("img", {
                           src: _config_constant__WEBPACK_IMPORTED_MODULE_7__.PROFILE_URL + props.blog.user.image,
                           className: "profile-min card-img-top",
-                          alt: props.blog.user.username
+                          alt: props.blog.user.username,
+                          style: {
+                            display: "inline"
+                          }
                         })
                       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_12__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_13__.Link, {
                         style: {

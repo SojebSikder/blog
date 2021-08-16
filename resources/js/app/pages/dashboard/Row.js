@@ -67,17 +67,22 @@ function Row(props) {
                                                 <img
                                                     src={Constant.PROFILE_URL + "logo.png"}
                                                     className="profile-min card-img-top"
+                                                    style={{ display: "inline", }}
 
                                                 />
                                             ) : (
                                                 <>
                                                     <Link to={"/user/" + blog.user.username}>
                                                         {blog.user.image == null ? "" : (
-                                                            <img
-                                                                src={Constant.PROFILE_URL + blog.user.image}
-                                                                className="profile-min card-img-top"
-                                                                alt={blog.user.username}
-                                                            />
+                                                            <>
+                                                                <img
+                                                                    src={Constant.PROFILE_URL + blog.user.image}
+                                                                    className="profile-min card-img-top"
+                                                                    alt={blog.user.username}
+                                                                    style={{ display: "inline", }}
+                                                                />
+                                                            </>
+
                                                         )}
                                                     </Link>
 

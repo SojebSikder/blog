@@ -82,6 +82,7 @@ function View(props) {
                                             <img src={Constant.BLOG_URL + props.blog.image}
                                                 className="cover-image card-img-top"
                                                 alt={props.blog.title}
+                                                style={{ display: "inline", }}
                                             />
                                     }
                                     <div className="card-body">
@@ -94,6 +95,7 @@ function View(props) {
                                                 <img
                                                     src={Constant.PROFILE_URL + "logo.png"}
                                                     className="profile-min card-img-top"
+                                                    style={{ display: "inline", }}
 
                                                 />
                                             ) : (
@@ -103,6 +105,7 @@ function View(props) {
                                                             src={Constant.PROFILE_URL + props.blog.user.image}
                                                             className="profile-min card-img-top"
                                                             alt={props.blog.user.username}
+                                                            style={{ display: "inline", }}
                                                         />
                                                     </Link>
 
