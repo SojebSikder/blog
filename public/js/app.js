@@ -5334,13 +5334,13 @@ function Edit(props) {
 
   var onFileChange = function onFileChange(event) {
     setImage(event.target.files[0]);
-    setImageChanged(true); // console.log(event.target.files[0]);
+    setImageChanged(true);
   };
 
   var handleTitle = function handleTitle(event) {
-    var _setTextInput;
+    var _objectSpread4;
 
-    setTextInput((_setTextInput = {}, _defineProperty(_setTextInput, "title", event.target.value), _defineProperty(_setTextInput, "name", _util_Data__WEBPACK_IMPORTED_MODULE_10__.default.replace(event.target.value, " ", "-").toLowerCase()), _setTextInput));
+    setTextInput(_objectSpread(_objectSpread({}, textInput), {}, (_objectSpread4 = {}, _defineProperty(_objectSpread4, "title", event.target.value), _defineProperty(_objectSpread4, "name", _util_Data__WEBPACK_IMPORTED_MODULE_10__.default.replace(event.target.value, " ", "-").toLowerCase()), _objectSpread4)));
   };
   /**
    * Body element handle
@@ -5348,7 +5348,6 @@ function Edit(props) {
 
 
   var onChange = function onChange(content) {
-    // console.log('onChange', content);
     setBody(content);
   }; // Methods for handling add post
 
@@ -5405,10 +5404,10 @@ function Edit(props) {
     }); // Fetch blog by id
 
     _api_Blog__WEBPACK_IMPORTED_MODULE_5__.default.showOne(props.match.params.id).then(function (res) {
-      var _setTextInput2;
+      var _objectSpread6;
 
-      setCheckbox(_defineProperty({}, "published", res.data.data.published == 1 ? true : false));
-      setTextInput((_setTextInput2 = {}, _defineProperty(_setTextInput2, "title", res.data.data.title), _defineProperty(_setTextInput2, "name", res.data.data.name), _defineProperty(_setTextInput2, "keywords", res.data.data.keywords), _setTextInput2));
+      setCheckbox(_objectSpread(_objectSpread({}, checkbox), {}, _defineProperty({}, "published", res.data.data.published == 1 ? true : false)));
+      setTextInput(_objectSpread(_objectSpread({}, textInput), {}, (_objectSpread6 = {}, _defineProperty(_objectSpread6, "title", res.data.data.title), _defineProperty(_objectSpread6, "name", res.data.data.name), _defineProperty(_objectSpread6, "keywords", res.data.data.keywords), _objectSpread6)));
       setBody(res.data.data.body);
       setImage(res.data.data.image);
     })["catch"](function (err) {

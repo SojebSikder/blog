@@ -229,11 +229,14 @@ class BlogController extends Controller
         }
 
         // Check if blog name exist in current user
-        if (!Blog::where('user_id', auth("api")->user()->id)->where('name', '=', $request->input('name'))->exists()) {
+        if (!Blog::where('user_id', auth("api")->user()->id)
+            ->where('id', '!=', $id)->where('name', '=', $request->input('name'))->exists()) {
+
             $result->name = $request->Input('name');
         } else {
             $result->name = $this->getUniqueUrl($request->Input('name'));
         }
+
         if ($request->Input('body')) {
             $result->body = html_entity_decode($request->Input('body'));
         }

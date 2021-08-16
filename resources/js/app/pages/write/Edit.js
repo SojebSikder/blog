@@ -58,11 +58,11 @@ export default function Edit(props) {
     const onFileChange = (event) => {
         setImage(event.target.files[0]);
         setImageChanged(true);
-        // console.log(event.target.files[0]);
     };
 
     const handleTitle = (event) => {
         setTextInput({
+            ...textInput,
             ["title"]: event.target.value,
             ["name"]: DataUtil.replace(event.target.value, " ", "-").toLowerCase(),
         });
@@ -72,7 +72,6 @@ export default function Edit(props) {
      * Body element handle
      */
     const onChange = (content) => {
-        // console.log('onChange', content);
         setBody(content);
     }
 
@@ -138,9 +137,11 @@ export default function Edit(props) {
         Blog.showOne(props.match.params.id).then((res) => {
 
             setCheckbox({
+                ...checkbox,
                 ["published"]: res.data.data.published == 1 ? true : false,
             });
             setTextInput({
+                ...textInput,
                 ["title"]: res.data.data.title,
                 ["name"]: res.data.data.name,
                 ["keywords"]: res.data.data.keywords,
