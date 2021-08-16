@@ -256,7 +256,8 @@ class BlogController extends Controller
 
         if ($request->hasFile('image')) {
             // remove image
-            $this->removeImage($result);
+            // $this->removeImage($result);
+            FileLib::removeImage($result);
             // End remove image
 
             $file = $request->file('image');
