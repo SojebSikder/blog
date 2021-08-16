@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
-
+// Components
 import Navbar from '../../components/partials/navbar/Navbar';
 import Footer from '../../components/partials/footer/Footer';
 
 import MarkdownEditor from '../../components/markdown/MarkdownEditor';
 import { CustomSuccess, CustomError } from '../../components/messages/CustomMsg';
 
-import BlogApi from '../../api/Blog';
-import CategoryApi from '../../api/Category';
-import LanguageApi from '../../api/Language';
 // api
 import Blog from '../../api/Blog';
+import CategoryApi from '../../api/Category';
+import LanguageApi from '../../api/Language';
 // Style Component
 import Button from '../../components/button';
 
@@ -37,6 +36,7 @@ export default function Edit(props) {
     });
     const [body, setBody] = useState('');
     const [image, setImage] = useState('');
+    const [imageChanged, setImageChanged] = useState();
 
     const [error_message, setError_message] = useState('')
     const [message, setMessage] = useState('')
@@ -57,6 +57,7 @@ export default function Edit(props) {
      */
     const onFileChange = (event) => {
         setImage(event.target.files[0]);
+        setImageChanged(true);
         // console.log(event.target.files[0]);
     };
 
@@ -102,7 +103,7 @@ export default function Edit(props) {
             data.append('keywords', textInput.keywords);
         }
 
-        if (image.name) {
+        if (imageChanged == true) {
             data.append('image', image, image.name);
         }
 
@@ -113,7 +114,7 @@ export default function Edit(props) {
 
         data.append('_method', 'PATCH');
 
-        BlogApi.update(props.match.params.id, data, (res) => {
+        Blog.update(props.match.params.id, data, (res) => {
             setMessage(res.data.message);
         }, (err) => {
             if (err) {
@@ -171,6 +172,7 @@ export default function Edit(props) {
         <>
             <Navbar />
             <div className="container">
+                <h1>{textInput.name}</h1>
 
                 <div className="d-flex justify-content-center">
                     {/* Write to us */}

@@ -5244,14 +5244,14 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
-
-
-
+ // Components
 
 
 
 
  // api
+
+
 
  // Style Component
 
@@ -5300,15 +5300,20 @@ function Edit(props) {
       image = _useState12[0],
       setImage = _useState12[1];
 
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
       _useState14 = _slicedToArray(_useState13, 2),
-      error_message = _useState14[0],
-      setError_message = _useState14[1];
+      imageChanged = _useState14[0],
+      setImageChanged = _useState14[1];
 
   var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
       _useState16 = _slicedToArray(_useState15, 2),
-      message = _useState16[0],
-      setMessage = _useState16[1];
+      error_message = _useState16[0],
+      setError_message = _useState16[1];
+
+  var _useState17 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState18 = _slicedToArray(_useState17, 2),
+      message = _useState18[0],
+      setMessage = _useState18[1];
   /**
    * Text Element handle
    */
@@ -5328,7 +5333,8 @@ function Edit(props) {
 
 
   var onFileChange = function onFileChange(event) {
-    setImage(event.target.files[0]); // console.log(event.target.files[0]);
+    setImage(event.target.files[0]);
+    setImageChanged(true); // console.log(event.target.files[0]);
   };
 
   var handleTitle = function handleTitle(event) {
@@ -5374,7 +5380,7 @@ function Edit(props) {
       data.append('keywords', textInput.keywords);
     }
 
-    if (image.name) {
+    if (imageChanged == true) {
       data.append('image', image, image.name);
     } // data.append('published', textInput.publish == true ? 1 : 0);
 
@@ -5428,9 +5434,11 @@ function Edit(props) {
     updateUi();
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
       className: "container",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h1", {
+        children: textInput.name
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
         className: "d-flex justify-content-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
           className: "col",
@@ -5567,7 +5575,7 @@ function Edit(props) {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("br", {})]
           })]
         })
-      })
+      })]
     })]
   });
 }
