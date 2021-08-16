@@ -3998,7 +3998,8 @@ function Index(props) {
     setPassword(e.target.value);
   };
 
-  var handleLogin = function handleLogin() {
+  var handleLogin = function handleLogin(e) {
+    e.preventDefault();
     setMessage(null);
     setError_message(null);
 
@@ -4007,6 +4008,7 @@ function Index(props) {
       return false;
     }
 
+    setMessage("Logging... Please wait!");
     var data = {
       email: email,
       password: password
@@ -4033,6 +4035,7 @@ function Index(props) {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("main", {
         className: "form-signin",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("form", {
+          onSubmit: handleLogin,
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
             className: "mb-4",
             src: _config_constant__WEBPACK_IMPORTED_MODULE_1__.BLOG_URL + "logo.png",
@@ -4076,7 +4079,7 @@ function Index(props) {
               htmlFor: "name",
               children: "Password"
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("input", {
-              type: "text",
+              type: "password",
               className: "border bg-gray-100 py-2 px-4 w-96 outline-none focus:ring-2 focus:ring-indigo-400 rounded",
               placeholder: "Password",
               onChange: handlePasswordChange,
@@ -4085,9 +4088,9 @@ function Index(props) {
               }
             })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("button", {
-            type: "button",
-            className: "w-full mt-6 text-indigo-50 font-bold bg-indigo-600 py-3 rounded-md hover:bg-indigo-500 transition duration-300",
-            onClick: handleLogin,
+            type: "submit",
+            className: "w-full mt-6 text-indigo-50 font-bold bg-indigo-600 py-3 rounded-md hover:bg-indigo-500 transition duration-300" // onClick={handleLogin}
+            ,
             children: "LOGIN"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_9__.Link, {
             to: "/register",

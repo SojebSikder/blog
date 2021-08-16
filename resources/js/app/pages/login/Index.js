@@ -26,7 +26,8 @@ export default function Index(props) {
         setPassword(e.target.value)
     }
 
-    const handleLogin = () => {
+    const handleLogin = (e) => {
+        e.preventDefault();
 
         setMessage(null);
         setError_message(null);
@@ -36,6 +37,8 @@ export default function Index(props) {
             setError_message("Please enter login credentials");
             return false;
         }
+
+        setMessage("Logging... Please wait!");
 
         const data = {
             email: email,
@@ -69,7 +72,7 @@ export default function Index(props) {
             <div>
                 <main className="form-signin">
 
-                    <form>
+                    <form onSubmit={handleLogin}>
                         <img
                             className="mb-4"
                             src={Constant.BLOG_URL + "logo.png"}
@@ -124,7 +127,7 @@ export default function Index(props) {
                         <div className="mb-6">
                             <label className="mr-4 text-gray-700 font-bold inline-block mb-2" htmlFor="name">Password</label>
                             <input
-                                type="text"
+                                type="password"
                                 className="border bg-gray-100 py-2 px-4 w-96 outline-none focus:ring-2 focus:ring-indigo-400 rounded"
                                 placeholder="Password"
                                 onChange={handlePasswordChange}
@@ -133,9 +136,9 @@ export default function Index(props) {
                         </div>
 
                         <button
-                            type="button"
+                            type="submit"
                             className="w-full mt-6 text-indigo-50 font-bold bg-indigo-600 py-3 rounded-md hover:bg-indigo-500 transition duration-300"
-                            onClick={handleLogin}
+                        // onClick={handleLogin}
                         >
                             LOGIN
                         </button>
