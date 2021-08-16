@@ -158,7 +158,7 @@ class UserController extends Controller
         $created->phone = $request->input('phone');
         $created->password = $password;
         $created->status = "allow";
-        $created->user_type = "user";
+        $created->user_type = 1;
 
         $created->image = "logo.png";
         $created->save();
@@ -173,9 +173,13 @@ class UserController extends Controller
         //         'user' => $user,
         //         'message' => 'Registration Completed successfully',
         //     ], 200);
+        return response()->json([
+                'success' => true,
+                'message' => 'Registration Completed successfully',
+            ], 200);
 
         // login now..
-        return $this->login($request);
+        // return $this->login($request);
     }
 
 
@@ -207,7 +211,7 @@ class UserController extends Controller
         return response()->json([
             'success' => true,
             'token' => $jwt_token,
-            'user' => $user
+            // 'user' => $user
         ]);
     }
 
