@@ -90,18 +90,10 @@ export default function Edit(props) {
 
         const data = new FormData();
 
-        if (textInput.title) {
-            data.append('title', textInput.title);
-        }
-        if (body) {
-            data.append('body', body);
-        }
-        if (textInput.name) {
-            data.append('name', textInput.name);
-        }
-        if (textInput.keywords) {
-            data.append('keywords', textInput.keywords);
-        }
+        data.append('title', textInput.title);
+        data.append('body', body);
+        data.append('name', textInput.name);
+        data.append('keywords', textInput.keywords);
 
         if (imageChanged == true) {
             data.append('image', image, image.name);
@@ -172,7 +164,6 @@ export default function Edit(props) {
         <>
             <Navbar />
             <div className="container">
-                <h1>{textInput.name}</h1>
 
                 <div className="d-flex justify-content-center">
                     {/* Write to us */}

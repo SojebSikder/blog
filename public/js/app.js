@@ -2364,7 +2364,7 @@ var Blog = {
     });
   },
   update: function update(id, data, successCb, failCb) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default().put(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/blog/' + id, data, {
+    axios__WEBPACK_IMPORTED_MODULE_0___default().post(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/blog/' + id, data, {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem("token")
       }
@@ -5363,22 +5363,10 @@ function Edit(props) {
     }
 
     var data = new FormData();
-
-    if (textInput.title) {
-      data.append('title', textInput.title);
-    }
-
-    if (body) {
-      data.append('body', body);
-    }
-
-    if (textInput.name) {
-      data.append('name', textInput.name);
-    }
-
-    if (textInput.keywords) {
-      data.append('keywords', textInput.keywords);
-    }
+    data.append('title', textInput.title);
+    data.append('body', body);
+    data.append('name', textInput.name);
+    data.append('keywords', textInput.keywords);
 
     if (imageChanged == true) {
       data.append('image', image, image.name);
@@ -5434,11 +5422,9 @@ function Edit(props) {
     updateUi();
   }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
       className: "container",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h1", {
-        children: textInput.name
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
         className: "d-flex justify-content-center",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
           className: "col",
@@ -5575,7 +5561,7 @@ function Edit(props) {
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("br", {})]
           })]
         })
-      })]
+      })
     })]
   });
 }
