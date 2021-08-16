@@ -186,10 +186,11 @@ class UserController extends Controller
     public function login(Request $request)
     {
         $input = $request->only('email', 'password');
-
+        $fieldType = filter_var($request->email, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 
         $jwt_token = null;
-        if (!$jwt_token = $this->guard()->attempt($input)) { //JWTAuth::attempt($input)) {
+        if (!$jwt_token = $this->guard()->attempt(array($fieldType => $input['email'], 'password' => $input['password']))) { //JWTAuth::attempt($input)) {
+        // if (!$jwt_token = $this->guard()->attempt($input)) { //JWTAuth::attempt($input)) {
 
             return response()->json([
                 'success' => false,
