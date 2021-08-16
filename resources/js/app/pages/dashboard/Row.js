@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Markdown from '../../components/markdown/Markdown';
 import Spinner from '../../components/spinner'
 // config
+import Config from '../../config/app_config';
 import * as Constant from '../../config/constant';
 // action
 import { listBlogs } from "../../store/actions/BlogActions";
@@ -57,6 +58,102 @@ function Row(props) {
                                     }
                                     <div className="card-body">
                                         <h5 className="title card-title">{blog.title}</h5>
+
+
+                                        <div>
+                                            {/* Author Profile photo */}
+
+                                            {blog.user == null ? (
+                                                <img
+                                                    src={Constant.PROFILE_URL + "logo.png"}
+                                                    className="profile-min card-img-top"
+
+                                                />
+                                            ) : (
+                                                <>
+                                                    <Link to={"/user/" + blog.user.username}>
+                                                        {blog.user.image == null ? "" : (
+                                                            <img
+                                                                src={Constant.PROFILE_URL + blog.user.image}
+                                                                className="profile-min card-img-top"
+                                                                alt={blog.user.username}
+                                                            />
+                                                        )}
+                                                    </Link>
+
+                                                    <Link
+                                                        style={{
+                                                            margin: "10px",
+                                                            textDecoration: "none",
+                                                            fontSize: "14px",
+                                                        }}
+                                                        to={"/user/" + blog.user.username}
+                                                    >
+                                                        {blog.user.username}
+                                                    </Link>
+                                                    <span
+                                                        style={{
+                                                            margin: "10px",
+                                                            textDecoration: "none",
+                                                            fontSize: "14px",
+                                                        }}
+                                                    >
+                                                        <a>
+                                                            <p style={{ display: "inline", }}>
+                                                                <span style={{ margin: "0 7px", }}>·</span>
+                                                                {DataUtil.date(blog.created_at)}
+                                                            </p>
+                                                        </a>
+                                                    </span>
+                                                    <span
+                                                        style={{
+                                                            margin: "10px",
+                                                            textDecoration: "none",
+                                                            fontSize: "14px",
+                                                        }}
+                                                    >
+                                                        <a>
+                                                            <p style={{ display: "inline", }}>
+                                                                <span style={{ margin: "0 7px", }}>·</span>
+                                                                {DataUtil.readingTime(blog.body)} min read
+                                                            </p>
+                                                        </a>
+                                                    </span>
+                                                </>
+                                            )}
+
+                                            {/* Share kit */}
+                                            {/* <div
+                                                style={{ display: "inline", }}
+                                                className="dropdown"
+                                            >
+                                                <a className="btn btn-secondary dropdown-toggle"
+                                                    href="#" role="button"
+                                                    id="dropdownMenuLink"
+                                                    data-bs-toggle="dropdown"
+                                                    aria-expanded="false">
+                                                    Share
+                                                </a>
+
+                                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                    <li><a className="dropdown-item" href="#">Twitter</a></li>
+                                                    <li><a className="dropdown-item" href="#">Facebook</a></li>
+                                                    <li>
+                                                        <button
+                                                            className="dropdown-item"
+                                                            // onClick={DataUtil.copyText(Config.getBaseUrl() + props.location.pathname)}
+                                                            onClick={DataUtil.copyText(Config.getBaseUrl() + "/blog/" + blog.user.username + "/" + blog.name)}
+                                                        >
+                                                            Copy link
+                                                        </button>
+                                                    </li>
+
+                                                </ul>
+                                            </div> */}
+                                            {/* End Share Kit */}
+
+                                        </div>
+
 
                                         {/* <p className="card-text">{blog.body}</p> */}
                                         <Markdown>

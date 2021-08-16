@@ -92,7 +92,7 @@ class BlogController extends Controller
             // Uses: (web, app)
             // Fetch all blog (web, app)
             $result = Blog::with(array('category', 'user' => function ($query) {
-                $query->select('id', 'username');
+                $query->select('id', 'username','image');
             }))
                 ->orderBy('created_at', 'DESC')
                 ->where('published', 1)
