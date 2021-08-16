@@ -19,7 +19,8 @@ class CreateBlogsTable extends Migration
 
             $table->string('user_id')->references('id')->on('users')->onDelete('set null');
             $table->string('title');
-            $table->text('body');
+            // $table->text('body');
+            $table->mediumText('body');
             $table->string('image')->nullable();
             // name is slug. Unique field
             $table->string('name')->unique()->nullable();
