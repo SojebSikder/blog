@@ -65,6 +65,7 @@ export const Index = (props) => {
                                             <span>Drafts</span>
                                         </div>
                                     </Link>
+
                                     <Link
                                         to={"/me/stories/public"}
                                         className=""
@@ -87,6 +88,18 @@ export const Index = (props) => {
                                             <span>Responses</span>
                                         </div>
                                     </Link> */}
+                                    <Link
+                                        to={"/me/stories/lists"}
+                                        className=""
+                                    >
+                                        <div
+                                            // className="flex items-center pb-2 border-b-2 border-transparent cursor-pointer profile-tab-button"
+                                            className="flex items-center pb-2 mr-3 cursor-pointer profile-tab-button"
+                                        >
+                                            <span>My Bookmarks</span>
+                                        </div>
+                                    </Link>
+
                                 </div>
 
                                 <ProfileRoutes />
