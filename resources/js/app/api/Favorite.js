@@ -6,7 +6,7 @@ const FavoriteApi = {
     add: (data, successCb, failCb) => {
         return axios.post(Config.getApiUrl() + '/favorite', data, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
-    getAll: (successCb, failCb) => {
+    list: (successCb, failCb) => {
         return axios.get(Config.getApiUrl() + '/favorite', { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
 
@@ -17,7 +17,6 @@ const FavoriteApi = {
 
         return axios.post(Config.getApiUrl() + '/favorite/' + id, data, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
-
     deleteById: (id, successCb, failCb) => {
         return axios.delete(Config.getApiUrl() + '/favorite/' + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },

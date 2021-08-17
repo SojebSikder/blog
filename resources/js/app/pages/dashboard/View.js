@@ -11,6 +11,7 @@ import Spinner from '../../components/spinner'
 import * as Constant from '../../config/constant';
 // action
 import { showBlog } from "../../store/actions/BlogActions";
+import { listFavorite, addFavorites } from "../../store/actions/FavoriteActions";
 import DataUtil from '../../util/Data';
 
 import './style.css';
@@ -26,19 +27,17 @@ function View(props) {
     //     Header.setMeta('keywords', props.blog.keyword);
     // }
 
+    const handleAddFavorite = (blogId) => {
+        const data = {
+            blog_id: blogId
+        };
+
+        props.addFavorites(data);
+    }
+
+
     const updateUi = () => {
         props.showBlog(props.match.params.username, props.match.params.blogname);
-
-
-        // Blog.showByUserAndName(props.match.params.username, props.match.params.blogname)
-        //     .then(response => {
-        //         setBlog(response.data.data);
-        //         console.log(response.data.data.user.image);
-        //     }).catch(error => {
-        //         if (eror) {
-        //             alert(error.response.data);
-        //         }
-        //     });
     }
 
     useEffect(() => {
@@ -152,7 +151,11 @@ function View(props) {
 
                                             {/* Bookmark */}
                                             <span style={{ marginRight: "1rem" }}></span>
-                                            <button title="bookmark" className="focus:outline-none">
+                                            <button
+                                                title="bookmark"
+                                                className="focus:outline-none"
+                                                onClick={() => handleAddFavorite(props.blog.id)}
+                                            >
                                                 <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 text-dark-secondary">
                                                     <path d="M1.83354 1.28697C1.52462 1.63079 1.35107 2.0971 1.35107 2.58333V17.25L7.11647 14.0417L12.8819 17.25V2.58333C12.8819 2.0971 12.7083 1.63079 12.3994 1.28697C12.0905 0.943154 11.6715 0.75 11.2346 0.75H2.99833C2.56145 0.75 2.14246 0.943154 1.83354 1.28697Z"
                                                         strokeLinecap="round" strokeLinejoin="round" className="stroke-current">
@@ -235,6 +238,8 @@ const mapDispatchToProps = (dispatch) => {
 
     return {
         showBlog: (username, blog_name) => dispatch(showBlog(username, blog_name)),
+        // listFavorite: (page) => dispatch(listFavorite(page)),
+        addFavorites: (data) => dispatch(addFavorites(data)),
     };
 };
 

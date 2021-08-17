@@ -1,0 +1,14 @@
+// show all favorite for current user
+export const LIST_FAVORITE = 'LIST_FAVORITE';
+export const LIST_FAVORITE_SUCCESS = 'LIST_FAVORITE_SUCCESS';
+export const LIST_FAVORITE_FAILURE = 'LIST_FAVORITE_FAILURE';
+
+// create favorite
+export const CREATE_FAVORITE = 'CREATE_FAVORITE';
+export const CREATE_FAVORITE_SUCCESS = 'CREATE_FAVORITE_SUCCESS';
+export const CREATE_FAVORITE_FAILURE = 'CREATE_FAVORITE_FAILURE';
+
+// delete favorite for current user
+export const DELETE_FAVORITE = 'DELETE_FAVORITE';
+export const DELETE_FAVORITE_SUCCESS = 'DELETE_FAVORITE_SUCCESS';
+export const DELETE_FAVORITE_FAILURE = 'DELETE_FAVORITE_FAILURE';
