@@ -15,4 +15,9 @@ class Favorite extends Model
             ->orderBy('created_at', 'DESC')
             ->where('published', 1);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

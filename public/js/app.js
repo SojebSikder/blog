@@ -4062,7 +4062,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     showBlog: function showBlog(username, blog_name) {
       return dispatch((0,_store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_8__.showBlog)(username, blog_name));
     },
-    // listFavorite: (page) => dispatch(listFavorite(page)),
+    // listFavorites: (page) => dispatch(listFavorites(page)),
     addFavorites: function addFavorites(data) {
       return dispatch((0,_store_actions_FavoriteActions__WEBPACK_IMPORTED_MODULE_9__.addFavorites)(data));
     }
@@ -4892,10 +4892,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../store/actions/BlogActions */ "./resources/js/app/store/actions/BlogActions.js");
-/* harmony import */ var _api_Blog__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../api/Blog */ "./resources/js/app/api/Blog.js");
+/* harmony import */ var _store_actions_FavoriteActions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../store/actions/FavoriteActions */ "./resources/js/app/store/actions/FavoriteActions.js");
+/* harmony import */ var _api_Favorite__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../api/Favorite */ "./resources/js/app/api/Favorite.js");
 /* harmony import */ var _public_profile_components_StoryCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public_profile/components/StoryCard */ "./resources/js/app/pages/profile/public_profile/components/StoryCard.js");
 /* harmony import */ var _components_spinner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../components/spinner */ "./resources/js/app/components/spinner/index.js");
 /* harmony import */ var _components_messages_CustomMsg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../components/messages/CustomMsg */ "./resources/js/app/components/messages/CustomMsg.js");
@@ -4943,7 +4942,7 @@ var Favorite = function Favorite(props) {
     var bool = confirm('Are you sure to delete (this cannot be undone)');
 
     if (bool) {
-      _api_Blog__WEBPACK_IMPORTED_MODULE_3__.default.deleteById(id).then(function (res) {
+      _api_Favorite__WEBPACK_IMPORTED_MODULE_3__.default.deleteById(id).then(function (res) {
         setMessage('Deleted Blog Successfully');
         updateUi();
       })["catch"](function (err) {
@@ -4955,7 +4954,7 @@ var Favorite = function Favorite(props) {
   };
 
   var updateUi = function updateUi() {
-    props.showPublished();
+    props.listFavorites(1);
   };
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
@@ -4986,22 +4985,13 @@ var Favorite = function Favorite(props) {
           className: "readme-content dark:bg-gray-800",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
             className: "markdown",
-            children: props.publishedBlog.length == 0 ? "Empty" : props.publishedBlog.map(function (blog) {
+            children: props.favorites.length == 0 ? "Empty" : props.favorites.map(function (blog) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_public_profile_components_StoryCard__WEBPACK_IMPORTED_MODULE_4__.default, {
-                  title: blog.title,
-                  date: blog.created_at,
-                  link: "#" // link={"/blog/" + blog.user.username + "/" + blog.name}
-                  ,
+                  title: blog.blogs.title,
+                  date: blog.blogs.created_at,
+                  link: "/blog/" + blog.user.username + "/" + blog.blogs.name,
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
-                    style: {
-                      marginLeft: "20px"
-                    }
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.Link, {
-                    to: "/edit/" + blog.id,
-                    className: "font-bold text-indigo-600 hover:text-indigo-900",
-                    children: "Edit"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                     style: {
                       marginLeft: "20px"
                     }
@@ -5024,15 +5014,15 @@ var Favorite = function Favorite(props) {
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
-    spinner: state.blog.spinner,
-    publishedBlog: state.blog.publishedBlog
+    spinner: state.favorite.spinner,
+    favorites: state.favorite.favorites
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    showPublished: function showPublished() {
-      return dispatch((0,_store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_2__.showPublished)());
+    listFavorites: function listFavorites(page) {
+      return dispatch((0,_store_actions_FavoriteActions__WEBPACK_IMPORTED_MODULE_2__.listFavorites)(page));
     }
   };
 };

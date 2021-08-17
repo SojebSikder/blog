@@ -11,7 +11,7 @@ import Spinner from '../../components/spinner'
 import * as Constant from '../../config/constant';
 // action
 import { showBlog } from "../../store/actions/BlogActions";
-import { listFavorite, addFavorites } from "../../store/actions/FavoriteActions";
+import { listFavorites, addFavorites } from "../../store/actions/FavoriteActions";
 import DataUtil from '../../util/Data';
 
 import './style.css';
@@ -238,7 +238,7 @@ const mapDispatchToProps = (dispatch) => {
 
     return {
         showBlog: (username, blog_name) => dispatch(showBlog(username, blog_name)),
-        // listFavorite: (page) => dispatch(listFavorite(page)),
+        // listFavorites: (page) => dispatch(listFavorites(page)),
         addFavorites: (data) => dispatch(addFavorites(data)),
     };
 };

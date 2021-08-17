@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux'
 // action
-import { showPublished } from "../../../store/actions/BlogActions";
+import { listFavorites } from "../../../store/actions/FavoriteActions";
 // api
-import Blog from '../../../api/Blog';
+import FavoriteApi from '../../../api/Favorite';
 // components
 import StoryCard from '../public_profile/components/StoryCard';
 import Spinner from '../../../components/spinner';
 import { CustomSuccess, CustomError } from '../../../components/messages/CustomMsg';
+
 
 export const Favorite = (props) => {
 
@@ -22,7 +23,7 @@ export const Favorite = (props) => {
         var bool = confirm('Are you sure to delete (this cannot be undone)');
 
         if (bool) {
-            Blog.deleteById(id)
+            FavoriteApi.deleteById(id)
                 .then((res) => {
                     setMessage('Deleted Blog Successfully');
                     updateUi();
@@ -35,7 +36,7 @@ export const Favorite = (props) => {
     }
 
     const updateUi = () => {
-        props.showPublished();
+        props.listFavorites(1);
     }
 
     useEffect(() => {
@@ -70,22 +71,15 @@ export const Favorite = (props) => {
                     <div className="readme-content dark:bg-gray-800">
                         <div className="markdown">
 
-                            {props.publishedBlog.length == 0 ? "Empty" : props.publishedBlog.map((blog) => {
+                            {props.favorites.length == 0 ? "Empty" : props.favorites.map((blog) => {
                                 return (
                                     <div key={blog.id}>
 
                                         <StoryCard
-                                            title={blog.title}
-                                            date={blog.created_at}
-                                            link="#"
-                                        // link={"/blog/" + blog.user.username + "/" + blog.name}
+                                            title={blog.blogs.title}
+                                            date={blog.blogs.created_at}
+                                            link={"/blog/" + blog.user.username + "/" + blog.blogs.name}
                                         >
-                                            <span style={{ marginLeft: "20px", }}></span>
-                                            <Link to={"/edit/" + blog.id}
-                                                className="font-bold text-indigo-600 hover:text-indigo-900"
-                                            >
-                                                Edit
-                                            </Link>
                                             <span style={{ marginLeft: "20px", }}></span>
                                             <button onClick={() => deleteById(blog.id)}
                                                 className="mr-2 text-sm font-bold text-red-400 hover:underline">
@@ -110,13 +104,13 @@ export const Favorite = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    spinner: state.blog.spinner,
-    publishedBlog: state.blog.publishedBlog,
+    spinner: state.favorite.spinner,
+    favorites: state.favorite.favorites,
 })
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        showPublished: () => dispatch(showPublished()),
+        listFavorites: (page) => dispatch(listFavorites(page)),
     };
 }
 
