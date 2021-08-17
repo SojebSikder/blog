@@ -26,6 +26,7 @@ const favoriteReducer = function (state = initialState, action) {
                 error_message: action.error
             };
 
+
         default:
             return state;
     }

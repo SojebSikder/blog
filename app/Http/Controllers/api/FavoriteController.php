@@ -19,7 +19,8 @@ class FavoriteController extends Controller
      */
     public function index()
     {
-        $favorite = Favorite::with('blogs','user')->where('user_id', auth("api")->user()->id)->get();
+        $favorite = Favorite::with('blogs', 'user')
+            ->where('user_id', auth("api")->user()->id)->get();
         return response()->json(['data' => $favorite], 200);
     }
 

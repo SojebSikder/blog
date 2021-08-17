@@ -2486,35 +2486,36 @@ __webpack_require__.r(__webpack_exports__);
  // get posts
 
 var FavoriteApi = {
-  add: function add(data, successCb, failCb) {
+  add: function add(data) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().post(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/favorite', data, {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem("token")
       }
     });
   },
-  list: function list(successCb, failCb) {
+  list: function list() {
+    var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
     return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/favorite', {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem("token")
       }
     });
   },
-  getById: function getById(id, successCb, failCb) {
+  getById: function getById(id) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().get(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/favorite/' + id, {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem("token")
       }
     });
   },
-  update: function update(id, data, successCb, failCb) {
+  update: function update(id, data) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().post(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/favorite/' + id, data, {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem("token")
       }
     });
   },
-  deleteById: function deleteById(id, successCb, failCb) {
+  deleteById: function deleteById(id) {
     return axios__WEBPACK_IMPORTED_MODULE_0___default().delete(_config_app_config__WEBPACK_IMPORTED_MODULE_1__.default.getApiUrl() + '/favorite/' + id, {
       headers: {
         Authorization: 'Bearer ' + localStorage.getItem("token")

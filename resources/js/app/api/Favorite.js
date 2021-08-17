@@ -3,21 +3,21 @@ import Config from "../config/app_config";
 
 // get posts
 const FavoriteApi = {
-    add: (data, successCb, failCb) => {
+    add: (data) => {
         return axios.post(Config.getApiUrl() + '/favorite', data, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
-    list: (successCb, failCb) => {
+    list: (page = 1) => {
         return axios.get(Config.getApiUrl() + '/favorite', { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
 
-    getById: (id, successCb, failCb) => {
+    getById: (id) => {
         return axios.get(Config.getApiUrl() + '/favorite/' + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
-    update: (id, data, successCb, failCb) => {
+    update: (id, data) => {
 
         return axios.post(Config.getApiUrl() + '/favorite/' + id, data, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
-    deleteById: (id, successCb, failCb) => {
+    deleteById: (id) => {
         return axios.delete(Config.getApiUrl() + '/favorite/' + id, { headers: { Authorization: 'Bearer ' + localStorage.getItem("token") } });
     },
 
