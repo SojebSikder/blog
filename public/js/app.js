@@ -5258,9 +5258,9 @@ var Published = function Published(props) {
               return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(_public_profile_components_StoryCard__WEBPACK_IMPORTED_MODULE_4__.default, {
                   title: blog.title,
-                  date: blog.created_at,
-                  link: "#" // link={"/blog/" + blog.user.username + "/" + blog.name}
+                  date: blog.created_at // link="#"
                   ,
+                  link: "/blog/" + blog.user.username + "/" + blog.name,
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("span", {
                     style: {
                       marginLeft: "20px"

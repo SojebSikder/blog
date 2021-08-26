@@ -77,8 +77,8 @@ export const Published = (props) => {
                                         <StoryCard
                                             title={blog.title}
                                             date={blog.created_at}
-                                            link="#"
-                                        // link={"/blog/" + blog.user.username + "/" + blog.name}
+                                            // link="#"
+                                            link={"/blog/" + blog.user.username + "/" + blog.name}
                                         >
                                             <span style={{ marginLeft: "20px", }}></span>
                                             <Link to={"/edit/" + blog.id}
