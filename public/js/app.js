@@ -3886,7 +3886,22 @@ function View(props) {
           content: props.blog.body
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("meta", {
           name: "keywords",
-          content: props.blog.keyword
+          content: props.blog.keywords
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("meta", {
+          property: "og:url",
+          content: _config_app_config__WEBPACK_IMPORTED_MODULE_12__.default.getBaseUrl() + props.location.pathname
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("meta", {
+          property: "og:type",
+          content: "website"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("meta", {
+          property: "og:title",
+          content: props.blog.title + " - " + _config_app_config__WEBPACK_IMPORTED_MODULE_12__.default.getAppName()
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("meta", {
+          property: "og:description",
+          content: props.blog.body
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("meta", {
+          property: "og:image",
+          content: "https://www.your-domain.com/path/image.jpg"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("div", {
         className: "container",
@@ -4045,7 +4060,8 @@ function View(props) {
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("li", {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("a", {
                             className: "dropdown-item",
-                            href: "#",
+                            target: "_blank",
+                            href: "https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/blog/sojebsikder/what-is-django&src=sdkpreparse",
                             children: "Facebook"
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("li", {

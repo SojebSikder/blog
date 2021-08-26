@@ -66,10 +66,18 @@ function View(props) {
                 <Helmet>
                     <title>{props.blog.title + " - " + Config.getAppName()}</title>
                     <meta name="description" content={props.blog.body} />
-                    <meta name="keywords" content={props.blog.keyword} />
+                    <meta name="keywords" content={props.blog.keywords} />
+
+                    <meta property="og:url" content={Config.getBaseUrl() + props.location.pathname} />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content={props.blog.title + " - " + Config.getAppName()} />
+                    <meta property="og:description" content={props.blog.body} />
+                    <meta property="og:image" content="https://www.your-domain.com/path/image.jpg" />
                 </Helmet>
                 <div className="container">
                     <div className="">
+
+
                         {/* Display blogs */}
                         <div key={props.blog.id}>
                             <div className="d-flex justify-content-center">
@@ -200,7 +208,13 @@ function View(props) {
 
                                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                                     <li><a className="dropdown-item" href="#">Twitter</a></li>
-                                                    <li><a className="dropdown-item" href="#">Facebook</a></li>
+                                                    <li>
+                                                        <a className="dropdown-item"
+                                                            target="_blank"
+                                                            href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/blog/sojebsikder/what-is-django&amp;src=sdkpreparse">
+                                                            Facebook
+                                                        </a>
+                                                    </li>
                                                     <li>
                                                         <button
                                                             className="dropdown-item"
