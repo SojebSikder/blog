@@ -207,11 +207,19 @@ function View(props) {
                                                 </a>
 
                                                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                    <li><a className="dropdown-item" href="#">Twitter</a></li>
                                                     <li>
                                                         <a className="dropdown-item"
                                                             target="_blank"
-                                                            href="https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/blog/sojebsikder/what-is-django&amp;src=sdkpreparse">
+                                                            // href="https://twitter.com/intent/tweet?text=Hello%20world"
+                                                            href={"https://twitter.com/intent/tweet?url=" + Config.getBaseUrl() + props.location.pathname}
+                                                        >
+                                                            Twitter
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a className="dropdown-item"
+                                                            target="_blank"
+                                                            href={"https://www.facebook.com/sharer/sharer.php?u=" + Config.getBaseUrl() + props.location.pathname}>
                                                             Facebook
                                                         </a>
                                                     </li>

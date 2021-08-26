@@ -4054,7 +4054,9 @@ function View(props) {
                         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("li", {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("a", {
                             className: "dropdown-item",
-                            href: "#",
+                            target: "_blank" // href="https://twitter.com/intent/tweet?text=Hello%20world"
+                            ,
+                            href: "https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/blog/sojebsikder/what-is-django",
                             children: "Twitter"
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("li", {
