@@ -42,10 +42,18 @@ class Blog extends Model
 
     public function getIsBookmarkAttribute()
     {
-        if (Favorite::where('blog_id', '=', $this->id)
-            ->where('user_id', '=', $this->user_id)->exists()
-        ) {
-            return true;
+        
+        if (auth("api")->user()) {
+            $user_id = auth("api")->user()->id;
+
+            if (Favorite::where('blog_id', '=', $this->id)
+                ->where('user_id', '=', $user_id)->exists()
+            ) {
+                // return true;
+                return $user_id;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
