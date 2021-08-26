@@ -18,6 +18,15 @@ class Blog extends Model
         'id' => 'string',
     ];
 
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = ['is_bookmark'];
+
+
+
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id');
@@ -26,9 +35,17 @@ class Blog extends Model
     {
         return $this->belongsTo(Language::class, 'language_id');
     }
-
     public function user()
     {
         return $this->belongsTo(User::class, 'user_id');
+    }
+
+    public function getIsBookmarkAttribute()
+    {
+        if (Favorite::where('blog_id', '=', $this->id)->exists()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

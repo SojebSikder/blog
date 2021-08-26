@@ -53,6 +53,7 @@ class BlogController extends Controller
 
             // $result->makeHidden(['user:api_token']);
             return response()->json(['data' => $result], 200);
+            //
         } else if ($request->Input('draft')) {
             // Uses: (web, app)
             // Fetch all draft from current logged user (web, app)
@@ -71,6 +72,7 @@ class BlogController extends Controller
 
             // $result->makeHidden(['user:api_token']);
             return response()->json(['data' => $result], 200);
+            //
         } else if ($request->Input('published')) {
             // Uses: (web, app)
             // Fetch all published post from current logged user (web, app)
@@ -88,11 +90,12 @@ class BlogController extends Controller
                 ->get();
 
             return response()->json(['data' => $result], 200);
+            //
         } else {
             // Uses: (web, app)
             // Fetch all blog (web, app)
             $result = Blog::with(array('category', 'user' => function ($query) {
-                $query->select('id', 'username','image');
+                $query->select('id', 'username', 'image');
             }))
                 ->orderBy('created_at', 'DESC')
                 ->where('published', 1)
