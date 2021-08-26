@@ -151,25 +151,31 @@ function View(props) {
 
                                             {/* Bookmark */}
                                             <span style={{ marginRight: "1rem" }}></span>
-                                            <button
-                                                title="bookmark"
-                                                className="focus:outline-none"
-                                                onClick={() => handleAddFavorite(props.blog.id)}
-                                            >
-                                                <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 text-dark-secondary">
-                                                    <path d="M1.83354 1.28697C1.52462 1.63079 1.35107 2.0971 1.35107 2.58333V17.25L7.11647 14.0417L12.8819 17.25V2.58333C12.8819 2.0971 12.7083 1.63079 12.3994 1.28697C12.0905 0.943154 11.6715 0.75 11.2346 0.75H2.99833C2.56145 0.75 2.14246 0.943154 1.83354 1.28697Z"
-                                                        strokeLinecap="round" strokeLinejoin="round" className="stroke-current">
-                                                    </path>
-                                                </svg>
-                                            </button>
 
-                                            {/* <button title="bookmark" className="focus:outline-none">
-                                                <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 text-green-600 fill-current">
-                                                    <path d="M1.83354 1.28697C1.52462 1.63079 1.35107 2.0971 1.35107 2.58333V17.25L7.11647 14.0417L12.8819 17.25V2.58333C12.8819 2.0971 12.7083 1.63079 12.3994 1.28697C12.0905 0.943154 11.6715 0.75 11.2346 0.75H2.99833C2.56145 0.75 2.14246 0.943154 1.83354 1.28697Z"
-                                                        strokeLinecap="round" strokeLinejoin="round" className="stroke-current">
-                                                    </path>
-                                                </svg>
-                                            </button> */}
+                                            {props.blog.is_bookmark == true ? (
+                                                <button title="bookmark" className="focus:outline-none">
+                                                    <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 text-green-600 fill-current">
+                                                        <path d="M1.83354 1.28697C1.52462 1.63079 1.35107 2.0971 1.35107 2.58333V17.25L7.11647 14.0417L12.8819 17.25V2.58333C12.8819 2.0971 12.7083 1.63079 12.3994 1.28697C12.0905 0.943154 11.6715 0.75 11.2346 0.75H2.99833C2.56145 0.75 2.14246 0.943154 1.83354 1.28697Z"
+                                                            strokeLinecap="round" strokeLinejoin="round" className="stroke-current">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            ) : (
+                                                <button
+                                                    title="bookmark"
+                                                    className="focus:outline-none"
+                                                    onClick={() => handleAddFavorite(props.blog.id)}
+                                                >
+                                                    <svg viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 text-dark-secondary">
+                                                        <path d="M1.83354 1.28697C1.52462 1.63079 1.35107 2.0971 1.35107 2.58333V17.25L7.11647 14.0417L12.8819 17.25V2.58333C12.8819 2.0971 12.7083 1.63079 12.3994 1.28697C12.0905 0.943154 11.6715 0.75 11.2346 0.75H2.99833C2.56145 0.75 2.14246 0.943154 1.83354 1.28697Z"
+                                                            strokeLinecap="round" strokeLinejoin="round" className="stroke-current">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            )}
+
+
+
 
                                             <span style={{ marginRight: "1rem" }}></span>
                                             {/* End Bookmark */}
