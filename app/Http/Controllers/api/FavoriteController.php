@@ -48,16 +48,46 @@ class FavoriteController extends Controller
             return response()->json(['message' => 'Unauthorize'], 500);
         }
 
-        $favorite = new Favorite();
-        $favorite->user_id = auth("api")->user()->id;
-        $favorite->blog_id = $request->input('blog_id');
-        $favorite->save();
 
-        return response()->json([
-            // 'data' => $favorite,
-            'success' => true,
-            'message' => 'Added to favorite successfully'
-        ], 201);
+
+        if (Favorite::where('blog_id', '=', $request->input('blog_id'))
+            ->where('user_id', '=', auth("api")->user()->id)->exists()
+        ) {
+
+
+            $user_id = auth("api")->user()->id;
+            $user = Favorite::where('blog_id', $request->input('blog_id'))->first();
+
+            if ($user_id == $user->user_id) {
+                $favorite = Favorite::where('blog_id', $request->input('blog_id'));
+                $favorite->delete();
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Deleted successfully'
+                ], 200);
+            } else {
+                return response()->json([
+                    'success' => false,
+                    "message" => "you're not able to proceed :("
+                ], 200);
+            }
+
+
+
+
+            // return $this->destroy($request->input('blog_id'));
+        } else {
+            $favorite = new Favorite();
+            $favorite->user_id = auth("api")->user()->id;
+            $favorite->blog_id = $request->input('blog_id');
+            $favorite->save();
+
+            return response()->json([
+                // 'data' => $favorite,
+                'success' => true,
+                'message' => 'Added to favorite successfully'
+            ], 201);
+        }
     }
 
     /**

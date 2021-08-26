@@ -3854,6 +3854,7 @@ function View(props) {
       blog_id: blogId
     };
     props.addFavorites(data);
+    updateUi();
   };
 
   var updateUi = function updateUi() {
@@ -3982,6 +3983,9 @@ function View(props) {
                     }), props.blog.is_bookmark == true ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("button", {
                       title: "bookmark",
                       className: "focus:outline-none",
+                      onClick: function onClick() {
+                        return handleAddFavorite(props.blog.id);
+                      },
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("svg", {
                         viewBox: "0 0 14 18",
                         fill: "none",
