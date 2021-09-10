@@ -4056,14 +4056,14 @@ function View(props) {
                             className: "dropdown-item",
                             target: "_blank" // href="https://twitter.com/intent/tweet?text=Hello%20world"
                             ,
-                            href: "https://twitter.com/intent/tweet?url=http://127.0.0.1:8000/blog/sojebsikder/what-is-django",
+                            href: "https://twitter.com/intent/tweet?url=" + _config_app_config__WEBPACK_IMPORTED_MODULE_12__.default.getBaseUrl() + props.location.pathname,
                             children: "Twitter"
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("li", {
                           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("a", {
                             className: "dropdown-item",
                             target: "_blank",
-                            href: "https://www.facebook.com/sharer/sharer.php?u=http://127.0.0.1:8000/blog/sojebsikder/what-is-django&src=sdkpreparse",
+                            href: "https://www.facebook.com/sharer/sharer.php?u=" + _config_app_config__WEBPACK_IMPORTED_MODULE_12__.default.getBaseUrl() + props.location.pathname,
                             children: "Facebook"
                           })
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("li", {
