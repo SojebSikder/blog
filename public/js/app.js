@@ -3233,8 +3233,9 @@ function Footer() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "credits",
           children: ["Maintain by ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("a", {
-            href: "http://sojebsoft.ml",
-            children: "SojebSoft"
+            target: "__blank__",
+            href: "https://github.com/SojebSikder",
+            children: "sojebsikder"
           })]
         })]
       })]

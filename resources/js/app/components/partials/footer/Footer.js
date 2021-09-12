@@ -48,11 +48,10 @@ export default function Footer() {
                         &copy; Copyright 2021 <strong>SojebSoft</strong>. All Rights Reserved
                     </div>
                     <div className="credits">
-                        Maintain by <a href="http://sojebsoft.ml">SojebSoft</a>
+                        Maintain by <a target="__blank__" href="https://github.com/SojebSikder">sojebsikder</a>
                     </div>
                 </div>
             </footer>
-
         </>
     )
 }
