@@ -1,7 +1,10 @@
+// external imports
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
+import moment from 'moment';
 
+// enternal imports
 // Components
 import Markdown from '../../components/markdown/Markdown';
 import Spinner from '../../components/spinner'
@@ -105,6 +108,10 @@ function Row(props) {
                                                         }}
                                                     >
                                                         <a>
+                                                            <p style={{ display: "inline", }}>
+                                                                <span style={{ margin: "0 7px", }}>·</span>
+                                                                {moment(blog.created_at, "YYYYMMDD").fromNow()}
+                                                            </p>
                                                             <p style={{ display: "inline", }}>
                                                                 <span style={{ margin: "0 7px", }}>·</span>
                                                                 {DataUtil.date(blog.created_at)}

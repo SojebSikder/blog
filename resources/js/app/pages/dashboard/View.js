@@ -1,7 +1,11 @@
+// external imports
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import moment from 'moment';
+
+// enternal imports
 // Components
 import Markdown from '../../components/markdown/Markdown';
 import Navbar from '../../components/partials/navbar/Navbar';
@@ -135,6 +139,10 @@ function View(props) {
                                                         }}
                                                     >
                                                         <a>
+                                                            <p style={{ display: "inline", }}>
+                                                                <span style={{ margin: "0 7px", }}>·</span>
+                                                                {moment(props.blog.created_at, "YYYYMMDD").fromNow()}
+                                                            </p>
                                                             <p style={{ display: "inline", }}>
                                                                 <span style={{ margin: "0 7px", }}>·</span>
                                                                 {DataUtil.date(props.blog.created_at)}
