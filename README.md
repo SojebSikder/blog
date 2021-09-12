@@ -1,2 +1,2 @@
 # blog
-Blog app created with laravel
+Blog app created with laravel and reactjs
