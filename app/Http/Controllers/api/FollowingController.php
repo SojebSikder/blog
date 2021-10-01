@@ -39,10 +39,11 @@ class FollowingController extends Controller
     public function index()
     {
         //
-        $user = User::find(1);
+        $user = auth()->user();
         $data = [
-          "following"=>  $user->followings,
-          "followers"=>  $user->followers,
+            'id' => auth()->user()->id,
+            "following" =>  $user->followings()->count(),
+            "followers" =>  $user->followers()->count(),
         ];
 
         return response()->json([
