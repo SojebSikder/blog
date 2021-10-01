@@ -11,17 +11,19 @@ import Markdown from '../../components/markdown/Markdown';
 import Navbar from '../../components/partials/navbar/Navbar';
 import Footer from '../../components/partials/footer/Footer';
 import Spinner from '../../components/spinner'
+import Button from '../../components/button';
+
 // config
+import Config from '../../config/app_config';
 import * as Constant from '../../config/constant';
 // action
 import { showBlog } from "../../store/actions/BlogActions";
 import { listFavorites, addFavorites } from "../../store/actions/FavoriteActions";
 import DataUtil from '../../util/Data';
+import { toggleFollow } from '../../store/actions/FollowActions';
 
 import './style.css';
-// import Blog from '../../api/Blog';
-import Config from '../../config/app_config';
-// import Header from '../../util/Header';
+
 
 function View(props) {
 
@@ -37,6 +39,15 @@ function View(props) {
         };
 
         props.addFavorites(data);
+        updateUi();
+    }
+
+    const toggleFollow = (userId) => {
+        const data = {
+            user_id: userId
+        }
+
+        props.toggleFollow(data);
         updateUi();
     }
 
@@ -169,6 +180,15 @@ function View(props) {
                                                     </span>
                                                 </>
                                             )}
+                                            {/* Toggle Follow Button */}
+                                            <Button
+                                                style={{
+                                                    textDecoration: "none"
+                                                }}
+                                                onClick={() => toggleFollow(props.blog.user_id)}
+                                            >
+                                                Follow
+                                            </Button>
 
                                             {/* Bookmark */}
                                             <span style={{ marginRight: "1rem" }}></span>
@@ -285,6 +305,8 @@ const mapDispatchToProps = (dispatch) => {
         showBlog: (username, blog_name) => dispatch(showBlog(username, blog_name)),
         // listFavorites: (page) => dispatch(listFavorites(page)),
         addFavorites: (data) => dispatch(addFavorites(data)),
+
+        toggleFollow: (data) => dispatch(toggleFollow(data)),
     };
 };
 

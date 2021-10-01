@@ -4,7 +4,7 @@ import FollowApi from '../../api/Follow';
 
 
 /**
- * add favorite action
+ * Toggle Follow action
  */
 function toggleFollow(payload, cb) {
 

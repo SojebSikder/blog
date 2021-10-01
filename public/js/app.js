@@ -2747,6 +2747,42 @@ var FavoriteApi = {
 
 /***/ }),
 
+/***/ "./resources/js/app/api/Follow.js":
+/*!****************************************!*\
+  !*** ./resources/js/app/api/Follow.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _config_app_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../config/app_config */ "./resources/js/app/config/app_config.js");
+
+
+var FollowApi = {
+  // For redux
+
+  /**
+   * Toggle Follow/UnFollow
+   * @param {*} data 
+   * @returns 
+   */
+  toggleFollow: function toggleFollow(data) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default().post(_config_app_config__WEBPACK_IMPORTED_MODULE_1__["default"].getApiUrl() + "/togglefollow", data, {
+      headers: {
+        Authorization: 'Bearer ' + localStorage.getItem("token")
+      }
+    });
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FollowApi);
+
+/***/ }),
+
 /***/ "./resources/js/app/api/Language.js":
 /*!******************************************!*\
   !*** ./resources/js/app/api/Language.js ***!
@@ -4042,7 +4078,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-helmet */ "./node_modules/react-helmet/es/Helmet.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
@@ -4050,13 +4086,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/partials/navbar/Navbar */ "./resources/js/app/components/partials/navbar/Navbar.js");
 /* harmony import */ var _components_partials_footer_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../components/partials/footer/Footer */ "./resources/js/app/components/partials/footer/Footer.js");
 /* harmony import */ var _components_spinner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../components/spinner */ "./resources/js/app/components/spinner/index.js");
-/* harmony import */ var _config_constant__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../config/constant */ "./resources/js/app/config/constant.js");
-/* harmony import */ var _store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../store/actions/BlogActions */ "./resources/js/app/store/actions/BlogActions.js");
-/* harmony import */ var _store_actions_FavoriteActions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../store/actions/FavoriteActions */ "./resources/js/app/store/actions/FavoriteActions.js");
-/* harmony import */ var _util_Data__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../util/Data */ "./resources/js/app/util/Data.js");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/pages/dashboard/style.css");
-/* harmony import */ var _config_app_config__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../config/app_config */ "./resources/js/app/config/app_config.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _components_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../components/button */ "./resources/js/app/components/button/index.js");
+/* harmony import */ var _config_app_config__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../config/app_config */ "./resources/js/app/config/app_config.js");
+/* harmony import */ var _config_constant__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../config/constant */ "./resources/js/app/config/constant.js");
+/* harmony import */ var _store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../store/actions/BlogActions */ "./resources/js/app/store/actions/BlogActions.js");
+/* harmony import */ var _store_actions_FavoriteActions__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../store/actions/FavoriteActions */ "./resources/js/app/store/actions/FavoriteActions.js");
+/* harmony import */ var _util_Data__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../util/Data */ "./resources/js/app/util/Data.js");
+/* harmony import */ var _store_actions_FollowActions__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../store/actions/FollowActions */ "./resources/js/app/store/actions/FollowActions.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/pages/dashboard/style.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 // external imports
 
 
@@ -4068,16 +4106,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
  // config
+
 
  // action
 
 
 
 
- // import Blog from '../../api/Blog';
 
- // import Header from '../../util/Header';
 
 
 
@@ -4097,6 +4135,14 @@ function View(props) {
     updateUi();
   };
 
+  var toggleFollow = function toggleFollow(userId) {
+    var data = {
+      user_id: userId
+    };
+    props.toggleFollow(data);
+    updateUi();
+  };
+
   var updateUi = function updateUi() {
     props.showBlog(props.match.params.username, props.match.params.blogname);
   };
@@ -4107,84 +4153,84 @@ function View(props) {
   }, []);
 
   if (props.spinner == true) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_5__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("div", {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_5__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
         className: "d-flex justify-content-center",
         style: {
           height: "500px"
         },
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_spinner__WEBPACK_IMPORTED_MODULE_7__["default"], {})
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_spinner__WEBPACK_IMPORTED_MODULE_7__["default"], {})
       })]
     });
   } else {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.Fragment, {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_5__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_helmet__WEBPACK_IMPORTED_MODULE_2__.Helmet, {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("title", {
-          children: props.blog.title + " - " + _config_app_config__WEBPACK_IMPORTED_MODULE_13__["default"].getAppName()
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("meta", {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.Fragment, {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_partials_navbar_Navbar__WEBPACK_IMPORTED_MODULE_5__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)(react_helmet__WEBPACK_IMPORTED_MODULE_2__.Helmet, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("title", {
+          children: props.blog.title + " - " + _config_app_config__WEBPACK_IMPORTED_MODULE_9__["default"].getAppName()
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("meta", {
           name: "description",
           content: props.blog.body
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("meta", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("meta", {
           name: "keywords",
           content: props.blog.keywords
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("meta", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("meta", {
           property: "og:url",
-          content: _config_app_config__WEBPACK_IMPORTED_MODULE_13__["default"].getBaseUrl() + props.location.pathname
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("meta", {
+          content: _config_app_config__WEBPACK_IMPORTED_MODULE_9__["default"].getBaseUrl() + props.location.pathname
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("meta", {
           property: "og:type",
           content: "website"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("meta", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("meta", {
           property: "og:title",
-          content: props.blog.title + " - " + _config_app_config__WEBPACK_IMPORTED_MODULE_13__["default"].getAppName()
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("meta", {
+          content: props.blog.title + " - " + _config_app_config__WEBPACK_IMPORTED_MODULE_9__["default"].getAppName()
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("meta", {
           property: "og:description",
           content: props.blog.body
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("meta", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("meta", {
           property: "og:image",
           content: "https://www.your-domain.com/path/image.jpg"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
         className: "container",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
           className: "",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("div", {
               className: "d-flex justify-content-center",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("div", {
                 className: "content card",
                 style: {// width: "18rem" 
                 },
-                children: [props.blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("img", {
-                  src: _config_constant__WEBPACK_IMPORTED_MODULE_8__.BLOG_URL + props.blog.image,
+                children: [props.blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("img", {
+                  src: _config_constant__WEBPACK_IMPORTED_MODULE_10__.BLOG_URL + props.blog.image,
                   className: "cover-image card-img-top",
                   alt: props.blog.title,
                   style: {
                     display: "inline"
                   }
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("div", {
                   className: "card-body",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("h5", {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("h5", {
                     className: "title card-title",
                     children: props.blog.title
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
-                    children: [props.blog.user == null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("img", {
-                      src: _config_constant__WEBPACK_IMPORTED_MODULE_8__.PROFILE_URL + "logo.png",
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("div", {
+                    children: [props.blog.user == null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("img", {
+                      src: _config_constant__WEBPACK_IMPORTED_MODULE_10__.PROFILE_URL + "logo.png",
                       className: "profile-min card-img-top",
                       style: {
                         display: "inline"
                       }
-                    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.Fragment, {
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Link, {
+                    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.Fragment, {
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Link, {
                         to: "/user/" + props.blog.user.username,
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("img", {
-                          src: _config_constant__WEBPACK_IMPORTED_MODULE_8__.PROFILE_URL + props.blog.user.image,
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("img", {
+                          src: _config_constant__WEBPACK_IMPORTED_MODULE_10__.PROFILE_URL + props.blog.user.image,
                           className: "profile-min card-img-top",
                           alt: props.blog.user.username,
                           style: {
                             display: "inline"
                           }
                         })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Link, {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_17__.Link, {
                         style: {
                           margin: "10px",
                           textDecoration: "none",
@@ -4192,105 +4238,113 @@ function View(props) {
                         },
                         to: "/user/" + props.blog.user.username,
                         children: props.blog.user.username
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("span", {
                         style: {
                           margin: "10px",
                           textDecoration: "none",
                           fontSize: "14px"
                         },
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("a", {
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("p", {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("a", {
+                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("p", {
                             style: {
                               display: "inline"
                             },
-                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("span", {
                               style: {
                                 margin: "0 7px"
                               },
                               children: "\xB7"
                             }), moment__WEBPACK_IMPORTED_MODULE_3___default()(props.blog.created_at, "YYYYMMDD").fromNow()]
-                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("p", {
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("p", {
                             style: {
                               display: "inline"
                             },
-                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("span", {
                               style: {
                                 margin: "0 7px"
                               },
                               children: "\xB7"
-                            }), _util_Data__WEBPACK_IMPORTED_MODULE_11__["default"].date(props.blog.created_at)]
+                            }), _util_Data__WEBPACK_IMPORTED_MODULE_13__["default"].date(props.blog.created_at)]
                           })]
                         })
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("span", {
                         style: {
                           margin: "10px",
                           textDecoration: "none",
                           fontSize: "14px"
                         },
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("a", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("p", {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("a", {
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("p", {
                             style: {
                               display: "inline"
                             },
-                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
+                            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("span", {
                               style: {
                                 margin: "0 7px"
                               },
                               children: "\xB7"
-                            }), _util_Data__WEBPACK_IMPORTED_MODULE_11__["default"].readingTime(props.blog.body), " min read"]
+                            }), _util_Data__WEBPACK_IMPORTED_MODULE_13__["default"].readingTime(props.blog.body), " min read"]
                           })
                         })
                       })]
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_button__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                      style: {
+                        textDecoration: "none"
+                      },
+                      onClick: function onClick() {
+                        return toggleFollow(props.blog.user_id);
+                      },
+                      children: "Follow"
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("span", {
                       style: {
                         marginRight: "1rem"
                       }
-                    }), props.blog.is_bookmark == true ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("button", {
+                    }), props.blog.is_bookmark == true ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("button", {
                       title: "bookmark",
                       className: "focus:outline-none",
                       onClick: function onClick() {
                         return handleAddFavorite(props.blog.id);
                       },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("svg", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("svg", {
                         viewBox: "0 0 14 18",
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         className: "w-4 text-green-600 fill-current",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("path", {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("path", {
                           d: "M1.83354 1.28697C1.52462 1.63079 1.35107 2.0971 1.35107 2.58333V17.25L7.11647 14.0417L12.8819 17.25V2.58333C12.8819 2.0971 12.7083 1.63079 12.3994 1.28697C12.0905 0.943154 11.6715 0.75 11.2346 0.75H2.99833C2.56145 0.75 2.14246 0.943154 1.83354 1.28697Z",
                           strokeLinecap: "round",
                           strokeLinejoin: "round",
                           className: "stroke-current"
                         })
                       })
-                    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("button", {
+                    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("button", {
                       title: "bookmark",
                       className: "focus:outline-none",
                       onClick: function onClick() {
                         return handleAddFavorite(props.blog.id);
                       },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("svg", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("svg", {
                         viewBox: "0 0 14 18",
                         fill: "none",
                         xmlns: "http://www.w3.org/2000/svg",
                         className: "w-4 text-dark-secondary",
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("path", {
+                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("path", {
                           d: "M1.83354 1.28697C1.52462 1.63079 1.35107 2.0971 1.35107 2.58333V17.25L7.11647 14.0417L12.8819 17.25V2.58333C12.8819 2.0971 12.7083 1.63079 12.3994 1.28697C12.0905 0.943154 11.6715 0.75 11.2346 0.75H2.99833C2.56145 0.75 2.14246 0.943154 1.83354 1.28697Z",
                           strokeLinecap: "round",
                           strokeLinejoin: "round",
                           className: "stroke-current"
                         })
                       })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("span", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("span", {
                       style: {
                         marginRight: "1rem"
                       }
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("div", {
+                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("div", {
                       style: {
                         display: "inline"
                       },
                       className: "dropdown",
-                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("a", {
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("a", {
                         className: "btn btn-secondary dropdown-toggle",
                         href: "#",
                         role: "button",
@@ -4298,39 +4352,39 @@ function View(props) {
                         "data-bs-toggle": "dropdown",
                         "aria-expanded": "false",
                         children: "Share"
-                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)("ul", {
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("ul", {
                         className: "dropdown-menu",
                         "aria-labelledby": "dropdownMenuLink",
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("a", {
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("li", {
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("a", {
                             className: "dropdown-item",
                             target: "_blank" // href="https://twitter.com/intent/tweet?text=Hello%20world"
                             ,
-                            href: "https://twitter.com/intent/tweet?url=" + _config_app_config__WEBPACK_IMPORTED_MODULE_13__["default"].getBaseUrl() + props.location.pathname,
+                            href: "https://twitter.com/intent/tweet?url=" + _config_app_config__WEBPACK_IMPORTED_MODULE_9__["default"].getBaseUrl() + props.location.pathname,
                             children: "Twitter"
                           })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("a", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("li", {
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("a", {
                             className: "dropdown-item",
                             target: "_blank",
-                            href: "https://www.facebook.com/sharer/sharer.php?u=" + _config_app_config__WEBPACK_IMPORTED_MODULE_13__["default"].getBaseUrl() + props.location.pathname,
+                            href: "https://www.facebook.com/sharer/sharer.php?u=" + _config_app_config__WEBPACK_IMPORTED_MODULE_9__["default"].getBaseUrl() + props.location.pathname,
                             children: "Facebook"
                           })
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("li", {
-                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("button", {
+                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("li", {
+                          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("button", {
                             className: "dropdown-item",
-                            onClick: _util_Data__WEBPACK_IMPORTED_MODULE_11__["default"].copyText(_config_app_config__WEBPACK_IMPORTED_MODULE_13__["default"].getBaseUrl() + props.location.pathname),
+                            onClick: _util_Data__WEBPACK_IMPORTED_MODULE_13__["default"].copyText(_config_app_config__WEBPACK_IMPORTED_MODULE_9__["default"].getBaseUrl() + props.location.pathname),
                             children: "Copy link"
                           })
                         })]
                       })]
                     })]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_components_markdown_Markdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)(_components_markdown_Markdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
                     children: props.blog.body
                   })]
                 })]
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)("br", {})]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsx)("br", {})]
           }, props.blog.id)
         })
       })]
@@ -4348,11 +4402,14 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     showBlog: function showBlog(username, blog_name) {
-      return dispatch((0,_store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_9__.showBlog)(username, blog_name));
+      return dispatch((0,_store_actions_BlogActions__WEBPACK_IMPORTED_MODULE_11__.showBlog)(username, blog_name));
     },
     // listFavorites: (page) => dispatch(listFavorites(page)),
     addFavorites: function addFavorites(data) {
-      return dispatch((0,_store_actions_FavoriteActions__WEBPACK_IMPORTED_MODULE_10__.addFavorites)(data));
+      return dispatch((0,_store_actions_FavoriteActions__WEBPACK_IMPORTED_MODULE_12__.addFavorites)(data));
+    },
+    toggleFollow: function toggleFollow(data) {
+      return dispatch((0,_store_actions_FollowActions__WEBPACK_IMPORTED_MODULE_14__.toggleFollow)(data));
     }
   };
 };
@@ -6907,6 +6964,51 @@ function addFavorites(payload, cb) {
     })["catch"](function (error) {
       dispatch({
         type: _actionTypes_FavoriteTypes__WEBPACK_IMPORTED_MODULE_0__.CREATE_FAVORITE_FAILURE,
+        error: error.response.data
+      });
+    });
+  };
+}
+
+
+
+/***/ }),
+
+/***/ "./resources/js/app/store/actions/FollowActions.js":
+/*!*********************************************************!*\
+  !*** ./resources/js/app/store/actions/FollowActions.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "toggleFollow": () => (/* binding */ toggleFollow)
+/* harmony export */ });
+/* harmony import */ var _actionTypes_FollowTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/FollowTypes */ "./resources/js/app/store/actionTypes/FollowTypes.js");
+/* harmony import */ var _api_Follow__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../api/Follow */ "./resources/js/app/api/Follow.js");
+
+
+/**
+ * Toggle Follow action
+ */
+
+function toggleFollow(payload, cb) {
+  return function (dispatch, getState) {
+    dispatch({
+      type: _actionTypes_FollowTypes__WEBPACK_IMPORTED_MODULE_0__.TOGGLE_FOLLOW
+    });
+    var data = {
+      user_id: payload.user_id
+    };
+    _api_Follow__WEBPACK_IMPORTED_MODULE_1__["default"].toggleFollow(data).then(function (response) {
+      dispatch({
+        type: _actionTypes_FollowTypes__WEBPACK_IMPORTED_MODULE_0__.TOGGLE_FOLLOW_SUCCESS,
+        data: response.data.data
+      });
+    })["catch"](function (error) {
+      dispatch({
+        type: _actionTypes_FollowTypes__WEBPACK_IMPORTED_MODULE_0__.TOGGLE_FOLLOW_FAILURE,
         error: error.response.data
       });
     });
