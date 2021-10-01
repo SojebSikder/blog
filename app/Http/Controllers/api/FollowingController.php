@@ -17,10 +17,10 @@ class FollowingController extends Controller
 
         // receiver id
         $receiver_id = $request->user_id;
-        $receiver = User::where("user_id", $receiver_id)->first();
+        $receiver = User::where("id", $receiver_id)->first();
 
         // sender id
-        $sender_id = User::where("user_id", auth()->user()->user_id)->first();
+        $sender_id = User::where("id", auth()->user()->id)->first();
 
         // Toggle Follow/Unfollow the users
         $sender_id->toggleFollow($receiver);

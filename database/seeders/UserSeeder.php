@@ -25,5 +25,14 @@ class UserSeeder extends Seeder
             'about_me' => 'Hello, I am Sojeb Sikder',
             'password' => bcrypt('sojeb123'),
         ]);
+        User::create([
+            'id' => '16156bed723150',
+            'name' => 'Sikder Sojeb',
+            'username' => 'sikdersojeb',
+            'email' => 'sikdersojeb@gmail.com',
+            'image' => 'logo.png',
+            'about_me' => 'Hello, I am Sikder Sojeb',
+            'password' => bcrypt('sikder123'),
+        ]);
     }
 }

@@ -10,8 +10,10 @@ class CreateUserFollowerTable extends Migration
     {
         Schema::create(config('follow.relation_table', 'user_follower'), function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedBigInteger('following_id')->index();
-            $table->unsignedBigInteger('follower_id')->index();
+            // $table->unsignedBigInteger('following_id')->index();
+            $table->string('following_id')->index();
+            // $table->unsignedBigInteger('follower_id')->index();
+            $table->string('follower_id')->index();
             $table->timestamp('accepted_at')->nullable()->index();
             $table->timestamps();
         });
