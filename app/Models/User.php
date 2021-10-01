@@ -33,6 +33,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $hidden = [
+        'api_token',
         'password',
         'remember_token',
     ];
@@ -45,7 +46,7 @@ class User extends Authenticatable implements JWTSubject
     protected $casts = [
         'email_verified_at' => 'datetime',
         'id' => 'string',
-        
+
         'following_id' => 'string',
         'follower_id' => 'string',
     ];

@@ -39,6 +39,15 @@ class FollowingController extends Controller
     public function index()
     {
         //
+        $user = User::find(1);
+        $data = [
+          "following"=>  $user->followings,
+          "followers"=>  $user->followers,
+        ];
+
+        return response()->json([
+            'data' => $data,
+        ], 200);
     }
 
     /**
