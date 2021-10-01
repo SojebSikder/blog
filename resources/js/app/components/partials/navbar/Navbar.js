@@ -52,7 +52,7 @@ function Navbar(props) {
                     <Link className="navbar-brand" to="/">Blog</Link>
 
 
-                    <form className="d-flex">
+                    <div>
                         <input
                             className="me-2 w-full h-full px-3 rounded-lg focus:outline-none"
                             type="search"
@@ -64,7 +64,20 @@ function Navbar(props) {
                                 height: "40px",
                             }}
                         />
-                    </form>
+                    </div>
+                    {/* <form className="d-flex">
+                        <input
+                            className="me-2 w-full h-full px-3 rounded-lg focus:outline-none"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search"
+                            style={{
+                                color: "black",
+                                width: "30vw",
+                                height: "40px",
+                            }}
+                        />
+                    </form> */}
 
                     <button
                         className="navbar-toggler"
