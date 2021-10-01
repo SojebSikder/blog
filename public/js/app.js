@@ -3989,7 +3989,7 @@ function Row(props) {
                               margin: "0 7px"
                             },
                             children: "\xB7"
-                          }), moment__WEBPACK_IMPORTED_MODULE_2___default()(blog.created_at, "YYYYMMDD").fromNow()]
+                          }), moment__WEBPACK_IMPORTED_MODULE_2___default()(blog.created_at, "YYYY-MM-DD hh:mm:s").fromNow()]
                         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("p", {
                           style: {
                             display: "inline"
@@ -4254,7 +4254,7 @@ function View(props) {
                                 margin: "0 7px"
                               },
                               children: "\xB7"
-                            }), moment__WEBPACK_IMPORTED_MODULE_3___default()(props.blog.created_at, "YYYYMMDD").fromNow()]
+                            }), moment__WEBPACK_IMPORTED_MODULE_3___default()(props.blog.created_at, "YYYY-MM-DD hh:mm:s").fromNow()]
                           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_16__.jsxs)("p", {
                             style: {
                               display: "inline"

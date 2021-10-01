@@ -155,7 +155,7 @@ function View(props) {
                                                         <a>
                                                             <p style={{ display: "inline", }}>
                                                                 <span style={{ margin: "0 7px", }}>·</span>
-                                                                {moment(props.blog.created_at, "YYYYMMDD").fromNow()}
+                                                                {moment(props.blog.created_at, "YYYY-MM-DD hh:mm:s").fromNow()}
                                                             </p>
                                                             <p style={{ display: "inline", }}>
                                                                 <span style={{ margin: "0 7px", }}>·</span>

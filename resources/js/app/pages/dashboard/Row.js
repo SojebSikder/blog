@@ -110,7 +110,7 @@ function Row(props) {
                                                         <a>
                                                             <p style={{ display: "inline", }}>
                                                                 <span style={{ margin: "0 7px", }}>·</span>
-                                                                {moment(blog.created_at, "YYYYMMDD").fromNow()}
+                                                                {moment(blog.created_at, "YYYY-MM-DD hh:mm:s").fromNow()}
                                                             </p>
                                                             <p style={{ display: "inline", }}>
                                                                 <span style={{ margin: "0 7px", }}>·</span>
