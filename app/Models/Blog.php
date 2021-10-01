@@ -42,7 +42,6 @@ class Blog extends Model
 
     public function getIsBookmarkAttribute()
     {
-        
         if (auth("api")->user()) {
             $user_id = auth("api")->user()->id;
 
