@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use DateTimeInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -25,6 +26,11 @@ class Blog extends Model
      */
     protected $appends = ['is_bookmark'];
 
+    protected function serializeDate(DateTimeInterface $date)
+    {
+        return $date->format('Y-m-d H:i:s');
+    }
+
 
 
     public function category()
@@ -42,6 +48,7 @@ class Blog extends Model
 
     public function getIsBookmarkAttribute()
     {
+
         if (auth("api")->user()) {
             $user_id = auth("api")->user()->id;
 

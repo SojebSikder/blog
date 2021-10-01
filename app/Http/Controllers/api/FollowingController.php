@@ -49,6 +49,7 @@ class FollowingController extends Controller
 
             "followings" =>  $followings,
             "followers" =>  $followers,
+            'time'=>date('Y-m-d H:i:s')
         ];
 
         return response()->json([

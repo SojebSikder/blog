@@ -174,6 +174,12 @@ class BlogController extends Controller
 
             $result->image = $filename;
         }
+
+        // $result->created_at = Carbon::now()->toDateTimeString();
+        // $result->updated_at = Carbon::now()->toDateTimeString();
+        // $result->created_at = date('Y-m-d H:i:s');
+        // $result->updated_at = date('Y-m-d H:i:s');
+
         $result->save();
 
         return response()->json([
