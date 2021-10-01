@@ -6652,6 +6652,26 @@ var DELETE_FAVORITE_FAILURE = 'DELETE_FAVORITE_FAILURE';
 
 /***/ }),
 
+/***/ "./resources/js/app/store/actionTypes/FollowTypes.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/app/store/actionTypes/FollowTypes.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "TOGGLE_FOLLOW": () => (/* binding */ TOGGLE_FOLLOW),
+/* harmony export */   "TOGGLE_FOLLOW_SUCCESS": () => (/* binding */ TOGGLE_FOLLOW_SUCCESS),
+/* harmony export */   "TOGGLE_FOLLOW_FAILURE": () => (/* binding */ TOGGLE_FOLLOW_FAILURE)
+/* harmony export */ });
+// toggle Follow/Unfollow
+var TOGGLE_FOLLOW = 'TOGGLE_FOLLOW';
+var TOGGLE_FOLLOW_SUCCESS = 'TOGGLE_FOLLOW_SUCCESS';
+var TOGGLE_FOLLOW_FAILURE = 'TOGGLE_FOLLOW_FAILURE';
+
+/***/ }),
+
 /***/ "./resources/js/app/store/actionTypes/UserTypes.js":
 /*!*********************************************************!*\
   !*** ./resources/js/app/store/actionTypes/UserTypes.js ***!
@@ -7411,7 +7431,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-Object(function webpackMissingModule() { var e = new Error("Cannot find module '../actionTypes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _actionTypes_FollowTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/FollowTypes */ "./resources/js/app/store/actionTypes/FollowTypes.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -7430,18 +7450,18 @@ var followReducer = function followReducer() {
   var action = arguments.length > 1 ? arguments[1] : undefined;
 
   switch (action.type) {
-    case Object(function webpackMissingModule() { var e = new Error("Cannot find module '../actionTypes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()):
+    case _actionTypes_FollowTypes__WEBPACK_IMPORTED_MODULE_0__.TOGGLE_FOLLOW:
       return _objectSpread(_objectSpread({}, state), {}, {
         spinner: true
       });
 
-    case Object(function webpackMissingModule() { var e = new Error("Cannot find module '../actionTypes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()):
+    case _actionTypes_FollowTypes__WEBPACK_IMPORTED_MODULE_0__.TOGGLE_FOLLOW_SUCCESS:
       return _objectSpread(_objectSpread({}, state), {}, {
         spinner: false,
         follows: action.data
       });
 
-    case Object(function webpackMissingModule() { var e = new Error("Cannot find module '../actionTypes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()):
+    case _actionTypes_FollowTypes__WEBPACK_IMPORTED_MODULE_0__.TOGGLE_FOLLOW_FAILURE:
       return _objectSpread(_objectSpread({}, state), {}, {
         spinner: false,
         error_message: action.error

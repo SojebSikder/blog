@@ -1,4 +1,4 @@
-import * as FollowTypes from '../actionTypes'
+import * as FollowTypes from '../actionTypes/FollowTypes'
 
 const initialState = {
     // List all valid favorite in home page

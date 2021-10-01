@@ -112,6 +112,7 @@ function View(props) {
                                                 />
                                             ) : (
                                                 <>
+                                                    {/* Profile image */}
                                                     <Link to={"/user/" + props.blog.user.username}>
                                                         <img
                                                             src={Constant.PROFILE_URL + props.blog.user.image}
@@ -121,6 +122,7 @@ function View(props) {
                                                         />
                                                     </Link>
 
+                                                    {/* Profile username */}
                                                     <Link
                                                         style={{
                                                             margin: "10px",
@@ -131,6 +133,7 @@ function View(props) {
                                                     >
                                                         {props.blog.user.username}
                                                     </Link>
+                                                    {/* Relative time */}
                                                     <span
                                                         style={{
                                                             margin: "10px",
@@ -149,6 +152,7 @@ function View(props) {
                                                             </p>
                                                         </a>
                                                     </span>
+                                                    {/* Reading time */}
                                                     <span
                                                         style={{
                                                             margin: "10px",
