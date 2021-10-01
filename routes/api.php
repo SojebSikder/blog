@@ -36,7 +36,5 @@ Route::resource("blog", App\Http\Controllers\api\BlogController::class);
 Route::resource('favorite', App\Http\Controllers\api\FavoriteController::class);
 
 // Follow/Unfollow route
-Route::post("follow", [App\Http\Controllers\api\FollowingController::class, 'follow']);
-Route::post("unfollow", [App\Http\Controllers\api\FollowingController::class, 'unfollow']);
 Route::post("togglefollow", [App\Http\Controllers\api\FollowingController::class, 'toggleFollow']);
 // Route::resource("following", App\Http\Controllers\api\FollowingController::class);

@@ -8,40 +8,27 @@ use Illuminate\Http\Request;
 
 class FollowingController extends Controller
 {
-    /**
-     * Follow a user
-     */
-    public function follow(Request $request)
-    {
-        $user_id = $request->user_id;
-        $user = User::where("user_id", $user_id)->first();
-
-        // Follow the user
-        $user->follow($user);
-    }
-
-    /**
-     * Unfollow a user
-     */
-    public function unfollow(Request $request)
-    {
-        $user_id = $request->user_id;
-        $user = User::where("user_id", $user_id)->first();
-
-        // Unfollow the users
-        $user->unfollow($user);
-    }
 
     /**
      * Toggle Follow/Unfollow a user
      */
     public function toggleFollow(Request $request)
     {
-        $user_id = $request->user_id;
-        $user = User::where("user_id", $user_id)->first();
+
+        // receiver id
+        $receiver_id = $request->user_id;
+        $receiver = User::where("user_id", $receiver_id)->first();
+
+        // sender id
+        $sender_id = User::where("user_id", auth()->user()->user_id)->first();
 
         // Toggle Follow/Unfollow the users
-        $user->toggleFollow($user);
+        $sender_id->toggleFollow($receiver);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'successfull'
+        ], 200);
     }
 
     /**
