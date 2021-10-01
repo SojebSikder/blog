@@ -40,10 +40,12 @@ class FollowingController extends Controller
     {
         //
         $user = auth()->user();
+        $followings = $user->followings->makeHidden('api_token');
+        $followers = $user->followers->makeHidden('api_token');
         $data = [
             'id' => auth()->user()->id,
-            "following" =>  $user->followings()->count(),
-            "followers" =>  $user->followers()->count(),
+            "followings" =>  $followings,
+            "followers" =>  $followers,
         ];
 
         return response()->json([
