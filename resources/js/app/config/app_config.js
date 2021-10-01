@@ -19,7 +19,7 @@ const Config = {
      */
     getBaseUrl: () => {
         // return 'http://127.0.0.1:8000';
-        return 'https://sojebsikder-blog.herokuapp.com/';
+        return 'https://sojebsikder-blog.herokuapp.com';
     },
     /**
      * Get Api url
