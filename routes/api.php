@@ -34,3 +34,8 @@ Route::resource("category", App\Http\Controllers\api\CategoryController::class);
 Route::resource("language", App\Http\Controllers\api\LanguageController::class);
 Route::resource("blog", App\Http\Controllers\api\BlogController::class);
 Route::resource('favorite', App\Http\Controllers\api\FavoriteController::class);
+
+// Follow/Unfollow route
+Route::post("follow", [App\Http\Controllers\api\FollowingController::class, 'follow']);
+Route::post("unfollow", [App\Http\Controllers\api\FollowingController::class, 'unfollow']);
+// Route::resource("following", App\Http\Controllers\api\FollowingController::class);
