@@ -7400,6 +7400,62 @@ var favoriteReducer = function favoriteReducer() {
 
 /***/ }),
 
+/***/ "./resources/js/app/store/reducers/FollowReducer.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/app/store/reducers/FollowReducer.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+Object(function webpackMissingModule() { var e = new Error("Cannot find module '../actionTypes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var initialState = {
+  // List all valid favorite in home page
+  follows: [],
+  spinner: false
+};
+
+var followReducer = function followReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+
+  switch (action.type) {
+    case Object(function webpackMissingModule() { var e = new Error("Cannot find module '../actionTypes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()):
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spinner: true
+      });
+
+    case Object(function webpackMissingModule() { var e = new Error("Cannot find module '../actionTypes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()):
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spinner: false,
+        follows: action.data
+      });
+
+    case Object(function webpackMissingModule() { var e = new Error("Cannot find module '../actionTypes'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()):
+      return _objectSpread(_objectSpread({}, state), {}, {
+        spinner: false,
+        error_message: action.error
+      });
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (followReducer);
+
+/***/ }),
+
 /***/ "./resources/js/app/store/reducers/RootReducer.js":
 /*!********************************************************!*\
   !*** ./resources/js/app/store/reducers/RootReducer.js ***!
@@ -7411,24 +7467,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var _DataReducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DataReducer */ "./resources/js/app/store/reducers/DataReducer.js");
 /* harmony import */ var _CounterReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CounterReducer */ "./resources/js/app/store/reducers/CounterReducer.js");
 /* harmony import */ var _BlogReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BlogReducer */ "./resources/js/app/store/reducers/BlogReducer.js");
 /* harmony import */ var _UserReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./UserReducer */ "./resources/js/app/store/reducers/UserReducer.js");
 /* harmony import */ var _FavoriteReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FavoriteReducer */ "./resources/js/app/store/reducers/FavoriteReducer.js");
+/* harmony import */ var _FollowReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FollowReducer */ "./resources/js/app/store/reducers/FollowReducer.js");
 
 
 
 
 
 
-var rootReducer = (0,redux__WEBPACK_IMPORTED_MODULE_5__.combineReducers)({
+
+var rootReducer = (0,redux__WEBPACK_IMPORTED_MODULE_6__.combineReducers)({
   data: _DataReducer__WEBPACK_IMPORTED_MODULE_0__["default"],
   counter: _CounterReducer__WEBPACK_IMPORTED_MODULE_1__["default"],
   blog: _BlogReducer__WEBPACK_IMPORTED_MODULE_2__["default"],
   user: _UserReducer__WEBPACK_IMPORTED_MODULE_3__["default"],
-  favorite: _FavoriteReducer__WEBPACK_IMPORTED_MODULE_4__["default"]
+  favorite: _FavoriteReducer__WEBPACK_IMPORTED_MODULE_4__["default"],
+  follow: _FollowReducer__WEBPACK_IMPORTED_MODULE_5__["default"]
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (rootReducer);
 

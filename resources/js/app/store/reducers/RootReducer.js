@@ -5,6 +5,7 @@ import counterReducer from './CounterReducer';
 import blogReducer from './BlogReducer';
 import userReducer from './UserReducer';
 import favoriteReducer from './FavoriteReducer';
+import followReducer from './FollowReducer';
 
 const rootReducer = combineReducers({
     data: dataReducer,
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
     blog: blogReducer,
     user: userReducer,
     favorite: favoriteReducer,
+    follow: followReducer,
 });
 
 export default rootReducer;

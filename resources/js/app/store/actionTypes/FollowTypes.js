@@ -1,0 +1,4 @@
+// toggle Follow/Unfollow
+export const TOGGLE_FOLLOW = 'TOGGLE_FOLLOW';
+export const TOGGLE_FOLLOW_SUCCESS = 'TOGGLE_FOLLOW_SUCCESS';
+export const TOGGLE_FOLLOW_FAILURE = 'TOGGLE_FOLLOW_FAILURE';
