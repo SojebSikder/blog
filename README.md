@@ -2,6 +2,10 @@
 
 Blog app created with laravel and reactjs
 
+
+![preview](ss/preview1.PNG)
+![preview](ss/preview2.PNG)
+![preview](ss/preview3.PNG)
 ## Installing
 
 Install laravel dependency using composer:
