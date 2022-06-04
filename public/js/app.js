@@ -996,7 +996,7 @@ module.exports = function transformData(data, headers, fns) {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
 
 var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
@@ -2067,17 +2067,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -2087,7 +2087,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf.bind() : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
@@ -2153,13 +2153,13 @@ var ErrorBoundary = /*#__PURE__*/function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
-/* harmony import */ var _app_store_reducers_RootReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/store/reducers/RootReducer */ "./resources/js/app/store/reducers/RootReducer.js");
-/* harmony import */ var _ErrorBoundary__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ErrorBoundary */ "./resources/js/ErrorBoundary.js");
-/* harmony import */ var _app_Index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app/Index */ "./resources/js/app/Index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
+/* harmony import */ var _app_store_reducers_RootReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/store/reducers/RootReducer */ "./resources/js/app/store/reducers/RootReducer.js");
+/* harmony import */ var _ErrorBoundary__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ErrorBoundary */ "./resources/js/ErrorBoundary.js");
+/* harmony import */ var _app_Index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app/Index */ "./resources/js/app/Index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes React and other helpers. It's a great starting point while
@@ -2182,14 +2182,14 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-var store = (0,redux__WEBPACK_IMPORTED_MODULE_7__.createStore)(_app_store_reducers_RootReducer__WEBPACK_IMPORTED_MODULE_3__["default"], (0,redux__WEBPACK_IMPORTED_MODULE_7__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"]));
+var store = (0,redux__WEBPACK_IMPORTED_MODULE_6__.createStore)(_app_store_reducers_RootReducer__WEBPACK_IMPORTED_MODULE_2__["default"], (0,redux__WEBPACK_IMPORTED_MODULE_6__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_7__["default"]));
 
 if (document.getElementById('app')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_0__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_ErrorBoundary__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_redux__WEBPACK_IMPORTED_MODULE_1__.Provider, {
+  react_dom__WEBPACK_IMPORTED_MODULE_0__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_ErrorBoundary__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_redux__WEBPACK_IMPORTED_MODULE_1__.Provider, {
       store: store,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_app_Index__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_8__.BrowserRouter, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_app_Index__WEBPACK_IMPORTED_MODULE_4__["default"], {})
       })
     })
   }), document.getElementById('app'));
@@ -2213,9 +2213,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["component"];
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -2956,9 +2956,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _excluded = ["isLink", "to", "children"];
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -3013,13 +3013,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
@@ -3292,8 +3292,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Dropdown": () => (/* binding */ Dropdown),
 /* harmony export */   "DropdownContent": () => (/* binding */ DropdownContent),
-/* harmony export */   "DropdownTrig": () => (/* binding */ DropdownTrig),
-/* harmony export */   "DropdownItem": () => (/* binding */ DropdownItem)
+/* harmony export */   "DropdownItem": () => (/* binding */ DropdownItem),
+/* harmony export */   "DropdownTrig": () => (/* binding */ DropdownTrig)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/components/partials/navbar/style.css");
@@ -3302,9 +3302,9 @@ var _excluded = ["children"],
     _excluded2 = ["children"],
     _excluded3 = ["children"];
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -3898,152 +3898,194 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // This is for post limit
+// let limit = 12;
 
 
 
 
+var limit = 2;
+var isPostLoad = false; //
 
 function Row(props) {
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    props.listBlogs();
-  }, []);
+  var scrollRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
 
-  if (props.spinner == true) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
+  var getPost = function getPost(limit) {
+    props.listBlogs(limit);
+  };
+
+  var updateUi = function updateUi() {
+    getPost(limit);
+  }; // Scrolling function
+
+
+  var isBottom = function isBottom(el) {
+    return el.getBoundingClientRect().bottom - 20 <= window.innerHeight;
+  };
+
+  var trackScrolling = function trackScrolling() {
+    var wrappedElement = scrollRef.current;
+
+    if (isBottom(wrappedElement) == false) {
+      isPostLoad = false;
+    }
+
+    if (isPostLoad == false) {
+      if (!wrappedElement) return;
+
+      if (isBottom(wrappedElement)) {
+        //
+        limit = limit + 6; // Fetch Post
+
+        getPost(limit);
+        isPostLoad = true;
+      }
+    }
+  };
+
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    // componentDidMount
+    document.addEventListener('scroll', trackScrolling);
+    updateUi(); // componentWillUnmount
+
+    return function () {
+      document.removeEventListener('scroll', trackScrolling);
+    };
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
+    children: [props.blogs.map(function (blog) {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+        ref: scrollRef,
+        id: "body",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+          className: "d-flex justify-content-center",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+            className: "card",
+            style: {
+              // width: "18rem" 
+              // width: "50%",
+              // width: "80%",
+              width: "30rem"
+            },
+            children: [blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
+              style: {
+                width: "200px",
+                margin: "0 auto"
+              },
+              src: _config_constant__WEBPACK_IMPORTED_MODULE_6__.BLOG_URL + blog.image,
+              className: "card-img-top",
+              alt: blog.title
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+              className: "card-body",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h5", {
+                className: "title card-title",
+                children: blog.title
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+                children: blog.user == null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
+                  src: _config_constant__WEBPACK_IMPORTED_MODULE_6__.PROFILE_URL + "logo.png",
+                  className: "profile-min card-img-top",
+                  style: {
+                    display: "inline"
+                  }
+                }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link, {
+                    to: "/user/" + blog.user.username,
+                    children: blog.user.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
+                        src: _config_constant__WEBPACK_IMPORTED_MODULE_6__.PROFILE_URL + blog.user.image,
+                        className: "profile-min card-img-top",
+                        alt: blog.user.username,
+                        style: {
+                          display: "inline"
+                        }
+                      })
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link, {
+                    style: {
+                      margin: "10px",
+                      textDecoration: "none",
+                      fontSize: "14px"
+                    },
+                    to: "/user/" + blog.user.username,
+                    children: blog.user.username
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                    style: {
+                      margin: "10px",
+                      textDecoration: "none",
+                      fontSize: "14px"
+                    },
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("a", {
+                      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("p", {
+                        style: {
+                          display: "inline"
+                        },
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                          style: {
+                            margin: "0 7px"
+                          },
+                          children: "\xB7"
+                        }), moment__WEBPACK_IMPORTED_MODULE_2___default()(blog.created_at, "YYYY-MM-DD hh:mm:s").fromNow()]
+                      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("p", {
+                        style: {
+                          display: "inline"
+                        },
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                          style: {
+                            margin: "0 7px"
+                          },
+                          children: "\xB7"
+                        }), _util_Data__WEBPACK_IMPORTED_MODULE_8__["default"].date(blog.created_at)]
+                      })]
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                    style: {
+                      margin: "10px",
+                      textDecoration: "none",
+                      fontSize: "14px"
+                    },
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("a", {
+                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("p", {
+                        style: {
+                          display: "inline"
+                        },
+                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
+                          style: {
+                            margin: "0 7px"
+                          },
+                          children: "\xB7"
+                        }), _util_Data__WEBPACK_IMPORTED_MODULE_8__["default"].readingTime(blog.body), " min read"]
+                      })
+                    })
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_markdown_Markdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
+                children: _util_Data__WEBPACK_IMPORTED_MODULE_8__["default"].textShorten(blog.body, 400)
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_button__WEBPACK_IMPORTED_MODULE_9__["default"], {
+                isLink: "true",
+                to: "/blog/" + blog.user.username + "/" + blog.name,
+                className: "btn btn-primary" // style={{
+                //     textDecoration: "none"
+                // }}
+                ,
+                style: {
+                  textDecoration: "none"
+                },
+                children: "Read more"
+              })]
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("br", {})]
+      }, blog.id);
+    }), props.spinner == true ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
         className: "d-flex justify-content-center",
         style: {
-          height: "500px"
+          height: "200px"
         },
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_spinner__WEBPACK_IMPORTED_MODULE_4__["default"], {})
       })
-    });
-  } else {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
-      children: props.blogs.map(function (blog) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-            className: "d-flex justify-content-center",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-              className: "card",
-              style: {
-                // width: "18rem" 
-                // width: "50%",
-                // width: "80%",
-                width: "30rem"
-              },
-              children: [blog.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
-                style: {
-                  width: "200px",
-                  margin: "0 auto"
-                },
-                src: _config_constant__WEBPACK_IMPORTED_MODULE_6__.BLOG_URL + blog.image,
-                className: "card-img-top",
-                alt: blog.title
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
-                className: "card-body",
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("h5", {
-                  className: "title card-title",
-                  children: blog.title
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
-                  children: blog.user == null ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
-                    src: _config_constant__WEBPACK_IMPORTED_MODULE_6__.PROFILE_URL + "logo.png",
-                    className: "profile-min card-img-top",
-                    style: {
-                      display: "inline"
-                    }
-                  }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
-                    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link, {
-                      to: "/user/" + blog.user.username,
-                      children: blog.user.image == null ? "" : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
-                          src: _config_constant__WEBPACK_IMPORTED_MODULE_6__.PROFILE_URL + blog.user.image,
-                          className: "profile-min card-img-top",
-                          alt: blog.user.username,
-                          style: {
-                            display: "inline"
-                          }
-                        })
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_12__.Link, {
-                      style: {
-                        margin: "10px",
-                        textDecoration: "none",
-                        fontSize: "14px"
-                      },
-                      to: "/user/" + blog.user.username,
-                      children: blog.user.username
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
-                      style: {
-                        margin: "10px",
-                        textDecoration: "none",
-                        fontSize: "14px"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("a", {
-                        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("p", {
-                          style: {
-                            display: "inline"
-                          },
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
-                            style: {
-                              margin: "0 7px"
-                            },
-                            children: "\xB7"
-                          }), moment__WEBPACK_IMPORTED_MODULE_2___default()(blog.created_at, "YYYY-MM-DD hh:mm:s").fromNow()]
-                        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("p", {
-                          style: {
-                            display: "inline"
-                          },
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
-                            style: {
-                              margin: "0 7px"
-                            },
-                            children: "\xB7"
-                          }), _util_Data__WEBPACK_IMPORTED_MODULE_8__["default"].date(blog.created_at)]
-                        })]
-                      })
-                    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
-                      style: {
-                        margin: "10px",
-                        textDecoration: "none",
-                        fontSize: "14px"
-                      },
-                      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("a", {
-                        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("p", {
-                          style: {
-                            display: "inline"
-                          },
-                          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("span", {
-                            style: {
-                              margin: "0 7px"
-                            },
-                            children: "\xB7"
-                          }), _util_Data__WEBPACK_IMPORTED_MODULE_8__["default"].readingTime(blog.body), " min read"]
-                        })
-                      })
-                    })]
-                  })
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_markdown_Markdown__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                  children: _util_Data__WEBPACK_IMPORTED_MODULE_8__["default"].textShorten(blog.body, 400)
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_button__WEBPACK_IMPORTED_MODULE_9__["default"], {
-                  isLink: "true",
-                  to: "/blog/" + blog.user.username + "/" + blog.name,
-                  className: "btn btn-primary" // style={{
-                  //     textDecoration: "none"
-                  // }}
-                  ,
-                  style: {
-                    textDecoration: "none"
-                  },
-                  children: "Read more"
-                })]
-              })]
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("br", {})]
-        }, blog.id);
-      })
-    });
-  }
+    }) : ""]
+  });
 }
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
@@ -5912,9 +5954,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/pages/write/style.css");
 /* harmony import */ var _util_Data__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../util/Data */ "./resources/js/app/util/Data.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -6277,9 +6319,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./style.css */ "./resources/js/app/pages/write/style.css");
 /* harmony import */ var _util_Data__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../util/Data */ "./resources/js/app/util/Data.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -6608,17 +6650,17 @@ function Index() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LIST_BLOG": () => (/* binding */ LIST_BLOG),
-/* harmony export */   "LIST_BLOG_SUCCESS": () => (/* binding */ LIST_BLOG_SUCCESS),
 /* harmony export */   "LIST_BLOG_FAILURE": () => (/* binding */ LIST_BLOG_FAILURE),
+/* harmony export */   "LIST_BLOG_SUCCESS": () => (/* binding */ LIST_BLOG_SUCCESS),
 /* harmony export */   "SHOW_BLOG": () => (/* binding */ SHOW_BLOG),
-/* harmony export */   "SHOW_BLOG_SUCCESS": () => (/* binding */ SHOW_BLOG_SUCCESS),
 /* harmony export */   "SHOW_BLOG_FAILURE": () => (/* binding */ SHOW_BLOG_FAILURE),
-/* harmony export */   "SHOW_PUBLISHED": () => (/* binding */ SHOW_PUBLISHED),
-/* harmony export */   "SHOW_PUBLISHED_SUCCESS": () => (/* binding */ SHOW_PUBLISHED_SUCCESS),
-/* harmony export */   "SHOW_PUBLISHED_FAILURE": () => (/* binding */ SHOW_PUBLISHED_FAILURE),
+/* harmony export */   "SHOW_BLOG_SUCCESS": () => (/* binding */ SHOW_BLOG_SUCCESS),
 /* harmony export */   "SHOW_DRAFT": () => (/* binding */ SHOW_DRAFT),
+/* harmony export */   "SHOW_DRAFT_FAILURE": () => (/* binding */ SHOW_DRAFT_FAILURE),
 /* harmony export */   "SHOW_DRAFT_SUCCESS": () => (/* binding */ SHOW_DRAFT_SUCCESS),
-/* harmony export */   "SHOW_DRAFT_FAILURE": () => (/* binding */ SHOW_DRAFT_FAILURE)
+/* harmony export */   "SHOW_PUBLISHED": () => (/* binding */ SHOW_PUBLISHED),
+/* harmony export */   "SHOW_PUBLISHED_FAILURE": () => (/* binding */ SHOW_PUBLISHED_FAILURE),
+/* harmony export */   "SHOW_PUBLISHED_SUCCESS": () => (/* binding */ SHOW_PUBLISHED_SUCCESS)
 /* harmony export */ });
 // show all blog
 var LIST_BLOG = 'LIST_BLOG';
@@ -6648,8 +6690,8 @@ var SHOW_DRAFT_FAILURE = 'SHOW_DRAFT_FAILURE';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "INCREMENT": () => (/* binding */ INCREMENT),
-/* harmony export */   "DECREMENT": () => (/* binding */ DECREMENT)
+/* harmony export */   "DECREMENT": () => (/* binding */ DECREMENT),
+/* harmony export */   "INCREMENT": () => (/* binding */ INCREMENT)
 /* harmony export */ });
 var INCREMENT = 'INCREMENT';
 var DECREMENT = 'DECREMENT';
@@ -6666,8 +6708,8 @@ var DECREMENT = 'DECREMENT';
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "LIST_DATA": () => (/* binding */ LIST_DATA),
-/* harmony export */   "LIST_DATA_SUCCESS": () => (/* binding */ LIST_DATA_SUCCESS),
-/* harmony export */   "LIST_DATA_FAILURE": () => (/* binding */ LIST_DATA_FAILURE)
+/* harmony export */   "LIST_DATA_FAILURE": () => (/* binding */ LIST_DATA_FAILURE),
+/* harmony export */   "LIST_DATA_SUCCESS": () => (/* binding */ LIST_DATA_SUCCESS)
 /* harmony export */ });
 var LIST_DATA = 'LIST_DATA';
 var LIST_DATA_SUCCESS = 'LIST_DATA_SUCCESS';
@@ -6684,15 +6726,15 @@ var LIST_DATA_FAILURE = 'LIST_DATA_FAILURE';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "LIST_FAVORITE": () => (/* binding */ LIST_FAVORITE),
-/* harmony export */   "LIST_FAVORITE_SUCCESS": () => (/* binding */ LIST_FAVORITE_SUCCESS),
-/* harmony export */   "LIST_FAVORITE_FAILURE": () => (/* binding */ LIST_FAVORITE_FAILURE),
 /* harmony export */   "CREATE_FAVORITE": () => (/* binding */ CREATE_FAVORITE),
-/* harmony export */   "CREATE_FAVORITE_SUCCESS": () => (/* binding */ CREATE_FAVORITE_SUCCESS),
 /* harmony export */   "CREATE_FAVORITE_FAILURE": () => (/* binding */ CREATE_FAVORITE_FAILURE),
+/* harmony export */   "CREATE_FAVORITE_SUCCESS": () => (/* binding */ CREATE_FAVORITE_SUCCESS),
 /* harmony export */   "DELETE_FAVORITE": () => (/* binding */ DELETE_FAVORITE),
+/* harmony export */   "DELETE_FAVORITE_FAILURE": () => (/* binding */ DELETE_FAVORITE_FAILURE),
 /* harmony export */   "DELETE_FAVORITE_SUCCESS": () => (/* binding */ DELETE_FAVORITE_SUCCESS),
-/* harmony export */   "DELETE_FAVORITE_FAILURE": () => (/* binding */ DELETE_FAVORITE_FAILURE)
+/* harmony export */   "LIST_FAVORITE": () => (/* binding */ LIST_FAVORITE),
+/* harmony export */   "LIST_FAVORITE_FAILURE": () => (/* binding */ LIST_FAVORITE_FAILURE),
+/* harmony export */   "LIST_FAVORITE_SUCCESS": () => (/* binding */ LIST_FAVORITE_SUCCESS)
 /* harmony export */ });
 // show all favorite for current user
 var LIST_FAVORITE = 'LIST_FAVORITE';
@@ -6719,8 +6761,8 @@ var DELETE_FAVORITE_FAILURE = 'DELETE_FAVORITE_FAILURE';
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "TOGGLE_FOLLOW": () => (/* binding */ TOGGLE_FOLLOW),
-/* harmony export */   "TOGGLE_FOLLOW_SUCCESS": () => (/* binding */ TOGGLE_FOLLOW_SUCCESS),
-/* harmony export */   "TOGGLE_FOLLOW_FAILURE": () => (/* binding */ TOGGLE_FOLLOW_FAILURE)
+/* harmony export */   "TOGGLE_FOLLOW_FAILURE": () => (/* binding */ TOGGLE_FOLLOW_FAILURE),
+/* harmony export */   "TOGGLE_FOLLOW_SUCCESS": () => (/* binding */ TOGGLE_FOLLOW_SUCCESS)
 /* harmony export */ });
 // toggle Follow/Unfollow
 var TOGGLE_FOLLOW = 'TOGGLE_FOLLOW';
@@ -6738,27 +6780,27 @@ var TOGGLE_FOLLOW_FAILURE = 'TOGGLE_FOLLOW_FAILURE';
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "LIST_USERS": () => (/* binding */ LIST_USERS),
-/* harmony export */   "LIST_USERS_SUCCESS": () => (/* binding */ LIST_USERS_SUCCESS),
-/* harmony export */   "LIST_USERS_FAILURE": () => (/* binding */ LIST_USERS_FAILURE),
 /* harmony export */   "CREATE_USERS": () => (/* binding */ CREATE_USERS),
-/* harmony export */   "CREATE_USERS_SUCCESS": () => (/* binding */ CREATE_USERS_SUCCESS),
 /* harmony export */   "CREATE_USERS_FAILURE": () => (/* binding */ CREATE_USERS_FAILURE),
-/* harmony export */   "EDIT_USERS": () => (/* binding */ EDIT_USERS),
-/* harmony export */   "EDIT_USERS_SUCCESS": () => (/* binding */ EDIT_USERS_SUCCESS),
-/* harmony export */   "EDIT_USERS_FAILURE": () => (/* binding */ EDIT_USERS_FAILURE),
+/* harmony export */   "CREATE_USERS_SUCCESS": () => (/* binding */ CREATE_USERS_SUCCESS),
 /* harmony export */   "DELETE_USERS": () => (/* binding */ DELETE_USERS),
-/* harmony export */   "DELETE_USERS_SUCCESS": () => (/* binding */ DELETE_USERS_SUCCESS),
 /* harmony export */   "DELETE_USERS_FAILURE": () => (/* binding */ DELETE_USERS_FAILURE),
-/* harmony export */   "SHOW_USER_BY_USERNAME": () => (/* binding */ SHOW_USER_BY_USERNAME),
-/* harmony export */   "SHOW_USER_BY_USERNAME_SUCCESS": () => (/* binding */ SHOW_USER_BY_USERNAME_SUCCESS),
-/* harmony export */   "SHOW_USER_BY_USERNAME_FAILURE": () => (/* binding */ SHOW_USER_BY_USERNAME_FAILURE),
-/* harmony export */   "SHOW_USER": () => (/* binding */ SHOW_USER),
-/* harmony export */   "SHOW_USER_SUCCESS": () => (/* binding */ SHOW_USER_SUCCESS),
-/* harmony export */   "SHOW_USER_FAILURE": () => (/* binding */ SHOW_USER_FAILURE),
+/* harmony export */   "DELETE_USERS_SUCCESS": () => (/* binding */ DELETE_USERS_SUCCESS),
+/* harmony export */   "EDIT_USERS": () => (/* binding */ EDIT_USERS),
+/* harmony export */   "EDIT_USERS_FAILURE": () => (/* binding */ EDIT_USERS_FAILURE),
+/* harmony export */   "EDIT_USERS_SUCCESS": () => (/* binding */ EDIT_USERS_SUCCESS),
 /* harmony export */   "HANDLE_USER_CHANGE": () => (/* binding */ HANDLE_USER_CHANGE),
+/* harmony export */   "LIST_USERS": () => (/* binding */ LIST_USERS),
+/* harmony export */   "LIST_USERS_FAILURE": () => (/* binding */ LIST_USERS_FAILURE),
+/* harmony export */   "LIST_USERS_SUCCESS": () => (/* binding */ LIST_USERS_SUCCESS),
+/* harmony export */   "RESET_USER_FIELDS": () => (/* binding */ RESET_USER_FIELDS),
 /* harmony export */   "SET_USER_DEFAULTS": () => (/* binding */ SET_USER_DEFAULTS),
-/* harmony export */   "RESET_USER_FIELDS": () => (/* binding */ RESET_USER_FIELDS)
+/* harmony export */   "SHOW_USER": () => (/* binding */ SHOW_USER),
+/* harmony export */   "SHOW_USER_BY_USERNAME": () => (/* binding */ SHOW_USER_BY_USERNAME),
+/* harmony export */   "SHOW_USER_BY_USERNAME_FAILURE": () => (/* binding */ SHOW_USER_BY_USERNAME_FAILURE),
+/* harmony export */   "SHOW_USER_BY_USERNAME_SUCCESS": () => (/* binding */ SHOW_USER_BY_USERNAME_SUCCESS),
+/* harmony export */   "SHOW_USER_FAILURE": () => (/* binding */ SHOW_USER_FAILURE),
+/* harmony export */   "SHOW_USER_SUCCESS": () => (/* binding */ SHOW_USER_SUCCESS)
 /* harmony export */ });
 var LIST_USERS = 'LIST_USERS';
 var LIST_USERS_SUCCESS = 'LIST_USERS_SUCCESS';
@@ -6795,8 +6837,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "listBlogs": () => (/* binding */ listBlogs),
 /* harmony export */   "showBlog": () => (/* binding */ showBlog),
-/* harmony export */   "showPublished": () => (/* binding */ showPublished),
-/* harmony export */   "showDraft": () => (/* binding */ showDraft)
+/* harmony export */   "showDraft": () => (/* binding */ showDraft),
+/* harmony export */   "showPublished": () => (/* binding */ showPublished)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/BlogTypes */ "./resources/js/app/store/actionTypes/BlogTypes.js");
 /* harmony import */ var _api_Blog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../api/Blog */ "./resources/js/app/api/Blog.js");
@@ -6913,8 +6955,8 @@ function showDraft() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "listFavorites": () => (/* binding */ listFavorites),
-/* harmony export */   "addFavorites": () => (/* binding */ addFavorites)
+/* harmony export */   "addFavorites": () => (/* binding */ addFavorites),
+/* harmony export */   "listFavorites": () => (/* binding */ listFavorites)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_FavoriteTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/FavoriteTypes */ "./resources/js/app/store/actionTypes/FavoriteTypes.js");
 /* harmony import */ var _api_Favorite__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../api/Favorite */ "./resources/js/app/api/Favorite.js");
@@ -7028,15 +7070,15 @@ function toggleFollow(payload, cb) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "setUserDefaults": () => (/* binding */ setUserDefaults),
-/* harmony export */   "listUsers": () => (/* binding */ listUsers),
 /* harmony export */   "addUser": () => (/* binding */ addUser),
-/* harmony export */   "showUserByUsername": () => (/* binding */ showUserByUsername),
-/* harmony export */   "showUser": () => (/* binding */ showUser),
-/* harmony export */   "editUser": () => (/* binding */ editUser),
 /* harmony export */   "deleteUser": () => (/* binding */ deleteUser),
+/* harmony export */   "editUser": () => (/* binding */ editUser),
 /* harmony export */   "handleUserChange": () => (/* binding */ handleUserChange),
-/* harmony export */   "resetUserFields": () => (/* binding */ resetUserFields)
+/* harmony export */   "listUsers": () => (/* binding */ listUsers),
+/* harmony export */   "resetUserFields": () => (/* binding */ resetUserFields),
+/* harmony export */   "setUserDefaults": () => (/* binding */ setUserDefaults),
+/* harmony export */   "showUser": () => (/* binding */ showUser),
+/* harmony export */   "showUserByUsername": () => (/* binding */ showUserByUsername)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_UserTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/UserTypes */ "./resources/js/app/store/actionTypes/UserTypes.js");
 /* harmony import */ var _api_User__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../api/User */ "./resources/js/app/api/User.js");
@@ -7241,9 +7283,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_BlogTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/BlogTypes */ "./resources/js/app/store/actionTypes/BlogTypes.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -7357,9 +7399,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_CounterTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/CounterTypes */ "./resources/js/app/store/actionTypes/CounterTypes.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -7404,9 +7446,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_DataTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/DataTypes */ "./resources/js/app/store/actionTypes/DataTypes.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -7478,9 +7520,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_FavoriteTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/FavoriteTypes */ "./resources/js/app/store/actionTypes/FavoriteTypes.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -7534,9 +7576,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_FollowTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/FollowTypes */ "./resources/js/app/store/actionTypes/FollowTypes.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -7627,9 +7669,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _actionTypes_UserTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actionTypes/UserTypes */ "./resources/js/app/store/actionTypes/UserTypes.js");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -7970,7 +8012,7 @@ window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
  */
 
 try {
-  window.Popper = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"];
+  window.Popper = (__webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")["default"]);
   window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
   __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
@@ -8007,14 +8049,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 /*!
-  * Bootstrap v4.6.0 (https://getbootstrap.com/)
+  * Bootstrap v4.6.1 (https://getbootstrap.com/)
   * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
    true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")) :
   0;
-}(this, (function (exports, $, Popper) { 'use strict';
+})(this, (function (exports, $, Popper) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
@@ -8058,19 +8100,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   function _inheritsLoose(subClass, superClass) {
     subClass.prototype = Object.create(superClass.prototype);
     subClass.prototype.constructor = subClass;
-    subClass.__proto__ = superClass;
+
+    _setPrototypeOf(subClass, superClass);
+  }
+
+  function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+      o.__proto__ = p;
+      return o;
+    };
+
+    return _setPrototypeOf(o, p);
   }
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.0): util.js
+   * Bootstrap (v4.6.1): util.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
   /**
-   * ------------------------------------------------------------------------
    * Private TransitionEnd Helpers
-   * ------------------------------------------------------------------------
    */
 
   var TRANSITION_END = 'transitionend';
@@ -8090,7 +8140,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       bindType: TRANSITION_END,
       delegateType: TRANSITION_END,
       handle: function handle(event) {
-        if ($__default['default'](event.target).is(this)) {
+        if ($__default["default"](event.target).is(this)) {
           return event.handleObj.handler.apply(this, arguments); // eslint-disable-line prefer-rest-params
         }
 
@@ -8103,7 +8153,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     var _this = this;
 
     var called = false;
-    $__default['default'](this).one(Util.TRANSITION_END, function () {
+    $__default["default"](this).one(Util.TRANSITION_END, function () {
       called = true;
     });
     setTimeout(function () {
@@ -8115,13 +8165,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   }
 
   function setTransitionEndSupport() {
-    $__default['default'].fn.emulateTransitionEnd = transitionEndEmulator;
-    $__default['default'].event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
+    $__default["default"].fn.emulateTransitionEnd = transitionEndEmulator;
+    $__default["default"].event.special[Util.TRANSITION_END] = getSpecialTransitionEndEvent();
   }
   /**
-   * --------------------------------------------------------------------------
-   * Public Util Api
-   * --------------------------------------------------------------------------
+   * Public Util API
    */
 
 
@@ -8129,6 +8177,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     TRANSITION_END: 'bsTransitionEnd',
     getUID: function getUID(prefix) {
       do {
+        // eslint-disable-next-line no-bitwise
         prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
       } while (document.getElementById(prefix));
 
@@ -8154,8 +8203,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       } // Get transition-duration of the element
 
 
-      var transitionDuration = $__default['default'](element).css('transition-duration');
-      var transitionDelay = $__default['default'](element).css('transition-delay');
+      var transitionDuration = $__default["default"](element).css('transition-duration');
+      var transitionDelay = $__default["default"](element).css('transition-delay');
       var floatTransitionDuration = parseFloat(transitionDuration);
       var floatTransitionDelay = parseFloat(transitionDelay); // Return 0 if element or transition duration is not found
 
@@ -8172,7 +8221,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       return element.offsetHeight;
     },
     triggerTransitionEnd: function triggerTransitionEnd(element) {
-      $__default['default'](element).trigger(TRANSITION_END);
+      $__default["default"](element).trigger(TRANSITION_END);
     },
     supportsTransitionEnd: function supportsTransitionEnd() {
       return Boolean(TRANSITION_END);
@@ -8216,11 +8265,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       return Util.findShadowRoot(element.parentNode);
     },
     jQueryDetection: function jQueryDetection() {
-      if (typeof $__default['default'] === 'undefined') {
+      if (typeof $__default["default"] === 'undefined') {
         throw new TypeError('Bootstrap\'s JavaScript requires jQuery. jQuery must be included before Bootstrap\'s JavaScript.');
       }
 
-      var version = $__default['default'].fn.jquery.split(' ')[0].split('.');
+      var version = $__default["default"].fn.jquery.split(' ')[0].split('.');
       var minMajor = 1;
       var ltMajor = 2;
       var minMinor = 9;
@@ -8236,28 +8285,24 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   setTransitionEndSupport();
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  var NAME = 'alert';
-  var VERSION = '4.6.0';
-  var DATA_KEY = 'bs.alert';
-  var EVENT_KEY = "." + DATA_KEY;
-  var DATA_API_KEY = '.data-api';
-  var JQUERY_NO_CONFLICT = $__default['default'].fn[NAME];
-  var SELECTOR_DISMISS = '[data-dismiss="alert"]';
-  var EVENT_CLOSE = "close" + EVENT_KEY;
-  var EVENT_CLOSED = "closed" + EVENT_KEY;
-  var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
+  var NAME$a = 'alert';
+  var VERSION$a = '4.6.1';
+  var DATA_KEY$a = 'bs.alert';
+  var EVENT_KEY$a = "." + DATA_KEY$a;
+  var DATA_API_KEY$7 = '.data-api';
+  var JQUERY_NO_CONFLICT$a = $__default["default"].fn[NAME$a];
   var CLASS_NAME_ALERT = 'alert';
-  var CLASS_NAME_FADE = 'fade';
-  var CLASS_NAME_SHOW = 'show';
+  var CLASS_NAME_FADE$5 = 'fade';
+  var CLASS_NAME_SHOW$7 = 'show';
+  var EVENT_CLOSE = "close" + EVENT_KEY$a;
+  var EVENT_CLOSED = "closed" + EVENT_KEY$a;
+  var EVENT_CLICK_DATA_API$6 = "click" + EVENT_KEY$a + DATA_API_KEY$7;
+  var SELECTOR_DISMISS = '[data-dismiss="alert"]';
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var Alert = /*#__PURE__*/function () {
@@ -8286,7 +8331,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].removeData(this._element, DATA_KEY);
+      $__default["default"].removeData(this._element, DATA_KEY$a);
       this._element = null;
     } // Private
     ;
@@ -8300,48 +8345,48 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       }
 
       if (!parent) {
-        parent = $__default['default'](element).closest("." + CLASS_NAME_ALERT)[0];
+        parent = $__default["default"](element).closest("." + CLASS_NAME_ALERT)[0];
       }
 
       return parent;
     };
 
     _proto._triggerCloseEvent = function _triggerCloseEvent(element) {
-      var closeEvent = $__default['default'].Event(EVENT_CLOSE);
-      $__default['default'](element).trigger(closeEvent);
+      var closeEvent = $__default["default"].Event(EVENT_CLOSE);
+      $__default["default"](element).trigger(closeEvent);
       return closeEvent;
     };
 
     _proto._removeElement = function _removeElement(element) {
       var _this = this;
 
-      $__default['default'](element).removeClass(CLASS_NAME_SHOW);
+      $__default["default"](element).removeClass(CLASS_NAME_SHOW$7);
 
-      if (!$__default['default'](element).hasClass(CLASS_NAME_FADE)) {
+      if (!$__default["default"](element).hasClass(CLASS_NAME_FADE$5)) {
         this._destroyElement(element);
 
         return;
       }
 
       var transitionDuration = Util.getTransitionDurationFromElement(element);
-      $__default['default'](element).one(Util.TRANSITION_END, function (event) {
+      $__default["default"](element).one(Util.TRANSITION_END, function (event) {
         return _this._destroyElement(element, event);
       }).emulateTransitionEnd(transitionDuration);
     };
 
     _proto._destroyElement = function _destroyElement(element) {
-      $__default['default'](element).detach().trigger(EVENT_CLOSED).remove();
+      $__default["default"](element).detach().trigger(EVENT_CLOSED).remove();
     } // Static
     ;
 
     Alert._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $element = $__default['default'](this);
-        var data = $element.data(DATA_KEY);
+        var $element = $__default["default"](this);
+        var data = $element.data(DATA_KEY$a);
 
         if (!data) {
           data = new Alert(this);
-          $element.data(DATA_KEY, data);
+          $element.data(DATA_KEY$a, data);
         }
 
         if (config === 'close') {
@@ -8363,63 +8408,55 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _createClass(Alert, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION;
+        return VERSION$a;
       }
     }]);
 
     return Alert;
   }();
   /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
+   * Data API implementation
    */
 
 
-  $__default['default'](document).on(EVENT_CLICK_DATA_API, SELECTOR_DISMISS, Alert._handleDismiss(new Alert()));
+  $__default["default"](document).on(EVENT_CLICK_DATA_API$6, SELECTOR_DISMISS, Alert._handleDismiss(new Alert()));
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME] = Alert._jQueryInterface;
-  $__default['default'].fn[NAME].Constructor = Alert;
+  $__default["default"].fn[NAME$a] = Alert._jQueryInterface;
+  $__default["default"].fn[NAME$a].Constructor = Alert;
 
-  $__default['default'].fn[NAME].noConflict = function () {
-    $__default['default'].fn[NAME] = JQUERY_NO_CONFLICT;
+  $__default["default"].fn[NAME$a].noConflict = function () {
+    $__default["default"].fn[NAME$a] = JQUERY_NO_CONFLICT$a;
     return Alert._jQueryInterface;
   };
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  var NAME$1 = 'button';
-  var VERSION$1 = '4.6.0';
-  var DATA_KEY$1 = 'bs.button';
-  var EVENT_KEY$1 = "." + DATA_KEY$1;
-  var DATA_API_KEY$1 = '.data-api';
-  var JQUERY_NO_CONFLICT$1 = $__default['default'].fn[NAME$1];
-  var CLASS_NAME_ACTIVE = 'active';
+  var NAME$9 = 'button';
+  var VERSION$9 = '4.6.1';
+  var DATA_KEY$9 = 'bs.button';
+  var EVENT_KEY$9 = "." + DATA_KEY$9;
+  var DATA_API_KEY$6 = '.data-api';
+  var JQUERY_NO_CONFLICT$9 = $__default["default"].fn[NAME$9];
+  var CLASS_NAME_ACTIVE$3 = 'active';
   var CLASS_NAME_BUTTON = 'btn';
   var CLASS_NAME_FOCUS = 'focus';
+  var EVENT_CLICK_DATA_API$5 = "click" + EVENT_KEY$9 + DATA_API_KEY$6;
+  var EVENT_FOCUS_BLUR_DATA_API = "focus" + EVENT_KEY$9 + DATA_API_KEY$6 + " " + ("blur" + EVENT_KEY$9 + DATA_API_KEY$6);
+  var EVENT_LOAD_DATA_API$2 = "load" + EVENT_KEY$9 + DATA_API_KEY$6;
   var SELECTOR_DATA_TOGGLE_CARROT = '[data-toggle^="button"]';
   var SELECTOR_DATA_TOGGLES = '[data-toggle="buttons"]';
-  var SELECTOR_DATA_TOGGLE = '[data-toggle="button"]';
+  var SELECTOR_DATA_TOGGLE$4 = '[data-toggle="button"]';
   var SELECTOR_DATA_TOGGLES_BUTTONS = '[data-toggle="buttons"] .btn';
   var SELECTOR_INPUT = 'input:not([type="hidden"])';
-  var SELECTOR_ACTIVE = '.active';
+  var SELECTOR_ACTIVE$2 = '.active';
   var SELECTOR_BUTTON = '.btn';
-  var EVENT_CLICK_DATA_API$1 = "click" + EVENT_KEY$1 + DATA_API_KEY$1;
-  var EVENT_FOCUS_BLUR_DATA_API = "focus" + EVENT_KEY$1 + DATA_API_KEY$1 + " " + ("blur" + EVENT_KEY$1 + DATA_API_KEY$1);
-  var EVENT_LOAD_DATA_API = "load" + EVENT_KEY$1 + DATA_API_KEY$1;
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var Button = /*#__PURE__*/function () {
@@ -8435,20 +8472,20 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto.toggle = function toggle() {
       var triggerChangeEvent = true;
       var addAriaPressed = true;
-      var rootElement = $__default['default'](this._element).closest(SELECTOR_DATA_TOGGLES)[0];
+      var rootElement = $__default["default"](this._element).closest(SELECTOR_DATA_TOGGLES)[0];
 
       if (rootElement) {
         var input = this._element.querySelector(SELECTOR_INPUT);
 
         if (input) {
           if (input.type === 'radio') {
-            if (input.checked && this._element.classList.contains(CLASS_NAME_ACTIVE)) {
+            if (input.checked && this._element.classList.contains(CLASS_NAME_ACTIVE$3)) {
               triggerChangeEvent = false;
             } else {
-              var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
+              var activeElement = rootElement.querySelector(SELECTOR_ACTIVE$2);
 
               if (activeElement) {
-                $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE);
+                $__default["default"](activeElement).removeClass(CLASS_NAME_ACTIVE$3);
               }
             }
           }
@@ -8456,11 +8493,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
           if (triggerChangeEvent) {
             // if it's not a radio button or checkbox don't add a pointless/invalid checked property to the input
             if (input.type === 'checkbox' || input.type === 'radio') {
-              input.checked = !this._element.classList.contains(CLASS_NAME_ACTIVE);
+              input.checked = !this._element.classList.contains(CLASS_NAME_ACTIVE$3);
             }
 
             if (!this.shouldAvoidTriggerChange) {
-              $__default['default'](input).trigger('change');
+              $__default["default"](input).trigger('change');
             }
           }
 
@@ -8471,29 +8508,29 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       if (!(this._element.hasAttribute('disabled') || this._element.classList.contains('disabled'))) {
         if (addAriaPressed) {
-          this._element.setAttribute('aria-pressed', !this._element.classList.contains(CLASS_NAME_ACTIVE));
+          this._element.setAttribute('aria-pressed', !this._element.classList.contains(CLASS_NAME_ACTIVE$3));
         }
 
         if (triggerChangeEvent) {
-          $__default['default'](this._element).toggleClass(CLASS_NAME_ACTIVE);
+          $__default["default"](this._element).toggleClass(CLASS_NAME_ACTIVE$3);
         }
       }
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].removeData(this._element, DATA_KEY$1);
+      $__default["default"].removeData(this._element, DATA_KEY$9);
       this._element = null;
     } // Static
     ;
 
     Button._jQueryInterface = function _jQueryInterface(config, avoidTriggerChange) {
       return this.each(function () {
-        var $element = $__default['default'](this);
-        var data = $element.data(DATA_KEY$1);
+        var $element = $__default["default"](this);
+        var data = $element.data(DATA_KEY$9);
 
         if (!data) {
           data = new Button(this);
-          $element.data(DATA_KEY$1, data);
+          $element.data(DATA_KEY$9, data);
         }
 
         data.shouldAvoidTriggerChange = avoidTriggerChange;
@@ -8507,25 +8544,23 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _createClass(Button, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$1;
+        return VERSION$9;
       }
     }]);
 
     return Button;
   }();
   /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
+   * Data API implementation
    */
 
 
-  $__default['default'](document).on(EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
+  $__default["default"](document).on(EVENT_CLICK_DATA_API$5, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
     var button = event.target;
     var initialButton = button;
 
-    if (!$__default['default'](button).hasClass(CLASS_NAME_BUTTON)) {
-      button = $__default['default'](button).closest(SELECTOR_BUTTON)[0];
+    if (!$__default["default"](button).hasClass(CLASS_NAME_BUTTON)) {
+      button = $__default["default"](button).closest(SELECTOR_BUTTON)[0];
     }
 
     if (!button || button.hasAttribute('disabled') || button.classList.contains('disabled')) {
@@ -8540,14 +8575,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       }
 
       if (initialButton.tagName === 'INPUT' || button.tagName !== 'LABEL') {
-        Button._jQueryInterface.call($__default['default'](button), 'toggle', initialButton.tagName === 'INPUT');
+        Button._jQueryInterface.call($__default["default"](button), 'toggle', initialButton.tagName === 'INPUT');
       }
     }
   }).on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
-    var button = $__default['default'](event.target).closest(SELECTOR_BUTTON)[0];
-    $__default['default'](button).toggleClass(CLASS_NAME_FOCUS, /^focus(in)?$/.test(event.type));
+    var button = $__default["default"](event.target).closest(SELECTOR_BUTTON)[0];
+    $__default["default"](button).toggleClass(CLASS_NAME_FOCUS, /^focus(in)?$/.test(event.type));
   });
-  $__default['default'](window).on(EVENT_LOAD_DATA_API, function () {
+  $__default["default"](window).on(EVENT_LOAD_DATA_API$2, function () {
     // ensure correct active class is set to match the controls' actual values/states
     // find all checkboxes/readio buttons inside data-toggle groups
     var buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLES_BUTTONS));
@@ -8557,51 +8592,47 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       var input = button.querySelector(SELECTOR_INPUT);
 
       if (input.checked || input.hasAttribute('checked')) {
-        button.classList.add(CLASS_NAME_ACTIVE);
+        button.classList.add(CLASS_NAME_ACTIVE$3);
       } else {
-        button.classList.remove(CLASS_NAME_ACTIVE);
+        button.classList.remove(CLASS_NAME_ACTIVE$3);
       }
     } // find all button toggles
 
 
-    buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE));
+    buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE$4));
 
     for (var _i = 0, _len = buttons.length; _i < _len; _i++) {
       var _button = buttons[_i];
 
       if (_button.getAttribute('aria-pressed') === 'true') {
-        _button.classList.add(CLASS_NAME_ACTIVE);
+        _button.classList.add(CLASS_NAME_ACTIVE$3);
       } else {
-        _button.classList.remove(CLASS_NAME_ACTIVE);
+        _button.classList.remove(CLASS_NAME_ACTIVE$3);
       }
     }
   });
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME$1] = Button._jQueryInterface;
-  $__default['default'].fn[NAME$1].Constructor = Button;
+  $__default["default"].fn[NAME$9] = Button._jQueryInterface;
+  $__default["default"].fn[NAME$9].Constructor = Button;
 
-  $__default['default'].fn[NAME$1].noConflict = function () {
-    $__default['default'].fn[NAME$1] = JQUERY_NO_CONFLICT$1;
+  $__default["default"].fn[NAME$9].noConflict = function () {
+    $__default["default"].fn[NAME$9] = JQUERY_NO_CONFLICT$9;
     return Button._jQueryInterface;
   };
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  var NAME$2 = 'carousel';
-  var VERSION$2 = '4.6.0';
-  var DATA_KEY$2 = 'bs.carousel';
-  var EVENT_KEY$2 = "." + DATA_KEY$2;
-  var DATA_API_KEY$2 = '.data-api';
-  var JQUERY_NO_CONFLICT$2 = $__default['default'].fn[NAME$2];
+  var NAME$8 = 'carousel';
+  var VERSION$8 = '4.6.1';
+  var DATA_KEY$8 = 'bs.carousel';
+  var EVENT_KEY$8 = "." + DATA_KEY$8;
+  var DATA_API_KEY$5 = '.data-api';
+  var JQUERY_NO_CONFLICT$8 = $__default["default"].fn[NAME$8];
   var ARROW_LEFT_KEYCODE = 37; // KeyboardEvent.which value for left arrow key
 
   var ARROW_RIGHT_KEYCODE = 39; // KeyboardEvent.which value for right arrow key
@@ -8609,47 +8640,31 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   var TOUCHEVENT_COMPAT_WAIT = 500; // Time for mouse compat events to fire after touch
 
   var SWIPE_THRESHOLD = 40;
-  var Default = {
-    interval: 5000,
-    keyboard: true,
-    slide: false,
-    pause: 'hover',
-    wrap: true,
-    touch: true
-  };
-  var DefaultType = {
-    interval: '(number|boolean)',
-    keyboard: 'boolean',
-    slide: '(boolean|string)',
-    pause: '(string|boolean)',
-    wrap: 'boolean',
-    touch: 'boolean'
-  };
-  var DIRECTION_NEXT = 'next';
-  var DIRECTION_PREV = 'prev';
-  var DIRECTION_LEFT = 'left';
-  var DIRECTION_RIGHT = 'right';
-  var EVENT_SLIDE = "slide" + EVENT_KEY$2;
-  var EVENT_SLID = "slid" + EVENT_KEY$2;
-  var EVENT_KEYDOWN = "keydown" + EVENT_KEY$2;
-  var EVENT_MOUSEENTER = "mouseenter" + EVENT_KEY$2;
-  var EVENT_MOUSELEAVE = "mouseleave" + EVENT_KEY$2;
-  var EVENT_TOUCHSTART = "touchstart" + EVENT_KEY$2;
-  var EVENT_TOUCHMOVE = "touchmove" + EVENT_KEY$2;
-  var EVENT_TOUCHEND = "touchend" + EVENT_KEY$2;
-  var EVENT_POINTERDOWN = "pointerdown" + EVENT_KEY$2;
-  var EVENT_POINTERUP = "pointerup" + EVENT_KEY$2;
-  var EVENT_DRAG_START = "dragstart" + EVENT_KEY$2;
-  var EVENT_LOAD_DATA_API$1 = "load" + EVENT_KEY$2 + DATA_API_KEY$2;
-  var EVENT_CLICK_DATA_API$2 = "click" + EVENT_KEY$2 + DATA_API_KEY$2;
   var CLASS_NAME_CAROUSEL = 'carousel';
-  var CLASS_NAME_ACTIVE$1 = 'active';
+  var CLASS_NAME_ACTIVE$2 = 'active';
   var CLASS_NAME_SLIDE = 'slide';
   var CLASS_NAME_RIGHT = 'carousel-item-right';
   var CLASS_NAME_LEFT = 'carousel-item-left';
   var CLASS_NAME_NEXT = 'carousel-item-next';
   var CLASS_NAME_PREV = 'carousel-item-prev';
   var CLASS_NAME_POINTER_EVENT = 'pointer-event';
+  var DIRECTION_NEXT = 'next';
+  var DIRECTION_PREV = 'prev';
+  var DIRECTION_LEFT = 'left';
+  var DIRECTION_RIGHT = 'right';
+  var EVENT_SLIDE = "slide" + EVENT_KEY$8;
+  var EVENT_SLID = "slid" + EVENT_KEY$8;
+  var EVENT_KEYDOWN = "keydown" + EVENT_KEY$8;
+  var EVENT_MOUSEENTER = "mouseenter" + EVENT_KEY$8;
+  var EVENT_MOUSELEAVE = "mouseleave" + EVENT_KEY$8;
+  var EVENT_TOUCHSTART = "touchstart" + EVENT_KEY$8;
+  var EVENT_TOUCHMOVE = "touchmove" + EVENT_KEY$8;
+  var EVENT_TOUCHEND = "touchend" + EVENT_KEY$8;
+  var EVENT_POINTERDOWN = "pointerdown" + EVENT_KEY$8;
+  var EVENT_POINTERUP = "pointerup" + EVENT_KEY$8;
+  var EVENT_DRAG_START = "dragstart" + EVENT_KEY$8;
+  var EVENT_LOAD_DATA_API$1 = "load" + EVENT_KEY$8 + DATA_API_KEY$5;
+  var EVENT_CLICK_DATA_API$4 = "click" + EVENT_KEY$8 + DATA_API_KEY$5;
   var SELECTOR_ACTIVE$1 = '.active';
   var SELECTOR_ACTIVE_ITEM = '.active.carousel-item';
   var SELECTOR_ITEM = '.carousel-item';
@@ -8658,14 +8673,28 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   var SELECTOR_INDICATORS = '.carousel-indicators';
   var SELECTOR_DATA_SLIDE = '[data-slide], [data-slide-to]';
   var SELECTOR_DATA_RIDE = '[data-ride="carousel"]';
+  var Default$7 = {
+    interval: 5000,
+    keyboard: true,
+    slide: false,
+    pause: 'hover',
+    wrap: true,
+    touch: true
+  };
+  var DefaultType$7 = {
+    interval: '(number|boolean)',
+    keyboard: 'boolean',
+    slide: '(boolean|string)',
+    pause: '(string|boolean)',
+    wrap: 'boolean',
+    touch: 'boolean'
+  };
   var PointerType = {
     TOUCH: 'touch',
     PEN: 'pen'
   };
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var Carousel = /*#__PURE__*/function () {
@@ -8698,7 +8727,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto.nextWhenVisible = function nextWhenVisible() {
-      var $element = $__default['default'](this._element); // Don't call next when the page isn't visible
+      var $element = $__default["default"](this._element); // Don't call next when the page isn't visible
       // or the carousel or its parent isn't visible
 
       if (!document.hidden && $element.is(':visible') && $element.css('visibility') !== 'hidden') {
@@ -8755,7 +8784,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       }
 
       if (this._isSliding) {
-        $__default['default'](this._element).one(EVENT_SLID, function () {
+        $__default["default"](this._element).one(EVENT_SLID, function () {
           return _this.to(index);
         });
         return;
@@ -8773,8 +8802,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'](this._element).off(EVENT_KEY$2);
-      $__default['default'].removeData(this._element, DATA_KEY$2);
+      $__default["default"](this._element).off(EVENT_KEY$8);
+      $__default["default"].removeData(this._element, DATA_KEY$8);
       this._items = null;
       this._config = null;
       this._element = null;
@@ -8787,8 +8816,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _extends({}, Default, config);
-      Util.typeCheckConfig(NAME$2, config, DefaultType);
+      config = _extends({}, Default$7, config);
+      Util.typeCheckConfig(NAME$8, config, DefaultType$7);
       return config;
     };
 
@@ -8816,13 +8845,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       var _this2 = this;
 
       if (this._config.keyboard) {
-        $__default['default'](this._element).on(EVENT_KEYDOWN, function (event) {
+        $__default["default"](this._element).on(EVENT_KEYDOWN, function (event) {
           return _this2._keydown(event);
         });
       }
 
       if (this._config.pause === 'hover') {
-        $__default['default'](this._element).on(EVENT_MOUSEENTER, function (event) {
+        $__default["default"](this._element).on(EVENT_MOUSEENTER, function (event) {
           return _this2.pause(event);
         }).on(EVENT_MOUSELEAVE, function (event) {
           return _this2.cycle(event);
@@ -8851,11 +8880,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       var move = function move(event) {
         // ensure swiping with one touch and not pinching
-        if (event.originalEvent.touches && event.originalEvent.touches.length > 1) {
-          _this3.touchDeltaX = 0;
-        } else {
-          _this3.touchDeltaX = event.originalEvent.touches[0].clientX - _this3.touchStartX;
-        }
+        _this3.touchDeltaX = event.originalEvent.touches && event.originalEvent.touches.length > 1 ? 0 : event.originalEvent.touches[0].clientX - _this3.touchStartX;
       };
 
       var end = function end(event) {
@@ -8885,27 +8910,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         }
       };
 
-      $__default['default'](this._element.querySelectorAll(SELECTOR_ITEM_IMG)).on(EVENT_DRAG_START, function (e) {
+      $__default["default"](this._element.querySelectorAll(SELECTOR_ITEM_IMG)).on(EVENT_DRAG_START, function (e) {
         return e.preventDefault();
       });
 
       if (this._pointerEvent) {
-        $__default['default'](this._element).on(EVENT_POINTERDOWN, function (event) {
+        $__default["default"](this._element).on(EVENT_POINTERDOWN, function (event) {
           return start(event);
         });
-        $__default['default'](this._element).on(EVENT_POINTERUP, function (event) {
+        $__default["default"](this._element).on(EVENT_POINTERUP, function (event) {
           return end(event);
         });
 
         this._element.classList.add(CLASS_NAME_POINTER_EVENT);
       } else {
-        $__default['default'](this._element).on(EVENT_TOUCHSTART, function (event) {
+        $__default["default"](this._element).on(EVENT_TOUCHSTART, function (event) {
           return start(event);
         });
-        $__default['default'](this._element).on(EVENT_TOUCHMOVE, function (event) {
+        $__default["default"](this._element).on(EVENT_TOUCHMOVE, function (event) {
           return move(event);
         });
-        $__default['default'](this._element).on(EVENT_TOUCHEND, function (event) {
+        $__default["default"](this._element).on(EVENT_TOUCHEND, function (event) {
           return end(event);
         });
       }
@@ -8957,25 +8982,25 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       var fromIndex = this._getItemIndex(this._element.querySelector(SELECTOR_ACTIVE_ITEM));
 
-      var slideEvent = $__default['default'].Event(EVENT_SLIDE, {
+      var slideEvent = $__default["default"].Event(EVENT_SLIDE, {
         relatedTarget: relatedTarget,
         direction: eventDirectionName,
         from: fromIndex,
         to: targetIndex
       });
-      $__default['default'](this._element).trigger(slideEvent);
+      $__default["default"](this._element).trigger(slideEvent);
       return slideEvent;
     };
 
     _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
         var indicators = [].slice.call(this._indicatorsElement.querySelectorAll(SELECTOR_ACTIVE$1));
-        $__default['default'](indicators).removeClass(CLASS_NAME_ACTIVE$1);
+        $__default["default"](indicators).removeClass(CLASS_NAME_ACTIVE$2);
 
         var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
 
         if (nextIndicator) {
-          $__default['default'](nextIndicator).addClass(CLASS_NAME_ACTIVE$1);
+          $__default["default"](nextIndicator).addClass(CLASS_NAME_ACTIVE$2);
         }
       }
     };
@@ -9023,7 +9048,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         eventDirectionName = DIRECTION_RIGHT;
       }
 
-      if (nextElement && $__default['default'](nextElement).hasClass(CLASS_NAME_ACTIVE$1)) {
+      if (nextElement && $__default["default"](nextElement).hasClass(CLASS_NAME_ACTIVE$2)) {
         this._isSliding = false;
         return;
       }
@@ -9048,32 +9073,32 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       this._setActiveIndicatorElement(nextElement);
 
       this._activeElement = nextElement;
-      var slidEvent = $__default['default'].Event(EVENT_SLID, {
+      var slidEvent = $__default["default"].Event(EVENT_SLID, {
         relatedTarget: nextElement,
         direction: eventDirectionName,
         from: activeElementIndex,
         to: nextElementIndex
       });
 
-      if ($__default['default'](this._element).hasClass(CLASS_NAME_SLIDE)) {
-        $__default['default'](nextElement).addClass(orderClassName);
+      if ($__default["default"](this._element).hasClass(CLASS_NAME_SLIDE)) {
+        $__default["default"](nextElement).addClass(orderClassName);
         Util.reflow(nextElement);
-        $__default['default'](activeElement).addClass(directionalClassName);
-        $__default['default'](nextElement).addClass(directionalClassName);
+        $__default["default"](activeElement).addClass(directionalClassName);
+        $__default["default"](nextElement).addClass(directionalClassName);
         var transitionDuration = Util.getTransitionDurationFromElement(activeElement);
-        $__default['default'](activeElement).one(Util.TRANSITION_END, function () {
-          $__default['default'](nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(CLASS_NAME_ACTIVE$1);
-          $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE$1 + " " + orderClassName + " " + directionalClassName);
+        $__default["default"](activeElement).one(Util.TRANSITION_END, function () {
+          $__default["default"](nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(CLASS_NAME_ACTIVE$2);
+          $__default["default"](activeElement).removeClass(CLASS_NAME_ACTIVE$2 + " " + orderClassName + " " + directionalClassName);
           _this4._isSliding = false;
           setTimeout(function () {
-            return $__default['default'](_this4._element).trigger(slidEvent);
+            return $__default["default"](_this4._element).trigger(slidEvent);
           }, 0);
         }).emulateTransitionEnd(transitionDuration);
       } else {
-        $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE$1);
-        $__default['default'](nextElement).addClass(CLASS_NAME_ACTIVE$1);
+        $__default["default"](activeElement).removeClass(CLASS_NAME_ACTIVE$2);
+        $__default["default"](nextElement).addClass(CLASS_NAME_ACTIVE$2);
         this._isSliding = false;
-        $__default['default'](this._element).trigger(slidEvent);
+        $__default["default"](this._element).trigger(slidEvent);
       }
 
       if (isCycling) {
@@ -9084,9 +9109,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     Carousel._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$2);
+        var data = $__default["default"](this).data(DATA_KEY$8);
 
-        var _config = _extends({}, Default, $__default['default'](this).data());
+        var _config = _extends({}, Default$7, $__default["default"](this).data());
 
         if (typeof config === 'object') {
           _config = _extends({}, _config, config);
@@ -9096,7 +9121,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
         if (!data) {
           data = new Carousel(this, _config);
-          $__default['default'](this).data(DATA_KEY$2, data);
+          $__default["default"](this).data(DATA_KEY$8, data);
         }
 
         if (typeof config === 'number') {
@@ -9121,13 +9146,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         return;
       }
 
-      var target = $__default['default'](selector)[0];
+      var target = $__default["default"](selector)[0];
 
-      if (!target || !$__default['default'](target).hasClass(CLASS_NAME_CAROUSEL)) {
+      if (!target || !$__default["default"](target).hasClass(CLASS_NAME_CAROUSEL)) {
         return;
       }
 
-      var config = _extends({}, $__default['default'](target).data(), $__default['default'](this).data());
+      var config = _extends({}, $__default["default"](target).data(), $__default["default"](this).data());
 
       var slideIndex = this.getAttribute('data-slide-to');
 
@@ -9135,10 +9160,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         config.interval = false;
       }
 
-      Carousel._jQueryInterface.call($__default['default'](target), config);
+      Carousel._jQueryInterface.call($__default["default"](target), config);
 
       if (slideIndex) {
-        $__default['default'](target).data(DATA_KEY$2).to(slideIndex);
+        $__default["default"](target).data(DATA_KEY$8).to(slideIndex);
       }
 
       event.preventDefault();
@@ -9147,85 +9172,77 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _createClass(Carousel, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$2;
+        return VERSION$8;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default;
+        return Default$7;
       }
     }]);
 
     return Carousel;
   }();
   /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
+   * Data API implementation
    */
 
 
-  $__default['default'](document).on(EVENT_CLICK_DATA_API$2, SELECTOR_DATA_SLIDE, Carousel._dataApiClickHandler);
-  $__default['default'](window).on(EVENT_LOAD_DATA_API$1, function () {
+  $__default["default"](document).on(EVENT_CLICK_DATA_API$4, SELECTOR_DATA_SLIDE, Carousel._dataApiClickHandler);
+  $__default["default"](window).on(EVENT_LOAD_DATA_API$1, function () {
     var carousels = [].slice.call(document.querySelectorAll(SELECTOR_DATA_RIDE));
 
     for (var i = 0, len = carousels.length; i < len; i++) {
-      var $carousel = $__default['default'](carousels[i]);
+      var $carousel = $__default["default"](carousels[i]);
 
       Carousel._jQueryInterface.call($carousel, $carousel.data());
     }
   });
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME$2] = Carousel._jQueryInterface;
-  $__default['default'].fn[NAME$2].Constructor = Carousel;
+  $__default["default"].fn[NAME$8] = Carousel._jQueryInterface;
+  $__default["default"].fn[NAME$8].Constructor = Carousel;
 
-  $__default['default'].fn[NAME$2].noConflict = function () {
-    $__default['default'].fn[NAME$2] = JQUERY_NO_CONFLICT$2;
+  $__default["default"].fn[NAME$8].noConflict = function () {
+    $__default["default"].fn[NAME$8] = JQUERY_NO_CONFLICT$8;
     return Carousel._jQueryInterface;
   };
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  var NAME$3 = 'collapse';
-  var VERSION$3 = '4.6.0';
-  var DATA_KEY$3 = 'bs.collapse';
-  var EVENT_KEY$3 = "." + DATA_KEY$3;
-  var DATA_API_KEY$3 = '.data-api';
-  var JQUERY_NO_CONFLICT$3 = $__default['default'].fn[NAME$3];
-  var Default$1 = {
-    toggle: true,
-    parent: ''
-  };
-  var DefaultType$1 = {
-    toggle: 'boolean',
-    parent: '(string|element)'
-  };
-  var EVENT_SHOW = "show" + EVENT_KEY$3;
-  var EVENT_SHOWN = "shown" + EVENT_KEY$3;
-  var EVENT_HIDE = "hide" + EVENT_KEY$3;
-  var EVENT_HIDDEN = "hidden" + EVENT_KEY$3;
-  var EVENT_CLICK_DATA_API$3 = "click" + EVENT_KEY$3 + DATA_API_KEY$3;
-  var CLASS_NAME_SHOW$1 = 'show';
+  var NAME$7 = 'collapse';
+  var VERSION$7 = '4.6.1';
+  var DATA_KEY$7 = 'bs.collapse';
+  var EVENT_KEY$7 = "." + DATA_KEY$7;
+  var DATA_API_KEY$4 = '.data-api';
+  var JQUERY_NO_CONFLICT$7 = $__default["default"].fn[NAME$7];
+  var CLASS_NAME_SHOW$6 = 'show';
   var CLASS_NAME_COLLAPSE = 'collapse';
   var CLASS_NAME_COLLAPSING = 'collapsing';
   var CLASS_NAME_COLLAPSED = 'collapsed';
   var DIMENSION_WIDTH = 'width';
   var DIMENSION_HEIGHT = 'height';
+  var EVENT_SHOW$4 = "show" + EVENT_KEY$7;
+  var EVENT_SHOWN$4 = "shown" + EVENT_KEY$7;
+  var EVENT_HIDE$4 = "hide" + EVENT_KEY$7;
+  var EVENT_HIDDEN$4 = "hidden" + EVENT_KEY$7;
+  var EVENT_CLICK_DATA_API$3 = "click" + EVENT_KEY$7 + DATA_API_KEY$4;
   var SELECTOR_ACTIVES = '.show, .collapsing';
-  var SELECTOR_DATA_TOGGLE$1 = '[data-toggle="collapse"]';
+  var SELECTOR_DATA_TOGGLE$3 = '[data-toggle="collapse"]';
+  var Default$6 = {
+    toggle: true,
+    parent: ''
+  };
+  var DefaultType$6 = {
+    toggle: 'boolean',
+    parent: '(string|element)'
+  };
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var Collapse = /*#__PURE__*/function () {
@@ -9234,7 +9251,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       this._element = element;
       this._config = this._getConfig(config);
       this._triggerArray = [].slice.call(document.querySelectorAll("[data-toggle=\"collapse\"][href=\"#" + element.id + "\"]," + ("[data-toggle=\"collapse\"][data-target=\"#" + element.id + "\"]")));
-      var toggleList = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE$1));
+      var toggleList = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE$3));
 
       for (var i = 0, len = toggleList.length; i < len; i++) {
         var elem = toggleList[i];
@@ -9266,7 +9283,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     // Public
     _proto.toggle = function toggle() {
-      if ($__default['default'](this._element).hasClass(CLASS_NAME_SHOW$1)) {
+      if ($__default["default"](this._element).hasClass(CLASS_NAME_SHOW$6)) {
         this.hide();
       } else {
         this.show();
@@ -9276,7 +9293,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto.show = function show() {
       var _this = this;
 
-      if (this._isTransitioning || $__default['default'](this._element).hasClass(CLASS_NAME_SHOW$1)) {
+      if (this._isTransitioning || $__default["default"](this._element).hasClass(CLASS_NAME_SHOW$6)) {
         return;
       }
 
@@ -9298,64 +9315,64 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       }
 
       if (actives) {
-        activesData = $__default['default'](actives).not(this._selector).data(DATA_KEY$3);
+        activesData = $__default["default"](actives).not(this._selector).data(DATA_KEY$7);
 
         if (activesData && activesData._isTransitioning) {
           return;
         }
       }
 
-      var startEvent = $__default['default'].Event(EVENT_SHOW);
-      $__default['default'](this._element).trigger(startEvent);
+      var startEvent = $__default["default"].Event(EVENT_SHOW$4);
+      $__default["default"](this._element).trigger(startEvent);
 
       if (startEvent.isDefaultPrevented()) {
         return;
       }
 
       if (actives) {
-        Collapse._jQueryInterface.call($__default['default'](actives).not(this._selector), 'hide');
+        Collapse._jQueryInterface.call($__default["default"](actives).not(this._selector), 'hide');
 
         if (!activesData) {
-          $__default['default'](actives).data(DATA_KEY$3, null);
+          $__default["default"](actives).data(DATA_KEY$7, null);
         }
       }
 
       var dimension = this._getDimension();
 
-      $__default['default'](this._element).removeClass(CLASS_NAME_COLLAPSE).addClass(CLASS_NAME_COLLAPSING);
+      $__default["default"](this._element).removeClass(CLASS_NAME_COLLAPSE).addClass(CLASS_NAME_COLLAPSING);
       this._element.style[dimension] = 0;
 
       if (this._triggerArray.length) {
-        $__default['default'](this._triggerArray).removeClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', true);
+        $__default["default"](this._triggerArray).removeClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', true);
       }
 
       this.setTransitioning(true);
 
       var complete = function complete() {
-        $__default['default'](_this._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
+        $__default["default"](_this._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$6);
         _this._element.style[dimension] = '';
 
         _this.setTransitioning(false);
 
-        $__default['default'](_this._element).trigger(EVENT_SHOWN);
+        $__default["default"](_this._element).trigger(EVENT_SHOWN$4);
       };
 
       var capitalizedDimension = dimension[0].toUpperCase() + dimension.slice(1);
       var scrollSize = "scroll" + capitalizedDimension;
       var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-      $__default['default'](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+      $__default["default"](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       this._element.style[dimension] = this._element[scrollSize] + "px";
     };
 
     _proto.hide = function hide() {
       var _this2 = this;
 
-      if (this._isTransitioning || !$__default['default'](this._element).hasClass(CLASS_NAME_SHOW$1)) {
+      if (this._isTransitioning || !$__default["default"](this._element).hasClass(CLASS_NAME_SHOW$6)) {
         return;
       }
 
-      var startEvent = $__default['default'].Event(EVENT_HIDE);
-      $__default['default'](this._element).trigger(startEvent);
+      var startEvent = $__default["default"].Event(EVENT_HIDE$4);
+      $__default["default"](this._element).trigger(startEvent);
 
       if (startEvent.isDefaultPrevented()) {
         return;
@@ -9365,7 +9382,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
       Util.reflow(this._element);
-      $__default['default'](this._element).addClass(CLASS_NAME_COLLAPSING).removeClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
+      $__default["default"](this._element).addClass(CLASS_NAME_COLLAPSING).removeClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$6);
       var triggerArrayLength = this._triggerArray.length;
 
       if (triggerArrayLength > 0) {
@@ -9374,10 +9391,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
           var selector = Util.getSelectorFromElement(trigger);
 
           if (selector !== null) {
-            var $elem = $__default['default']([].slice.call(document.querySelectorAll(selector)));
+            var $elem = $__default["default"]([].slice.call(document.querySelectorAll(selector)));
 
-            if (!$elem.hasClass(CLASS_NAME_SHOW$1)) {
-              $__default['default'](trigger).addClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', false);
+            if (!$elem.hasClass(CLASS_NAME_SHOW$6)) {
+              $__default["default"](trigger).addClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', false);
             }
           }
         }
@@ -9388,12 +9405,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       var complete = function complete() {
         _this2.setTransitioning(false);
 
-        $__default['default'](_this2._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE).trigger(EVENT_HIDDEN);
+        $__default["default"](_this2._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE).trigger(EVENT_HIDDEN$4);
       };
 
       this._element.style[dimension] = '';
       var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-      $__default['default'](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+      $__default["default"](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
     };
 
     _proto.setTransitioning = function setTransitioning(isTransitioning) {
@@ -9401,7 +9418,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].removeData(this._element, DATA_KEY$3);
+      $__default["default"].removeData(this._element, DATA_KEY$7);
       this._config = null;
       this._parent = null;
       this._element = null;
@@ -9411,15 +9428,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _extends({}, Default$1, config);
+      config = _extends({}, Default$6, config);
       config.toggle = Boolean(config.toggle); // Coerce string values
 
-      Util.typeCheckConfig(NAME$3, config, DefaultType$1);
+      Util.typeCheckConfig(NAME$7, config, DefaultType$6);
       return config;
     };
 
     _proto._getDimension = function _getDimension() {
-      var hasWidth = $__default['default'](this._element).hasClass(DIMENSION_WIDTH);
+      var hasWidth = $__default["default"](this._element).hasClass(DIMENSION_WIDTH);
       return hasWidth ? DIMENSION_WIDTH : DIMENSION_HEIGHT;
     };
 
@@ -9440,17 +9457,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       var selector = "[data-toggle=\"collapse\"][data-parent=\"" + this._config.parent + "\"]";
       var children = [].slice.call(parent.querySelectorAll(selector));
-      $__default['default'](children).each(function (i, element) {
+      $__default["default"](children).each(function (i, element) {
         _this3._addAriaAndCollapsedClass(Collapse._getTargetFromElement(element), [element]);
       });
       return parent;
     };
 
     _proto._addAriaAndCollapsedClass = function _addAriaAndCollapsedClass(element, triggerArray) {
-      var isOpen = $__default['default'](element).hasClass(CLASS_NAME_SHOW$1);
+      var isOpen = $__default["default"](element).hasClass(CLASS_NAME_SHOW$6);
 
       if (triggerArray.length) {
-        $__default['default'](triggerArray).toggleClass(CLASS_NAME_COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
+        $__default["default"](triggerArray).toggleClass(CLASS_NAME_COLLAPSED, !isOpen).attr('aria-expanded', isOpen);
       }
     } // Static
     ;
@@ -9462,10 +9479,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     Collapse._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $element = $__default['default'](this);
-        var data = $element.data(DATA_KEY$3);
+        var $element = $__default["default"](this);
+        var data = $element.data(DATA_KEY$7);
 
-        var _config = _extends({}, Default$1, $element.data(), typeof config === 'object' && config ? config : {});
+        var _config = _extends({}, Default$6, $element.data(), typeof config === 'object' && config ? config : {});
 
         if (!data && _config.toggle && typeof config === 'string' && /show|hide/.test(config)) {
           _config.toggle = false;
@@ -9473,7 +9490,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
         if (!data) {
           data = new Collapse(this, _config);
-          $element.data(DATA_KEY$3, data);
+          $element.data(DATA_KEY$7, data);
         }
 
         if (typeof config === 'string') {
@@ -9489,68 +9506,62 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _createClass(Collapse, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$3;
+        return VERSION$7;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default$1;
+        return Default$6;
       }
     }]);
 
     return Collapse;
   }();
   /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
+   * Data API implementation
    */
 
 
-  $__default['default'](document).on(EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$1, function (event) {
+  $__default["default"](document).on(EVENT_CLICK_DATA_API$3, SELECTOR_DATA_TOGGLE$3, function (event) {
     // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
     if (event.currentTarget.tagName === 'A') {
       event.preventDefault();
     }
 
-    var $trigger = $__default['default'](this);
+    var $trigger = $__default["default"](this);
     var selector = Util.getSelectorFromElement(this);
     var selectors = [].slice.call(document.querySelectorAll(selector));
-    $__default['default'](selectors).each(function () {
-      var $target = $__default['default'](this);
-      var data = $target.data(DATA_KEY$3);
+    $__default["default"](selectors).each(function () {
+      var $target = $__default["default"](this);
+      var data = $target.data(DATA_KEY$7);
       var config = data ? 'toggle' : $trigger.data();
 
       Collapse._jQueryInterface.call($target, config);
     });
   });
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME$3] = Collapse._jQueryInterface;
-  $__default['default'].fn[NAME$3].Constructor = Collapse;
+  $__default["default"].fn[NAME$7] = Collapse._jQueryInterface;
+  $__default["default"].fn[NAME$7].Constructor = Collapse;
 
-  $__default['default'].fn[NAME$3].noConflict = function () {
-    $__default['default'].fn[NAME$3] = JQUERY_NO_CONFLICT$3;
+  $__default["default"].fn[NAME$7].noConflict = function () {
+    $__default["default"].fn[NAME$7] = JQUERY_NO_CONFLICT$7;
     return Collapse._jQueryInterface;
   };
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  var NAME$4 = 'dropdown';
-  var VERSION$4 = '4.6.0';
-  var DATA_KEY$4 = 'bs.dropdown';
-  var EVENT_KEY$4 = "." + DATA_KEY$4;
-  var DATA_API_KEY$4 = '.data-api';
-  var JQUERY_NO_CONFLICT$4 = $__default['default'].fn[NAME$4];
-  var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
+  var NAME$6 = 'dropdown';
+  var VERSION$6 = '4.6.1';
+  var DATA_KEY$6 = 'bs.dropdown';
+  var EVENT_KEY$6 = "." + DATA_KEY$6;
+  var DATA_API_KEY$3 = '.data-api';
+  var JQUERY_NO_CONFLICT$6 = $__default["default"].fn[NAME$6];
+  var ESCAPE_KEYCODE$1 = 27; // KeyboardEvent.which value for Escape (Esc) key
 
   var SPACE_KEYCODE = 32; // KeyboardEvent.which value for space key
 
@@ -9562,22 +9573,22 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
   var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
 
-  var REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + "|" + ARROW_DOWN_KEYCODE + "|" + ESCAPE_KEYCODE);
-  var EVENT_HIDE$1 = "hide" + EVENT_KEY$4;
-  var EVENT_HIDDEN$1 = "hidden" + EVENT_KEY$4;
-  var EVENT_SHOW$1 = "show" + EVENT_KEY$4;
-  var EVENT_SHOWN$1 = "shown" + EVENT_KEY$4;
-  var EVENT_CLICK = "click" + EVENT_KEY$4;
-  var EVENT_CLICK_DATA_API$4 = "click" + EVENT_KEY$4 + DATA_API_KEY$4;
-  var EVENT_KEYDOWN_DATA_API = "keydown" + EVENT_KEY$4 + DATA_API_KEY$4;
-  var EVENT_KEYUP_DATA_API = "keyup" + EVENT_KEY$4 + DATA_API_KEY$4;
-  var CLASS_NAME_DISABLED = 'disabled';
-  var CLASS_NAME_SHOW$2 = 'show';
+  var REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + "|" + ARROW_DOWN_KEYCODE + "|" + ESCAPE_KEYCODE$1);
+  var CLASS_NAME_DISABLED$1 = 'disabled';
+  var CLASS_NAME_SHOW$5 = 'show';
   var CLASS_NAME_DROPUP = 'dropup';
   var CLASS_NAME_DROPRIGHT = 'dropright';
   var CLASS_NAME_DROPLEFT = 'dropleft';
   var CLASS_NAME_MENURIGHT = 'dropdown-menu-right';
   var CLASS_NAME_POSITION_STATIC = 'position-static';
+  var EVENT_HIDE$3 = "hide" + EVENT_KEY$6;
+  var EVENT_HIDDEN$3 = "hidden" + EVENT_KEY$6;
+  var EVENT_SHOW$3 = "show" + EVENT_KEY$6;
+  var EVENT_SHOWN$3 = "shown" + EVENT_KEY$6;
+  var EVENT_CLICK = "click" + EVENT_KEY$6;
+  var EVENT_CLICK_DATA_API$2 = "click" + EVENT_KEY$6 + DATA_API_KEY$3;
+  var EVENT_KEYDOWN_DATA_API = "keydown" + EVENT_KEY$6 + DATA_API_KEY$3;
+  var EVENT_KEYUP_DATA_API = "keyup" + EVENT_KEY$6 + DATA_API_KEY$3;
   var SELECTOR_DATA_TOGGLE$2 = '[data-toggle="dropdown"]';
   var SELECTOR_FORM_CHILD = '.dropdown form';
   var SELECTOR_MENU = '.dropdown-menu';
@@ -9589,7 +9600,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   var PLACEMENT_BOTTOMEND = 'bottom-end';
   var PLACEMENT_RIGHT = 'right-start';
   var PLACEMENT_LEFT = 'left-start';
-  var Default$2 = {
+  var Default$5 = {
     offset: 0,
     flip: true,
     boundary: 'scrollParent',
@@ -9597,7 +9608,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     display: 'dynamic',
     popperConfig: null
   };
-  var DefaultType$2 = {
+  var DefaultType$5 = {
     offset: '(number|string|function)',
     flip: 'boolean',
     boundary: '(string|element)',
@@ -9606,9 +9617,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     popperConfig: '(null|object)'
   };
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var Dropdown = /*#__PURE__*/function () {
@@ -9627,11 +9636,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     // Public
     _proto.toggle = function toggle() {
-      if (this._element.disabled || $__default['default'](this._element).hasClass(CLASS_NAME_DISABLED)) {
+      if (this._element.disabled || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED$1)) {
         return;
       }
 
-      var isActive = $__default['default'](this._menu).hasClass(CLASS_NAME_SHOW$2);
+      var isActive = $__default["default"](this._menu).hasClass(CLASS_NAME_SHOW$5);
 
       Dropdown._clearMenus();
 
@@ -9647,18 +9656,18 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         usePopper = false;
       }
 
-      if (this._element.disabled || $__default['default'](this._element).hasClass(CLASS_NAME_DISABLED) || $__default['default'](this._menu).hasClass(CLASS_NAME_SHOW$2)) {
+      if (this._element.disabled || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED$1) || $__default["default"](this._menu).hasClass(CLASS_NAME_SHOW$5)) {
         return;
       }
 
       var relatedTarget = {
         relatedTarget: this._element
       };
-      var showEvent = $__default['default'].Event(EVENT_SHOW$1, relatedTarget);
+      var showEvent = $__default["default"].Event(EVENT_SHOW$3, relatedTarget);
 
       var parent = Dropdown._getParentFromElement(this._element);
 
-      $__default['default'](parent).trigger(showEvent);
+      $__default["default"](parent).trigger(showEvent);
 
       if (showEvent.isDefaultPrevented()) {
         return;
@@ -9666,11 +9675,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 
       if (!this._inNavbar && usePopper) {
-        /**
-         * Check for Popper dependency
-         * Popper - https://popper.js.org
-         */
-        if (typeof Popper__default['default'] === 'undefined') {
+        // Check for Popper dependency
+        if (typeof Popper__default["default"] === 'undefined') {
           throw new TypeError('Bootstrap\'s dropdowns require Popper (https://popper.js.org)');
         }
 
@@ -9690,41 +9696,41 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 
         if (this._config.boundary !== 'scrollParent') {
-          $__default['default'](parent).addClass(CLASS_NAME_POSITION_STATIC);
+          $__default["default"](parent).addClass(CLASS_NAME_POSITION_STATIC);
         }
 
-        this._popper = new Popper__default['default'](referenceElement, this._menu, this._getPopperConfig());
+        this._popper = new Popper__default["default"](referenceElement, this._menu, this._getPopperConfig());
       } // If this is a touch-enabled device we add extra
       // empty mouseover listeners to the body's immediate children;
       // only needed because of broken event delegation on iOS
       // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
 
-      if ('ontouchstart' in document.documentElement && $__default['default'](parent).closest(SELECTOR_NAVBAR_NAV).length === 0) {
-        $__default['default'](document.body).children().on('mouseover', null, $__default['default'].noop);
+      if ('ontouchstart' in document.documentElement && $__default["default"](parent).closest(SELECTOR_NAVBAR_NAV).length === 0) {
+        $__default["default"](document.body).children().on('mouseover', null, $__default["default"].noop);
       }
 
       this._element.focus();
 
       this._element.setAttribute('aria-expanded', true);
 
-      $__default['default'](this._menu).toggleClass(CLASS_NAME_SHOW$2);
-      $__default['default'](parent).toggleClass(CLASS_NAME_SHOW$2).trigger($__default['default'].Event(EVENT_SHOWN$1, relatedTarget));
+      $__default["default"](this._menu).toggleClass(CLASS_NAME_SHOW$5);
+      $__default["default"](parent).toggleClass(CLASS_NAME_SHOW$5).trigger($__default["default"].Event(EVENT_SHOWN$3, relatedTarget));
     };
 
     _proto.hide = function hide() {
-      if (this._element.disabled || $__default['default'](this._element).hasClass(CLASS_NAME_DISABLED) || !$__default['default'](this._menu).hasClass(CLASS_NAME_SHOW$2)) {
+      if (this._element.disabled || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED$1) || !$__default["default"](this._menu).hasClass(CLASS_NAME_SHOW$5)) {
         return;
       }
 
       var relatedTarget = {
         relatedTarget: this._element
       };
-      var hideEvent = $__default['default'].Event(EVENT_HIDE$1, relatedTarget);
+      var hideEvent = $__default["default"].Event(EVENT_HIDE$3, relatedTarget);
 
       var parent = Dropdown._getParentFromElement(this._element);
 
-      $__default['default'](parent).trigger(hideEvent);
+      $__default["default"](parent).trigger(hideEvent);
 
       if (hideEvent.isDefaultPrevented()) {
         return;
@@ -9734,13 +9740,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         this._popper.destroy();
       }
 
-      $__default['default'](this._menu).toggleClass(CLASS_NAME_SHOW$2);
-      $__default['default'](parent).toggleClass(CLASS_NAME_SHOW$2).trigger($__default['default'].Event(EVENT_HIDDEN$1, relatedTarget));
+      $__default["default"](this._menu).toggleClass(CLASS_NAME_SHOW$5);
+      $__default["default"](parent).toggleClass(CLASS_NAME_SHOW$5).trigger($__default["default"].Event(EVENT_HIDDEN$3, relatedTarget));
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].removeData(this._element, DATA_KEY$4);
-      $__default['default'](this._element).off(EVENT_KEY$4);
+      $__default["default"].removeData(this._element, DATA_KEY$6);
+      $__default["default"](this._element).off(EVENT_KEY$6);
       this._element = null;
       this._menu = null;
 
@@ -9763,7 +9769,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto._addEventListeners = function _addEventListeners() {
       var _this = this;
 
-      $__default['default'](this._element).on(EVENT_CLICK, function (event) {
+      $__default["default"](this._element).on(EVENT_CLICK, function (event) {
         event.preventDefault();
         event.stopPropagation();
 
@@ -9772,8 +9778,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto._getConfig = function _getConfig(config) {
-      config = _extends({}, this.constructor.Default, $__default['default'](this._element).data(), config);
-      Util.typeCheckConfig(NAME$4, config, this.constructor.DefaultType);
+      config = _extends({}, this.constructor.Default, $__default["default"](this._element).data(), config);
+      Util.typeCheckConfig(NAME$6, config, this.constructor.DefaultType);
       return config;
     };
 
@@ -9790,16 +9796,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto._getPlacement = function _getPlacement() {
-      var $parentDropdown = $__default['default'](this._element.parentNode);
+      var $parentDropdown = $__default["default"](this._element.parentNode);
       var placement = PLACEMENT_BOTTOM; // Handle dropup
 
       if ($parentDropdown.hasClass(CLASS_NAME_DROPUP)) {
-        placement = $__default['default'](this._menu).hasClass(CLASS_NAME_MENURIGHT) ? PLACEMENT_TOPEND : PLACEMENT_TOP;
+        placement = $__default["default"](this._menu).hasClass(CLASS_NAME_MENURIGHT) ? PLACEMENT_TOPEND : PLACEMENT_TOP;
       } else if ($parentDropdown.hasClass(CLASS_NAME_DROPRIGHT)) {
         placement = PLACEMENT_RIGHT;
       } else if ($parentDropdown.hasClass(CLASS_NAME_DROPLEFT)) {
         placement = PLACEMENT_LEFT;
-      } else if ($__default['default'](this._menu).hasClass(CLASS_NAME_MENURIGHT)) {
+      } else if ($__default["default"](this._menu).hasClass(CLASS_NAME_MENURIGHT)) {
         placement = PLACEMENT_BOTTOMEND;
       }
 
@@ -9807,7 +9813,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto._detectNavbar = function _detectNavbar() {
-      return $__default['default'](this._element).closest('.navbar').length > 0;
+      return $__default["default"](this._element).closest('.navbar').length > 0;
     };
 
     _proto._getOffset = function _getOffset() {
@@ -9817,7 +9823,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       if (typeof this._config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _extends({}, data.offsets, _this2._config.offset(data.offsets, _this2._element) || {});
+          data.offsets = _extends({}, data.offsets, _this2._config.offset(data.offsets, _this2._element));
           return data;
         };
       } else {
@@ -9853,13 +9859,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     Dropdown._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$4);
+        var data = $__default["default"](this).data(DATA_KEY$6);
 
         var _config = typeof config === 'object' ? config : null;
 
         if (!data) {
           data = new Dropdown(this, _config);
-          $__default['default'](this).data(DATA_KEY$4, data);
+          $__default["default"](this).data(DATA_KEY$6, data);
         }
 
         if (typeof config === 'string') {
@@ -9882,7 +9888,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       for (var i = 0, len = toggles.length; i < len; i++) {
         var parent = Dropdown._getParentFromElement(toggles[i]);
 
-        var context = $__default['default'](toggles[i]).data(DATA_KEY$4);
+        var context = $__default["default"](toggles[i]).data(DATA_KEY$6);
         var relatedTarget = {
           relatedTarget: toggles[i]
         };
@@ -9897,16 +9903,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
         var dropdownMenu = context._menu;
 
-        if (!$__default['default'](parent).hasClass(CLASS_NAME_SHOW$2)) {
+        if (!$__default["default"](parent).hasClass(CLASS_NAME_SHOW$5)) {
           continue;
         }
 
-        if (event && (event.type === 'click' && /input|textarea/i.test(event.target.tagName) || event.type === 'keyup' && event.which === TAB_KEYCODE) && $__default['default'].contains(parent, event.target)) {
+        if (event && (event.type === 'click' && /input|textarea/i.test(event.target.tagName) || event.type === 'keyup' && event.which === TAB_KEYCODE) && $__default["default"].contains(parent, event.target)) {
           continue;
         }
 
-        var hideEvent = $__default['default'].Event(EVENT_HIDE$1, relatedTarget);
-        $__default['default'](parent).trigger(hideEvent);
+        var hideEvent = $__default["default"].Event(EVENT_HIDE$3, relatedTarget);
+        $__default["default"](parent).trigger(hideEvent);
 
         if (hideEvent.isDefaultPrevented()) {
           continue;
@@ -9915,7 +9921,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 
         if ('ontouchstart' in document.documentElement) {
-          $__default['default'](document.body).children().off('mouseover', null, $__default['default'].noop);
+          $__default["default"](document.body).children().off('mouseover', null, $__default["default"].noop);
         }
 
         toggles[i].setAttribute('aria-expanded', 'false');
@@ -9924,8 +9930,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
           context._popper.destroy();
         }
 
-        $__default['default'](dropdownMenu).removeClass(CLASS_NAME_SHOW$2);
-        $__default['default'](parent).removeClass(CLASS_NAME_SHOW$2).trigger($__default['default'].Event(EVENT_HIDDEN$1, relatedTarget));
+        $__default["default"](dropdownMenu).removeClass(CLASS_NAME_SHOW$5);
+        $__default["default"](parent).removeClass(CLASS_NAME_SHOW$5).trigger($__default["default"].Event(EVENT_HIDDEN$3, relatedTarget));
       }
     };
 
@@ -9949,36 +9955,36 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       //  - If key is other than escape
       //    - If key is not up or down => not a dropdown command
       //    - If trigger inside the menu => not a dropdown command
-      if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $__default['default'](event.target).closest(SELECTOR_MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
+      if (/input|textarea/i.test(event.target.tagName) ? event.which === SPACE_KEYCODE || event.which !== ESCAPE_KEYCODE$1 && (event.which !== ARROW_DOWN_KEYCODE && event.which !== ARROW_UP_KEYCODE || $__default["default"](event.target).closest(SELECTOR_MENU).length) : !REGEXP_KEYDOWN.test(event.which)) {
         return;
       }
 
-      if (this.disabled || $__default['default'](this).hasClass(CLASS_NAME_DISABLED)) {
+      if (this.disabled || $__default["default"](this).hasClass(CLASS_NAME_DISABLED$1)) {
         return;
       }
 
       var parent = Dropdown._getParentFromElement(this);
 
-      var isActive = $__default['default'](parent).hasClass(CLASS_NAME_SHOW$2);
+      var isActive = $__default["default"](parent).hasClass(CLASS_NAME_SHOW$5);
 
-      if (!isActive && event.which === ESCAPE_KEYCODE) {
+      if (!isActive && event.which === ESCAPE_KEYCODE$1) {
         return;
       }
 
       event.preventDefault();
       event.stopPropagation();
 
-      if (!isActive || event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE) {
-        if (event.which === ESCAPE_KEYCODE) {
-          $__default['default'](parent.querySelector(SELECTOR_DATA_TOGGLE$2)).trigger('focus');
+      if (!isActive || event.which === ESCAPE_KEYCODE$1 || event.which === SPACE_KEYCODE) {
+        if (event.which === ESCAPE_KEYCODE$1) {
+          $__default["default"](parent.querySelector(SELECTOR_DATA_TOGGLE$2)).trigger('focus');
         }
 
-        $__default['default'](this).trigger('click');
+        $__default["default"](this).trigger('click');
         return;
       }
 
       var items = [].slice.call(parent.querySelectorAll(SELECTOR_VISIBLE_ITEMS)).filter(function (item) {
-        return $__default['default'](item).is(':visible');
+        return $__default["default"](item).is(':visible');
       });
 
       if (items.length === 0) {
@@ -10007,77 +10013,66 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _createClass(Dropdown, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$4;
+        return VERSION$6;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default$2;
+        return Default$5;
       }
     }, {
       key: "DefaultType",
       get: function get() {
-        return DefaultType$2;
+        return DefaultType$5;
       }
     }]);
 
     return Dropdown;
   }();
   /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
+   * Data API implementation
    */
 
 
-  $__default['default'](document).on(EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE$2, Dropdown._dataApiKeydownHandler).on(EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown._dataApiKeydownHandler).on(EVENT_CLICK_DATA_API$4 + " " + EVENT_KEYUP_DATA_API, Dropdown._clearMenus).on(EVENT_CLICK_DATA_API$4, SELECTOR_DATA_TOGGLE$2, function (event) {
+  $__default["default"](document).on(EVENT_KEYDOWN_DATA_API, SELECTOR_DATA_TOGGLE$2, Dropdown._dataApiKeydownHandler).on(EVENT_KEYDOWN_DATA_API, SELECTOR_MENU, Dropdown._dataApiKeydownHandler).on(EVENT_CLICK_DATA_API$2 + " " + EVENT_KEYUP_DATA_API, Dropdown._clearMenus).on(EVENT_CLICK_DATA_API$2, SELECTOR_DATA_TOGGLE$2, function (event) {
     event.preventDefault();
     event.stopPropagation();
 
-    Dropdown._jQueryInterface.call($__default['default'](this), 'toggle');
-  }).on(EVENT_CLICK_DATA_API$4, SELECTOR_FORM_CHILD, function (e) {
+    Dropdown._jQueryInterface.call($__default["default"](this), 'toggle');
+  }).on(EVENT_CLICK_DATA_API$2, SELECTOR_FORM_CHILD, function (e) {
     e.stopPropagation();
   });
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME$4] = Dropdown._jQueryInterface;
-  $__default['default'].fn[NAME$4].Constructor = Dropdown;
+  $__default["default"].fn[NAME$6] = Dropdown._jQueryInterface;
+  $__default["default"].fn[NAME$6].Constructor = Dropdown;
 
-  $__default['default'].fn[NAME$4].noConflict = function () {
-    $__default['default'].fn[NAME$4] = JQUERY_NO_CONFLICT$4;
+  $__default["default"].fn[NAME$6].noConflict = function () {
+    $__default["default"].fn[NAME$6] = JQUERY_NO_CONFLICT$6;
     return Dropdown._jQueryInterface;
   };
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
   var NAME$5 = 'modal';
-  var VERSION$5 = '4.6.0';
+  var VERSION$5 = '4.6.1';
   var DATA_KEY$5 = 'bs.modal';
   var EVENT_KEY$5 = "." + DATA_KEY$5;
-  var DATA_API_KEY$5 = '.data-api';
-  var JQUERY_NO_CONFLICT$5 = $__default['default'].fn[NAME$5];
-  var ESCAPE_KEYCODE$1 = 27; // KeyboardEvent.which value for Escape (Esc) key
+  var DATA_API_KEY$2 = '.data-api';
+  var JQUERY_NO_CONFLICT$5 = $__default["default"].fn[NAME$5];
+  var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
 
-  var Default$3 = {
-    backdrop: true,
-    keyboard: true,
-    focus: true,
-    show: true
-  };
-  var DefaultType$3 = {
-    backdrop: '(boolean|string)',
-    keyboard: 'boolean',
-    focus: 'boolean',
-    show: 'boolean'
-  };
+  var CLASS_NAME_SCROLLABLE = 'modal-dialog-scrollable';
+  var CLASS_NAME_SCROLLBAR_MEASURER = 'modal-scrollbar-measure';
+  var CLASS_NAME_BACKDROP = 'modal-backdrop';
+  var CLASS_NAME_OPEN = 'modal-open';
+  var CLASS_NAME_FADE$4 = 'fade';
+  var CLASS_NAME_SHOW$4 = 'show';
+  var CLASS_NAME_STATIC = 'modal-static';
   var EVENT_HIDE$2 = "hide" + EVENT_KEY$5;
   var EVENT_HIDE_PREVENTED = "hidePrevented" + EVENT_KEY$5;
   var EVENT_HIDDEN$2 = "hidden" + EVENT_KEY$5;
@@ -10085,28 +10080,31 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   var EVENT_SHOWN$2 = "shown" + EVENT_KEY$5;
   var EVENT_FOCUSIN = "focusin" + EVENT_KEY$5;
   var EVENT_RESIZE = "resize" + EVENT_KEY$5;
-  var EVENT_CLICK_DISMISS = "click.dismiss" + EVENT_KEY$5;
+  var EVENT_CLICK_DISMISS$1 = "click.dismiss" + EVENT_KEY$5;
   var EVENT_KEYDOWN_DISMISS = "keydown.dismiss" + EVENT_KEY$5;
   var EVENT_MOUSEUP_DISMISS = "mouseup.dismiss" + EVENT_KEY$5;
   var EVENT_MOUSEDOWN_DISMISS = "mousedown.dismiss" + EVENT_KEY$5;
-  var EVENT_CLICK_DATA_API$5 = "click" + EVENT_KEY$5 + DATA_API_KEY$5;
-  var CLASS_NAME_SCROLLABLE = 'modal-dialog-scrollable';
-  var CLASS_NAME_SCROLLBAR_MEASURER = 'modal-scrollbar-measure';
-  var CLASS_NAME_BACKDROP = 'modal-backdrop';
-  var CLASS_NAME_OPEN = 'modal-open';
-  var CLASS_NAME_FADE$1 = 'fade';
-  var CLASS_NAME_SHOW$3 = 'show';
-  var CLASS_NAME_STATIC = 'modal-static';
+  var EVENT_CLICK_DATA_API$1 = "click" + EVENT_KEY$5 + DATA_API_KEY$2;
   var SELECTOR_DIALOG = '.modal-dialog';
   var SELECTOR_MODAL_BODY = '.modal-body';
-  var SELECTOR_DATA_TOGGLE$3 = '[data-toggle="modal"]';
-  var SELECTOR_DATA_DISMISS = '[data-dismiss="modal"]';
+  var SELECTOR_DATA_TOGGLE$1 = '[data-toggle="modal"]';
+  var SELECTOR_DATA_DISMISS$1 = '[data-dismiss="modal"]';
   var SELECTOR_FIXED_CONTENT = '.fixed-top, .fixed-bottom, .is-fixed, .sticky-top';
   var SELECTOR_STICKY_CONTENT = '.sticky-top';
+  var Default$4 = {
+    backdrop: true,
+    keyboard: true,
+    focus: true,
+    show: true
+  };
+  var DefaultType$4 = {
+    backdrop: '(boolean|string)',
+    keyboard: 'boolean',
+    focus: 'boolean',
+    show: 'boolean'
+  };
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var Modal = /*#__PURE__*/function () {
@@ -10137,20 +10135,20 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         return;
       }
 
-      if ($__default['default'](this._element).hasClass(CLASS_NAME_FADE$1)) {
-        this._isTransitioning = true;
-      }
-
-      var showEvent = $__default['default'].Event(EVENT_SHOW$2, {
+      var showEvent = $__default["default"].Event(EVENT_SHOW$2, {
         relatedTarget: relatedTarget
       });
-      $__default['default'](this._element).trigger(showEvent);
+      $__default["default"](this._element).trigger(showEvent);
 
-      if (this._isShown || showEvent.isDefaultPrevented()) {
+      if (showEvent.isDefaultPrevented()) {
         return;
       }
 
       this._isShown = true;
+
+      if ($__default["default"](this._element).hasClass(CLASS_NAME_FADE$4)) {
+        this._isTransitioning = true;
+      }
 
       this._checkScrollbar();
 
@@ -10162,12 +10160,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       this._setResizeEvent();
 
-      $__default['default'](this._element).on(EVENT_CLICK_DISMISS, SELECTOR_DATA_DISMISS, function (event) {
+      $__default["default"](this._element).on(EVENT_CLICK_DISMISS$1, SELECTOR_DATA_DISMISS$1, function (event) {
         return _this.hide(event);
       });
-      $__default['default'](this._dialog).on(EVENT_MOUSEDOWN_DISMISS, function () {
-        $__default['default'](_this._element).one(EVENT_MOUSEUP_DISMISS, function (event) {
-          if ($__default['default'](event.target).is(_this._element)) {
+      $__default["default"](this._dialog).on(EVENT_MOUSEDOWN_DISMISS, function () {
+        $__default["default"](_this._element).one(EVENT_MOUSEUP_DISMISS, function (event) {
+          if ($__default["default"](event.target).is(_this._element)) {
             _this._ignoreBackdropClick = true;
           }
         });
@@ -10189,15 +10187,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         return;
       }
 
-      var hideEvent = $__default['default'].Event(EVENT_HIDE$2);
-      $__default['default'](this._element).trigger(hideEvent);
+      var hideEvent = $__default["default"].Event(EVENT_HIDE$2);
+      $__default["default"](this._element).trigger(hideEvent);
 
       if (!this._isShown || hideEvent.isDefaultPrevented()) {
         return;
       }
 
       this._isShown = false;
-      var transition = $__default['default'](this._element).hasClass(CLASS_NAME_FADE$1);
+      var transition = $__default["default"](this._element).hasClass(CLASS_NAME_FADE$4);
 
       if (transition) {
         this._isTransitioning = true;
@@ -10207,14 +10205,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       this._setResizeEvent();
 
-      $__default['default'](document).off(EVENT_FOCUSIN);
-      $__default['default'](this._element).removeClass(CLASS_NAME_SHOW$3);
-      $__default['default'](this._element).off(EVENT_CLICK_DISMISS);
-      $__default['default'](this._dialog).off(EVENT_MOUSEDOWN_DISMISS);
+      $__default["default"](document).off(EVENT_FOCUSIN);
+      $__default["default"](this._element).removeClass(CLASS_NAME_SHOW$4);
+      $__default["default"](this._element).off(EVENT_CLICK_DISMISS$1);
+      $__default["default"](this._dialog).off(EVENT_MOUSEDOWN_DISMISS);
 
       if (transition) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-        $__default['default'](this._element).one(Util.TRANSITION_END, function (event) {
+        $__default["default"](this._element).one(Util.TRANSITION_END, function (event) {
           return _this2._hideModal(event);
         }).emulateTransitionEnd(transitionDuration);
       } else {
@@ -10224,7 +10222,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     _proto.dispose = function dispose() {
       [window, this._element, this._dialog].forEach(function (htmlElement) {
-        return $__default['default'](htmlElement).off(EVENT_KEY$5);
+        return $__default["default"](htmlElement).off(EVENT_KEY$5);
       });
       /**
        * `document` has 2 events `EVENT_FOCUSIN` and `EVENT_CLICK_DATA_API`
@@ -10232,8 +10230,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
        * It will remove `EVENT_CLICK_DATA_API` event that should remain
        */
 
-      $__default['default'](document).off(EVENT_FOCUSIN);
-      $__default['default'].removeData(this._element, DATA_KEY$5);
+      $__default["default"](document).off(EVENT_FOCUSIN);
+      $__default["default"].removeData(this._element, DATA_KEY$5);
       this._config = null;
       this._element = null;
       this._dialog = null;
@@ -10251,16 +10249,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _extends({}, Default$3, config);
-      Util.typeCheckConfig(NAME$5, config, DefaultType$3);
+      config = _extends({}, Default$4, config);
+      Util.typeCheckConfig(NAME$5, config, DefaultType$4);
       return config;
     };
 
     _proto._triggerBackdropTransition = function _triggerBackdropTransition() {
       var _this3 = this;
 
-      var hideEventPrevented = $__default['default'].Event(EVENT_HIDE_PREVENTED);
-      $__default['default'](this._element).trigger(hideEventPrevented);
+      var hideEventPrevented = $__default["default"].Event(EVENT_HIDE_PREVENTED);
+      $__default["default"](this._element).trigger(hideEventPrevented);
 
       if (hideEventPrevented.isDefaultPrevented()) {
         return;
@@ -10275,12 +10273,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       this._element.classList.add(CLASS_NAME_STATIC);
 
       var modalTransitionDuration = Util.getTransitionDurationFromElement(this._dialog);
-      $__default['default'](this._element).off(Util.TRANSITION_END);
-      $__default['default'](this._element).one(Util.TRANSITION_END, function () {
+      $__default["default"](this._element).off(Util.TRANSITION_END);
+      $__default["default"](this._element).one(Util.TRANSITION_END, function () {
         _this3._element.classList.remove(CLASS_NAME_STATIC);
 
         if (!isModalOverflowing) {
-          $__default['default'](_this3._element).one(Util.TRANSITION_END, function () {
+          $__default["default"](_this3._element).one(Util.TRANSITION_END, function () {
             _this3._element.style.overflowY = '';
           }).emulateTransitionEnd(_this3._element, modalTransitionDuration);
         }
@@ -10292,7 +10290,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto._showElement = function _showElement(relatedTarget) {
       var _this4 = this;
 
-      var transition = $__default['default'](this._element).hasClass(CLASS_NAME_FADE$1);
+      var transition = $__default["default"](this._element).hasClass(CLASS_NAME_FADE$4);
       var modalBody = this._dialog ? this._dialog.querySelector(SELECTOR_MODAL_BODY) : null;
 
       if (!this._element.parentNode || this._element.parentNode.nodeType !== Node.ELEMENT_NODE) {
@@ -10308,7 +10306,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       this._element.setAttribute('role', 'dialog');
 
-      if ($__default['default'](this._dialog).hasClass(CLASS_NAME_SCROLLABLE) && modalBody) {
+      if ($__default["default"](this._dialog).hasClass(CLASS_NAME_SCROLLABLE) && modalBody) {
         modalBody.scrollTop = 0;
       } else {
         this._element.scrollTop = 0;
@@ -10318,13 +10316,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         Util.reflow(this._element);
       }
 
-      $__default['default'](this._element).addClass(CLASS_NAME_SHOW$3);
+      $__default["default"](this._element).addClass(CLASS_NAME_SHOW$4);
 
       if (this._config.focus) {
         this._enforceFocus();
       }
 
-      var shownEvent = $__default['default'].Event(EVENT_SHOWN$2, {
+      var shownEvent = $__default["default"].Event(EVENT_SHOWN$2, {
         relatedTarget: relatedTarget
       });
 
@@ -10334,12 +10332,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         }
 
         _this4._isTransitioning = false;
-        $__default['default'](_this4._element).trigger(shownEvent);
+        $__default["default"](_this4._element).trigger(shownEvent);
       };
 
       if (transition) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._dialog);
-        $__default['default'](this._dialog).one(Util.TRANSITION_END, transitionComplete).emulateTransitionEnd(transitionDuration);
+        $__default["default"](this._dialog).one(Util.TRANSITION_END, transitionComplete).emulateTransitionEnd(transitionDuration);
       } else {
         transitionComplete();
       }
@@ -10348,9 +10346,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto._enforceFocus = function _enforceFocus() {
       var _this5 = this;
 
-      $__default['default'](document).off(EVENT_FOCUSIN) // Guard against infinite focus loop
+      $__default["default"](document).off(EVENT_FOCUSIN) // Guard against infinite focus loop
       .on(EVENT_FOCUSIN, function (event) {
-        if (document !== event.target && _this5._element !== event.target && $__default['default'](_this5._element).has(event.target).length === 0) {
+        if (document !== event.target && _this5._element !== event.target && $__default["default"](_this5._element).has(event.target).length === 0) {
           _this5._element.focus();
         }
       });
@@ -10360,17 +10358,17 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       var _this6 = this;
 
       if (this._isShown) {
-        $__default['default'](this._element).on(EVENT_KEYDOWN_DISMISS, function (event) {
-          if (_this6._config.keyboard && event.which === ESCAPE_KEYCODE$1) {
+        $__default["default"](this._element).on(EVENT_KEYDOWN_DISMISS, function (event) {
+          if (_this6._config.keyboard && event.which === ESCAPE_KEYCODE) {
             event.preventDefault();
 
             _this6.hide();
-          } else if (!_this6._config.keyboard && event.which === ESCAPE_KEYCODE$1) {
+          } else if (!_this6._config.keyboard && event.which === ESCAPE_KEYCODE) {
             _this6._triggerBackdropTransition();
           }
         });
       } else if (!this._isShown) {
-        $__default['default'](this._element).off(EVENT_KEYDOWN_DISMISS);
+        $__default["default"](this._element).off(EVENT_KEYDOWN_DISMISS);
       }
     };
 
@@ -10378,11 +10376,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       var _this7 = this;
 
       if (this._isShown) {
-        $__default['default'](window).on(EVENT_RESIZE, function (event) {
+        $__default["default"](window).on(EVENT_RESIZE, function (event) {
           return _this7.handleUpdate(event);
         });
       } else {
-        $__default['default'](window).off(EVENT_RESIZE);
+        $__default["default"](window).off(EVENT_RESIZE);
       }
     };
 
@@ -10400,19 +10398,19 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       this._isTransitioning = false;
 
       this._showBackdrop(function () {
-        $__default['default'](document.body).removeClass(CLASS_NAME_OPEN);
+        $__default["default"](document.body).removeClass(CLASS_NAME_OPEN);
 
         _this8._resetAdjustments();
 
         _this8._resetScrollbar();
 
-        $__default['default'](_this8._element).trigger(EVENT_HIDDEN$2);
+        $__default["default"](_this8._element).trigger(EVENT_HIDDEN$2);
       });
     };
 
     _proto._removeBackdrop = function _removeBackdrop() {
       if (this._backdrop) {
-        $__default['default'](this._backdrop).remove();
+        $__default["default"](this._backdrop).remove();
         this._backdrop = null;
       }
     };
@@ -10420,7 +10418,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto._showBackdrop = function _showBackdrop(callback) {
       var _this9 = this;
 
-      var animate = $__default['default'](this._element).hasClass(CLASS_NAME_FADE$1) ? CLASS_NAME_FADE$1 : '';
+      var animate = $__default["default"](this._element).hasClass(CLASS_NAME_FADE$4) ? CLASS_NAME_FADE$4 : '';
 
       if (this._isShown && this._config.backdrop) {
         this._backdrop = document.createElement('div');
@@ -10430,8 +10428,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
           this._backdrop.classList.add(animate);
         }
 
-        $__default['default'](this._backdrop).appendTo(document.body);
-        $__default['default'](this._element).on(EVENT_CLICK_DISMISS, function (event) {
+        $__default["default"](this._backdrop).appendTo(document.body);
+        $__default["default"](this._element).on(EVENT_CLICK_DISMISS$1, function (event) {
           if (_this9._ignoreBackdropClick) {
             _this9._ignoreBackdropClick = false;
             return;
@@ -10452,7 +10450,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
           Util.reflow(this._backdrop);
         }
 
-        $__default['default'](this._backdrop).addClass(CLASS_NAME_SHOW$3);
+        $__default["default"](this._backdrop).addClass(CLASS_NAME_SHOW$4);
 
         if (!callback) {
           return;
@@ -10464,9 +10462,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         }
 
         var backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
-        $__default['default'](this._backdrop).one(Util.TRANSITION_END, callback).emulateTransitionEnd(backdropTransitionDuration);
+        $__default["default"](this._backdrop).one(Util.TRANSITION_END, callback).emulateTransitionEnd(backdropTransitionDuration);
       } else if (!this._isShown && this._backdrop) {
-        $__default['default'](this._backdrop).removeClass(CLASS_NAME_SHOW$3);
+        $__default["default"](this._backdrop).removeClass(CLASS_NAME_SHOW$4);
 
         var callbackRemove = function callbackRemove() {
           _this9._removeBackdrop();
@@ -10476,10 +10474,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
           }
         };
 
-        if ($__default['default'](this._element).hasClass(CLASS_NAME_FADE$1)) {
+        if ($__default["default"](this._element).hasClass(CLASS_NAME_FADE$4)) {
           var _backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
 
-          $__default['default'](this._backdrop).one(Util.TRANSITION_END, callbackRemove).emulateTransitionEnd(_backdropTransitionDuration);
+          $__default["default"](this._backdrop).one(Util.TRANSITION_END, callbackRemove).emulateTransitionEnd(_backdropTransitionDuration);
         } else {
           callbackRemove();
         }
@@ -10524,46 +10522,46 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         var fixedContent = [].slice.call(document.querySelectorAll(SELECTOR_FIXED_CONTENT));
         var stickyContent = [].slice.call(document.querySelectorAll(SELECTOR_STICKY_CONTENT)); // Adjust fixed content padding
 
-        $__default['default'](fixedContent).each(function (index, element) {
+        $__default["default"](fixedContent).each(function (index, element) {
           var actualPadding = element.style.paddingRight;
-          var calculatedPadding = $__default['default'](element).css('padding-right');
-          $__default['default'](element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this10._scrollbarWidth + "px");
+          var calculatedPadding = $__default["default"](element).css('padding-right');
+          $__default["default"](element).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + _this10._scrollbarWidth + "px");
         }); // Adjust sticky content margin
 
-        $__default['default'](stickyContent).each(function (index, element) {
+        $__default["default"](stickyContent).each(function (index, element) {
           var actualMargin = element.style.marginRight;
-          var calculatedMargin = $__default['default'](element).css('margin-right');
-          $__default['default'](element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this10._scrollbarWidth + "px");
+          var calculatedMargin = $__default["default"](element).css('margin-right');
+          $__default["default"](element).data('margin-right', actualMargin).css('margin-right', parseFloat(calculatedMargin) - _this10._scrollbarWidth + "px");
         }); // Adjust body padding
 
         var actualPadding = document.body.style.paddingRight;
-        var calculatedPadding = $__default['default'](document.body).css('padding-right');
-        $__default['default'](document.body).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + "px");
+        var calculatedPadding = $__default["default"](document.body).css('padding-right');
+        $__default["default"](document.body).data('padding-right', actualPadding).css('padding-right', parseFloat(calculatedPadding) + this._scrollbarWidth + "px");
       }
 
-      $__default['default'](document.body).addClass(CLASS_NAME_OPEN);
+      $__default["default"](document.body).addClass(CLASS_NAME_OPEN);
     };
 
     _proto._resetScrollbar = function _resetScrollbar() {
       // Restore fixed content padding
       var fixedContent = [].slice.call(document.querySelectorAll(SELECTOR_FIXED_CONTENT));
-      $__default['default'](fixedContent).each(function (index, element) {
-        var padding = $__default['default'](element).data('padding-right');
-        $__default['default'](element).removeData('padding-right');
+      $__default["default"](fixedContent).each(function (index, element) {
+        var padding = $__default["default"](element).data('padding-right');
+        $__default["default"](element).removeData('padding-right');
         element.style.paddingRight = padding ? padding : '';
       }); // Restore sticky content
 
       var elements = [].slice.call(document.querySelectorAll("" + SELECTOR_STICKY_CONTENT));
-      $__default['default'](elements).each(function (index, element) {
-        var margin = $__default['default'](element).data('margin-right');
+      $__default["default"](elements).each(function (index, element) {
+        var margin = $__default["default"](element).data('margin-right');
 
         if (typeof margin !== 'undefined') {
-          $__default['default'](element).css('margin-right', margin).removeData('margin-right');
+          $__default["default"](element).css('margin-right', margin).removeData('margin-right');
         }
       }); // Restore body padding
 
-      var padding = $__default['default'](document.body).data('padding-right');
-      $__default['default'](document.body).removeData('padding-right');
+      var padding = $__default["default"](document.body).data('padding-right');
+      $__default["default"](document.body).removeData('padding-right');
       document.body.style.paddingRight = padding ? padding : '';
     };
 
@@ -10580,13 +10578,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     Modal._jQueryInterface = function _jQueryInterface(config, relatedTarget) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$5);
+        var data = $__default["default"](this).data(DATA_KEY$5);
 
-        var _config = _extends({}, Default$3, $__default['default'](this).data(), typeof config === 'object' && config ? config : {});
+        var _config = _extends({}, Default$4, $__default["default"](this).data(), typeof config === 'object' && config ? config : {});
 
         if (!data) {
           data = new Modal(this, _config);
-          $__default['default'](this).data(DATA_KEY$5, data);
+          $__default["default"](this).data(DATA_KEY$5, data);
         }
 
         if (typeof config === 'string') {
@@ -10609,20 +10607,18 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     }, {
       key: "Default",
       get: function get() {
-        return Default$3;
+        return Default$4;
       }
     }]);
 
     return Modal;
   }();
   /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
+   * Data API implementation
    */
 
 
-  $__default['default'](document).on(EVENT_CLICK_DATA_API$5, SELECTOR_DATA_TOGGLE$3, function (event) {
+  $__default["default"](document).on(EVENT_CLICK_DATA_API$1, SELECTOR_DATA_TOGGLE$1, function (event) {
     var _this11 = this;
 
     var target;
@@ -10632,44 +10628,42 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       target = document.querySelector(selector);
     }
 
-    var config = $__default['default'](target).data(DATA_KEY$5) ? 'toggle' : _extends({}, $__default['default'](target).data(), $__default['default'](this).data());
+    var config = $__default["default"](target).data(DATA_KEY$5) ? 'toggle' : _extends({}, $__default["default"](target).data(), $__default["default"](this).data());
 
     if (this.tagName === 'A' || this.tagName === 'AREA') {
       event.preventDefault();
     }
 
-    var $target = $__default['default'](target).one(EVENT_SHOW$2, function (showEvent) {
+    var $target = $__default["default"](target).one(EVENT_SHOW$2, function (showEvent) {
       if (showEvent.isDefaultPrevented()) {
         // Only register focus restorer if modal will actually get shown
         return;
       }
 
       $target.one(EVENT_HIDDEN$2, function () {
-        if ($__default['default'](_this11).is(':visible')) {
+        if ($__default["default"](_this11).is(':visible')) {
           _this11.focus();
         }
       });
     });
 
-    Modal._jQueryInterface.call($__default['default'](target), config, this);
+    Modal._jQueryInterface.call($__default["default"](target), config, this);
   });
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME$5] = Modal._jQueryInterface;
-  $__default['default'].fn[NAME$5].Constructor = Modal;
+  $__default["default"].fn[NAME$5] = Modal._jQueryInterface;
+  $__default["default"].fn[NAME$5].Constructor = Modal;
 
-  $__default['default'].fn[NAME$5].noConflict = function () {
-    $__default['default'].fn[NAME$5] = JQUERY_NO_CONFLICT$5;
+  $__default["default"].fn[NAME$5].noConflict = function () {
+    $__default["default"].fn[NAME$5] = JQUERY_NO_CONFLICT$5;
     return Modal._jQueryInterface;
   };
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.0): tools/sanitizer.js
+   * Bootstrap (v4.6.1): tools/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -10711,14 +10705,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   /**
    * A pattern that recognizes a commonly useful subset of URLs that are safe.
    *
-   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+   * Shoutout to Angular https://github.com/angular/angular/blob/12.2.x/packages/core/src/sanitization/url_sanitizer.ts
    */
 
-  var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file):|[^#&/:?]*(?:[#/?]|$))/gi;
+  var SAFE_URL_PATTERN = /^(?:(?:https?|mailto|ftp|tel|file|sms):|[^#&/:?]*(?:[#/?]|$))/i;
   /**
    * A pattern that matches safe data URLs. Only matches image, video and audio types.
    *
-   * Shoutout to Angular 7 https://github.com/angular/angular/blob/7.2.4/packages/core/src/sanitization/url_sanitizer.ts
+   * Shoutout to Angular https://github.com/angular/angular/blob/12.2.x/packages/core/src/sanitization/url_sanitizer.ts
    */
 
   var DATA_URL_PATTERN = /^data:(?:image\/(?:bmp|gif|jpeg|jpg|png|tiff|webp)|video\/(?:mpeg|mp4|ogg|webm)|audio\/(?:mp3|oga|ogg|opus));base64,[\d+/a-z]+=*$/i;
@@ -10728,7 +10722,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     if (allowedAttributeList.indexOf(attrName) !== -1) {
       if (uriAttrs.indexOf(attrName) !== -1) {
-        return Boolean(attr.nodeValue.match(SAFE_URL_PATTERN) || attr.nodeValue.match(DATA_URL_PATTERN));
+        return Boolean(SAFE_URL_PATTERN.test(attr.nodeValue) || DATA_URL_PATTERN.test(attr.nodeValue));
       }
 
       return true;
@@ -10739,7 +10733,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     }); // Check if a regular expression validates the attribute.
 
     for (var i = 0, len = regExp.length; i < len; i++) {
-      if (attrName.match(regExp[i])) {
+      if (regExp[i].test(attrName)) {
         return true;
       }
     }
@@ -10770,7 +10764,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         return "continue";
       }
 
-      var attributeList = [].slice.call(el.attributes);
+      var attributeList = [].slice.call(el.attributes); // eslint-disable-next-line unicorn/prefer-spread
+
       var whitelistedAttributes = [].concat(whiteList['*'] || [], whiteList[elName] || []);
       attributeList.forEach(function (attr) {
         if (!allowedAttribute(attr, whitelistedAttributes)) {
@@ -10789,38 +10784,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
   }
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  var NAME$6 = 'tooltip';
-  var VERSION$6 = '4.6.0';
-  var DATA_KEY$6 = 'bs.tooltip';
-  var EVENT_KEY$6 = "." + DATA_KEY$6;
-  var JQUERY_NO_CONFLICT$6 = $__default['default'].fn[NAME$6];
-  var CLASS_PREFIX = 'bs-tooltip';
-  var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
+  var NAME$4 = 'tooltip';
+  var VERSION$4 = '4.6.1';
+  var DATA_KEY$4 = 'bs.tooltip';
+  var EVENT_KEY$4 = "." + DATA_KEY$4;
+  var JQUERY_NO_CONFLICT$4 = $__default["default"].fn[NAME$4];
+  var CLASS_PREFIX$1 = 'bs-tooltip';
+  var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
   var DISALLOWED_ATTRIBUTES = ['sanitize', 'whiteList', 'sanitizeFn'];
-  var DefaultType$4 = {
-    animation: 'boolean',
-    template: 'string',
-    title: '(string|element|function)',
-    trigger: 'string',
-    delay: '(number|object)',
-    html: 'boolean',
-    selector: '(string|boolean)',
-    placement: '(string|function)',
-    offset: '(number|string|function)',
-    container: '(string|element|boolean)',
-    fallbackPlacement: '(string|array)',
-    boundary: '(string|element)',
-    customClass: '(string|function)',
-    sanitize: 'boolean',
-    sanitizeFn: '(null|function)',
-    whiteList: 'object',
-    popperConfig: '(null|object)'
-  };
+  var CLASS_NAME_FADE$3 = 'fade';
+  var CLASS_NAME_SHOW$3 = 'show';
+  var HOVER_STATE_SHOW = 'show';
+  var HOVER_STATE_OUT = 'out';
+  var SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
+  var SELECTOR_ARROW = '.arrow';
+  var TRIGGER_HOVER = 'hover';
+  var TRIGGER_FOCUS = 'focus';
+  var TRIGGER_CLICK = 'click';
+  var TRIGGER_MANUAL = 'manual';
   var AttachmentMap = {
     AUTO: 'auto',
     TOP: 'top',
@@ -10828,7 +10812,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     BOTTOM: 'bottom',
     LEFT: 'left'
   };
-  var Default$4 = {
+  var Default$3 = {
     animation: true,
     template: '<div class="tooltip" role="tooltip">' + '<div class="arrow"></div>' + '<div class="tooltip-inner"></div></div>',
     trigger: 'hover focus',
@@ -10847,39 +10831,46 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     whiteList: DefaultWhitelist,
     popperConfig: null
   };
-  var HOVER_STATE_SHOW = 'show';
-  var HOVER_STATE_OUT = 'out';
-  var Event = {
-    HIDE: "hide" + EVENT_KEY$6,
-    HIDDEN: "hidden" + EVENT_KEY$6,
-    SHOW: "show" + EVENT_KEY$6,
-    SHOWN: "shown" + EVENT_KEY$6,
-    INSERTED: "inserted" + EVENT_KEY$6,
-    CLICK: "click" + EVENT_KEY$6,
-    FOCUSIN: "focusin" + EVENT_KEY$6,
-    FOCUSOUT: "focusout" + EVENT_KEY$6,
-    MOUSEENTER: "mouseenter" + EVENT_KEY$6,
-    MOUSELEAVE: "mouseleave" + EVENT_KEY$6
+  var DefaultType$3 = {
+    animation: 'boolean',
+    template: 'string',
+    title: '(string|element|function)',
+    trigger: 'string',
+    delay: '(number|object)',
+    html: 'boolean',
+    selector: '(string|boolean)',
+    placement: '(string|function)',
+    offset: '(number|string|function)',
+    container: '(string|element|boolean)',
+    fallbackPlacement: '(string|array)',
+    boundary: '(string|element)',
+    customClass: '(string|function)',
+    sanitize: 'boolean',
+    sanitizeFn: '(null|function)',
+    whiteList: 'object',
+    popperConfig: '(null|object)'
   };
-  var CLASS_NAME_FADE$2 = 'fade';
-  var CLASS_NAME_SHOW$4 = 'show';
-  var SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
-  var SELECTOR_ARROW = '.arrow';
-  var TRIGGER_HOVER = 'hover';
-  var TRIGGER_FOCUS = 'focus';
-  var TRIGGER_CLICK = 'click';
-  var TRIGGER_MANUAL = 'manual';
+  var Event$1 = {
+    HIDE: "hide" + EVENT_KEY$4,
+    HIDDEN: "hidden" + EVENT_KEY$4,
+    SHOW: "show" + EVENT_KEY$4,
+    SHOWN: "shown" + EVENT_KEY$4,
+    INSERTED: "inserted" + EVENT_KEY$4,
+    CLICK: "click" + EVENT_KEY$4,
+    FOCUSIN: "focusin" + EVENT_KEY$4,
+    FOCUSOUT: "focusout" + EVENT_KEY$4,
+    MOUSEENTER: "mouseenter" + EVENT_KEY$4,
+    MOUSELEAVE: "mouseleave" + EVENT_KEY$4
+  };
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var Tooltip = /*#__PURE__*/function () {
     function Tooltip(element, config) {
-      if (typeof Popper__default['default'] === 'undefined') {
+      if (typeof Popper__default["default"] === 'undefined') {
         throw new TypeError('Bootstrap\'s tooltips require Popper (https://popper.js.org)');
-      } // private
+      } // Private
 
 
       this._isEnabled = true;
@@ -10918,11 +10909,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       if (event) {
         var dataKey = this.constructor.DATA_KEY;
-        var context = $__default['default'](event.currentTarget).data(dataKey);
+        var context = $__default["default"](event.currentTarget).data(dataKey);
 
         if (!context) {
           context = new this.constructor(event.currentTarget, this._getDelegateConfig());
-          $__default['default'](event.currentTarget).data(dataKey, context);
+          $__default["default"](event.currentTarget).data(dataKey, context);
         }
 
         context._activeTrigger.click = !context._activeTrigger.click;
@@ -10933,7 +10924,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
           context._leave(null, context);
         }
       } else {
-        if ($__default['default'](this.getTipElement()).hasClass(CLASS_NAME_SHOW$4)) {
+        if ($__default["default"](this.getTipElement()).hasClass(CLASS_NAME_SHOW$3)) {
           this._leave(null, this);
 
           return;
@@ -10945,12 +10936,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     _proto.dispose = function dispose() {
       clearTimeout(this._timeout);
-      $__default['default'].removeData(this.element, this.constructor.DATA_KEY);
-      $__default['default'](this.element).off(this.constructor.EVENT_KEY);
-      $__default['default'](this.element).closest('.modal').off('hide.bs.modal', this._hideModalHandler);
+      $__default["default"].removeData(this.element, this.constructor.DATA_KEY);
+      $__default["default"](this.element).off(this.constructor.EVENT_KEY);
+      $__default["default"](this.element).closest('.modal').off('hide.bs.modal', this._hideModalHandler);
 
       if (this.tip) {
-        $__default['default'](this.tip).remove();
+        $__default["default"](this.tip).remove();
       }
 
       this._isEnabled = null;
@@ -10971,16 +10962,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto.show = function show() {
       var _this = this;
 
-      if ($__default['default'](this.element).css('display') === 'none') {
+      if ($__default["default"](this.element).css('display') === 'none') {
         throw new Error('Please use show on visible elements');
       }
 
-      var showEvent = $__default['default'].Event(this.constructor.Event.SHOW);
+      var showEvent = $__default["default"].Event(this.constructor.Event.SHOW);
 
       if (this.isWithContent() && this._isEnabled) {
-        $__default['default'](this.element).trigger(showEvent);
+        $__default["default"](this.element).trigger(showEvent);
         var shadowRoot = Util.findShadowRoot(this.element);
-        var isInTheDom = $__default['default'].contains(shadowRoot !== null ? shadowRoot : this.element.ownerDocument.documentElement, this.element);
+        var isInTheDom = $__default["default"].contains(shadowRoot !== null ? shadowRoot : this.element.ownerDocument.documentElement, this.element);
 
         if (showEvent.isDefaultPrevented() || !isInTheDom) {
           return;
@@ -10993,7 +10984,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         this.setContent();
 
         if (this.config.animation) {
-          $__default['default'](tip).addClass(CLASS_NAME_FADE$2);
+          $__default["default"](tip).addClass(CLASS_NAME_FADE$3);
         }
 
         var placement = typeof this.config.placement === 'function' ? this.config.placement.call(this, tip, this.element) : this.config.placement;
@@ -11004,22 +10995,22 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
         var container = this._getContainer();
 
-        $__default['default'](tip).data(this.constructor.DATA_KEY, this);
+        $__default["default"](tip).data(this.constructor.DATA_KEY, this);
 
-        if (!$__default['default'].contains(this.element.ownerDocument.documentElement, this.tip)) {
-          $__default['default'](tip).appendTo(container);
+        if (!$__default["default"].contains(this.element.ownerDocument.documentElement, this.tip)) {
+          $__default["default"](tip).appendTo(container);
         }
 
-        $__default['default'](this.element).trigger(this.constructor.Event.INSERTED);
-        this._popper = new Popper__default['default'](this.element, tip, this._getPopperConfig(attachment));
-        $__default['default'](tip).addClass(CLASS_NAME_SHOW$4);
-        $__default['default'](tip).addClass(this.config.customClass); // If this is a touch-enabled device we add extra
+        $__default["default"](this.element).trigger(this.constructor.Event.INSERTED);
+        this._popper = new Popper__default["default"](this.element, tip, this._getPopperConfig(attachment));
+        $__default["default"](tip).addClass(CLASS_NAME_SHOW$3);
+        $__default["default"](tip).addClass(this.config.customClass); // If this is a touch-enabled device we add extra
         // empty mouseover listeners to the body's immediate children;
         // only needed because of broken event delegation on iOS
         // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
 
         if ('ontouchstart' in document.documentElement) {
-          $__default['default'](document.body).children().on('mouseover', null, $__default['default'].noop);
+          $__default["default"](document.body).children().on('mouseover', null, $__default["default"].noop);
         }
 
         var complete = function complete() {
@@ -11029,16 +11020,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
           var prevHoverState = _this._hoverState;
           _this._hoverState = null;
-          $__default['default'](_this.element).trigger(_this.constructor.Event.SHOWN);
+          $__default["default"](_this.element).trigger(_this.constructor.Event.SHOWN);
 
           if (prevHoverState === HOVER_STATE_OUT) {
             _this._leave(null, _this);
           }
         };
 
-        if ($__default['default'](this.tip).hasClass(CLASS_NAME_FADE$2)) {
+        if ($__default["default"](this.tip).hasClass(CLASS_NAME_FADE$3)) {
           var transitionDuration = Util.getTransitionDurationFromElement(this.tip);
-          $__default['default'](this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+          $__default["default"](this.tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
         } else {
           complete();
         }
@@ -11049,7 +11040,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       var _this2 = this;
 
       var tip = this.getTipElement();
-      var hideEvent = $__default['default'].Event(this.constructor.Event.HIDE);
+      var hideEvent = $__default["default"].Event(this.constructor.Event.HIDE);
 
       var complete = function complete() {
         if (_this2._hoverState !== HOVER_STATE_SHOW && tip.parentNode) {
@@ -11060,7 +11051,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
         _this2.element.removeAttribute('aria-describedby');
 
-        $__default['default'](_this2.element).trigger(_this2.constructor.Event.HIDDEN);
+        $__default["default"](_this2.element).trigger(_this2.constructor.Event.HIDDEN);
 
         if (_this2._popper !== null) {
           _this2._popper.destroy();
@@ -11071,26 +11062,26 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         }
       };
 
-      $__default['default'](this.element).trigger(hideEvent);
+      $__default["default"](this.element).trigger(hideEvent);
 
       if (hideEvent.isDefaultPrevented()) {
         return;
       }
 
-      $__default['default'](tip).removeClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we remove the extra
+      $__default["default"](tip).removeClass(CLASS_NAME_SHOW$3); // If this is a touch-enabled device we remove the extra
       // empty mouseover listeners we added for iOS support
 
       if ('ontouchstart' in document.documentElement) {
-        $__default['default'](document.body).children().off('mouseover', null, $__default['default'].noop);
+        $__default["default"](document.body).children().off('mouseover', null, $__default["default"].noop);
       }
 
       this._activeTrigger[TRIGGER_CLICK] = false;
       this._activeTrigger[TRIGGER_FOCUS] = false;
       this._activeTrigger[TRIGGER_HOVER] = false;
 
-      if ($__default['default'](this.tip).hasClass(CLASS_NAME_FADE$2)) {
+      if ($__default["default"](this.tip).hasClass(CLASS_NAME_FADE$3)) {
         var transitionDuration = Util.getTransitionDurationFromElement(tip);
-        $__default['default'](tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+        $__default["default"](tip).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
@@ -11110,29 +11101,29 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto.addAttachmentClass = function addAttachmentClass(attachment) {
-      $__default['default'](this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
+      $__default["default"](this.getTipElement()).addClass(CLASS_PREFIX$1 + "-" + attachment);
     };
 
     _proto.getTipElement = function getTipElement() {
-      this.tip = this.tip || $__default['default'](this.config.template)[0];
+      this.tip = this.tip || $__default["default"](this.config.template)[0];
       return this.tip;
     };
 
     _proto.setContent = function setContent() {
       var tip = this.getTipElement();
-      this.setElementContent($__default['default'](tip.querySelectorAll(SELECTOR_TOOLTIP_INNER)), this.getTitle());
-      $__default['default'](tip).removeClass(CLASS_NAME_FADE$2 + " " + CLASS_NAME_SHOW$4);
+      this.setElementContent($__default["default"](tip.querySelectorAll(SELECTOR_TOOLTIP_INNER)), this.getTitle());
+      $__default["default"](tip).removeClass(CLASS_NAME_FADE$3 + " " + CLASS_NAME_SHOW$3);
     };
 
     _proto.setElementContent = function setElementContent($element, content) {
       if (typeof content === 'object' && (content.nodeType || content.jquery)) {
         // Content is a DOM node or a jQuery
         if (this.config.html) {
-          if (!$__default['default'](content).parent().is($element)) {
+          if (!$__default["default"](content).parent().is($element)) {
             $element.empty().append(content);
           }
         } else {
-          $element.text($__default['default'](content).text());
+          $element.text($__default["default"](content).text());
         }
 
         return;
@@ -11196,7 +11187,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       if (typeof this.config.offset === 'function') {
         offset.fn = function (data) {
-          data.offsets = _extends({}, data.offsets, _this4.config.offset(data.offsets, _this4.element) || {});
+          data.offsets = _extends({}, data.offsets, _this4.config.offset(data.offsets, _this4.element));
           return data;
         };
       } else {
@@ -11212,10 +11203,10 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       }
 
       if (Util.isElement(this.config.container)) {
-        return $__default['default'](this.config.container);
+        return $__default["default"](this.config.container);
       }
 
-      return $__default['default'](document).find(this.config.container);
+      return $__default["default"](document).find(this.config.container);
     };
 
     _proto._getAttachment = function _getAttachment(placement) {
@@ -11228,13 +11219,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       var triggers = this.config.trigger.split(' ');
       triggers.forEach(function (trigger) {
         if (trigger === 'click') {
-          $__default['default'](_this5.element).on(_this5.constructor.Event.CLICK, _this5.config.selector, function (event) {
+          $__default["default"](_this5.element).on(_this5.constructor.Event.CLICK, _this5.config.selector, function (event) {
             return _this5.toggle(event);
           });
         } else if (trigger !== TRIGGER_MANUAL) {
           var eventIn = trigger === TRIGGER_HOVER ? _this5.constructor.Event.MOUSEENTER : _this5.constructor.Event.FOCUSIN;
           var eventOut = trigger === TRIGGER_HOVER ? _this5.constructor.Event.MOUSELEAVE : _this5.constructor.Event.FOCUSOUT;
-          $__default['default'](_this5.element).on(eventIn, _this5.config.selector, function (event) {
+          $__default["default"](_this5.element).on(eventIn, _this5.config.selector, function (event) {
             return _this5._enter(event);
           }).on(eventOut, _this5.config.selector, function (event) {
             return _this5._leave(event);
@@ -11248,7 +11239,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         }
       };
 
-      $__default['default'](this.element).closest('.modal').on('hide.bs.modal', this._hideModalHandler);
+      $__default["default"](this.element).closest('.modal').on('hide.bs.modal', this._hideModalHandler);
 
       if (this.config.selector) {
         this.config = _extends({}, this.config, {
@@ -11271,18 +11262,18 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     _proto._enter = function _enter(event, context) {
       var dataKey = this.constructor.DATA_KEY;
-      context = context || $__default['default'](event.currentTarget).data(dataKey);
+      context = context || $__default["default"](event.currentTarget).data(dataKey);
 
       if (!context) {
         context = new this.constructor(event.currentTarget, this._getDelegateConfig());
-        $__default['default'](event.currentTarget).data(dataKey, context);
+        $__default["default"](event.currentTarget).data(dataKey, context);
       }
 
       if (event) {
         context._activeTrigger[event.type === 'focusin' ? TRIGGER_FOCUS : TRIGGER_HOVER] = true;
       }
 
-      if ($__default['default'](context.getTipElement()).hasClass(CLASS_NAME_SHOW$4) || context._hoverState === HOVER_STATE_SHOW) {
+      if ($__default["default"](context.getTipElement()).hasClass(CLASS_NAME_SHOW$3) || context._hoverState === HOVER_STATE_SHOW) {
         context._hoverState = HOVER_STATE_SHOW;
         return;
       }
@@ -11304,11 +11295,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     _proto._leave = function _leave(event, context) {
       var dataKey = this.constructor.DATA_KEY;
-      context = context || $__default['default'](event.currentTarget).data(dataKey);
+      context = context || $__default["default"](event.currentTarget).data(dataKey);
 
       if (!context) {
         context = new this.constructor(event.currentTarget, this._getDelegateConfig());
-        $__default['default'](event.currentTarget).data(dataKey, context);
+        $__default["default"](event.currentTarget).data(dataKey, context);
       }
 
       if (event) {
@@ -11345,7 +11336,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto._getConfig = function _getConfig(config) {
-      var dataAttributes = $__default['default'](this.element).data();
+      var dataAttributes = $__default["default"](this.element).data();
       Object.keys(dataAttributes).forEach(function (dataAttr) {
         if (DISALLOWED_ATTRIBUTES.indexOf(dataAttr) !== -1) {
           delete dataAttributes[dataAttr];
@@ -11368,7 +11359,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         config.content = config.content.toString();
       }
 
-      Util.typeCheckConfig(NAME$6, config, this.constructor.DefaultType);
+      Util.typeCheckConfig(NAME$4, config, this.constructor.DefaultType);
 
       if (config.sanitize) {
         config.template = sanitizeHtml(config.template, config.whiteList, config.sanitizeFn);
@@ -11392,8 +11383,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto._cleanTipClass = function _cleanTipClass() {
-      var $tip = $__default['default'](this.getTipElement());
-      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
+      var $tip = $__default["default"](this.getTipElement());
+      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX$1);
 
       if (tabClass !== null && tabClass.length) {
         $tip.removeClass(tabClass.join(''));
@@ -11416,7 +11407,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         return;
       }
 
-      $__default['default'](tip).removeClass(CLASS_NAME_FADE$2);
+      $__default["default"](tip).removeClass(CLASS_NAME_FADE$3);
       this.config.animation = false;
       this.hide();
       this.show();
@@ -11426,8 +11417,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     Tooltip._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $element = $__default['default'](this);
-        var data = $element.data(DATA_KEY$6);
+        var $element = $__default["default"](this);
+        var data = $element.data(DATA_KEY$4);
 
         var _config = typeof config === 'object' && config;
 
@@ -11437,7 +11428,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
         if (!data) {
           data = new Tooltip(this, _config);
-          $element.data(DATA_KEY$6, data);
+          $element.data(DATA_KEY$4, data);
         }
 
         if (typeof config === 'string') {
@@ -11453,102 +11444,96 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _createClass(Tooltip, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$6;
+        return VERSION$4;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default$4;
+        return Default$3;
       }
     }, {
       key: "NAME",
       get: function get() {
-        return NAME$6;
+        return NAME$4;
       }
     }, {
       key: "DATA_KEY",
       get: function get() {
-        return DATA_KEY$6;
+        return DATA_KEY$4;
       }
     }, {
       key: "Event",
       get: function get() {
-        return Event;
+        return Event$1;
       }
     }, {
       key: "EVENT_KEY",
       get: function get() {
-        return EVENT_KEY$6;
+        return EVENT_KEY$4;
       }
     }, {
       key: "DefaultType",
       get: function get() {
-        return DefaultType$4;
+        return DefaultType$3;
       }
     }]);
 
     return Tooltip;
   }();
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
 
-  $__default['default'].fn[NAME$6] = Tooltip._jQueryInterface;
-  $__default['default'].fn[NAME$6].Constructor = Tooltip;
+  $__default["default"].fn[NAME$4] = Tooltip._jQueryInterface;
+  $__default["default"].fn[NAME$4].Constructor = Tooltip;
 
-  $__default['default'].fn[NAME$6].noConflict = function () {
-    $__default['default'].fn[NAME$6] = JQUERY_NO_CONFLICT$6;
+  $__default["default"].fn[NAME$4].noConflict = function () {
+    $__default["default"].fn[NAME$4] = JQUERY_NO_CONFLICT$4;
     return Tooltip._jQueryInterface;
   };
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  var NAME$7 = 'popover';
-  var VERSION$7 = '4.6.0';
-  var DATA_KEY$7 = 'bs.popover';
-  var EVENT_KEY$7 = "." + DATA_KEY$7;
-  var JQUERY_NO_CONFLICT$7 = $__default['default'].fn[NAME$7];
-  var CLASS_PREFIX$1 = 'bs-popover';
-  var BSCLS_PREFIX_REGEX$1 = new RegExp("(^|\\s)" + CLASS_PREFIX$1 + "\\S+", 'g');
+  var NAME$3 = 'popover';
+  var VERSION$3 = '4.6.1';
+  var DATA_KEY$3 = 'bs.popover';
+  var EVENT_KEY$3 = "." + DATA_KEY$3;
+  var JQUERY_NO_CONFLICT$3 = $__default["default"].fn[NAME$3];
+  var CLASS_PREFIX = 'bs-popover';
+  var BSCLS_PREFIX_REGEX = new RegExp("(^|\\s)" + CLASS_PREFIX + "\\S+", 'g');
+  var CLASS_NAME_FADE$2 = 'fade';
+  var CLASS_NAME_SHOW$2 = 'show';
+  var SELECTOR_TITLE = '.popover-header';
+  var SELECTOR_CONTENT = '.popover-body';
 
-  var Default$5 = _extends({}, Tooltip.Default, {
+  var Default$2 = _extends({}, Tooltip.Default, {
     placement: 'right',
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
 
-  var DefaultType$5 = _extends({}, Tooltip.DefaultType, {
+  var DefaultType$2 = _extends({}, Tooltip.DefaultType, {
     content: '(string|element|function)'
   });
 
-  var CLASS_NAME_FADE$3 = 'fade';
-  var CLASS_NAME_SHOW$5 = 'show';
-  var SELECTOR_TITLE = '.popover-header';
-  var SELECTOR_CONTENT = '.popover-body';
-  var Event$1 = {
-    HIDE: "hide" + EVENT_KEY$7,
-    HIDDEN: "hidden" + EVENT_KEY$7,
-    SHOW: "show" + EVENT_KEY$7,
-    SHOWN: "shown" + EVENT_KEY$7,
-    INSERTED: "inserted" + EVENT_KEY$7,
-    CLICK: "click" + EVENT_KEY$7,
-    FOCUSIN: "focusin" + EVENT_KEY$7,
-    FOCUSOUT: "focusout" + EVENT_KEY$7,
-    MOUSEENTER: "mouseenter" + EVENT_KEY$7,
-    MOUSELEAVE: "mouseleave" + EVENT_KEY$7
+  var Event = {
+    HIDE: "hide" + EVENT_KEY$3,
+    HIDDEN: "hidden" + EVENT_KEY$3,
+    SHOW: "show" + EVENT_KEY$3,
+    SHOWN: "shown" + EVENT_KEY$3,
+    INSERTED: "inserted" + EVENT_KEY$3,
+    CLICK: "click" + EVENT_KEY$3,
+    FOCUSIN: "focusin" + EVENT_KEY$3,
+    FOCUSOUT: "focusout" + EVENT_KEY$3,
+    MOUSEENTER: "mouseenter" + EVENT_KEY$3,
+    MOUSELEAVE: "mouseleave" + EVENT_KEY$3
   };
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var Popover = /*#__PURE__*/function (_Tooltip) {
@@ -11566,16 +11551,16 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto.addAttachmentClass = function addAttachmentClass(attachment) {
-      $__default['default'](this.getTipElement()).addClass(CLASS_PREFIX$1 + "-" + attachment);
+      $__default["default"](this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
     };
 
     _proto.getTipElement = function getTipElement() {
-      this.tip = this.tip || $__default['default'](this.config.template)[0];
+      this.tip = this.tip || $__default["default"](this.config.template)[0];
       return this.tip;
     };
 
     _proto.setContent = function setContent() {
-      var $tip = $__default['default'](this.getTipElement()); // We use append for html objects to maintain js events
+      var $tip = $__default["default"](this.getTipElement()); // We use append for html objects to maintain js events
 
       this.setElementContent($tip.find(SELECTOR_TITLE), this.getTitle());
 
@@ -11586,7 +11571,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       }
 
       this.setElementContent($tip.find(SELECTOR_CONTENT), content);
-      $tip.removeClass(CLASS_NAME_FADE$3 + " " + CLASS_NAME_SHOW$5);
+      $tip.removeClass(CLASS_NAME_FADE$2 + " " + CLASS_NAME_SHOW$2);
     } // Private
     ;
 
@@ -11595,8 +11580,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto._cleanTipClass = function _cleanTipClass() {
-      var $tip = $__default['default'](this.getTipElement());
-      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX$1);
+      var $tip = $__default["default"](this.getTipElement());
+      var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
 
       if (tabClass !== null && tabClass.length > 0) {
         $tip.removeClass(tabClass.join(''));
@@ -11606,7 +11591,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     Popover._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$7);
+        var data = $__default["default"](this).data(DATA_KEY$3);
 
         var _config = typeof config === 'object' ? config : null;
 
@@ -11616,7 +11601,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
         if (!data) {
           data = new Popover(this, _config);
-          $__default['default'](this).data(DATA_KEY$7, data);
+          $__default["default"](this).data(DATA_KEY$3, data);
         }
 
         if (typeof config === 'string') {
@@ -11631,100 +11616,94 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     _createClass(Popover, null, [{
       key: "VERSION",
-      // Getters
-      get: function get() {
-        return VERSION$7;
+      get: // Getters
+      function get() {
+        return VERSION$3;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default$5;
+        return Default$2;
       }
     }, {
       key: "NAME",
       get: function get() {
-        return NAME$7;
+        return NAME$3;
       }
     }, {
       key: "DATA_KEY",
       get: function get() {
-        return DATA_KEY$7;
+        return DATA_KEY$3;
       }
     }, {
       key: "Event",
       get: function get() {
-        return Event$1;
+        return Event;
       }
     }, {
       key: "EVENT_KEY",
       get: function get() {
-        return EVENT_KEY$7;
+        return EVENT_KEY$3;
       }
     }, {
       key: "DefaultType",
       get: function get() {
-        return DefaultType$5;
+        return DefaultType$2;
       }
     }]);
 
     return Popover;
   }(Tooltip);
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
 
-  $__default['default'].fn[NAME$7] = Popover._jQueryInterface;
-  $__default['default'].fn[NAME$7].Constructor = Popover;
+  $__default["default"].fn[NAME$3] = Popover._jQueryInterface;
+  $__default["default"].fn[NAME$3].Constructor = Popover;
 
-  $__default['default'].fn[NAME$7].noConflict = function () {
-    $__default['default'].fn[NAME$7] = JQUERY_NO_CONFLICT$7;
+  $__default["default"].fn[NAME$3].noConflict = function () {
+    $__default["default"].fn[NAME$3] = JQUERY_NO_CONFLICT$3;
     return Popover._jQueryInterface;
   };
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  var NAME$8 = 'scrollspy';
-  var VERSION$8 = '4.6.0';
-  var DATA_KEY$8 = 'bs.scrollspy';
-  var EVENT_KEY$8 = "." + DATA_KEY$8;
-  var DATA_API_KEY$6 = '.data-api';
-  var JQUERY_NO_CONFLICT$8 = $__default['default'].fn[NAME$8];
-  var Default$6 = {
+  var NAME$2 = 'scrollspy';
+  var VERSION$2 = '4.6.1';
+  var DATA_KEY$2 = 'bs.scrollspy';
+  var EVENT_KEY$2 = "." + DATA_KEY$2;
+  var DATA_API_KEY$1 = '.data-api';
+  var JQUERY_NO_CONFLICT$2 = $__default["default"].fn[NAME$2];
+  var CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
+  var CLASS_NAME_ACTIVE$1 = 'active';
+  var EVENT_ACTIVATE = "activate" + EVENT_KEY$2;
+  var EVENT_SCROLL = "scroll" + EVENT_KEY$2;
+  var EVENT_LOAD_DATA_API = "load" + EVENT_KEY$2 + DATA_API_KEY$1;
+  var METHOD_OFFSET = 'offset';
+  var METHOD_POSITION = 'position';
+  var SELECTOR_DATA_SPY = '[data-spy="scroll"]';
+  var SELECTOR_NAV_LIST_GROUP$1 = '.nav, .list-group';
+  var SELECTOR_NAV_LINKS = '.nav-link';
+  var SELECTOR_NAV_ITEMS = '.nav-item';
+  var SELECTOR_LIST_ITEMS = '.list-group-item';
+  var SELECTOR_DROPDOWN$1 = '.dropdown';
+  var SELECTOR_DROPDOWN_ITEMS = '.dropdown-item';
+  var SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
+  var Default$1 = {
     offset: 10,
     method: 'auto',
     target: ''
   };
-  var DefaultType$6 = {
+  var DefaultType$1 = {
     offset: 'number',
     method: 'string',
     target: '(string|element)'
   };
-  var EVENT_ACTIVATE = "activate" + EVENT_KEY$8;
-  var EVENT_SCROLL = "scroll" + EVENT_KEY$8;
-  var EVENT_LOAD_DATA_API$2 = "load" + EVENT_KEY$8 + DATA_API_KEY$6;
-  var CLASS_NAME_DROPDOWN_ITEM = 'dropdown-item';
-  var CLASS_NAME_ACTIVE$2 = 'active';
-  var SELECTOR_DATA_SPY = '[data-spy="scroll"]';
-  var SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
-  var SELECTOR_NAV_LINKS = '.nav-link';
-  var SELECTOR_NAV_ITEMS = '.nav-item';
-  var SELECTOR_LIST_ITEMS = '.list-group-item';
-  var SELECTOR_DROPDOWN = '.dropdown';
-  var SELECTOR_DROPDOWN_ITEMS = '.dropdown-item';
-  var SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
-  var METHOD_OFFSET = 'offset';
-  var METHOD_POSITION = 'position';
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var ScrollSpy = /*#__PURE__*/function () {
@@ -11739,7 +11718,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       this._targets = [];
       this._activeTarget = null;
       this._scrollHeight = 0;
-      $__default['default'](this._scrollElement).on(EVENT_SCROLL, function (event) {
+      $__default["default"](this._scrollElement).on(EVENT_SCROLL, function (event) {
         return _this._process(event);
       });
       this.refresh();
@@ -11774,7 +11753,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
           if (targetBCR.width || targetBCR.height) {
             // TODO (fat): remove sketch reliance on jQuery position/offset
-            return [$__default['default'](target)[offsetMethod]().top + offsetBase, targetSelector];
+            return [$__default["default"](target)[offsetMethod]().top + offsetBase, targetSelector];
           }
         }
 
@@ -11791,8 +11770,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].removeData(this._element, DATA_KEY$8);
-      $__default['default'](this._scrollElement).off(EVENT_KEY$8);
+      $__default["default"].removeData(this._element, DATA_KEY$2);
+      $__default["default"](this._scrollElement).off(EVENT_KEY$2);
       this._element = null;
       this._scrollElement = null;
       this._config = null;
@@ -11805,20 +11784,20 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _extends({}, Default$6, typeof config === 'object' && config ? config : {});
+      config = _extends({}, Default$1, typeof config === 'object' && config ? config : {});
 
       if (typeof config.target !== 'string' && Util.isElement(config.target)) {
-        var id = $__default['default'](config.target).attr('id');
+        var id = $__default["default"](config.target).attr('id');
 
         if (!id) {
-          id = Util.getUID(NAME$8);
-          $__default['default'](config.target).attr('id', id);
+          id = Util.getUID(NAME$2);
+          $__default["default"](config.target).attr('id', id);
         }
 
         config.target = "#" + id;
       }
 
-      Util.typeCheckConfig(NAME$8, config, DefaultType$6);
+      Util.typeCheckConfig(NAME$2, config, DefaultType$1);
       return config;
     };
 
@@ -11881,44 +11860,44 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         return selector + "[data-target=\"" + target + "\"]," + selector + "[href=\"" + target + "\"]";
       });
 
-      var $link = $__default['default']([].slice.call(document.querySelectorAll(queries.join(','))));
+      var $link = $__default["default"]([].slice.call(document.querySelectorAll(queries.join(','))));
 
       if ($link.hasClass(CLASS_NAME_DROPDOWN_ITEM)) {
-        $link.closest(SELECTOR_DROPDOWN).find(SELECTOR_DROPDOWN_TOGGLE).addClass(CLASS_NAME_ACTIVE$2);
-        $link.addClass(CLASS_NAME_ACTIVE$2);
+        $link.closest(SELECTOR_DROPDOWN$1).find(SELECTOR_DROPDOWN_TOGGLE$1).addClass(CLASS_NAME_ACTIVE$1);
+        $link.addClass(CLASS_NAME_ACTIVE$1);
       } else {
         // Set triggered link as active
-        $link.addClass(CLASS_NAME_ACTIVE$2); // Set triggered links parents as active
+        $link.addClass(CLASS_NAME_ACTIVE$1); // Set triggered links parents as active
         // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
 
-        $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_LINKS + ", " + SELECTOR_LIST_ITEMS).addClass(CLASS_NAME_ACTIVE$2); // Handle special case when .nav-link is inside .nav-item
+        $link.parents(SELECTOR_NAV_LIST_GROUP$1).prev(SELECTOR_NAV_LINKS + ", " + SELECTOR_LIST_ITEMS).addClass(CLASS_NAME_ACTIVE$1); // Handle special case when .nav-link is inside .nav-item
 
-        $link.parents(SELECTOR_NAV_LIST_GROUP).prev(SELECTOR_NAV_ITEMS).children(SELECTOR_NAV_LINKS).addClass(CLASS_NAME_ACTIVE$2);
+        $link.parents(SELECTOR_NAV_LIST_GROUP$1).prev(SELECTOR_NAV_ITEMS).children(SELECTOR_NAV_LINKS).addClass(CLASS_NAME_ACTIVE$1);
       }
 
-      $__default['default'](this._scrollElement).trigger(EVENT_ACTIVATE, {
+      $__default["default"](this._scrollElement).trigger(EVENT_ACTIVATE, {
         relatedTarget: target
       });
     };
 
     _proto._clear = function _clear() {
       [].slice.call(document.querySelectorAll(this._selector)).filter(function (node) {
-        return node.classList.contains(CLASS_NAME_ACTIVE$2);
+        return node.classList.contains(CLASS_NAME_ACTIVE$1);
       }).forEach(function (node) {
-        return node.classList.remove(CLASS_NAME_ACTIVE$2);
+        return node.classList.remove(CLASS_NAME_ACTIVE$1);
       });
     } // Static
     ;
 
     ScrollSpy._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var data = $__default['default'](this).data(DATA_KEY$8);
+        var data = $__default["default"](this).data(DATA_KEY$2);
 
         var _config = typeof config === 'object' && config;
 
         if (!data) {
           data = new ScrollSpy(this, _config);
-          $__default['default'](this).data(DATA_KEY$8, data);
+          $__default["default"](this).data(DATA_KEY$2, data);
         }
 
         if (typeof config === 'string') {
@@ -11934,81 +11913,73 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _createClass(ScrollSpy, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$8;
+        return VERSION$2;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default$6;
+        return Default$1;
       }
     }]);
 
     return ScrollSpy;
   }();
   /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
+   * Data API implementation
    */
 
 
-  $__default['default'](window).on(EVENT_LOAD_DATA_API$2, function () {
+  $__default["default"](window).on(EVENT_LOAD_DATA_API, function () {
     var scrollSpys = [].slice.call(document.querySelectorAll(SELECTOR_DATA_SPY));
     var scrollSpysLength = scrollSpys.length;
 
     for (var i = scrollSpysLength; i--;) {
-      var $spy = $__default['default'](scrollSpys[i]);
+      var $spy = $__default["default"](scrollSpys[i]);
 
       ScrollSpy._jQueryInterface.call($spy, $spy.data());
     }
   });
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME$8] = ScrollSpy._jQueryInterface;
-  $__default['default'].fn[NAME$8].Constructor = ScrollSpy;
+  $__default["default"].fn[NAME$2] = ScrollSpy._jQueryInterface;
+  $__default["default"].fn[NAME$2].Constructor = ScrollSpy;
 
-  $__default['default'].fn[NAME$8].noConflict = function () {
-    $__default['default'].fn[NAME$8] = JQUERY_NO_CONFLICT$8;
+  $__default["default"].fn[NAME$2].noConflict = function () {
+    $__default["default"].fn[NAME$2] = JQUERY_NO_CONFLICT$2;
     return ScrollSpy._jQueryInterface;
   };
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  var NAME$9 = 'tab';
-  var VERSION$9 = '4.6.0';
-  var DATA_KEY$9 = 'bs.tab';
-  var EVENT_KEY$9 = "." + DATA_KEY$9;
-  var DATA_API_KEY$7 = '.data-api';
-  var JQUERY_NO_CONFLICT$9 = $__default['default'].fn[NAME$9];
-  var EVENT_HIDE$3 = "hide" + EVENT_KEY$9;
-  var EVENT_HIDDEN$3 = "hidden" + EVENT_KEY$9;
-  var EVENT_SHOW$3 = "show" + EVENT_KEY$9;
-  var EVENT_SHOWN$3 = "shown" + EVENT_KEY$9;
-  var EVENT_CLICK_DATA_API$6 = "click" + EVENT_KEY$9 + DATA_API_KEY$7;
+  var NAME$1 = 'tab';
+  var VERSION$1 = '4.6.1';
+  var DATA_KEY$1 = 'bs.tab';
+  var EVENT_KEY$1 = "." + DATA_KEY$1;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT$1 = $__default["default"].fn[NAME$1];
   var CLASS_NAME_DROPDOWN_MENU = 'dropdown-menu';
-  var CLASS_NAME_ACTIVE$3 = 'active';
-  var CLASS_NAME_DISABLED$1 = 'disabled';
-  var CLASS_NAME_FADE$4 = 'fade';
-  var CLASS_NAME_SHOW$6 = 'show';
-  var SELECTOR_DROPDOWN$1 = '.dropdown';
-  var SELECTOR_NAV_LIST_GROUP$1 = '.nav, .list-group';
-  var SELECTOR_ACTIVE$2 = '.active';
+  var CLASS_NAME_ACTIVE = 'active';
+  var CLASS_NAME_DISABLED = 'disabled';
+  var CLASS_NAME_FADE$1 = 'fade';
+  var CLASS_NAME_SHOW$1 = 'show';
+  var EVENT_HIDE$1 = "hide" + EVENT_KEY$1;
+  var EVENT_HIDDEN$1 = "hidden" + EVENT_KEY$1;
+  var EVENT_SHOW$1 = "show" + EVENT_KEY$1;
+  var EVENT_SHOWN$1 = "shown" + EVENT_KEY$1;
+  var EVENT_CLICK_DATA_API = "click" + EVENT_KEY$1 + DATA_API_KEY;
+  var SELECTOR_DROPDOWN = '.dropdown';
+  var SELECTOR_NAV_LIST_GROUP = '.nav, .list-group';
+  var SELECTOR_ACTIVE = '.active';
   var SELECTOR_ACTIVE_UL = '> li > .active';
-  var SELECTOR_DATA_TOGGLE$4 = '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]';
-  var SELECTOR_DROPDOWN_TOGGLE$1 = '.dropdown-toggle';
+  var SELECTOR_DATA_TOGGLE = '[data-toggle="tab"], [data-toggle="pill"], [data-toggle="list"]';
+  var SELECTOR_DROPDOWN_TOGGLE = '.dropdown-toggle';
   var SELECTOR_DROPDOWN_ACTIVE_CHILD = '> .dropdown-menu .active';
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var Tab = /*#__PURE__*/function () {
@@ -12023,33 +11994,33 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto.show = function show() {
       var _this = this;
 
-      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default['default'](this._element).hasClass(CLASS_NAME_ACTIVE$3) || $__default['default'](this._element).hasClass(CLASS_NAME_DISABLED$1)) {
+      if (this._element.parentNode && this._element.parentNode.nodeType === Node.ELEMENT_NODE && $__default["default"](this._element).hasClass(CLASS_NAME_ACTIVE) || $__default["default"](this._element).hasClass(CLASS_NAME_DISABLED)) {
         return;
       }
 
       var target;
       var previous;
-      var listElement = $__default['default'](this._element).closest(SELECTOR_NAV_LIST_GROUP$1)[0];
+      var listElement = $__default["default"](this._element).closest(SELECTOR_NAV_LIST_GROUP)[0];
       var selector = Util.getSelectorFromElement(this._element);
 
       if (listElement) {
-        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? SELECTOR_ACTIVE_UL : SELECTOR_ACTIVE$2;
-        previous = $__default['default'].makeArray($__default['default'](listElement).find(itemSelector));
+        var itemSelector = listElement.nodeName === 'UL' || listElement.nodeName === 'OL' ? SELECTOR_ACTIVE_UL : SELECTOR_ACTIVE;
+        previous = $__default["default"].makeArray($__default["default"](listElement).find(itemSelector));
         previous = previous[previous.length - 1];
       }
 
-      var hideEvent = $__default['default'].Event(EVENT_HIDE$3, {
+      var hideEvent = $__default["default"].Event(EVENT_HIDE$1, {
         relatedTarget: this._element
       });
-      var showEvent = $__default['default'].Event(EVENT_SHOW$3, {
+      var showEvent = $__default["default"].Event(EVENT_SHOW$1, {
         relatedTarget: previous
       });
 
       if (previous) {
-        $__default['default'](previous).trigger(hideEvent);
+        $__default["default"](previous).trigger(hideEvent);
       }
 
-      $__default['default'](this._element).trigger(showEvent);
+      $__default["default"](this._element).trigger(showEvent);
 
       if (showEvent.isDefaultPrevented() || hideEvent.isDefaultPrevented()) {
         return;
@@ -12062,14 +12033,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       this._activate(this._element, listElement);
 
       var complete = function complete() {
-        var hiddenEvent = $__default['default'].Event(EVENT_HIDDEN$3, {
+        var hiddenEvent = $__default["default"].Event(EVENT_HIDDEN$1, {
           relatedTarget: _this._element
         });
-        var shownEvent = $__default['default'].Event(EVENT_SHOWN$3, {
+        var shownEvent = $__default["default"].Event(EVENT_SHOWN$1, {
           relatedTarget: previous
         });
-        $__default['default'](previous).trigger(hiddenEvent);
-        $__default['default'](_this._element).trigger(shownEvent);
+        $__default["default"](previous).trigger(hiddenEvent);
+        $__default["default"](_this._element).trigger(shownEvent);
       };
 
       if (target) {
@@ -12080,7 +12051,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].removeData(this._element, DATA_KEY$9);
+      $__default["default"].removeData(this._element, DATA_KEY$1);
       this._element = null;
     } // Private
     ;
@@ -12088,9 +12059,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto._activate = function _activate(element, container, callback) {
       var _this2 = this;
 
-      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $__default['default'](container).find(SELECTOR_ACTIVE_UL) : $__default['default'](container).children(SELECTOR_ACTIVE$2);
+      var activeElements = container && (container.nodeName === 'UL' || container.nodeName === 'OL') ? $__default["default"](container).find(SELECTOR_ACTIVE_UL) : $__default["default"](container).children(SELECTOR_ACTIVE);
       var active = activeElements[0];
-      var isTransitioning = callback && active && $__default['default'](active).hasClass(CLASS_NAME_FADE$4);
+      var isTransitioning = callback && active && $__default["default"](active).hasClass(CLASS_NAME_FADE$1);
 
       var complete = function complete() {
         return _this2._transitionComplete(element, active, callback);
@@ -12098,7 +12069,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       if (active && isTransitioning) {
         var transitionDuration = Util.getTransitionDurationFromElement(active);
-        $__default['default'](active).removeClass(CLASS_NAME_SHOW$6).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+        $__default["default"](active).removeClass(CLASS_NAME_SHOW$1).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
@@ -12106,11 +12077,11 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     _proto._transitionComplete = function _transitionComplete(element, active, callback) {
       if (active) {
-        $__default['default'](active).removeClass(CLASS_NAME_ACTIVE$3);
-        var dropdownChild = $__default['default'](active.parentNode).find(SELECTOR_DROPDOWN_ACTIVE_CHILD)[0];
+        $__default["default"](active).removeClass(CLASS_NAME_ACTIVE);
+        var dropdownChild = $__default["default"](active.parentNode).find(SELECTOR_DROPDOWN_ACTIVE_CHILD)[0];
 
         if (dropdownChild) {
-          $__default['default'](dropdownChild).removeClass(CLASS_NAME_ACTIVE$3);
+          $__default["default"](dropdownChild).removeClass(CLASS_NAME_ACTIVE);
         }
 
         if (active.getAttribute('role') === 'tab') {
@@ -12118,7 +12089,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
         }
       }
 
-      $__default['default'](element).addClass(CLASS_NAME_ACTIVE$3);
+      $__default["default"](element).addClass(CLASS_NAME_ACTIVE);
 
       if (element.getAttribute('role') === 'tab') {
         element.setAttribute('aria-selected', true);
@@ -12126,16 +12097,22 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       Util.reflow(element);
 
-      if (element.classList.contains(CLASS_NAME_FADE$4)) {
-        element.classList.add(CLASS_NAME_SHOW$6);
+      if (element.classList.contains(CLASS_NAME_FADE$1)) {
+        element.classList.add(CLASS_NAME_SHOW$1);
       }
 
-      if (element.parentNode && $__default['default'](element.parentNode).hasClass(CLASS_NAME_DROPDOWN_MENU)) {
-        var dropdownElement = $__default['default'](element).closest(SELECTOR_DROPDOWN$1)[0];
+      var parent = element.parentNode;
+
+      if (parent && parent.nodeName === 'LI') {
+        parent = parent.parentNode;
+      }
+
+      if (parent && $__default["default"](parent).hasClass(CLASS_NAME_DROPDOWN_MENU)) {
+        var dropdownElement = $__default["default"](element).closest(SELECTOR_DROPDOWN)[0];
 
         if (dropdownElement) {
-          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(SELECTOR_DROPDOWN_TOGGLE$1));
-          $__default['default'](dropdownToggleList).addClass(CLASS_NAME_ACTIVE$3);
+          var dropdownToggleList = [].slice.call(dropdownElement.querySelectorAll(SELECTOR_DROPDOWN_TOGGLE));
+          $__default["default"](dropdownToggleList).addClass(CLASS_NAME_ACTIVE);
         }
 
         element.setAttribute('aria-expanded', true);
@@ -12149,12 +12126,12 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     Tab._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $this = $__default['default'](this);
-        var data = $this.data(DATA_KEY$9);
+        var $this = $__default["default"](this);
+        var data = $this.data(DATA_KEY$1);
 
         if (!data) {
           data = new Tab(this);
-          $this.data(DATA_KEY$9, data);
+          $this.data(DATA_KEY$1, data);
         }
 
         if (typeof config === 'string') {
@@ -12170,73 +12147,65 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _createClass(Tab, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$9;
+        return VERSION$1;
       }
     }]);
 
     return Tab;
   }();
   /**
-   * ------------------------------------------------------------------------
-   * Data Api implementation
-   * ------------------------------------------------------------------------
+   * Data API implementation
    */
 
 
-  $__default['default'](document).on(EVENT_CLICK_DATA_API$6, SELECTOR_DATA_TOGGLE$4, function (event) {
+  $__default["default"](document).on(EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE, function (event) {
     event.preventDefault();
 
-    Tab._jQueryInterface.call($__default['default'](this), 'show');
+    Tab._jQueryInterface.call($__default["default"](this), 'show');
   });
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
-  $__default['default'].fn[NAME$9] = Tab._jQueryInterface;
-  $__default['default'].fn[NAME$9].Constructor = Tab;
+  $__default["default"].fn[NAME$1] = Tab._jQueryInterface;
+  $__default["default"].fn[NAME$1].Constructor = Tab;
 
-  $__default['default'].fn[NAME$9].noConflict = function () {
-    $__default['default'].fn[NAME$9] = JQUERY_NO_CONFLICT$9;
+  $__default["default"].fn[NAME$1].noConflict = function () {
+    $__default["default"].fn[NAME$1] = JQUERY_NO_CONFLICT$1;
     return Tab._jQueryInterface;
   };
 
   /**
-   * ------------------------------------------------------------------------
    * Constants
-   * ------------------------------------------------------------------------
    */
 
-  var NAME$a = 'toast';
-  var VERSION$a = '4.6.0';
-  var DATA_KEY$a = 'bs.toast';
-  var EVENT_KEY$a = "." + DATA_KEY$a;
-  var JQUERY_NO_CONFLICT$a = $__default['default'].fn[NAME$a];
-  var EVENT_CLICK_DISMISS$1 = "click.dismiss" + EVENT_KEY$a;
-  var EVENT_HIDE$4 = "hide" + EVENT_KEY$a;
-  var EVENT_HIDDEN$4 = "hidden" + EVENT_KEY$a;
-  var EVENT_SHOW$4 = "show" + EVENT_KEY$a;
-  var EVENT_SHOWN$4 = "shown" + EVENT_KEY$a;
-  var CLASS_NAME_FADE$5 = 'fade';
+  var NAME = 'toast';
+  var VERSION = '4.6.1';
+  var DATA_KEY = 'bs.toast';
+  var EVENT_KEY = "." + DATA_KEY;
+  var JQUERY_NO_CONFLICT = $__default["default"].fn[NAME];
+  var CLASS_NAME_FADE = 'fade';
   var CLASS_NAME_HIDE = 'hide';
-  var CLASS_NAME_SHOW$7 = 'show';
+  var CLASS_NAME_SHOW = 'show';
   var CLASS_NAME_SHOWING = 'showing';
-  var DefaultType$7 = {
-    animation: 'boolean',
-    autohide: 'boolean',
-    delay: 'number'
-  };
-  var Default$7 = {
+  var EVENT_CLICK_DISMISS = "click.dismiss" + EVENT_KEY;
+  var EVENT_HIDE = "hide" + EVENT_KEY;
+  var EVENT_HIDDEN = "hidden" + EVENT_KEY;
+  var EVENT_SHOW = "show" + EVENT_KEY;
+  var EVENT_SHOWN = "shown" + EVENT_KEY;
+  var SELECTOR_DATA_DISMISS = '[data-dismiss="toast"]';
+  var Default = {
     animation: true,
     autohide: true,
     delay: 500
   };
-  var SELECTOR_DATA_DISMISS$1 = '[data-dismiss="toast"]';
+  var DefaultType = {
+    animation: 'boolean',
+    autohide: 'boolean',
+    delay: 'number'
+  };
   /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
+   * Class definition
    */
 
   var Toast = /*#__PURE__*/function () {
@@ -12255,8 +12224,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto.show = function show() {
       var _this = this;
 
-      var showEvent = $__default['default'].Event(EVENT_SHOW$4);
-      $__default['default'](this._element).trigger(showEvent);
+      var showEvent = $__default["default"].Event(EVENT_SHOW);
+      $__default["default"](this._element).trigger(showEvent);
 
       if (showEvent.isDefaultPrevented()) {
         return;
@@ -12265,15 +12234,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       this._clearTimeout();
 
       if (this._config.animation) {
-        this._element.classList.add(CLASS_NAME_FADE$5);
+        this._element.classList.add(CLASS_NAME_FADE);
       }
 
       var complete = function complete() {
         _this._element.classList.remove(CLASS_NAME_SHOWING);
 
-        _this._element.classList.add(CLASS_NAME_SHOW$7);
+        _this._element.classList.add(CLASS_NAME_SHOW);
 
-        $__default['default'](_this._element).trigger(EVENT_SHOWN$4);
+        $__default["default"](_this._element).trigger(EVENT_SHOWN);
 
         if (_this._config.autohide) {
           _this._timeout = setTimeout(function () {
@@ -12290,19 +12259,19 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
       if (this._config.animation) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-        $__default['default'](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+        $__default["default"](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
     };
 
     _proto.hide = function hide() {
-      if (!this._element.classList.contains(CLASS_NAME_SHOW$7)) {
+      if (!this._element.classList.contains(CLASS_NAME_SHOW)) {
         return;
       }
 
-      var hideEvent = $__default['default'].Event(EVENT_HIDE$4);
-      $__default['default'](this._element).trigger(hideEvent);
+      var hideEvent = $__default["default"].Event(EVENT_HIDE);
+      $__default["default"](this._element).trigger(hideEvent);
 
       if (hideEvent.isDefaultPrevented()) {
         return;
@@ -12314,27 +12283,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _proto.dispose = function dispose() {
       this._clearTimeout();
 
-      if (this._element.classList.contains(CLASS_NAME_SHOW$7)) {
-        this._element.classList.remove(CLASS_NAME_SHOW$7);
+      if (this._element.classList.contains(CLASS_NAME_SHOW)) {
+        this._element.classList.remove(CLASS_NAME_SHOW);
       }
 
-      $__default['default'](this._element).off(EVENT_CLICK_DISMISS$1);
-      $__default['default'].removeData(this._element, DATA_KEY$a);
+      $__default["default"](this._element).off(EVENT_CLICK_DISMISS);
+      $__default["default"].removeData(this._element, DATA_KEY);
       this._element = null;
       this._config = null;
     } // Private
     ;
 
     _proto._getConfig = function _getConfig(config) {
-      config = _extends({}, Default$7, $__default['default'](this._element).data(), typeof config === 'object' && config ? config : {});
-      Util.typeCheckConfig(NAME$a, config, this.constructor.DefaultType);
+      config = _extends({}, Default, $__default["default"](this._element).data(), typeof config === 'object' && config ? config : {});
+      Util.typeCheckConfig(NAME, config, this.constructor.DefaultType);
       return config;
     };
 
     _proto._setListeners = function _setListeners() {
       var _this2 = this;
 
-      $__default['default'](this._element).on(EVENT_CLICK_DISMISS$1, SELECTOR_DATA_DISMISS$1, function () {
+      $__default["default"](this._element).on(EVENT_CLICK_DISMISS, SELECTOR_DATA_DISMISS, function () {
         return _this2.hide();
       });
     };
@@ -12345,14 +12314,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
       var complete = function complete() {
         _this3._element.classList.add(CLASS_NAME_HIDE);
 
-        $__default['default'](_this3._element).trigger(EVENT_HIDDEN$4);
+        $__default["default"](_this3._element).trigger(EVENT_HIDDEN);
       };
 
-      this._element.classList.remove(CLASS_NAME_SHOW$7);
+      this._element.classList.remove(CLASS_NAME_SHOW);
 
       if (this._config.animation) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);
-        $__default['default'](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+        $__default["default"](this._element).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
@@ -12366,14 +12335,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
     Toast._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
-        var $element = $__default['default'](this);
-        var data = $element.data(DATA_KEY$a);
+        var $element = $__default["default"](this);
+        var data = $element.data(DATA_KEY);
 
         var _config = typeof config === 'object' && config;
 
         if (!data) {
           data = new Toast(this, _config);
-          $element.data(DATA_KEY$a, data);
+          $element.data(DATA_KEY, data);
         }
 
         if (typeof config === 'string') {
@@ -12389,34 +12358,32 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
     _createClass(Toast, null, [{
       key: "VERSION",
       get: function get() {
-        return VERSION$a;
+        return VERSION;
       }
     }, {
       key: "DefaultType",
       get: function get() {
-        return DefaultType$7;
+        return DefaultType;
       }
     }, {
       key: "Default",
       get: function get() {
-        return Default$7;
+        return Default;
       }
     }]);
 
     return Toast;
   }();
   /**
-   * ------------------------------------------------------------------------
    * jQuery
-   * ------------------------------------------------------------------------
    */
 
 
-  $__default['default'].fn[NAME$a] = Toast._jQueryInterface;
-  $__default['default'].fn[NAME$a].Constructor = Toast;
+  $__default["default"].fn[NAME] = Toast._jQueryInterface;
+  $__default["default"].fn[NAME].Constructor = Toast;
 
-  $__default['default'].fn[NAME$a].noConflict = function () {
-    $__default['default'].fn[NAME$a] = JQUERY_NO_CONFLICT$a;
+  $__default["default"].fn[NAME].noConflict = function () {
+    $__default["default"].fn[NAME] = JQUERY_NO_CONFLICT;
     return Toast._jQueryInterface;
   };
 
@@ -12435,7 +12402,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
 //# sourceMappingURL=bootstrap.js.map
 
 
@@ -12864,11 +12831,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "createBrowserHistory": () => (/* binding */ createBrowserHistory),
 /* harmony export */   "createHashHistory": () => (/* binding */ createHashHistory),
-/* harmony export */   "createMemoryHistory": () => (/* binding */ createMemoryHistory),
 /* harmony export */   "createLocation": () => (/* binding */ createLocation),
+/* harmony export */   "createMemoryHistory": () => (/* binding */ createMemoryHistory),
+/* harmony export */   "createPath": () => (/* binding */ createPath),
 /* harmony export */   "locationsAreEqual": () => (/* binding */ locationsAreEqual),
-/* harmony export */   "parsePath": () => (/* binding */ parsePath),
-/* harmony export */   "createPath": () => (/* binding */ createPath)
+/* harmony export */   "parsePath": () => (/* binding */ parsePath)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var resolve_pathname__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! resolve-pathname */ "./node_modules/resolve-pathname/esm/resolve-pathname.js");
@@ -42029,9 +41996,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var tiny_warning__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tiny-warning */ "./node_modules/tiny-warning/dist/tiny-warning.esm.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var tiny_warning__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tiny-warning */ "./node_modules/tiny-warning/dist/tiny-warning.esm.js");
 
 
 
@@ -42116,7 +42083,7 @@ function createReactContext(defaultValue, calculateChangedBits) {
           changedBits = typeof calculateChangedBits === 'function' ? calculateChangedBits(oldValue, newValue) : MAX_SIGNED_31_BIT_INT;
 
           if (true) {
-            (0,tiny_warning__WEBPACK_IMPORTED_MODULE_3__["default"])((changedBits & MAX_SIGNED_31_BIT_INT) === changedBits, 'calculateChangedBits: Expected the return value to be a ' + '31-bit integer. Instead received: ' + changedBits);
+            (0,tiny_warning__WEBPACK_IMPORTED_MODULE_2__["default"])((changedBits & MAX_SIGNED_31_BIT_INT) === changedBits, 'calculateChangedBits: Expected the return value to be a ' + '31-bit integer. Instead received: ' + changedBits);
           }
 
           changedBits |= 0;
@@ -42135,7 +42102,7 @@ function createReactContext(defaultValue, calculateChangedBits) {
     return Provider;
   }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-  Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object.isRequired), _Provider$childContex);
+  Provider.childContextTypes = (_Provider$childContex = {}, _Provider$childContex[contextProp] = (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object.isRequired), _Provider$childContex);
 
   var Consumer = /*#__PURE__*/function (_Component2) {
     (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(Consumer, _Component2);
@@ -42198,7 +42165,7 @@ function createReactContext(defaultValue, calculateChangedBits) {
     return Consumer;
   }(react__WEBPACK_IMPORTED_MODULE_0__.Component);
 
-  Consumer.contextTypes = (_Consumer$contextType = {}, _Consumer$contextType[contextProp] = (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object), _Consumer$contextType);
+  Consumer.contextTypes = (_Consumer$contextType = {}, _Consumer$contextType[contextProp] = (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object), _Consumer$contextType);
   return {
     Provider: Provider,
     Consumer: Consumer
@@ -42524,9 +42491,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split(
             '_'
         ),
-        monthsShort: 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split(
-            '_'
-        ),
+        monthsShort:
+            'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split(
+                '_'
+            ),
         weekdays: 'الأحد_الإتنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
         weekdaysShort: 'احد_اتنين_ثلاثاء_اربعاء_خميس_جمعة_سبت'.split('_'),
         weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
@@ -42583,7 +42551,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
 //! moment.js locale configuration
-//! locale : Arabic (Lybia) [ar-ly]
+//! locale : Arabic (Libya) [ar-ly]
 //! author : Ali Hmer: https://github.com/kikoanis
 
 ;(function (global, factory) {
@@ -42788,9 +42756,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split(
             '_'
         ),
-        monthsShort: 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split(
-            '_'
-        ),
+        monthsShort:
+            'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split(
+                '_'
+            ),
         weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
         weekdaysShort: 'احد_اثنين_ثلاثاء_اربعاء_خميس_جمعة_سبت'.split('_'),
         weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
@@ -42886,9 +42855,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'يناير_فبراير_مارس_أبريل_مايو_يونيو_يوليو_أغسطس_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split(
             '_'
         ),
-        monthsShort: 'يناير_فبراير_مارس_أبريل_مايو_يونيو_يوليو_أغسطس_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split(
-            '_'
-        ),
+        monthsShort:
+            'يناير_فبراير_مارس_أبريل_مايو_يونيو_يوليو_أغسطس_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split(
+                '_'
+            ),
         weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
         weekdaysShort: 'أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت'.split('_'),
         weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
@@ -42984,9 +42954,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'جانفي_فيفري_مارس_أفريل_ماي_جوان_جويلية_أوت_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split(
             '_'
         ),
-        monthsShort: 'جانفي_فيفري_مارس_أفريل_ماي_جوان_جويلية_أوت_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split(
-            '_'
-        ),
+        monthsShort:
+            'جانفي_فيفري_مارس_أفريل_ماي_جوان_جويلية_أوت_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split(
+                '_'
+            ),
         weekdays: 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
         weekdaysShort: 'أحد_إثنين_ثلاثاء_أربعاء_خميس_جمعة_سبت'.split('_'),
         weekdaysMin: 'ح_ن_ث_ر_خ_ج_س'.split('_'),
@@ -43287,9 +43258,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'yan_fev_mar_apr_may_iyn_iyl_avq_sen_okt_noy_dek'.split('_'),
-        weekdays: 'Bazar_Bazar ertəsi_Çərşənbə axşamı_Çərşənbə_Cümə axşamı_Cümə_Şənbə'.split(
-            '_'
-        ),
+        weekdays:
+            'Bazar_Bazar ertəsi_Çərşənbə axşamı_Çərşənbə_Cümə axşamı_Cümə_Şənbə'.split(
+                '_'
+            ),
         weekdaysShort: 'Baz_BzE_ÇAx_Çər_CAx_Cüm_Şən'.split('_'),
         weekdaysMin: 'Bz_BE_ÇA_Çə_CA_Cü_Şə'.split('_'),
         weekdaysParseExact: true,
@@ -43414,20 +43386,21 @@ __webpack_require__.r(__webpack_exports__);
             format: 'студзеня_лютага_сакавіка_красавіка_траўня_чэрвеня_ліпеня_жніўня_верасня_кастрычніка_лістапада_снежня'.split(
                 '_'
             ),
-            standalone: 'студзень_люты_сакавік_красавік_травень_чэрвень_ліпень_жнівень_верасень_кастрычнік_лістапад_снежань'.split(
-                '_'
-            ),
+            standalone:
+                'студзень_люты_сакавік_красавік_травень_чэрвень_ліпень_жнівень_верасень_кастрычнік_лістапад_снежань'.split(
+                    '_'
+                ),
         },
-        monthsShort: 'студ_лют_сак_крас_трав_чэрв_ліп_жнів_вер_каст_ліст_снеж'.split(
-            '_'
-        ),
+        monthsShort:
+            'студ_лют_сак_крас_трав_чэрв_ліп_жнів_вер_каст_ліст_снеж'.split('_'),
         weekdays: {
             format: 'нядзелю_панядзелак_аўторак_сераду_чацвер_пятніцу_суботу'.split(
                 '_'
             ),
-            standalone: 'нядзеля_панядзелак_аўторак_серада_чацвер_пятніца_субота'.split(
-                '_'
-            ),
+            standalone:
+                'нядзеля_панядзелак_аўторак_серада_чацвер_пятніца_субота'.split(
+                    '_'
+                ),
             isFormat: /\[ ?[Ууў] ?(?:мінулую|наступную)? ?\] ?dddd/,
         },
         weekdaysShort: 'нд_пн_ат_ср_чц_пт_сб'.split('_'),
@@ -43746,9 +43719,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'জানুয়ারি_ফেব্রুয়ারি_মার্চ_এপ্রিল_মে_জুন_জুলাই_আগস্ট_সেপ্টেম্বর_অক্টোবর_নভেম্বর_ডিসেম্বর'.split(
             '_'
         ),
-        monthsShort: 'জানু_ফেব্রু_মার্চ_এপ্রিল_মে_জুন_জুলাই_আগস্ট_সেপ্ট_অক্টো_নভে_ডিসে'.split(
-            '_'
-        ),
+        monthsShort:
+            'জানু_ফেব্রু_মার্চ_এপ্রিল_মে_জুন_জুলাই_আগস্ট_সেপ্ট_অক্টো_নভে_ডিসে'.split(
+                '_'
+            ),
         weekdays: 'রবিবার_সোমবার_মঙ্গলবার_বুধবার_বৃহস্পতিবার_শুক্রবার_শনিবার'.split(
             '_'
         ),
@@ -43893,9 +43867,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'জানুয়ারি_ফেব্রুয়ারি_মার্চ_এপ্রিল_মে_জুন_জুলাই_আগস্ট_সেপ্টেম্বর_অক্টোবর_নভেম্বর_ডিসেম্বর'.split(
             '_'
         ),
-        monthsShort: 'জানু_ফেব্রু_মার্চ_এপ্রিল_মে_জুন_জুলাই_আগস্ট_সেপ্ট_অক্টো_নভে_ডিসে'.split(
-            '_'
-        ),
+        monthsShort:
+            'জানু_ফেব্রু_মার্চ_এপ্রিল_মে_জুন_জুলাই_আগস্ট_সেপ্ট_অক্টো_নভে_ডিসে'.split(
+                '_'
+            ),
         weekdays: 'রবিবার_সোমবার_মঙ্গলবার_বুধবার_বৃহস্পতিবার_শুক্রবার_শনিবার'.split(
             '_'
         ),
@@ -44030,14 +44005,16 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ཟླ་བ་དང་པོ_ཟླ་བ་གཉིས་པ_ཟླ་བ་གསུམ་པ_ཟླ་བ་བཞི་པ_ཟླ་བ་ལྔ་པ_ཟླ་བ་དྲུག་པ_ཟླ་བ་བདུན་པ_ཟླ་བ་བརྒྱད་པ_ཟླ་བ་དགུ་པ_ཟླ་བ་བཅུ་པ_ཟླ་བ་བཅུ་གཅིག་པ_ཟླ་བ་བཅུ་གཉིས་པ'.split(
             '_'
         ),
-        monthsShort: 'ཟླ་1_ཟླ་2_ཟླ་3_ཟླ་4_ཟླ་5_ཟླ་6_ཟླ་7_ཟླ་8_ཟླ་9_ཟླ་10_ཟླ་11_ཟླ་12'.split(
-            '_'
-        ),
+        monthsShort:
+            'ཟླ་1_ཟླ་2_ཟླ་3_ཟླ་4_ཟླ་5_ཟླ་6_ཟླ་7_ཟླ་8_ཟླ་9_ཟླ་10_ཟླ་11_ཟླ་12'.split(
+                '_'
+            ),
         monthsShortRegex: /^(ཟླ་\d{1,2})/,
         monthsParseExact: true,
-        weekdays: 'གཟའ་ཉི་མ་_གཟའ་ཟླ་བ་_གཟའ་མིག་དམར་_གཟའ་ལྷག་པ་_གཟའ་ཕུར་བུ_གཟའ་པ་སངས་_གཟའ་སྤེན་པ་'.split(
-            '_'
-        ),
+        weekdays:
+            'གཟའ་ཉི་མ་_གཟའ་ཟླ་བ་_གཟའ་མིག་དམར་_གཟའ་ལྷག་པ་_གཟའ་ཕུར་བུ_གཟའ་པ་སངས་_གཟའ་སྤེན་པ་'.split(
+                '_'
+            ),
         weekdaysShort: 'ཉི་མ་_ཟླ་བ་_མིག་དམར་_ལྷག་པ་_ཕུར་བུ_པ་སངས་_སྤེན་པ་'.split(
             '_'
         ),
@@ -44200,9 +44177,12 @@ __webpack_require__.r(__webpack_exports__);
             /^du/i,
             /^ker/i,
         ],
-        monthsRegex = /^(genver|c[ʼ\']hwevrer|meurzh|ebrel|mae|mezheven|gouere|eost|gwengolo|here|du|kerzu|gen|c[ʼ\']hwe|meu|ebr|mae|eve|gou|eos|gwe|her|du|ker)/i,
-        monthsStrictRegex = /^(genver|c[ʼ\']hwevrer|meurzh|ebrel|mae|mezheven|gouere|eost|gwengolo|here|du|kerzu)/i,
-        monthsShortStrictRegex = /^(gen|c[ʼ\']hwe|meu|ebr|mae|eve|gou|eos|gwe|her|du|ker)/i,
+        monthsRegex =
+            /^(genver|c[ʼ\']hwevrer|meurzh|ebrel|mae|mezheven|gouere|eost|gwengolo|here|du|kerzu|gen|c[ʼ\']hwe|meu|ebr|mae|eve|gou|eos|gwe|her|du|ker)/i,
+        monthsStrictRegex =
+            /^(genver|c[ʼ\']hwevrer|meurzh|ebrel|mae|mezheven|gouere|eost|gwengolo|here|du|kerzu)/i,
+        monthsShortStrictRegex =
+            /^(gen|c[ʼ\']hwe|meu|ebr|mae|eve|gou|eos|gwe|her|du|ker)/i,
         fullWeekdaysParse = [
             /^sul/i,
             /^lun/i,
@@ -44393,9 +44373,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'januar_februar_mart_april_maj_juni_juli_august_septembar_oktobar_novembar_decembar'.split(
             '_'
         ),
-        monthsShort: 'jan._feb._mar._apr._maj._jun._jul._aug._sep._okt._nov._dec.'.split(
-            '_'
-        ),
+        monthsShort:
+            'jan._feb._mar._apr._maj._jun._jul._aug._sep._okt._nov._dec.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'nedjelja_ponedjeljak_utorak_srijeda_četvrtak_petak_subota'.split(
             '_'
@@ -44496,21 +44477,24 @@ __webpack_require__.r(__webpack_exports__);
 
     var ca = moment.defineLocale('ca', {
         months: {
-            standalone: 'gener_febrer_març_abril_maig_juny_juliol_agost_setembre_octubre_novembre_desembre'.split(
-                '_'
-            ),
+            standalone:
+                'gener_febrer_març_abril_maig_juny_juliol_agost_setembre_octubre_novembre_desembre'.split(
+                    '_'
+                ),
             format: "de gener_de febrer_de març_d'abril_de maig_de juny_de juliol_d'agost_de setembre_d'octubre_de novembre_de desembre".split(
                 '_'
             ),
             isFormat: /D[oD]?(\s)+MMMM/,
         },
-        monthsShort: 'gen._febr._març_abr._maig_juny_jul._ag._set._oct._nov._des.'.split(
-            '_'
-        ),
+        monthsShort:
+            'gen._febr._març_abr._maig_juny_jul._ag._set._oct._nov._des.'.split(
+                '_'
+            ),
         monthsParseExact: true,
-        weekdays: 'diumenge_dilluns_dimarts_dimecres_dijous_divendres_dissabte'.split(
-            '_'
-        ),
+        weekdays:
+            'diumenge_dilluns_dimarts_dimecres_dijous_divendres_dissabte'.split(
+                '_'
+            ),
         weekdaysShort: 'dg._dl._dt._dc._dj._dv._ds.'.split('_'),
         weekdaysMin: 'dg_dl_dt_dc_dj_dv_ds'.split('_'),
         weekdaysParseExact: true,
@@ -44610,9 +44594,15 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var months = 'leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec'.split(
-            '_'
-        ),
+    var months = {
+            format: 'leden_únor_březen_duben_květen_červen_červenec_srpen_září_říjen_listopad_prosinec'.split(
+                '_'
+            ),
+            standalone:
+                'ledna_února_března_dubna_května_června_července_srpna_září_října_listopadu_prosince'.split(
+                    '_'
+                ),
+        },
         monthsShort = 'led_úno_bře_dub_kvě_čvn_čvc_srp_zář_říj_lis_pro'.split('_'),
         monthsParse = [
             /^led/i,
@@ -44630,7 +44620,8 @@ __webpack_require__.r(__webpack_exports__);
         ],
         // NOTE: 'červen' is substring of 'červenec'; therefore 'červenec' must precede 'červen' in the regex to be fully matched.
         // Otherwise parser matches '1. červenec' as '1. červen' + 'ec'.
-        monthsRegex = /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
+        monthsRegex =
+            /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
 
     function plural(n) {
         return n > 1 && n < 5 && ~~(n / 10) !== 1;
@@ -44696,8 +44687,10 @@ __webpack_require__.r(__webpack_exports__);
         monthsShortRegex: monthsRegex,
         // NOTE: 'červen' is substring of 'červenec'; therefore 'červenec' must precede 'červen' in the regex to be fully matched.
         // Otherwise parser matches '1. červenec' as '1. červen' + 'ec'.
-        monthsStrictRegex: /^(leden|ledna|února|únor|březen|března|duben|dubna|květen|května|červenec|července|červen|června|srpen|srpna|září|říjen|října|listopadu|listopad|prosinec|prosince)/i,
-        monthsShortStrictRegex: /^(led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i,
+        monthsStrictRegex:
+            /^(leden|ledna|února|únor|březen|března|duben|dubna|květen|května|červenec|července|červen|června|srpen|srpna|září|říjen|října|listopadu|listopad|prosinec|prosince)/i,
+        monthsShortStrictRegex:
+            /^(led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i,
         monthsParse: monthsParse,
         longMonthsParse: monthsParse,
         shortMonthsParse: monthsParse,
@@ -44805,9 +44798,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'кӑр_нар_пуш_ака_май_ҫӗр_утӑ_ҫур_авн_юпа_чӳк_раш'.split('_'),
-        weekdays: 'вырсарникун_тунтикун_ытларикун_юнкун_кӗҫнерникун_эрнекун_шӑматкун'.split(
-            '_'
-        ),
+        weekdays:
+            'вырсарникун_тунтикун_ытларикун_юнкун_кӗҫнерникун_эрнекун_шӑматкун'.split(
+                '_'
+            ),
         weekdaysShort: 'выр_тун_ытл_юн_кӗҫ_эрн_шӑм'.split('_'),
         weekdaysMin: 'вр_тн_ыт_юн_кҫ_эр_шм'.split('_'),
         longDateFormat: {
@@ -44889,9 +44883,10 @@ __webpack_require__.r(__webpack_exports__);
         monthsShort: 'Ion_Chwe_Maw_Ebr_Mai_Meh_Gor_Aws_Med_Hyd_Tach_Rhag'.split(
             '_'
         ),
-        weekdays: 'Dydd Sul_Dydd Llun_Dydd Mawrth_Dydd Mercher_Dydd Iau_Dydd Gwener_Dydd Sadwrn'.split(
-            '_'
-        ),
+        weekdays:
+            'Dydd Sul_Dydd Llun_Dydd Mawrth_Dydd Mercher_Dydd Iau_Dydd Gwener_Dydd Sadwrn'.split(
+                '_'
+            ),
         weekdaysShort: 'Sul_Llun_Maw_Mer_Iau_Gwe_Sad'.split('_'),
         weekdaysMin: 'Su_Ll_Ma_Me_Ia_Gw_Sa'.split('_'),
         weekdaysParseExact: true,
@@ -45091,13 +45086,13 @@ __webpack_require__.r(__webpack_exports__);
         months: 'Jänner_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember'.split(
             '_'
         ),
-        monthsShort: 'Jän._Feb._März_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.'.split(
-            '_'
-        ),
+        monthsShort:
+            'Jän._Feb._März_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.'.split('_'),
         monthsParseExact: true,
-        weekdays: 'Sonntag_Montag_Dienstag_Mittwoch_Donnerstag_Freitag_Samstag'.split(
-            '_'
-        ),
+        weekdays:
+            'Sonntag_Montag_Dienstag_Mittwoch_Donnerstag_Freitag_Samstag'.split(
+                '_'
+            ),
         weekdaysShort: 'So._Mo._Di._Mi._Do._Fr._Sa.'.split('_'),
         weekdaysMin: 'So_Mo_Di_Mi_Do_Fr_Sa'.split('_'),
         weekdaysParseExact: true,
@@ -45186,13 +45181,13 @@ __webpack_require__.r(__webpack_exports__);
         months: 'Januar_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember'.split(
             '_'
         ),
-        monthsShort: 'Jan._Feb._März_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.'.split(
-            '_'
-        ),
+        monthsShort:
+            'Jan._Feb._März_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.'.split('_'),
         monthsParseExact: true,
-        weekdays: 'Sonntag_Montag_Dienstag_Mittwoch_Donnerstag_Freitag_Samstag'.split(
-            '_'
-        ),
+        weekdays:
+            'Sonntag_Montag_Dienstag_Mittwoch_Donnerstag_Freitag_Samstag'.split(
+                '_'
+            ),
         weekdaysShort: 'So_Mo_Di_Mi_Do_Fr_Sa'.split('_'),
         weekdaysMin: 'So_Mo_Di_Mi_Do_Fr_Sa'.split('_'),
         weekdaysParseExact: true,
@@ -45283,13 +45278,13 @@ __webpack_require__.r(__webpack_exports__);
         months: 'Januar_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember'.split(
             '_'
         ),
-        monthsShort: 'Jan._Feb._März_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.'.split(
-            '_'
-        ),
+        monthsShort:
+            'Jan._Feb._März_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.'.split('_'),
         monthsParseExact: true,
-        weekdays: 'Sonntag_Montag_Dienstag_Mittwoch_Donnerstag_Freitag_Samstag'.split(
-            '_'
-        ),
+        weekdays:
+            'Sonntag_Montag_Dienstag_Mittwoch_Donnerstag_Freitag_Samstag'.split(
+                '_'
+            ),
         weekdaysShort: 'So._Mo._Di._Mi._Do._Fr._Sa.'.split('_'),
         weekdaysMin: 'So_Mo_Di_Mi_Do_Fr_Sa'.split('_'),
         weekdaysParseExact: true,
@@ -45476,12 +45471,14 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     var el = moment.defineLocale('el', {
-        monthsNominativeEl: 'Ιανουάριος_Φεβρουάριος_Μάρτιος_Απρίλιος_Μάιος_Ιούνιος_Ιούλιος_Αύγουστος_Σεπτέμβριος_Οκτώβριος_Νοέμβριος_Δεκέμβριος'.split(
-            '_'
-        ),
-        monthsGenitiveEl: 'Ιανουαρίου_Φεβρουαρίου_Μαρτίου_Απριλίου_Μαΐου_Ιουνίου_Ιουλίου_Αυγούστου_Σεπτεμβρίου_Οκτωβρίου_Νοεμβρίου_Δεκεμβρίου'.split(
-            '_'
-        ),
+        monthsNominativeEl:
+            'Ιανουάριος_Φεβρουάριος_Μάρτιος_Απρίλιος_Μάιος_Ιούνιος_Ιούλιος_Αύγουστος_Σεπτέμβριος_Οκτώβριος_Νοέμβριος_Δεκέμβριος'.split(
+                '_'
+            ),
+        monthsGenitiveEl:
+            'Ιανουαρίου_Φεβρουαρίου_Μαρτίου_Απριλίου_Μαΐου_Ιουνίου_Ιουλίου_Αυγούστου_Σεπτεμβρίου_Οκτωβρίου_Νοεμβρίου_Δεκεμβρίου'.split(
+                '_'
+            ),
         months: function (momentToFormat, format) {
             if (!momentToFormat) {
                 return this._monthsNominativeEl;
@@ -46365,9 +46362,10 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var monthsShortDot = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
-            '_'
-        ),
+    var monthsShortDot =
+            'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
+                '_'
+            ),
         monthsShort = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_'),
         monthsParse = [
             /^ene/i,
@@ -46383,7 +46381,8 @@ __webpack_require__.r(__webpack_exports__);
             /^nov/i,
             /^dic/i,
         ],
-        monthsRegex = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
+        monthsRegex =
+            /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
 
     var esDo = moment.defineLocale('es-do', {
         months: 'enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre'.split(
@@ -46400,8 +46399,10 @@ __webpack_require__.r(__webpack_exports__);
         },
         monthsRegex: monthsRegex,
         monthsShortRegex: monthsRegex,
-        monthsStrictRegex: /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
-        monthsShortStrictRegex: /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
+        monthsStrictRegex:
+            /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
+        monthsShortStrictRegex:
+            /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
         monthsParse: monthsParse,
         longMonthsParse: monthsParse,
         shortMonthsParse: monthsParse,
@@ -46489,9 +46490,10 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var monthsShortDot = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
-            '_'
-        ),
+    var monthsShortDot =
+            'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
+                '_'
+            ),
         monthsShort = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_'),
         monthsParse = [
             /^ene/i,
@@ -46507,7 +46509,8 @@ __webpack_require__.r(__webpack_exports__);
             /^nov/i,
             /^dic/i,
         ],
-        monthsRegex = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
+        monthsRegex =
+            /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
 
     var esMx = moment.defineLocale('es-mx', {
         months: 'enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre'.split(
@@ -46524,8 +46527,10 @@ __webpack_require__.r(__webpack_exports__);
         },
         monthsRegex: monthsRegex,
         monthsShortRegex: monthsRegex,
-        monthsStrictRegex: /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
-        monthsShortStrictRegex: /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
+        monthsStrictRegex:
+            /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
+        monthsShortStrictRegex:
+            /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
         monthsParse: monthsParse,
         longMonthsParse: monthsParse,
         shortMonthsParse: monthsParse,
@@ -46615,9 +46620,10 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var monthsShortDot = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
-            '_'
-        ),
+    var monthsShortDot =
+            'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
+                '_'
+            ),
         monthsShort = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_'),
         monthsParse = [
             /^ene/i,
@@ -46633,7 +46639,8 @@ __webpack_require__.r(__webpack_exports__);
             /^nov/i,
             /^dic/i,
         ],
-        monthsRegex = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
+        monthsRegex =
+            /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
 
     var esUs = moment.defineLocale('es-us', {
         months: 'enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre'.split(
@@ -46650,8 +46657,10 @@ __webpack_require__.r(__webpack_exports__);
         },
         monthsRegex: monthsRegex,
         monthsShortRegex: monthsRegex,
-        monthsStrictRegex: /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
-        monthsShortStrictRegex: /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
+        monthsStrictRegex:
+            /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
+        monthsShortStrictRegex:
+            /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
         monthsParse: monthsParse,
         longMonthsParse: monthsParse,
         shortMonthsParse: monthsParse,
@@ -46739,9 +46748,10 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var monthsShortDot = 'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
-            '_'
-        ),
+    var monthsShortDot =
+            'ene._feb._mar._abr._may._jun._jul._ago._sep._oct._nov._dic.'.split(
+                '_'
+            ),
         monthsShort = 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_'),
         monthsParse = [
             /^ene/i,
@@ -46757,7 +46767,8 @@ __webpack_require__.r(__webpack_exports__);
             /^nov/i,
             /^dic/i,
         ],
-        monthsRegex = /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
+        monthsRegex =
+            /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre|ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i;
 
     var es = moment.defineLocale('es', {
         months: 'enero_febrero_marzo_abril_mayo_junio_julio_agosto_septiembre_octubre_noviembre_diciembre'.split(
@@ -46774,8 +46785,10 @@ __webpack_require__.r(__webpack_exports__);
         },
         monthsRegex: monthsRegex,
         monthsShortRegex: monthsRegex,
-        monthsStrictRegex: /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
-        monthsShortStrictRegex: /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
+        monthsStrictRegex:
+            /^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)/i,
+        monthsShortStrictRegex:
+            /^(ene\.?|feb\.?|mar\.?|abr\.?|may\.?|jun\.?|jul\.?|ago\.?|sep\.?|oct\.?|nov\.?|dic\.?)/i,
         monthsParse: monthsParse,
         longMonthsParse: monthsParse,
         shortMonthsParse: monthsParse,
@@ -46889,12 +46902,12 @@ __webpack_require__.r(__webpack_exports__);
         months: 'jaanuar_veebruar_märts_aprill_mai_juuni_juuli_august_september_oktoober_november_detsember'.split(
             '_'
         ),
-        monthsShort: 'jaan_veebr_märts_apr_mai_juuni_juuli_aug_sept_okt_nov_dets'.split(
-            '_'
-        ),
-        weekdays: 'pühapäev_esmaspäev_teisipäev_kolmapäev_neljapäev_reede_laupäev'.split(
-            '_'
-        ),
+        monthsShort:
+            'jaan_veebr_märts_apr_mai_juuni_juuli_aug_sept_okt_nov_dets'.split('_'),
+        weekdays:
+            'pühapäev_esmaspäev_teisipäev_kolmapäev_neljapäev_reede_laupäev'.split(
+                '_'
+            ),
         weekdaysShort: 'P_E_T_K_N_R_L'.split('_'),
         weekdaysMin: 'P_E_T_K_N_R_L'.split('_'),
         longDateFormat: {
@@ -46965,13 +46978,15 @@ __webpack_require__.r(__webpack_exports__);
         months: 'urtarrila_otsaila_martxoa_apirila_maiatza_ekaina_uztaila_abuztua_iraila_urria_azaroa_abendua'.split(
             '_'
         ),
-        monthsShort: 'urt._ots._mar._api._mai._eka._uzt._abu._ira._urr._aza._abe.'.split(
-            '_'
-        ),
+        monthsShort:
+            'urt._ots._mar._api._mai._eka._uzt._abu._ira._urr._aza._abe.'.split(
+                '_'
+            ),
         monthsParseExact: true,
-        weekdays: 'igandea_astelehena_asteartea_asteazkena_osteguna_ostirala_larunbata'.split(
-            '_'
-        ),
+        weekdays:
+            'igandea_astelehena_asteartea_asteazkena_osteguna_ostirala_larunbata'.split(
+                '_'
+            ),
         weekdaysShort: 'ig._al._ar._az._og._ol._lr.'.split('_'),
         weekdaysMin: 'ig_al_ar_az_og_ol_lr'.split('_'),
         weekdaysParseExact: true,
@@ -47072,15 +47087,18 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ژانویه_فوریه_مارس_آوریل_مه_ژوئن_ژوئیه_اوت_سپتامبر_اکتبر_نوامبر_دسامبر'.split(
             '_'
         ),
-        monthsShort: 'ژانویه_فوریه_مارس_آوریل_مه_ژوئن_ژوئیه_اوت_سپتامبر_اکتبر_نوامبر_دسامبر'.split(
-            '_'
-        ),
-        weekdays: 'یک\u200cشنبه_دوشنبه_سه\u200cشنبه_چهارشنبه_پنج\u200cشنبه_جمعه_شنبه'.split(
-            '_'
-        ),
-        weekdaysShort: 'یک\u200cشنبه_دوشنبه_سه\u200cشنبه_چهارشنبه_پنج\u200cشنبه_جمعه_شنبه'.split(
-            '_'
-        ),
+        monthsShort:
+            'ژانویه_فوریه_مارس_آوریل_مه_ژوئن_ژوئیه_اوت_سپتامبر_اکتبر_نوامبر_دسامبر'.split(
+                '_'
+            ),
+        weekdays:
+            'یک\u200cشنبه_دوشنبه_سه\u200cشنبه_چهارشنبه_پنج\u200cشنبه_جمعه_شنبه'.split(
+                '_'
+            ),
+        weekdaysShort:
+            'یک\u200cشنبه_دوشنبه_سه\u200cشنبه_چهارشنبه_پنج\u200cشنبه_جمعه_شنبه'.split(
+                '_'
+            ),
         weekdaysMin: 'ی_د_س_چ_پ_ج_ش'.split('_'),
         weekdaysParseExact: true,
         longDateFormat: {
@@ -47172,9 +47190,10 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var numbersPast = 'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(
-            ' '
-        ),
+    var numbersPast =
+            'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(
+                ' '
+            ),
         numbersFuture = [
             'nolla',
             'yhden',
@@ -47236,12 +47255,14 @@ __webpack_require__.r(__webpack_exports__);
         months: 'tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kesäkuu_heinäkuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu'.split(
             '_'
         ),
-        monthsShort: 'tammi_helmi_maalis_huhti_touko_kesä_heinä_elo_syys_loka_marras_joulu'.split(
-            '_'
-        ),
-        weekdays: 'sunnuntai_maanantai_tiistai_keskiviikko_torstai_perjantai_lauantai'.split(
-            '_'
-        ),
+        monthsShort:
+            'tammi_helmi_maalis_huhti_touko_kesä_heinä_elo_syys_loka_marras_joulu'.split(
+                '_'
+            ),
+        weekdays:
+            'sunnuntai_maanantai_tiistai_keskiviikko_torstai_perjantai_lauantai'.split(
+                '_'
+            ),
         weekdaysShort: 'su_ma_ti_ke_to_pe_la'.split('_'),
         weekdaysMin: 'su_ma_ti_ke_to_pe_la'.split('_'),
         longDateFormat: {
@@ -47395,9 +47416,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'jan_feb_mar_apr_mai_jun_jul_aug_sep_okt_nov_des'.split('_'),
-        weekdays: 'sunnudagur_mánadagur_týsdagur_mikudagur_hósdagur_fríggjadagur_leygardagur'.split(
-            '_'
-        ),
+        weekdays:
+            'sunnudagur_mánadagur_týsdagur_mikudagur_hósdagur_fríggjadagur_leygardagur'.split(
+                '_'
+            ),
         weekdaysShort: 'sun_mán_týs_mik_hós_frí_ley'.split('_'),
         weekdaysMin: 'su_má_tý_mi_hó_fr_le'.split('_'),
         longDateFormat: {
@@ -47468,9 +47490,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split(
             '_'
         ),
-        monthsShort: 'janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.'.split(
-            '_'
-        ),
+        monthsShort:
+            'janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi'.split('_'),
         weekdaysShort: 'dim._lun._mar._mer._jeu._ven._sam.'.split('_'),
@@ -47556,9 +47579,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split(
             '_'
         ),
-        monthsShort: 'janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.'.split(
-            '_'
-        ),
+        monthsShort:
+            'janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi'.split('_'),
         weekdaysShort: 'dim._lun._mar._mer._jeu._ven._sam.'.split('_'),
@@ -47644,9 +47668,12 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var monthsStrictRegex = /^(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)/i,
-        monthsShortStrictRegex = /(janv\.?|févr\.?|mars|avr\.?|mai|juin|juil\.?|août|sept\.?|oct\.?|nov\.?|déc\.?)/i,
-        monthsRegex = /(janv\.?|févr\.?|mars|avr\.?|mai|juin|juil\.?|août|sept\.?|oct\.?|nov\.?|déc\.?|janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)/i,
+    var monthsStrictRegex =
+            /^(janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)/i,
+        monthsShortStrictRegex =
+            /(janv\.?|févr\.?|mars|avr\.?|mai|juin|juil\.?|août|sept\.?|oct\.?|nov\.?|déc\.?)/i,
+        monthsRegex =
+            /(janv\.?|févr\.?|mars|avr\.?|mai|juin|juil\.?|août|sept\.?|oct\.?|nov\.?|déc\.?|janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)/i,
         monthsParse = [
             /^janv/i,
             /^févr/i,
@@ -47666,9 +47693,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split(
             '_'
         ),
-        monthsShort: 'janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.'.split(
-            '_'
-        ),
+        monthsShort:
+            'janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.'.split(
+                '_'
+            ),
         monthsRegex: monthsRegex,
         monthsShortRegex: monthsRegex,
         monthsStrictRegex: monthsStrictRegex,
@@ -47767,12 +47795,10 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var monthsShortWithDots = 'jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.'.split(
-            '_'
-        ),
-        monthsShortWithoutDots = 'jan_feb_mrt_apr_mai_jun_jul_aug_sep_okt_nov_des'.split(
-            '_'
-        );
+    var monthsShortWithDots =
+            'jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.'.split('_'),
+        monthsShortWithoutDots =
+            'jan_feb_mrt_apr_mai_jun_jul_aug_sep_okt_nov_des'.split('_');
 
     var fy = moment.defineLocale('fy', {
         months: 'jannewaris_febrewaris_maart_april_maaie_juny_july_augustus_septimber_oktober_novimber_desimber'.split(
@@ -48095,9 +48121,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'xaneiro_febreiro_marzo_abril_maio_xuño_xullo_agosto_setembro_outubro_novembro_decembro'.split(
             '_'
         ),
-        monthsShort: 'xan._feb._mar._abr._mai._xuñ._xul._ago._set._out._nov._dec.'.split(
-            '_'
-        ),
+        monthsShort:
+            'xan._feb._mar._abr._mai._xuñ._xul._ago._set._out._nov._dec.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'domingo_luns_martes_mércores_xoves_venres_sábado'.split('_'),
         weekdaysShort: 'dom._lun._mar._mér._xov._ven._sáb.'.split('_'),
@@ -48204,17 +48231,19 @@ __webpack_require__.r(__webpack_exports__);
 
     var gomDeva = moment.defineLocale('gom-deva', {
         months: {
-            standalone: 'जानेवारी_फेब्रुवारी_मार्च_एप्रील_मे_जून_जुलय_ऑगस्ट_सप्टेंबर_ऑक्टोबर_नोव्हेंबर_डिसेंबर'.split(
-                '_'
-            ),
+            standalone:
+                'जानेवारी_फेब्रुवारी_मार्च_एप्रील_मे_जून_जुलय_ऑगस्ट_सप्टेंबर_ऑक्टोबर_नोव्हेंबर_डिसेंबर'.split(
+                    '_'
+                ),
             format: 'जानेवारीच्या_फेब्रुवारीच्या_मार्चाच्या_एप्रीलाच्या_मेयाच्या_जूनाच्या_जुलयाच्या_ऑगस्टाच्या_सप्टेंबराच्या_ऑक्टोबराच्या_नोव्हेंबराच्या_डिसेंबराच्या'.split(
                 '_'
             ),
             isFormat: /MMMM(\s)+D[oD]?/,
         },
-        monthsShort: 'जाने._फेब्रु._मार्च_एप्री._मे_जून_जुल._ऑग._सप्टें._ऑक्टो._नोव्हें._डिसें.'.split(
-            '_'
-        ),
+        monthsShort:
+            'जाने._फेब्रु._मार्च_एप्री._मे_जून_जुल._ऑग._सप्टें._ऑक्टो._नोव्हें._डिसें.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'आयतार_सोमार_मंगळार_बुधवार_बिरेस्तार_सुक्रार_शेनवार'.split('_'),
         weekdaysShort: 'आयत._सोम._मंगळ._बुध._ब्रेस्त._सुक्र._शेन.'.split('_'),
@@ -48347,17 +48376,17 @@ __webpack_require__.r(__webpack_exports__);
 
     var gomLatn = moment.defineLocale('gom-latn', {
         months: {
-            standalone: 'Janer_Febrer_Mars_Abril_Mai_Jun_Julai_Agost_Setembr_Otubr_Novembr_Dezembr'.split(
-                '_'
-            ),
+            standalone:
+                'Janer_Febrer_Mars_Abril_Mai_Jun_Julai_Agost_Setembr_Otubr_Novembr_Dezembr'.split(
+                    '_'
+                ),
             format: 'Janerachea_Febrerachea_Marsachea_Abrilachea_Maiachea_Junachea_Julaiachea_Agostachea_Setembrachea_Otubrachea_Novembrachea_Dezembrachea'.split(
                 '_'
             ),
             isFormat: /MMMM(\s)+D[oD]?/,
         },
-        monthsShort: 'Jan._Feb._Mars_Abr._Mai_Jun_Jul._Ago._Set._Otu._Nov._Dez.'.split(
-            '_'
-        ),
+        monthsShort:
+            'Jan._Feb._Mars_Abr._Mai_Jun_Jul._Ago._Set._Otu._Nov._Dez.'.split('_'),
         monthsParseExact: true,
         weekdays: "Aitar_Somar_Mongllar_Budhvar_Birestar_Sukrar_Son'var".split('_'),
         weekdaysShort: 'Ait._Som._Mon._Bud._Bre._Suk._Son.'.split('_'),
@@ -48499,9 +48528,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'જાન્યુઆરી_ફેબ્રુઆરી_માર્ચ_એપ્રિલ_મે_જૂન_જુલાઈ_ઑગસ્ટ_સપ્ટેમ્બર_ઑક્ટ્બર_નવેમ્બર_ડિસેમ્બર'.split(
             '_'
         ),
-        monthsShort: 'જાન્યુ._ફેબ્રુ._માર્ચ_એપ્રિ._મે_જૂન_જુલા._ઑગ._સપ્ટે._ઑક્ટ્._નવે._ડિસે.'.split(
-            '_'
-        ),
+        monthsShort:
+            'જાન્યુ._ફેબ્રુ._માર્ચ_એપ્રિ._મે_જૂન_જુલા._ઑગ._સપ્ટે._ઑક્ટ્._નવે._ડિસે.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'રવિવાર_સોમવાર_મંગળવાર_બુધ્વાર_ગુરુવાર_શુક્રવાર_શનિવાર'.split(
             '_'
@@ -48616,9 +48646,8 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ינואר_פברואר_מרץ_אפריל_מאי_יוני_יולי_אוגוסט_ספטמבר_אוקטובר_נובמבר_דצמבר'.split(
             '_'
         ),
-        monthsShort: 'ינו׳_פבר׳_מרץ_אפר׳_מאי_יוני_יולי_אוג׳_ספט׳_אוק׳_נוב׳_דצמ׳'.split(
-            '_'
-        ),
+        monthsShort:
+            'ינו׳_פבר׳_מרץ_אפר׳_מאי_יוני_יולי_אוג׳_ספט׳_אוק׳_נוב׳_דצמ׳'.split('_'),
         weekdays: 'ראשון_שני_שלישי_רביעי_חמישי_שישי_שבת'.split('_'),
         weekdaysShort: 'א׳_ב׳_ג׳_ד׳_ה׳_ו׳_ש׳'.split('_'),
         weekdaysMin: 'א_ב_ג_ד_ה_ו_ש'.split('_'),
@@ -48680,7 +48709,8 @@ __webpack_require__.r(__webpack_exports__);
                 return number + ' שנים';
             },
         },
-        meridiemParse: /אחה"צ|לפנה"צ|אחרי הצהריים|לפני הצהריים|לפנות בוקר|בבוקר|בערב/i,
+        meridiemParse:
+            /אחה"צ|לפנה"צ|אחרי הצהריים|לפני הצהריים|לפנות בוקר|בבוקר|בערב/i,
         isPM: function (input) {
             return /^(אחה"צ|אחרי הצהריים|בערב)$/.test(input);
         },
@@ -48781,13 +48811,13 @@ __webpack_require__.r(__webpack_exports__);
             format: 'जनवरी_फ़रवरी_मार्च_अप्रैल_मई_जून_जुलाई_अगस्त_सितम्बर_अक्टूबर_नवम्बर_दिसम्बर'.split(
                 '_'
             ),
-            standalone: 'जनवरी_फरवरी_मार्च_अप्रैल_मई_जून_जुलाई_अगस्त_सितंबर_अक्टूबर_नवंबर_दिसंबर'.split(
-                '_'
-            ),
+            standalone:
+                'जनवरी_फरवरी_मार्च_अप्रैल_मई_जून_जुलाई_अगस्त_सितंबर_अक्टूबर_नवंबर_दिसंबर'.split(
+                    '_'
+                ),
         },
-        monthsShort: 'जन._फ़र._मार्च_अप्रै._मई_जून_जुल._अग._सित._अक्टू._नव._दिस.'.split(
-            '_'
-        ),
+        monthsShort:
+            'जन._फ़र._मार्च_अप्रै._मई_जून_जुल._अग._सित._अक्टू._नव._दिस.'.split('_'),
         weekdays: 'रविवार_सोमवार_मंगलवार_बुधवार_गुरूवार_शुक्रवार_शनिवार'.split('_'),
         weekdaysShort: 'रवि_सोम_मंगल_बुध_गुरू_शुक्र_शनि'.split('_'),
         weekdaysMin: 'र_सो_मं_बु_गु_शु_श'.split('_'),
@@ -48804,13 +48834,17 @@ __webpack_require__.r(__webpack_exports__);
         longMonthsParse: monthsParse,
         shortMonthsParse: shortMonthsParse,
 
-        monthsRegex: /^(जनवरी|जन\.?|फ़रवरी|फरवरी|फ़र\.?|मार्च?|अप्रैल|अप्रै\.?|मई?|जून?|जुलाई|जुल\.?|अगस्त|अग\.?|सितम्बर|सितंबर|सित\.?|अक्टूबर|अक्टू\.?|नवम्बर|नवंबर|नव\.?|दिसम्बर|दिसंबर|दिस\.?)/i,
+        monthsRegex:
+            /^(जनवरी|जन\.?|फ़रवरी|फरवरी|फ़र\.?|मार्च?|अप्रैल|अप्रै\.?|मई?|जून?|जुलाई|जुल\.?|अगस्त|अग\.?|सितम्बर|सितंबर|सित\.?|अक्टूबर|अक्टू\.?|नवम्बर|नवंबर|नव\.?|दिसम्बर|दिसंबर|दिस\.?)/i,
 
-        monthsShortRegex: /^(जनवरी|जन\.?|फ़रवरी|फरवरी|फ़र\.?|मार्च?|अप्रैल|अप्रै\.?|मई?|जून?|जुलाई|जुल\.?|अगस्त|अग\.?|सितम्बर|सितंबर|सित\.?|अक्टूबर|अक्टू\.?|नवम्बर|नवंबर|नव\.?|दिसम्बर|दिसंबर|दिस\.?)/i,
+        monthsShortRegex:
+            /^(जनवरी|जन\.?|फ़रवरी|फरवरी|फ़र\.?|मार्च?|अप्रैल|अप्रै\.?|मई?|जून?|जुलाई|जुल\.?|अगस्त|अग\.?|सितम्बर|सितंबर|सित\.?|अक्टूबर|अक्टू\.?|नवम्बर|नवंबर|नव\.?|दिसम्बर|दिसंबर|दिस\.?)/i,
 
-        monthsStrictRegex: /^(जनवरी?|फ़रवरी|फरवरी?|मार्च?|अप्रैल?|मई?|जून?|जुलाई?|अगस्त?|सितम्बर|सितंबर|सित?\.?|अक्टूबर|अक्टू\.?|नवम्बर|नवंबर?|दिसम्बर|दिसंबर?)/i,
+        monthsStrictRegex:
+            /^(जनवरी?|फ़रवरी|फरवरी?|मार्च?|अप्रैल?|मई?|जून?|जुलाई?|अगस्त?|सितम्बर|सितंबर|सित?\.?|अक्टूबर|अक्टू\.?|नवम्बर|नवंबर?|दिसम्बर|दिसंबर?)/i,
 
-        monthsShortStrictRegex: /^(जन\.?|फ़र\.?|मार्च?|अप्रै\.?|मई?|जून?|जुल\.?|अग\.?|सित\.?|अक्टू\.?|नव\.?|दिस\.?)/i,
+        monthsShortStrictRegex:
+            /^(जन\.?|फ़र\.?|मार्च?|अप्रै\.?|मई?|जून?|जुल\.?|अग\.?|सित\.?|अक्टू\.?|नव\.?|दिस\.?)/i,
 
         calendar: {
             sameDay: '[आज] LT',
@@ -48973,13 +49007,15 @@ __webpack_require__.r(__webpack_exports__);
             format: 'siječnja_veljače_ožujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca'.split(
                 '_'
             ),
-            standalone: 'siječanj_veljača_ožujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac'.split(
+            standalone:
+                'siječanj_veljača_ožujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac'.split(
+                    '_'
+                ),
+        },
+        monthsShort:
+            'sij._velj._ožu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.'.split(
                 '_'
             ),
-        },
-        monthsShort: 'sij._velj._ožu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.'.split(
-            '_'
-        ),
         monthsParseExact: true,
         weekdays: 'nedjelja_ponedjeljak_utorak_srijeda_četvrtak_petak_subota'.split(
             '_'
@@ -49080,9 +49116,8 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var weekEndings = 'vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton'.split(
-        ' '
-    );
+    var weekEndings =
+        'vasárnap hétfőn kedden szerdán csütörtökön pénteken szombaton'.split(' ');
     function translate(number, withoutSuffix, key, isFuture) {
         var num = number;
         switch (key) {
@@ -49130,9 +49165,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'január_február_március_április_május_június_július_augusztus_szeptember_október_november_december'.split(
             '_'
         ),
-        monthsShort: 'jan._feb._márc._ápr._máj._jún._júl._aug._szept._okt._nov._dec.'.split(
-            '_'
-        ),
+        monthsShort:
+            'jan._feb._márc._ápr._máj._jún._júl._aug._szept._okt._nov._dec.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'vasárnap_hétfő_kedd_szerda_csütörtök_péntek_szombat'.split('_'),
         weekdaysShort: 'vas_hét_kedd_sze_csüt_pén_szo'.split('_'),
@@ -49221,14 +49257,16 @@ __webpack_require__.r(__webpack_exports__);
             format: 'հունվարի_փետրվարի_մարտի_ապրիլի_մայիսի_հունիսի_հուլիսի_օգոստոսի_սեպտեմբերի_հոկտեմբերի_նոյեմբերի_դեկտեմբերի'.split(
                 '_'
             ),
-            standalone: 'հունվար_փետրվար_մարտ_ապրիլ_մայիս_հունիս_հուլիս_օգոստոս_սեպտեմբեր_հոկտեմբեր_նոյեմբեր_դեկտեմբեր'.split(
-                '_'
-            ),
+            standalone:
+                'հունվար_փետրվար_մարտ_ապրիլ_մայիս_հունիս_հուլիս_օգոստոս_սեպտեմբեր_հոկտեմբեր_նոյեմբեր_դեկտեմբեր'.split(
+                    '_'
+                ),
         },
         monthsShort: 'հնվ_փտր_մրտ_ապր_մյս_հնս_հլս_օգս_սպտ_հկտ_նմբ_դկտ'.split('_'),
-        weekdays: 'կիրակի_երկուշաբթի_երեքշաբթի_չորեքշաբթի_հինգշաբթի_ուրբաթ_շաբաթ'.split(
-            '_'
-        ),
+        weekdays:
+            'կիրակի_երկուշաբթի_երեքշաբթի_չորեքշաբթի_հինգշաբթի_ուրբաթ_շաբաթ'.split(
+                '_'
+            ),
         weekdaysShort: 'կրկ_երկ_երք_չրք_հնգ_ուրբ_շբթ'.split('_'),
         weekdaysMin: 'կրկ_երկ_երք_չրք_հնգ_ուրբ_շբթ'.split('_'),
         longDateFormat: {
@@ -49511,9 +49549,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'jan_feb_mar_apr_maí_jún_júl_ágú_sep_okt_nóv_des'.split('_'),
-        weekdays: 'sunnudagur_mánudagur_þriðjudagur_miðvikudagur_fimmtudagur_föstudagur_laugardagur'.split(
-            '_'
-        ),
+        weekdays:
+            'sunnudagur_mánudagur_þriðjudagur_miðvikudagur_fimmtudagur_föstudagur_laugardagur'.split(
+                '_'
+            ),
         weekdaysShort: 'sun_mán_þri_mið_fim_fös_lau'.split('_'),
         weekdaysMin: 'Su_Má_Þr_Mi_Fi_Fö_La'.split('_'),
         longDateFormat: {
@@ -50056,9 +50095,10 @@ __webpack_require__.r(__webpack_exports__);
         ),
         monthsShort: 'იან_თებ_მარ_აპრ_მაი_ივნ_ივლ_აგვ_სექ_ოქტ_ნოე_დეკ'.split('_'),
         weekdays: {
-            standalone: 'კვირა_ორშაბათი_სამშაბათი_ოთხშაბათი_ხუთშაბათი_პარასკევი_შაბათი'.split(
-                '_'
-            ),
+            standalone:
+                'კვირა_ორშაბათი_სამშაბათი_ოთხშაბათი_ხუთშაბათი_პარასკევი_შაბათი'.split(
+                    '_'
+                ),
             format: 'კვირას_ორშაბათს_სამშაბათს_ოთხშაბათს_ხუთშაბათს_პარასკევს_შაბათს'.split(
                 '_'
             ),
@@ -50084,13 +50124,12 @@ __webpack_require__.r(__webpack_exports__);
         },
         relativeTime: {
             future: function (s) {
-                return s.replace(/(წამ|წუთ|საათ|წელ|დღ|თვ)(ი|ე)/, function (
-                    $0,
-                    $1,
-                    $2
-                ) {
-                    return $2 === 'ი' ? $1 + 'ში' : $1 + $2 + 'ში';
-                });
+                return s.replace(
+                    /(წამ|წუთ|საათ|წელ|დღ|თვ)(ი|ე)/,
+                    function ($0, $1, $2) {
+                        return $2 === 'ი' ? $1 + 'ში' : $1 + $2 + 'ში';
+                    }
+                );
             },
             past: function (s) {
                 if (/(წამი|წუთი|საათი|დღე|თვე)/.test(s)) {
@@ -50291,9 +50330,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'មករា_កុម្ភៈ_មីនា_មេសា_ឧសភា_មិថុនា_កក្កដា_សីហា_កញ្ញា_តុលា_វិច្ឆិកា_ធ្នូ'.split(
             '_'
         ),
-        monthsShort: 'មករា_កុម្ភៈ_មីនា_មេសា_ឧសភា_មិថុនា_កក្កដា_សីហា_កញ្ញា_តុលា_វិច្ឆិកា_ធ្នូ'.split(
-            '_'
-        ),
+        monthsShort:
+            'មករា_កុម្ភៈ_មីនា_មេសា_ឧសភា_មិថុនា_កក្កដា_សីហា_កញ្ញា_តុលា_វិច្ឆិកា_ធ្នូ'.split(
+                '_'
+            ),
         weekdays: 'អាទិត្យ_ច័ន្ទ_អង្គារ_ពុធ_ព្រហស្បតិ៍_សុក្រ_សៅរ៍'.split('_'),
         weekdaysShort: 'អា_ច_អ_ព_ព្រ_សុ_ស'.split('_'),
         weekdaysMin: 'អា_ច_អ_ព_ព្រ_សុ_ស'.split('_'),
@@ -50412,9 +50452,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ಜನವರಿ_ಫೆಬ್ರವರಿ_ಮಾರ್ಚ್_ಏಪ್ರಿಲ್_ಮೇ_ಜೂನ್_ಜುಲೈ_ಆಗಸ್ಟ್_ಸೆಪ್ಟೆಂಬರ್_ಅಕ್ಟೋಬರ್_ನವೆಂಬರ್_ಡಿಸೆಂಬರ್'.split(
             '_'
         ),
-        monthsShort: 'ಜನ_ಫೆಬ್ರ_ಮಾರ್ಚ್_ಏಪ್ರಿಲ್_ಮೇ_ಜೂನ್_ಜುಲೈ_ಆಗಸ್ಟ್_ಸೆಪ್ಟೆಂ_ಅಕ್ಟೋ_ನವೆಂ_ಡಿಸೆಂ'.split(
-            '_'
-        ),
+        monthsShort:
+            'ಜನ_ಫೆಬ್ರ_ಮಾರ್ಚ್_ಏಪ್ರಿಲ್_ಮೇ_ಜೂನ್_ಜುಲೈ_ಆಗಸ್ಟ್_ಸೆಪ್ಟೆಂ_ಅಕ್ಟೋ_ನವೆಂ_ಡಿಸೆಂ'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'ಭಾನುವಾರ_ಸೋಮವಾರ_ಮಂಗಳವಾರ_ಬುಧವಾರ_ಗುರುವಾರ_ಶುಕ್ರವಾರ_ಶನಿವಾರ'.split(
             '_'
@@ -50661,12 +50702,12 @@ __webpack_require__.r(__webpack_exports__);
     var ku = moment.defineLocale('ku', {
         months: months,
         monthsShort: months,
-        weekdays: 'یه‌كشه‌ممه‌_دووشه‌ممه‌_سێشه‌ممه‌_چوارشه‌ممه‌_پێنجشه‌ممه‌_هه‌ینی_شه‌ممه‌'.split(
-            '_'
-        ),
-        weekdaysShort: 'یه‌كشه‌م_دووشه‌م_سێشه‌م_چوارشه‌م_پێنجشه‌م_هه‌ینی_شه‌ممه‌'.split(
-            '_'
-        ),
+        weekdays:
+            'یه‌كشه‌ممه‌_دووشه‌ممه‌_سێشه‌ممه‌_چوارشه‌ممه‌_پێنجشه‌ممه‌_هه‌ینی_شه‌ممه‌'.split(
+                '_'
+            ),
+        weekdaysShort:
+            'یه‌كشه‌م_دووشه‌م_سێشه‌م_چوارشه‌م_پێنجشه‌م_هه‌ینی_شه‌ممه‌'.split('_'),
         weekdaysMin: 'ی_د_س_چ_پ_ه_ش'.split('_'),
         weekdaysParseExact: true,
         longDateFormat: {
@@ -50930,13 +50971,15 @@ __webpack_require__.r(__webpack_exports__);
         months: 'Januar_Februar_Mäerz_Abrëll_Mee_Juni_Juli_August_September_Oktober_November_Dezember'.split(
             '_'
         ),
-        monthsShort: 'Jan._Febr._Mrz._Abr._Mee_Jun._Jul._Aug._Sept._Okt._Nov._Dez.'.split(
-            '_'
-        ),
+        monthsShort:
+            'Jan._Febr._Mrz._Abr._Mee_Jun._Jul._Aug._Sept._Okt._Nov._Dez.'.split(
+                '_'
+            ),
         monthsParseExact: true,
-        weekdays: 'Sonndeg_Méindeg_Dënschdeg_Mëttwoch_Donneschdeg_Freideg_Samschdeg'.split(
-            '_'
-        ),
+        weekdays:
+            'Sonndeg_Méindeg_Dënschdeg_Mëttwoch_Donneschdeg_Freideg_Samschdeg'.split(
+                '_'
+            ),
         weekdaysShort: 'So._Mé._Dë._Më._Do._Fr._Sa.'.split('_'),
         weekdaysMin: 'So_Mé_Dë_Më_Do_Fr_Sa'.split('_'),
         weekdaysParseExact: true,
@@ -51017,9 +51060,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ມັງກອນ_ກຸມພາ_ມີນາ_ເມສາ_ພຶດສະພາ_ມິຖຸນາ_ກໍລະກົດ_ສິງຫາ_ກັນຍາ_ຕຸລາ_ພະຈິກ_ທັນວາ'.split(
             '_'
         ),
-        monthsShort: 'ມັງກອນ_ກຸມພາ_ມີນາ_ເມສາ_ພຶດສະພາ_ມິຖຸນາ_ກໍລະກົດ_ສິງຫາ_ກັນຍາ_ຕຸລາ_ພະຈິກ_ທັນວາ'.split(
-            '_'
-        ),
+        monthsShort:
+            'ມັງກອນ_ກຸມພາ_ມີນາ_ເມສາ_ພຶດສະພາ_ມິຖຸນາ_ກໍລະກົດ_ສິງຫາ_ກັນຍາ_ຕຸລາ_ພະຈິກ_ທັນວາ'.split(
+                '_'
+            ),
         weekdays: 'ອາທິດ_ຈັນ_ອັງຄານ_ພຸດ_ພະຫັດ_ສຸກ_ເສົາ'.split('_'),
         weekdaysShort: 'ທິດ_ຈັນ_ອັງຄານ_ພຸດ_ພະຫັດ_ສຸກ_ເສົາ'.split('_'),
         weekdaysMin: 'ທ_ຈ_ອຄ_ພ_ພຫ_ສກ_ສ'.split('_'),
@@ -51151,9 +51195,10 @@ __webpack_require__.r(__webpack_exports__);
             format: 'sausio_vasario_kovo_balandžio_gegužės_birželio_liepos_rugpjūčio_rugsėjo_spalio_lapkričio_gruodžio'.split(
                 '_'
             ),
-            standalone: 'sausis_vasaris_kovas_balandis_gegužė_birželis_liepa_rugpjūtis_rugsėjis_spalis_lapkritis_gruodis'.split(
-                '_'
-            ),
+            standalone:
+                'sausis_vasaris_kovas_balandis_gegužė_birželis_liepa_rugpjūtis_rugsėjis_spalis_lapkritis_gruodis'.split(
+                    '_'
+                ),
             isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/,
         },
         monthsShort: 'sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd'.split('_'),
@@ -51161,9 +51206,10 @@ __webpack_require__.r(__webpack_exports__);
             format: 'sekmadienį_pirmadienį_antradienį_trečiadienį_ketvirtadienį_penktadienį_šeštadienį'.split(
                 '_'
             ),
-            standalone: 'sekmadienis_pirmadienis_antradienis_trečiadienis_ketvirtadienis_penktadienis_šeštadienis'.split(
-                '_'
-            ),
+            standalone:
+                'sekmadienis_pirmadienis_antradienis_trečiadienis_ketvirtadienis_penktadienis_šeštadienis'.split(
+                    '_'
+                ),
             isFormat: /dddd HH:mm/,
         },
         weekdaysShort: 'Sek_Pir_Ant_Tre_Ket_Pen_Šeš'.split('_'),
@@ -51281,9 +51327,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'jan_feb_mar_apr_mai_jūn_jūl_aug_sep_okt_nov_dec'.split('_'),
-        weekdays: 'svētdiena_pirmdiena_otrdiena_trešdiena_ceturtdiena_piektdiena_sestdiena'.split(
-            '_'
-        ),
+        weekdays:
+            'svētdiena_pirmdiena_otrdiena_trešdiena_ceturtdiena_piektdiena_sestdiena'.split(
+                '_'
+            ),
         weekdaysShort: 'Sv_P_O_T_C_Pk_S'.split('_'),
         weekdaysMin: 'Sv_P_O_T_C_Pk_S'.split('_'),
         weekdaysParseExact: true,
@@ -51388,9 +51435,8 @@ __webpack_require__.r(__webpack_exports__);
         months: 'januar_februar_mart_april_maj_jun_jul_avgust_septembar_oktobar_novembar_decembar'.split(
             '_'
         ),
-        monthsShort: 'jan._feb._mar._apr._maj_jun_jul_avg._sep._okt._nov._dec.'.split(
-            '_'
-        ),
+        monthsShort:
+            'jan._feb._mar._apr._maj_jun_jul_avg._sep._okt._nov._dec.'.split('_'),
         monthsParseExact: true,
         weekdays: 'nedjelja_ponedjeljak_utorak_srijeda_četvrtak_petak_subota'.split(
             '_'
@@ -51492,9 +51538,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'Kohi-tāte_Hui-tanguru_Poutū-te-rangi_Paenga-whāwhā_Haratua_Pipiri_Hōngoingoi_Here-turi-kōkā_Mahuru_Whiringa-ā-nuku_Whiringa-ā-rangi_Hakihea'.split(
             '_'
         ),
-        monthsShort: 'Kohi_Hui_Pou_Pae_Hara_Pipi_Hōngoi_Here_Mahu_Whi-nu_Whi-ra_Haki'.split(
-            '_'
-        ),
+        monthsShort:
+            'Kohi_Hui_Pou_Pae_Hara_Pipi_Hōngoi_Here_Mahu_Whi-nu_Whi-ra_Haki'.split(
+                '_'
+            ),
         monthsRegex: /(?:['a-z\u0101\u014D\u016B]+\-?){1,3}/i,
         monthsStrictRegex: /(?:['a-z\u0101\u014D\u016B]+\-?){1,3}/i,
         monthsShortRegex: /(?:['a-z\u0101\u014D\u016B]+\-?){1,3}/i,
@@ -51675,13 +51722,15 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ജനുവരി_ഫെബ്രുവരി_മാർച്ച്_ഏപ്രിൽ_മേയ്_ജൂൺ_ജൂലൈ_ഓഗസ്റ്റ്_സെപ്റ്റംബർ_ഒക്ടോബർ_നവംബർ_ഡിസംബർ'.split(
             '_'
         ),
-        monthsShort: 'ജനു._ഫെബ്രു._മാർ._ഏപ്രി._മേയ്_ജൂൺ_ജൂലൈ._ഓഗ._സെപ്റ്റ._ഒക്ടോ._നവം._ഡിസം.'.split(
-            '_'
-        ),
+        monthsShort:
+            'ജനു._ഫെബ്രു._മാർ._ഏപ്രി._മേയ്_ജൂൺ_ജൂലൈ._ഓഗ._സെപ്റ്റ._ഒക്ടോ._നവം._ഡിസം.'.split(
+                '_'
+            ),
         monthsParseExact: true,
-        weekdays: 'ഞായറാഴ്ച_തിങ്കളാഴ്ച_ചൊവ്വാഴ്ച_ബുധനാഴ്ച_വ്യാഴാഴ്ച_വെള്ളിയാഴ്ച_ശനിയാഴ്ച'.split(
-            '_'
-        ),
+        weekdays:
+            'ഞായറാഴ്ച_തിങ്കളാഴ്ച_ചൊവ്വാഴ്ച_ബുധനാഴ്ച_വ്യാഴാഴ്ച_വെള്ളിയാഴ്ച_ശനിയാഴ്ച'.split(
+                '_'
+            ),
         weekdaysShort: 'ഞായർ_തിങ്കൾ_ചൊവ്വ_ബുധൻ_വ്യാഴം_വെള്ളി_ശനി'.split('_'),
         weekdaysMin: 'ഞാ_തി_ചൊ_ബു_വ്യാ_വെ_ശ'.split('_'),
         longDateFormat: {
@@ -51800,9 +51849,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'Нэгдүгээр сар_Хоёрдугаар сар_Гуравдугаар сар_Дөрөвдүгээр сар_Тавдугаар сар_Зургадугаар сар_Долдугаар сар_Наймдугаар сар_Есдүгээр сар_Аравдугаар сар_Арван нэгдүгээр сар_Арван хоёрдугаар сар'.split(
             '_'
         ),
-        monthsShort: '1 сар_2 сар_3 сар_4 сар_5 сар_6 сар_7 сар_8 сар_9 сар_10 сар_11 сар_12 сар'.split(
-            '_'
-        ),
+        monthsShort:
+            '1 сар_2 сар_3 сар_4 сар_5 сар_6 сар_7 сар_8 сар_9 сар_10 сар_11 сар_12 сар'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'Ням_Даваа_Мягмар_Лхагва_Пүрэв_Баасан_Бямба'.split('_'),
         weekdaysShort: 'Ням_Дав_Мяг_Лха_Пүр_Баа_Бям'.split('_'),
@@ -52002,9 +52052,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'जानेवारी_फेब्रुवारी_मार्च_एप्रिल_मे_जून_जुलै_ऑगस्ट_सप्टेंबर_ऑक्टोबर_नोव्हेंबर_डिसेंबर'.split(
             '_'
         ),
-        monthsShort: 'जाने._फेब्रु._मार्च._एप्रि._मे._जून._जुलै._ऑग._सप्टें._ऑक्टो._नोव्हें._डिसें.'.split(
-            '_'
-        ),
+        monthsShort:
+            'जाने._फेब्रु._मार्च._एप्रि._मे._जून._जुलै._ऑग._सप्टें._ऑक्टो._नोव्हें._डिसें.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'रविवार_सोमवार_मंगळवार_बुधवार_गुरूवार_शुक्रवार_शनिवार'.split('_'),
         weekdaysShort: 'रवि_सोम_मंगळ_बुध_गुरू_शुक्र_शनि'.split('_'),
@@ -52303,9 +52354,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'Jan_Fra_Mar_Apr_Mej_Ġun_Lul_Aww_Set_Ott_Nov_Diċ'.split('_'),
-        weekdays: 'Il-Ħadd_It-Tnejn_It-Tlieta_L-Erbgħa_Il-Ħamis_Il-Ġimgħa_Is-Sibt'.split(
-            '_'
-        ),
+        weekdays:
+            'Il-Ħadd_It-Tnejn_It-Tlieta_L-Erbgħa_Il-Ħamis_Il-Ġimgħa_Is-Sibt'.split(
+                '_'
+            ),
         weekdaysShort: 'Ħad_Tne_Tli_Erb_Ħam_Ġim_Sib'.split('_'),
         weekdaysMin: 'Ħa_Tn_Tl_Er_Ħa_Ġi_Si'.split('_'),
         longDateFormat: {
@@ -52488,9 +52540,8 @@ __webpack_require__.r(__webpack_exports__);
         months: 'januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember'.split(
             '_'
         ),
-        monthsShort: 'jan._feb._mars_apr._mai_juni_juli_aug._sep._okt._nov._des.'.split(
-            '_'
-        ),
+        monthsShort:
+            'jan._feb._mars_apr._mai_juni_juli_aug._sep._okt._nov._des.'.split('_'),
         monthsParseExact: true,
         weekdays: 'søndag_mandag_tirsdag_onsdag_torsdag_fredag_lørdag'.split('_'),
         weekdaysShort: 'sø._ma._ti._on._to._fr._lø.'.split('_'),
@@ -52591,9 +52642,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'जनवरी_फेब्रुवरी_मार्च_अप्रिल_मई_जुन_जुलाई_अगष्ट_सेप्टेम्बर_अक्टोबर_नोभेम्बर_डिसेम्बर'.split(
             '_'
         ),
-        monthsShort: 'जन._फेब्रु._मार्च_अप्रि._मई_जुन_जुलाई._अग._सेप्ट._अक्टो._नोभे._डिसे.'.split(
-            '_'
-        ),
+        monthsShort:
+            'जन._फेब्रु._मार्च_अप्रि._मई_जुन_जुलाई._अग._सेप्ट._अक्टो._नोभे._डिसे.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'आइतबार_सोमबार_मङ्गलबार_बुधबार_बिहिबार_शुक्रबार_शनिबार'.split(
             '_'
@@ -52702,12 +52754,10 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var monthsShortWithDots = 'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split(
-            '_'
-        ),
-        monthsShortWithoutDots = 'jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec'.split(
-            '_'
-        ),
+    var monthsShortWithDots =
+            'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_'),
+        monthsShortWithoutDots =
+            'jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec'.split('_'),
         monthsParse = [
             /^jan/i,
             /^feb/i,
@@ -52722,7 +52772,8 @@ __webpack_require__.r(__webpack_exports__);
             /^nov/i,
             /^dec/i,
         ],
-        monthsRegex = /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
+        monthsRegex =
+            /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
 
     var nlBe = moment.defineLocale('nl-be', {
         months: 'januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december'.split(
@@ -52740,16 +52791,17 @@ __webpack_require__.r(__webpack_exports__);
 
         monthsRegex: monthsRegex,
         monthsShortRegex: monthsRegex,
-        monthsStrictRegex: /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december)/i,
-        monthsShortStrictRegex: /^(jan\.?|feb\.?|mrt\.?|apr\.?|mei|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i,
+        monthsStrictRegex:
+            /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december)/i,
+        monthsShortStrictRegex:
+            /^(jan\.?|feb\.?|mrt\.?|apr\.?|mei|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i,
 
         monthsParse: monthsParse,
         longMonthsParse: monthsParse,
         shortMonthsParse: monthsParse,
 
-        weekdays: 'zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag'.split(
-            '_'
-        ),
+        weekdays:
+            'zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag'.split('_'),
         weekdaysShort: 'zo._ma._di._wo._do._vr._za.'.split('_'),
         weekdaysMin: 'zo_ma_di_wo_do_vr_za'.split('_'),
         weekdaysParseExact: true,
@@ -52823,12 +52875,10 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var monthsShortWithDots = 'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split(
-            '_'
-        ),
-        monthsShortWithoutDots = 'jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec'.split(
-            '_'
-        ),
+    var monthsShortWithDots =
+            'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_'),
+        monthsShortWithoutDots =
+            'jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec'.split('_'),
         monthsParse = [
             /^jan/i,
             /^feb/i,
@@ -52843,7 +52893,8 @@ __webpack_require__.r(__webpack_exports__);
             /^nov/i,
             /^dec/i,
         ],
-        monthsRegex = /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
+        monthsRegex =
+            /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december|jan\.?|feb\.?|mrt\.?|apr\.?|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i;
 
     var nl = moment.defineLocale('nl', {
         months: 'januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december'.split(
@@ -52861,16 +52912,17 @@ __webpack_require__.r(__webpack_exports__);
 
         monthsRegex: monthsRegex,
         monthsShortRegex: monthsRegex,
-        monthsStrictRegex: /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december)/i,
-        monthsShortStrictRegex: /^(jan\.?|feb\.?|mrt\.?|apr\.?|mei|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i,
+        monthsStrictRegex:
+            /^(januari|februari|maart|april|mei|ju[nl]i|augustus|september|oktober|november|december)/i,
+        monthsShortStrictRegex:
+            /^(jan\.?|feb\.?|mrt\.?|apr\.?|mei|ju[nl]\.?|aug\.?|sep\.?|okt\.?|nov\.?|dec\.?)/i,
 
         monthsParse: monthsParse,
         longMonthsParse: monthsParse,
         shortMonthsParse: monthsParse,
 
-        weekdays: 'zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag'.split(
-            '_'
-        ),
+        weekdays:
+            'zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag'.split('_'),
         weekdaysShort: 'zo._ma._di._wo._do._vr._za.'.split('_'),
         weekdaysMin: 'zo_ma_di_wo_do_vr_za'.split('_'),
         weekdaysParseExact: true,
@@ -52950,9 +53002,8 @@ __webpack_require__.r(__webpack_exports__);
         months: 'januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember'.split(
             '_'
         ),
-        monthsShort: 'jan._feb._mars_apr._mai_juni_juli_aug._sep._okt._nov._des.'.split(
-            '_'
-        ),
+        monthsShort:
+            'jan._feb._mars_apr._mai_juni_juli_aug._sep._okt._nov._des.'.split('_'),
         monthsParseExact: true,
         weekdays: 'sundag_måndag_tysdag_onsdag_torsdag_fredag_laurdag'.split('_'),
         weekdaysShort: 'su._må._ty._on._to._fr._lau.'.split('_'),
@@ -53026,17 +53077,19 @@ __webpack_require__.r(__webpack_exports__);
 
     var ocLnc = moment.defineLocale('oc-lnc', {
         months: {
-            standalone: 'genièr_febrièr_març_abril_mai_junh_julhet_agost_setembre_octòbre_novembre_decembre'.split(
-                '_'
-            ),
+            standalone:
+                'genièr_febrièr_març_abril_mai_junh_julhet_agost_setembre_octòbre_novembre_decembre'.split(
+                    '_'
+                ),
             format: "de genièr_de febrièr_de març_d'abril_de mai_de junh_de julhet_d'agost_de setembre_d'octòbre_de novembre_de decembre".split(
                 '_'
             ),
             isFormat: /D[oD]?(\s)+MMMM/,
         },
-        monthsShort: 'gen._febr._març_abr._mai_junh_julh._ago._set._oct._nov._dec.'.split(
-            '_'
-        ),
+        monthsShort:
+            'gen._febr._març_abr._mai_junh_julh._ago._set._oct._nov._dec.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'dimenge_diluns_dimars_dimècres_dijòus_divendres_dissabte'.split(
             '_'
@@ -53156,9 +53209,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ਜਨਵਰੀ_ਫ਼ਰਵਰੀ_ਮਾਰਚ_ਅਪ੍ਰੈਲ_ਮਈ_ਜੂਨ_ਜੁਲਾਈ_ਅਗਸਤ_ਸਤੰਬਰ_ਅਕਤੂਬਰ_ਨਵੰਬਰ_ਦਸੰਬਰ'.split(
             '_'
         ),
-        monthsShort: 'ਜਨਵਰੀ_ਫ਼ਰਵਰੀ_ਮਾਰਚ_ਅਪ੍ਰੈਲ_ਮਈ_ਜੂਨ_ਜੁਲਾਈ_ਅਗਸਤ_ਸਤੰਬਰ_ਅਕਤੂਬਰ_ਨਵੰਬਰ_ਦਸੰਬਰ'.split(
-            '_'
-        ),
+        monthsShort:
+            'ਜਨਵਰੀ_ਫ਼ਰਵਰੀ_ਮਾਰਚ_ਅਪ੍ਰੈਲ_ਮਈ_ਜੂਨ_ਜੁਲਾਈ_ਅਗਸਤ_ਸਤੰਬਰ_ਅਕਤੂਬਰ_ਨਵੰਬਰ_ਦਸੰਬਰ'.split(
+                '_'
+            ),
         weekdays: 'ਐਤਵਾਰ_ਸੋਮਵਾਰ_ਮੰਗਲਵਾਰ_ਬੁਧਵਾਰ_ਵੀਰਵਾਰ_ਸ਼ੁੱਕਰਵਾਰ_ਸ਼ਨੀਚਰਵਾਰ'.split(
             '_'
         ),
@@ -53266,12 +53320,14 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var monthsNominative = 'styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień'.split(
-            '_'
-        ),
-        monthsSubjective = 'stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia'.split(
-            '_'
-        ),
+    var monthsNominative =
+            'styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień'.split(
+                '_'
+            ),
+        monthsSubjective =
+            'stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia'.split(
+                '_'
+            ),
         monthsParse = [
             /^sty/i,
             /^lut/i,
@@ -53325,9 +53381,8 @@ __webpack_require__.r(__webpack_exports__);
         monthsParse: monthsParse,
         longMonthsParse: monthsParse,
         shortMonthsParse: monthsParse,
-        weekdays: 'niedziela_poniedziałek_wtorek_środa_czwartek_piątek_sobota'.split(
-            '_'
-        ),
+        weekdays:
+            'niedziela_poniedziałek_wtorek_środa_czwartek_piątek_sobota'.split('_'),
         weekdaysShort: 'ndz_pon_wt_śr_czw_pt_sob'.split('_'),
         weekdaysMin: 'Nd_Pn_Wt_Śr_Cz_Pt_So'.split('_'),
         longDateFormat: {
@@ -53429,9 +53484,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'jan_fev_mar_abr_mai_jun_jul_ago_set_out_nov_dez'.split('_'),
-        weekdays: 'domingo_segunda-feira_terça-feira_quarta-feira_quinta-feira_sexta-feira_sábado'.split(
-            '_'
-        ),
+        weekdays:
+            'domingo_segunda-feira_terça-feira_quarta-feira_quinta-feira_sexta-feira_sábado'.split(
+                '_'
+            ),
         weekdaysShort: 'dom_seg_ter_qua_qui_sex_sáb'.split('_'),
         weekdaysMin: 'do_2ª_3ª_4ª_5ª_6ª_sá'.split('_'),
         weekdaysParseExact: true,
@@ -53505,9 +53561,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'jan_fev_mar_abr_mai_jun_jul_ago_set_out_nov_dez'.split('_'),
-        weekdays: 'Domingo_Segunda-feira_Terça-feira_Quarta-feira_Quinta-feira_Sexta-feira_Sábado'.split(
-            '_'
-        ),
+        weekdays:
+            'Domingo_Segunda-feira_Terça-feira_Quarta-feira_Quinta-feira_Sexta-feira_Sábado'.split(
+                '_'
+            ),
         weekdaysShort: 'Dom_Seg_Ter_Qua_Qui_Sex_Sáb'.split('_'),
         weekdaysMin: 'Do_2ª_3ª_4ª_5ª_6ª_Sá'.split('_'),
         weekdaysParseExact: true,
@@ -53604,9 +53661,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie'.split(
             '_'
         ),
-        monthsShort: 'ian._feb._mart._apr._mai_iun._iul._aug._sept._oct._nov._dec.'.split(
-            '_'
-        ),
+        monthsShort:
+            'ian._feb._mart._apr._mai_iun._iul._aug._sept._oct._nov._dec.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'duminică_luni_marți_miercuri_joi_vineri_sâmbătă'.split('_'),
         weekdaysShort: 'Dum_Lun_Mar_Mie_Joi_Vin_Sâm'.split('_'),
@@ -53724,23 +53782,26 @@ __webpack_require__.r(__webpack_exports__);
             format: 'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split(
                 '_'
             ),
-            standalone: 'январь_февраль_март_апрель_май_июнь_июль_август_сентябрь_октябрь_ноябрь_декабрь'.split(
-                '_'
-            ),
+            standalone:
+                'январь_февраль_март_апрель_май_июнь_июль_август_сентябрь_октябрь_ноябрь_декабрь'.split(
+                    '_'
+                ),
         },
         monthsShort: {
             // по CLDR именно "июл." и "июн.", но какой смысл менять букву на точку?
             format: 'янв._февр._мар._апр._мая_июня_июля_авг._сент._окт._нояб._дек.'.split(
                 '_'
             ),
-            standalone: 'янв._февр._март_апр._май_июнь_июль_авг._сент._окт._нояб._дек.'.split(
-                '_'
-            ),
+            standalone:
+                'янв._февр._март_апр._май_июнь_июль_авг._сент._окт._нояб._дек.'.split(
+                    '_'
+                ),
         },
         weekdays: {
-            standalone: 'воскресенье_понедельник_вторник_среда_четверг_пятница_суббота'.split(
-                '_'
-            ),
+            standalone:
+                'воскресенье_понедельник_вторник_среда_четверг_пятница_суббота'.split(
+                    '_'
+                ),
             format: 'воскресенье_понедельник_вторник_среду_четверг_пятницу_субботу'.split(
                 '_'
             ),
@@ -53753,16 +53814,20 @@ __webpack_require__.r(__webpack_exports__);
         shortMonthsParse: monthsParse,
 
         // полные названия с падежами, по три буквы, для некоторых, по 4 буквы, сокращения с точкой и без точки
-        monthsRegex: /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
+        monthsRegex:
+            /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
 
         // копия предыдущего
-        monthsShortRegex: /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
+        monthsShortRegex:
+            /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
 
         // полные названия с падежами
-        monthsStrictRegex: /^(январ[яь]|феврал[яь]|марта?|апрел[яь]|ма[яй]|июн[яь]|июл[яь]|августа?|сентябр[яь]|октябр[яь]|ноябр[яь]|декабр[яь])/i,
+        monthsStrictRegex:
+            /^(январ[яь]|феврал[яь]|марта?|апрел[яь]|ма[яй]|июн[яь]|июл[яь]|августа?|сентябр[яь]|октябр[яь]|ноябр[яь]|декабр[яь])/i,
 
         // Выражение, которое соответствует только сокращённым формам
-        monthsShortStrictRegex: /^(янв\.|февр?\.|мар[т.]|апр\.|ма[яй]|июн[ья.]|июл[ья.]|авг\.|сент?\.|окт\.|нояб?\.|дек\.)/i,
+        monthsShortStrictRegex:
+            /^(янв\.|февр?\.|мар[т.]|апр\.|ма[яй]|июн[ья.]|июл[ья.]|авг\.|сент?\.|окт\.|нояб?\.|дек\.)/i,
         longDateFormat: {
             LT: 'H:mm',
             LTS: 'H:mm:ss',
@@ -54004,12 +54069,12 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ođđajagemánnu_guovvamánnu_njukčamánnu_cuoŋománnu_miessemánnu_geassemánnu_suoidnemánnu_borgemánnu_čakčamánnu_golggotmánnu_skábmamánnu_juovlamánnu'.split(
             '_'
         ),
-        monthsShort: 'ođđj_guov_njuk_cuo_mies_geas_suoi_borg_čakč_golg_skáb_juov'.split(
-            '_'
-        ),
-        weekdays: 'sotnabeaivi_vuossárga_maŋŋebárga_gaskavahkku_duorastat_bearjadat_lávvardat'.split(
-            '_'
-        ),
+        monthsShort:
+            'ođđj_guov_njuk_cuo_mies_geas_suoi_borg_čakč_golg_skáb_juov'.split('_'),
+        weekdays:
+            'sotnabeaivi_vuossárga_maŋŋebárga_gaskavahkku_duorastat_bearjadat_lávvardat'.split(
+                '_'
+            ),
         weekdaysShort: 'sotn_vuos_maŋ_gask_duor_bear_láv'.split('_'),
         weekdaysMin: 's_v_m_g_d_b_L'.split('_'),
         longDateFormat: {
@@ -54084,9 +54149,10 @@ __webpack_require__.r(__webpack_exports__);
         monthsShort: 'ජන_පෙබ_මාර්_අප්_මැයි_ජූනි_ජූලි_අගෝ_සැප්_ඔක්_නොවැ_දෙසැ'.split(
             '_'
         ),
-        weekdays: 'ඉරිදා_සඳුදා_අඟහරුවාදා_බදාදා_බ්‍රහස්පතින්දා_සිකුරාදා_සෙනසුරාදා'.split(
-            '_'
-        ),
+        weekdays:
+            'ඉරිදා_සඳුදා_අඟහරුවාදා_බදාදා_බ්‍රහස්පතින්දා_සිකුරාදා_සෙනසුරාදා'.split(
+                '_'
+            ),
         weekdaysShort: 'ඉරි_සඳු_අඟ_බදා_බ්‍රහ_සිකු_සෙන'.split('_'),
         weekdaysMin: 'ඉ_ස_අ_බ_බ්‍ර_සි_සෙ'.split('_'),
         weekdaysParseExact: true,
@@ -54164,9 +54230,10 @@ __webpack_require__.r(__webpack_exports__);
 
     //! moment.js locale configuration
 
-    var months = 'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split(
-            '_'
-        ),
+    var months =
+            'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split(
+                '_'
+            ),
         monthsShort = 'jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec'.split('_');
     function plural(n) {
         return n > 1 && n < 5;
@@ -54414,9 +54481,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'januar_februar_marec_april_maj_junij_julij_avgust_september_oktober_november_december'.split(
             '_'
         ),
-        monthsShort: 'jan._feb._mar._apr._maj._jun._jul._avg._sep._okt._nov._dec.'.split(
-            '_'
-        ),
+        monthsShort:
+            'jan._feb._mar._apr._maj._jun._jul._avg._sep._okt._nov._dec.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'nedelja_ponedeljek_torek_sreda_četrtek_petek_sobota'.split('_'),
         weekdaysShort: 'ned._pon._tor._sre._čet._pet._sob.'.split('_'),
@@ -54604,32 +54672,44 @@ __webpack_require__.r(__webpack_exports__);
         words: {
             //Different grammatical cases
             ss: ['секунда', 'секунде', 'секунди'],
-            m: ['један минут', 'једне минуте'],
-            mm: ['минут', 'минуте', 'минута'],
+            m: ['један минут', 'једног минута'],
+            mm: ['минут', 'минута', 'минута'],
             h: ['један сат', 'једног сата'],
             hh: ['сат', 'сата', 'сати'],
+            d: ['један дан', 'једног дана'],
             dd: ['дан', 'дана', 'дана'],
+            M: ['један месец', 'једног месеца'],
             MM: ['месец', 'месеца', 'месеци'],
-            yy: ['година', 'године', 'година'],
+            y: ['једну годину', 'једне године'],
+            yy: ['годину', 'године', 'година'],
         },
         correctGrammaticalCase: function (number, wordKey) {
-            return number === 1
-                ? wordKey[0]
-                : number >= 2 && number <= 4
-                ? wordKey[1]
-                : wordKey[2];
-        },
-        translate: function (number, withoutSuffix, key) {
-            var wordKey = translator.words[key];
-            if (key.length === 1) {
-                return withoutSuffix ? wordKey[0] : wordKey[1];
-            } else {
-                return (
-                    number +
-                    ' ' +
-                    translator.correctGrammaticalCase(number, wordKey)
-                );
+            if (
+                number % 10 >= 1 &&
+                number % 10 <= 4 &&
+                (number % 100 < 10 || number % 100 >= 20)
+            ) {
+                return number % 10 === 1 ? wordKey[0] : wordKey[1];
             }
+            return wordKey[2];
+        },
+        translate: function (number, withoutSuffix, key, isFuture) {
+            var wordKey = translator.words[key],
+                word;
+
+            if (key.length === 1) {
+                // Nominativ
+                if (key === 'y' && withoutSuffix) return 'једна година';
+                return isFuture || withoutSuffix ? wordKey[0] : wordKey[1];
+            }
+
+            word = translator.correctGrammaticalCase(number, wordKey);
+            // Nominativ
+            if (key === 'yy' && withoutSuffix && word === 'годину') {
+                return number + ' година';
+            }
+
+            return number + ' ' + word;
         },
     };
 
@@ -54637,9 +54717,8 @@ __webpack_require__.r(__webpack_exports__);
         months: 'јануар_фебруар_март_април_мај_јун_јул_август_септембар_октобар_новембар_децембар'.split(
             '_'
         ),
-        monthsShort: 'јан._феб._мар._апр._мај_јун_јул_авг._сеп._окт._нов._дец.'.split(
-            '_'
-        ),
+        monthsShort:
+            'јан._феб._мар._апр._мај_јун_јул_авг._сеп._окт._нов._дец.'.split('_'),
         monthsParseExact: true,
         weekdays: 'недеља_понедељак_уторак_среда_четвртак_петак_субота'.split('_'),
         weekdaysShort: 'нед._пон._уто._сре._чет._пет._суб.'.split('_'),
@@ -54695,11 +54774,11 @@ __webpack_require__.r(__webpack_exports__);
             mm: translator.translate,
             h: translator.translate,
             hh: translator.translate,
-            d: 'дан',
+            d: translator.translate,
             dd: translator.translate,
-            M: 'месец',
+            M: translator.translate,
             MM: translator.translate,
-            y: 'годину',
+            y: translator.translate,
             yy: translator.translate,
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
@@ -54739,32 +54818,44 @@ __webpack_require__.r(__webpack_exports__);
         words: {
             //Different grammatical cases
             ss: ['sekunda', 'sekunde', 'sekundi'],
-            m: ['jedan minut', 'jedne minute'],
-            mm: ['minut', 'minute', 'minuta'],
+            m: ['jedan minut', 'jednog minuta'],
+            mm: ['minut', 'minuta', 'minuta'],
             h: ['jedan sat', 'jednog sata'],
             hh: ['sat', 'sata', 'sati'],
+            d: ['jedan dan', 'jednog dana'],
             dd: ['dan', 'dana', 'dana'],
+            M: ['jedan mesec', 'jednog meseca'],
             MM: ['mesec', 'meseca', 'meseci'],
-            yy: ['godina', 'godine', 'godina'],
+            y: ['jednu godinu', 'jedne godine'],
+            yy: ['godinu', 'godine', 'godina'],
         },
         correctGrammaticalCase: function (number, wordKey) {
-            return number === 1
-                ? wordKey[0]
-                : number >= 2 && number <= 4
-                ? wordKey[1]
-                : wordKey[2];
-        },
-        translate: function (number, withoutSuffix, key) {
-            var wordKey = translator.words[key];
-            if (key.length === 1) {
-                return withoutSuffix ? wordKey[0] : wordKey[1];
-            } else {
-                return (
-                    number +
-                    ' ' +
-                    translator.correctGrammaticalCase(number, wordKey)
-                );
+            if (
+                number % 10 >= 1 &&
+                number % 10 <= 4 &&
+                (number % 100 < 10 || number % 100 >= 20)
+            ) {
+                return number % 10 === 1 ? wordKey[0] : wordKey[1];
             }
+            return wordKey[2];
+        },
+        translate: function (number, withoutSuffix, key, isFuture) {
+            var wordKey = translator.words[key],
+                word;
+
+            if (key.length === 1) {
+                // Nominativ
+                if (key === 'y' && withoutSuffix) return 'jedna godina';
+                return isFuture || withoutSuffix ? wordKey[0] : wordKey[1];
+            }
+
+            word = translator.correctGrammaticalCase(number, wordKey);
+            // Nominativ
+            if (key === 'yy' && withoutSuffix && word === 'godinu') {
+                return number + ' godina';
+            }
+
+            return number + ' ' + word;
         },
     };
 
@@ -54772,9 +54863,8 @@ __webpack_require__.r(__webpack_exports__);
         months: 'januar_februar_mart_april_maj_jun_jul_avgust_septembar_oktobar_novembar_decembar'.split(
             '_'
         ),
-        monthsShort: 'jan._feb._mar._apr._maj_jun_jul_avg._sep._okt._nov._dec.'.split(
-            '_'
-        ),
+        monthsShort:
+            'jan._feb._mar._apr._maj_jun_jul_avg._sep._okt._nov._dec.'.split('_'),
         monthsParseExact: true,
         weekdays: 'nedelja_ponedeljak_utorak_sreda_četvrtak_petak_subota'.split(
             '_'
@@ -54832,11 +54922,11 @@ __webpack_require__.r(__webpack_exports__);
             mm: translator.translate,
             h: translator.translate,
             hh: translator.translate,
-            d: 'dan',
+            d: translator.translate,
             dd: translator.translate,
-            M: 'mesec',
+            M: translator.translate,
             MM: translator.translate,
-            y: 'godinu',
+            y: translator.translate,
             yy: translator.translate,
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
@@ -54876,9 +54966,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'Bhi_Ina_Inu_Mab_Ink_Inh_Kho_Igc_Iny_Imp_Lwe_Igo'.split('_'),
-        weekdays: 'Lisontfo_Umsombuluko_Lesibili_Lesitsatfu_Lesine_Lesihlanu_Umgcibelo'.split(
-            '_'
-        ),
+        weekdays:
+            'Lisontfo_Umsombuluko_Lesibili_Lesitsatfu_Lesine_Lesihlanu_Umgcibelo'.split(
+                '_'
+            ),
         weekdaysShort: 'Lis_Umb_Lsb_Les_Lsi_Lsh_Umg'.split('_'),
         weekdaysMin: 'Li_Us_Lb_Lt_Ls_Lh_Ug'.split('_'),
         weekdaysParseExact: true,
@@ -55065,9 +55156,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'Jan_Feb_Mac_Apr_Mei_Jun_Jul_Ago_Sep_Okt_Nov_Des'.split('_'),
-        weekdays: 'Jumapili_Jumatatu_Jumanne_Jumatano_Alhamisi_Ijumaa_Jumamosi'.split(
-            '_'
-        ),
+        weekdays:
+            'Jumapili_Jumatatu_Jumanne_Jumatano_Alhamisi_Ijumaa_Jumamosi'.split(
+                '_'
+            ),
         weekdaysShort: 'Jpl_Jtat_Jnne_Jtan_Alh_Ijm_Jmos'.split('_'),
         weekdaysMin: 'J2_J3_J4_J5_Al_Ij_J1'.split('_'),
         weekdaysParseExact: true,
@@ -55162,12 +55254,14 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ஜனவரி_பிப்ரவரி_மார்ச்_ஏப்ரல்_மே_ஜூன்_ஜூலை_ஆகஸ்ட்_செப்டெம்பர்_அக்டோபர்_நவம்பர்_டிசம்பர்'.split(
             '_'
         ),
-        monthsShort: 'ஜனவரி_பிப்ரவரி_மார்ச்_ஏப்ரல்_மே_ஜூன்_ஜூலை_ஆகஸ்ட்_செப்டெம்பர்_அக்டோபர்_நவம்பர்_டிசம்பர்'.split(
-            '_'
-        ),
-        weekdays: 'ஞாயிற்றுக்கிழமை_திங்கட்கிழமை_செவ்வாய்கிழமை_புதன்கிழமை_வியாழக்கிழமை_வெள்ளிக்கிழமை_சனிக்கிழமை'.split(
-            '_'
-        ),
+        monthsShort:
+            'ஜனவரி_பிப்ரவரி_மார்ச்_ஏப்ரல்_மே_ஜூன்_ஜூலை_ஆகஸ்ட்_செப்டெம்பர்_அக்டோபர்_நவம்பர்_டிசம்பர்'.split(
+                '_'
+            ),
+        weekdays:
+            'ஞாயிற்றுக்கிழமை_திங்கட்கிழமை_செவ்வாய்கிழமை_புதன்கிழமை_வியாழக்கிழமை_வெள்ளிக்கிழமை_சனிக்கிழமை'.split(
+                '_'
+            ),
         weekdaysShort: 'ஞாயிறு_திங்கள்_செவ்வாய்_புதன்_வியாழன்_வெள்ளி_சனி'.split(
             '_'
         ),
@@ -55285,13 +55379,15 @@ __webpack_require__.r(__webpack_exports__);
         months: 'జనవరి_ఫిబ్రవరి_మార్చి_ఏప్రిల్_మే_జూన్_జులై_ఆగస్టు_సెప్టెంబర్_అక్టోబర్_నవంబర్_డిసెంబర్'.split(
             '_'
         ),
-        monthsShort: 'జన._ఫిబ్ర._మార్చి_ఏప్రి._మే_జూన్_జులై_ఆగ._సెప్._అక్టో._నవ._డిసె.'.split(
-            '_'
-        ),
+        monthsShort:
+            'జన._ఫిబ్ర._మార్చి_ఏప్రి._మే_జూన్_జులై_ఆగ._సెప్._అక్టో._నవ._డిసె.'.split(
+                '_'
+            ),
         monthsParseExact: true,
-        weekdays: 'ఆదివారం_సోమవారం_మంగళవారం_బుధవారం_గురువారం_శుక్రవారం_శనివారం'.split(
-            '_'
-        ),
+        weekdays:
+            'ఆదివారం_సోమవారం_మంగళవారం_బుధవారం_గురువారం_శుక్రవారం_శనివారం'.split(
+                '_'
+            ),
         weekdaysShort: 'ఆది_సోమ_మంగళ_బుధ_గురు_శుక్ర_శని'.split('_'),
         weekdaysMin: 'ఆ_సో_మం_బు_గు_శు_శ'.split('_'),
         longDateFormat: {
@@ -55503,9 +55599,10 @@ __webpack_require__.r(__webpack_exports__);
             format: 'январи_феврали_марти_апрели_майи_июни_июли_августи_сентябри_октябри_ноябри_декабри'.split(
                 '_'
             ),
-            standalone: 'январ_феврал_март_апрел_май_июн_июл_август_сентябр_октябр_ноябр_декабр'.split(
-                '_'
-            ),
+            standalone:
+                'январ_феврал_март_апрел_май_июн_июл_август_сентябр_октябр_ноябр_декабр'.split(
+                    '_'
+                ),
         },
         monthsShort: 'янв_фев_мар_апр_май_июн_июл_авг_сен_окт_ноя_дек'.split('_'),
         weekdays: 'якшанбе_душанбе_сешанбе_чоршанбе_панҷшанбе_ҷумъа_шанбе'.split(
@@ -55612,9 +55709,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'มกราคม_กุมภาพันธ์_มีนาคม_เมษายน_พฤษภาคม_มิถุนายน_กรกฎาคม_สิงหาคม_กันยายน_ตุลาคม_พฤศจิกายน_ธันวาคม'.split(
             '_'
         ),
-        monthsShort: 'ม.ค._ก.พ._มี.ค._เม.ย._พ.ค._มิ.ย._ก.ค._ส.ค._ก.ย._ต.ค._พ.ย._ธ.ค.'.split(
-            '_'
-        ),
+        monthsShort:
+            'ม.ค._ก.พ._มี.ค._เม.ย._พ.ค._มิ.ย._ก.ค._ส.ค._ก.ย._ต.ค._พ.ย._ธ.ค.'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'อาทิตย์_จันทร์_อังคาร_พุธ_พฤหัสบดี_ศุกร์_เสาร์'.split('_'),
         weekdaysShort: 'อาทิตย์_จันทร์_อังคาร_พุธ_พฤหัส_ศุกร์_เสาร์'.split('_'), // yes, three characters difference
@@ -55944,19 +56042,18 @@ __webpack_require__.r(__webpack_exports__);
         months: 'tera’ jar wa’_tera’ jar cha’_tera’ jar wej_tera’ jar loS_tera’ jar vagh_tera’ jar jav_tera’ jar Soch_tera’ jar chorgh_tera’ jar Hut_tera’ jar wa’maH_tera’ jar wa’maH wa’_tera’ jar wa’maH cha’'.split(
             '_'
         ),
-        monthsShort: 'jar wa’_jar cha’_jar wej_jar loS_jar vagh_jar jav_jar Soch_jar chorgh_jar Hut_jar wa’maH_jar wa’maH wa’_jar wa’maH cha’'.split(
-            '_'
-        ),
+        monthsShort:
+            'jar wa’_jar cha’_jar wej_jar loS_jar vagh_jar jav_jar Soch_jar chorgh_jar Hut_jar wa’maH_jar wa’maH wa’_jar wa’maH cha’'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'lojmItjaj_DaSjaj_povjaj_ghItlhjaj_loghjaj_buqjaj_ghInjaj'.split(
             '_'
         ),
-        weekdaysShort: 'lojmItjaj_DaSjaj_povjaj_ghItlhjaj_loghjaj_buqjaj_ghInjaj'.split(
-            '_'
-        ),
-        weekdaysMin: 'lojmItjaj_DaSjaj_povjaj_ghItlhjaj_loghjaj_buqjaj_ghInjaj'.split(
-            '_'
-        ),
+        weekdaysShort:
+            'lojmItjaj_DaSjaj_povjaj_ghItlhjaj_loghjaj_buqjaj_ghInjaj'.split('_'),
+        weekdaysMin:
+            'lojmItjaj_DaSjaj_povjaj_ghItlhjaj_loghjaj_buqjaj_ghInjaj'.split('_'),
         longDateFormat: {
             LT: 'HH:mm',
             LTS: 'HH:mm:ss',
@@ -56051,7 +56148,7 @@ __webpack_require__.r(__webpack_exports__);
         weekdays: 'Pazar_Pazartesi_Salı_Çarşamba_Perşembe_Cuma_Cumartesi'.split(
             '_'
         ),
-        weekdaysShort: 'Paz_Pts_Sal_Çar_Per_Cum_Cts'.split('_'),
+        weekdaysShort: 'Paz_Pzt_Sal_Çar_Per_Cum_Cmt'.split('_'),
         weekdaysMin: 'Pz_Pt_Sa_Ça_Pe_Cu_Ct'.split('_'),
         meridiem: function (hours, minutes, isLower) {
             if (hours < 12) {
@@ -56258,9 +56355,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir'.split(
             '_'
         ),
-        monthsShort: 'innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir'.split(
-            '_'
-        ),
+        monthsShort:
+            'innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir'.split(
+                '_'
+            ),
         weekdays: 'asamas_aynas_asinas_akras_akwas_asimwas_asiḍyas'.split('_'),
         weekdaysShort: 'asamas_aynas_asinas_akras_akwas_asimwas_asiḍyas'.split('_'),
         weekdaysMin: 'asamas_aynas_asinas_akras_akwas_asimwas_asiḍyas'.split('_'),
@@ -56330,9 +56428,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'ⵉⵏⵏⴰⵢⵔ_ⴱⵕⴰⵢⵕ_ⵎⴰⵕⵚ_ⵉⴱⵔⵉⵔ_ⵎⴰⵢⵢⵓ_ⵢⵓⵏⵢⵓ_ⵢⵓⵍⵢⵓⵣ_ⵖⵓⵛⵜ_ⵛⵓⵜⴰⵏⴱⵉⵔ_ⴽⵟⵓⴱⵕ_ⵏⵓⵡⴰⵏⴱⵉⵔ_ⴷⵓⵊⵏⴱⵉⵔ'.split(
             '_'
         ),
-        monthsShort: 'ⵉⵏⵏⴰⵢⵔ_ⴱⵕⴰⵢⵕ_ⵎⴰⵕⵚ_ⵉⴱⵔⵉⵔ_ⵎⴰⵢⵢⵓ_ⵢⵓⵏⵢⵓ_ⵢⵓⵍⵢⵓⵣ_ⵖⵓⵛⵜ_ⵛⵓⵜⴰⵏⴱⵉⵔ_ⴽⵟⵓⴱⵕ_ⵏⵓⵡⴰⵏⴱⵉⵔ_ⴷⵓⵊⵏⴱⵉⵔ'.split(
-            '_'
-        ),
+        monthsShort:
+            'ⵉⵏⵏⴰⵢⵔ_ⴱⵕⴰⵢⵕ_ⵎⴰⵕⵚ_ⵉⴱⵔⵉⵔ_ⵎⴰⵢⵢⵓ_ⵢⵓⵏⵢⵓ_ⵢⵓⵍⵢⵓⵣ_ⵖⵓⵛⵜ_ⵛⵓⵜⴰⵏⴱⵉⵔ_ⴽⵟⵓⴱⵕ_ⵏⵓⵡⴰⵏⴱⵉⵔ_ⴷⵓⵊⵏⴱⵉⵔ'.split(
+                '_'
+            ),
         weekdays: 'ⴰⵙⴰⵎⴰⵙ_ⴰⵢⵏⴰⵙ_ⴰⵙⵉⵏⴰⵙ_ⴰⴽⵔⴰⵙ_ⴰⴽⵡⴰⵙ_ⴰⵙⵉⵎⵡⴰⵙ_ⴰⵙⵉⴹⵢⴰⵙ'.split('_'),
         weekdaysShort: 'ⴰⵙⴰⵎⴰⵙ_ⴰⵢⵏⴰⵙ_ⴰⵙⵉⵏⴰⵙ_ⴰⴽⵔⴰⵙ_ⴰⴽⵡⴰⵙ_ⴰⵙⵉⵎⵡⴰⵙ_ⴰⵙⵉⴹⵢⴰⵙ'.split('_'),
         weekdaysMin: 'ⴰⵙⴰⵎⴰⵙ_ⴰⵢⵏⴰⵙ_ⴰⵙⵉⵏⴰⵙ_ⴰⴽⵔⴰⵙ_ⴰⴽⵡⴰⵙ_ⴰⵙⵉⵎⵡⴰⵙ_ⴰⵙⵉⴹⵢⴰⵙ'.split('_'),
@@ -56402,9 +56501,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'يانۋار_فېۋرال_مارت_ئاپرېل_ماي_ئىيۇن_ئىيۇل_ئاۋغۇست_سېنتەبىر_ئۆكتەبىر_نويابىر_دېكابىر'.split(
             '_'
         ),
-        monthsShort: 'يانۋار_فېۋرال_مارت_ئاپرېل_ماي_ئىيۇن_ئىيۇل_ئاۋغۇست_سېنتەبىر_ئۆكتەبىر_نويابىر_دېكابىر'.split(
-            '_'
-        ),
+        monthsShort:
+            'يانۋار_فېۋرال_مارت_ئاپرېل_ماي_ئىيۇن_ئىيۇل_ئاۋغۇست_سېنتەبىر_ئۆكتەبىر_نويابىر_دېكابىر'.split(
+                '_'
+            ),
         weekdays: 'يەكشەنبە_دۈشەنبە_سەيشەنبە_چارشەنبە_پەيشەنبە_جۈمە_شەنبە'.split(
             '_'
         ),
@@ -56555,15 +56655,18 @@ __webpack_require__.r(__webpack_exports__);
     }
     function weekdaysCaseReplace(m, format) {
         var weekdays = {
-                nominative: 'неділя_понеділок_вівторок_середа_четвер_п’ятниця_субота'.split(
-                    '_'
-                ),
-                accusative: 'неділю_понеділок_вівторок_середу_четвер_п’ятницю_суботу'.split(
-                    '_'
-                ),
-                genitive: 'неділі_понеділка_вівторка_середи_четверга_п’ятниці_суботи'.split(
-                    '_'
-                ),
+                nominative:
+                    'неділя_понеділок_вівторок_середа_четвер_п’ятниця_субота'.split(
+                        '_'
+                    ),
+                accusative:
+                    'неділю_понеділок_вівторок_середу_четвер_п’ятницю_суботу'.split(
+                        '_'
+                    ),
+                genitive:
+                    'неділі_понеділка_вівторка_середи_четверга_п’ятниці_суботи'.split(
+                        '_'
+                    ),
             },
             nounCase;
 
@@ -56594,9 +56697,10 @@ __webpack_require__.r(__webpack_exports__);
             format: 'січня_лютого_березня_квітня_травня_червня_липня_серпня_вересня_жовтня_листопада_грудня'.split(
                 '_'
             ),
-            standalone: 'січень_лютий_березень_квітень_травень_червень_липень_серпень_вересень_жовтень_листопад_грудень'.split(
-                '_'
-            ),
+            standalone:
+                'січень_лютий_березень_квітень_травень_червень_липень_серпень_вересень_жовтень_листопад_грудень'.split(
+                    '_'
+                ),
         },
         monthsShort: 'січ_лют_бер_квіт_трав_черв_лип_серп_вер_жовт_лист_груд'.split(
             '_'
@@ -56815,9 +56919,10 @@ __webpack_require__.r(__webpack_exports__);
             '_'
         ),
         monthsShort: 'Yan_Fev_Mar_Apr_May_Iyun_Iyul_Avg_Sen_Okt_Noy_Dek'.split('_'),
-        weekdays: 'Yakshanba_Dushanba_Seshanba_Chorshanba_Payshanba_Juma_Shanba'.split(
-            '_'
-        ),
+        weekdays:
+            'Yakshanba_Dushanba_Seshanba_Chorshanba_Payshanba_Juma_Shanba'.split(
+                '_'
+            ),
         weekdaysShort: 'Yak_Dush_Sesh_Chor_Pay_Jum_Shan'.split('_'),
         weekdaysMin: 'Ya_Du_Se_Cho_Pa_Ju_Sha'.split('_'),
         longDateFormat: {
@@ -56957,9 +57062,10 @@ __webpack_require__.r(__webpack_exports__);
         months: 'tháng 1_tháng 2_tháng 3_tháng 4_tháng 5_tháng 6_tháng 7_tháng 8_tháng 9_tháng 10_tháng 11_tháng 12'.split(
             '_'
         ),
-        monthsShort: 'Thg 01_Thg 02_Thg 03_Thg 04_Thg 05_Thg 06_Thg 07_Thg 08_Thg 09_Thg 10_Thg 11_Thg 12'.split(
-            '_'
-        ),
+        monthsShort:
+            'Thg 01_Thg 02_Thg 03_Thg 04_Thg 05_Thg 06_Thg 07_Thg 08_Thg 09_Thg 10_Thg 11_Thg 12'.split(
+                '_'
+            ),
         monthsParseExact: true,
         weekdays: 'chủ nhật_thứ hai_thứ ba_thứ tư_thứ năm_thứ sáu_thứ bảy'.split(
             '_'
@@ -57054,13 +57160,15 @@ __webpack_require__.r(__webpack_exports__);
         months: 'J~áñúá~rý_F~ébrú~árý_~Márc~h_Áp~ríl_~Máý_~Júñé~_Júl~ý_Áú~gúst~_Sép~témb~ér_Ó~ctób~ér_Ñ~óvém~bér_~Décé~mbér'.split(
             '_'
         ),
-        monthsShort: 'J~áñ_~Féb_~Már_~Ápr_~Máý_~Júñ_~Júl_~Áúg_~Sép_~Óct_~Ñóv_~Déc'.split(
-            '_'
-        ),
+        monthsShort:
+            'J~áñ_~Féb_~Már_~Ápr_~Máý_~Júñ_~Júl_~Áúg_~Sép_~Óct_~Ñóv_~Déc'.split(
+                '_'
+            ),
         monthsParseExact: true,
-        weekdays: 'S~úñdá~ý_Mó~ñdáý~_Túé~sdáý~_Wéd~ñésd~áý_T~húrs~dáý_~Fríd~áý_S~átúr~dáý'.split(
-            '_'
-        ),
+        weekdays:
+            'S~úñdá~ý_Mó~ñdáý~_Túé~sdáý~_Wéd~ñésd~áý_T~húrs~dáý_~Fríd~áý_S~átúr~dáý'.split(
+                '_'
+            ),
         weekdaysShort: 'S~úñ_~Móñ_~Túé_~Wéd_~Thú_~Frí_~Sát'.split('_'),
         weekdaysMin: 'S~ú_Mó~_Tú_~Wé_T~h_Fr~_Sá'.split('_'),
         weekdaysParseExact: true,
@@ -58000,7 +58108,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 //! moment.js
-//! version : 2.29.1
+//! version : 2.29.3
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
 //! license : MIT
 //! momentjs.com
@@ -58076,8 +58184,9 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     function map(arr, fn) {
         var res = [],
-            i;
-        for (i = 0; i < arr.length; ++i) {
+            i,
+            arrLen = arr.length;
+        for (i = 0; i < arrLen; ++i) {
             res.push(fn(arr[i], i));
         }
         return res;
@@ -58206,7 +58315,10 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
         updateInProgress = false;
 
     function copyConfig(to, from) {
-        var i, prop, val;
+        var i,
+            prop,
+            val,
+            momentPropertiesLen = momentProperties.length;
 
         if (!isUndefined(from._isAMomentObject)) {
             to._isAMomentObject = from._isAMomentObject;
@@ -58239,8 +58351,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
             to._locale = from._locale;
         }
 
-        if (momentProperties.length > 0) {
-            for (i = 0; i < momentProperties.length; i++) {
+        if (momentPropertiesLen > 0) {
+            for (i = 0; i < momentPropertiesLen; i++) {
                 prop = momentProperties[i];
                 val = from[prop];
                 if (!isUndefined(val)) {
@@ -58295,8 +58407,9 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
                 var args = [],
                     arg,
                     i,
-                    key;
-                for (i = 0; i < arguments.length; i++) {
+                    key,
+                    argLen = arguments.length;
+                for (i = 0; i < argLen; i++) {
                     arg = '';
                     if (typeof arguments[i] === 'object') {
                         arg += '\n[' + i + '] ';
@@ -58446,7 +58559,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
         );
     }
 
-    var formattingTokens = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
+    var formattingTokens =
+            /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g,
         localFormattingTokens = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g,
         formatFunctions = {},
         formatTokenFunctions = {};
@@ -58750,8 +58864,9 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
         if (typeof units === 'object') {
             units = normalizeObjectUnits(units);
             var prioritized = getPrioritizedUnits(units),
-                i;
-            for (i = 0; i < prioritized.length; i++) {
+                i,
+                prioritizedLen = prioritized.length;
+            for (i = 0; i < prioritizedLen; i++) {
                 this[prioritized[i].unit](units[prioritized[i].unit]);
             }
         } else {
@@ -58781,7 +58896,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
         matchTimestamp = /[+-]?\d+(\.\d{1,3})?/, // 123456789 123456789.123
         // any word (or two) characters or numbers including two/three word month in arabic.
         // includes scottish gaelic two word and hyphenated months
-        matchWord = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i,
+        matchWord =
+            /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i,
         regexes;
 
     regexes = {};
@@ -58807,15 +58923,12 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return regexEscape(
             s
                 .replace('\\', '')
-                .replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function (
-                    matched,
-                    p1,
-                    p2,
-                    p3,
-                    p4
-                ) {
-                    return p1 || p2 || p3 || p4;
-                })
+                .replace(
+                    /\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g,
+                    function (matched, p1, p2, p3, p4) {
+                        return p1 || p2 || p3 || p4;
+                    }
+                )
         );
     }
 
@@ -58827,7 +58940,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     function addParseToken(token, callback) {
         var i,
-            func = callback;
+            func = callback,
+            tokenLen;
         if (typeof token === 'string') {
             token = [token];
         }
@@ -58836,7 +58950,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
                 array[callback] = toInt(input);
             };
         }
-        for (i = 0; i < token.length; i++) {
+        tokenLen = token.length;
+        for (i = 0; i < tokenLen; i++) {
             tokens[token[i]] = func;
         }
     }
@@ -58947,12 +59062,12 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     // LOCALES
 
-    var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
-            '_'
-        ),
-        defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split(
-            '_'
-        ),
+    var defaultLocaleMonths =
+            'January_February_March_April_May_June_July_August_September_October_November_December'.split(
+                '_'
+            ),
+        defaultLocaleMonthsShort =
+            'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'),
         MONTHS_IN_FORMAT = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/,
         defaultMonthsShortRegex = matchWord,
         defaultMonthsRegex = matchWord;
@@ -59394,14 +59509,12 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
     addRegexToken('W', match1to2);
     addRegexToken('WW', match1to2, match2);
 
-    addWeekParseToken(['w', 'ww', 'W', 'WW'], function (
-        input,
-        week,
-        config,
-        token
-    ) {
-        week[token.substr(0, 1)] = toInt(input);
-    });
+    addWeekParseToken(
+        ['w', 'ww', 'W', 'WW'],
+        function (input, week, config, token) {
+            week[token.substr(0, 1)] = toInt(input);
+        }
+    );
 
     // HELPERS
 
@@ -59526,9 +59639,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return ws.slice(n, 7).concat(ws.slice(0, n));
     }
 
-    var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split(
-            '_'
-        ),
+    var defaultLocaleWeekdays =
+            'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'),
         defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_'),
         defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'),
         defaultWeekdaysRegex = matchWord,
@@ -60076,6 +60188,11 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
         return globalLocale;
     }
 
+    function isLocaleNameSane(name) {
+        // Prevent names that look like filesystem paths, i.e contain '/' or '\'
+        return name.match('^[^/\\\\]*$') != null;
+    }
+
     function loadLocale(name) {
         var oldLocale = null,
             aliasedRequire;
@@ -60084,7 +60201,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
             locales[name] === undefined &&
             "object" !== 'undefined' &&
             module &&
-            module.exports
+            module.exports &&
+            isLocaleNameSane(name)
         ) {
             try {
                 oldLocale = globalLocale._abbr;
@@ -60301,8 +60419,10 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     // iso 8601 regex
     // 0000-00-00 0000-W00 or 0000-W00-0 + T + 00 or 00:00 or 00:00:00 or 00:00:00.000 + +00:00 or +0000 or +00)
-    var extendedIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
-        basicIsoRegex = /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d|))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
+    var extendedIsoRegex =
+            /^\s*((?:[+-]\d{6}|\d{4})-(?:\d\d-\d\d|W\d\d-\d|W\d\d|\d\d\d|\d\d))(?:(T| )(\d\d(?::\d\d(?::\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
+        basicIsoRegex =
+            /^\s*((?:[+-]\d{6}|\d{4})(?:\d\d\d\d|W\d\d\d|W\d\d|\d\d\d|\d\d|))(?:(T| )(\d\d(?:\d\d(?:\d\d(?:[.,]\d+)?)?)?)([+-]\d\d(?::?\d\d)?|\s*Z)?)?$/,
         tzRegex = /Z|[+-]\d\d(?::?\d\d)?/,
         isoDates = [
             ['YYYYYY-MM-DD', /[+-]\d{6}-\d\d-\d\d/],
@@ -60333,7 +60453,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
         ],
         aspNetJsonRegex = /^\/?Date\((-?\d+)/i,
         // RFC 2822 regex: For details see https://tools.ietf.org/html/rfc2822#section-3.3
-        rfc2822 = /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
+        rfc2822 =
+            /^(?:(Mon|Tue|Wed|Thu|Fri|Sat|Sun),?\s)?(\d{1,2})\s(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s(\d{2,4})\s(\d\d):(\d\d)(?::(\d\d))?\s(?:(UT|GMT|[ECMP][SD]T)|([Zz])|([+-]\d{4}))$/,
         obsOffsets = {
             UT: 0,
             GMT: 0,
@@ -60356,12 +60477,13 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
             allowTime,
             dateFormat,
             timeFormat,
-            tzFormat;
+            tzFormat,
+            isoDatesLen = isoDates.length,
+            isoTimesLen = isoTimes.length;
 
         if (match) {
             getParsingFlags(config).iso = true;
-
-            for (i = 0, l = isoDates.length; i < l; i++) {
+            for (i = 0, l = isoDatesLen; i < l; i++) {
                 if (isoDates[i][1].exec(match[1])) {
                     dateFormat = isoDates[i][0];
                     allowTime = isoDates[i][2] !== false;
@@ -60373,7 +60495,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
                 return;
             }
             if (match[3]) {
-                for (i = 0, l = isoTimes.length; i < l; i++) {
+                for (i = 0, l = isoTimesLen; i < l; i++) {
                     if (isoTimes[i][1].exec(match[3])) {
                         // match[2] should be 'T' or space
                         timeFormat = (match[2] || ' ') + isoTimes[i][0];
@@ -60753,12 +60875,13 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
             skipped,
             stringLength = string.length,
             totalParsedInputLength = 0,
-            era;
+            era,
+            tokenLen;
 
         tokens =
             expandFormat(config._f, config._locale).match(formattingTokens) || [];
-
-        for (i = 0; i < tokens.length; i++) {
+        tokenLen = tokens.length;
+        for (i = 0; i < tokenLen; i++) {
             token = tokens[i];
             parsedInput = (string.match(getParseRegexForToken(token, config)) ||
                 [])[0];
@@ -60853,15 +60976,16 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
             i,
             currentScore,
             validFormatFound,
-            bestFormatIsValid = false;
+            bestFormatIsValid = false,
+            configfLen = config._f.length;
 
-        if (config._f.length === 0) {
+        if (configfLen === 0) {
             getParsingFlags(config).invalidFormat = true;
             config._d = new Date(NaN);
             return;
         }
 
-        for (i = 0; i < config._f.length; i++) {
+        for (i = 0; i < configfLen; i++) {
             currentScore = 0;
             validFormatFound = false;
             tempConfig = copyConfig({}, config);
@@ -61102,7 +61226,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
     function isDurationValid(m) {
         var key,
             unitHasDecimal = false,
-            i;
+            i,
+            orderLen = ordering.length;
         for (key in m) {
             if (
                 hasOwnProp(m, key) &&
@@ -61115,7 +61240,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
             }
         }
 
-        for (i = 0; i < ordering.length; ++i) {
+        for (i = 0; i < orderLen; ++i) {
             if (m[ordering[i]]) {
                 if (unitHasDecimal) {
                     return false; // only allow non-integers for smallest unit
@@ -61440,7 +61565,8 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
         // from http://docs.closure-library.googlecode.com/git/closure_goog_date_date.js.source.html
         // somewhat more in line with 4.4.3.2 2004 spec, but allows decimal anywhere
         // and further modified to allow for strings containing both week and day
-        isoRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
+        isoRegex =
+            /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/;
 
     function createDuration(input, key) {
         var duration = input,
@@ -61661,9 +61787,10 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
                 'ms',
             ],
             i,
-            property;
+            property,
+            propertyLen = properties.length;
 
-        for (i = 0; i < properties.length; i += 1) {
+        for (i = 0; i < propertyLen; i += 1) {
             property = properties[i];
             propertyTest = propertyTest || hasOwnProp(input, property);
         }
@@ -62286,19 +62413,17 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
     addRegexToken('NNNN', matchEraName);
     addRegexToken('NNNNN', matchEraNarrow);
 
-    addParseToken(['N', 'NN', 'NNN', 'NNNN', 'NNNNN'], function (
-        input,
-        array,
-        config,
-        token
-    ) {
-        var era = config._locale.erasParse(input, token, config._strict);
-        if (era) {
-            getParsingFlags(config).era = era;
-        } else {
-            getParsingFlags(config).invalidEra = input;
+    addParseToken(
+        ['N', 'NN', 'NNN', 'NNNN', 'NNNNN'],
+        function (input, array, config, token) {
+            var era = config._locale.erasParse(input, token, config._strict);
+            if (era) {
+                getParsingFlags(config).era = era;
+            } else {
+                getParsingFlags(config).invalidEra = input;
+            }
         }
-    });
+    );
 
     addRegexToken('y', matchUnsigned);
     addRegexToken('yy', matchUnsigned);
@@ -62590,14 +62715,12 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
     addRegexToken('GGGGG', match1to6, match6);
     addRegexToken('ggggg', match1to6, match6);
 
-    addWeekParseToken(['gggg', 'ggggg', 'GGGG', 'GGGGG'], function (
-        input,
-        week,
-        config,
-        token
-    ) {
-        week[token.substr(0, 2)] = toInt(input);
-    });
+    addWeekParseToken(
+        ['gggg', 'ggggg', 'GGGG', 'GGGGG'],
+        function (input, week, config, token) {
+            week[token.substr(0, 2)] = toInt(input);
+        }
+    );
 
     addWeekParseToken(['gg', 'GG'], function (input, week, config, token) {
         week[token] = hooks.parseTwoDigitYear(input);
@@ -63620,7 +63743,7 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
     //! moment.js
 
-    hooks.version = '2.29.1';
+    hooks.version = '2.29.3';
 
     setHookCallback(createLocal);
 
@@ -67068,7 +67191,7 @@ var printWarning = function() {};
 if (true) {
   var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
   var loggedTypeFailures = {};
-  var has = Function.call.bind(Object.prototype.hasOwnProperty);
+  var has = __webpack_require__(/*! ./lib/has */ "./node_modules/prop-types/lib/has.js");
 
   printWarning = function(text) {
     var message = 'Warning: ' + text;
@@ -67080,7 +67203,7 @@ if (true) {
       // This error was thrown as a convenience so that you can use this stack
       // to find the callsite that caused this warning to fire.
       throw new Error(message);
-    } catch (x) {}
+    } catch (x) { /**/ }
   };
 }
 
@@ -67109,7 +67232,8 @@ function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
           if (typeof typeSpecs[typeSpecName] !== 'function') {
             var err = Error(
               (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
-              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
+              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.' +
+              'This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.'
             );
             err.name = 'Invariant Violation';
             throw err;
@@ -67180,9 +67304,9 @@ var ReactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index
 var assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
 
 var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+var has = __webpack_require__(/*! ./lib/has */ "./node_modules/prop-types/lib/has.js");
 var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
 
-var has = Function.call.bind(Object.prototype.hasOwnProperty);
 var printWarning = function() {};
 
 if (true) {
@@ -67283,6 +67407,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
   var ReactPropTypes = {
     array: createPrimitiveTypeChecker('array'),
+    bigint: createPrimitiveTypeChecker('bigint'),
     bool: createPrimitiveTypeChecker('boolean'),
     func: createPrimitiveTypeChecker('function'),
     number: createPrimitiveTypeChecker('number'),
@@ -67328,8 +67453,9 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
    * is prohibitively expensive if they are created too often, such as what
    * happens in oneOfType() for any type before the one that matched.
    */
-  function PropTypeError(message) {
+  function PropTypeError(message, data) {
     this.message = message;
+    this.data = data && typeof data === 'object' ? data: {};
     this.stack = '';
   }
   // Make `instanceof Error` still work for returned errors.
@@ -67364,7 +67490,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
           ) {
             printWarning(
               'You are manually calling a React.PropTypes validation ' +
-              'function for the `' + propFullName + '` prop on `' + componentName  + '`. This is deprecated ' +
+              'function for the `' + propFullName + '` prop on `' + componentName + '`. This is deprecated ' +
               'and will throw in the standalone `prop-types` package. ' +
               'You may be seeing this warning due to a third-party PropTypes ' +
               'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
@@ -67403,7 +67529,10 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
         // 'of type `object`'.
         var preciseType = getPreciseType(propValue);
 
-        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+        return new PropTypeError(
+          'Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'),
+          {expectedType: expectedType}
+        );
       }
       return null;
     }
@@ -67547,14 +67676,19 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     }
 
     function validate(props, propName, componentName, location, propFullName) {
+      var expectedTypes = [];
       for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
         var checker = arrayOfTypeCheckers[i];
-        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+        var checkerResult = checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret);
+        if (checkerResult == null) {
           return null;
         }
+        if (checkerResult.data && has(checkerResult.data, 'expectedType')) {
+          expectedTypes.push(checkerResult.data.expectedType);
+        }
       }
-
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+      var expectedTypesMessage = (expectedTypes.length > 0) ? ', expected one of type [' + expectedTypes.join(', ') + ']': '';
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`' + expectedTypesMessage + '.'));
     }
     return createChainableTypeChecker(validate);
   }
@@ -67569,6 +67703,13 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     return createChainableTypeChecker(validate);
   }
 
+  function invalidValidatorError(componentName, location, propFullName, key, type) {
+    return new PropTypeError(
+      (componentName || 'React class') + ': ' + location + ' type `' + propFullName + '.' + key + '` is invalid; ' +
+      'it must be a function, usually from the `prop-types` package, but received `' + type + '`.'
+    );
+  }
+
   function createShapeTypeChecker(shapeTypes) {
     function validate(props, propName, componentName, location, propFullName) {
       var propValue = props[propName];
@@ -67578,8 +67719,8 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       }
       for (var key in shapeTypes) {
         var checker = shapeTypes[key];
-        if (!checker) {
-          continue;
+        if (typeof checker !== 'function') {
+          return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
         }
         var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
         if (error) {
@@ -67598,16 +67739,18 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       if (propType !== 'object') {
         return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
       }
-      // We need to check all keys in case some are required but missing from
-      // props.
+      // We need to check all keys in case some are required but missing from props.
       var allKeys = assign({}, props[propName], shapeTypes);
       for (var key in allKeys) {
         var checker = shapeTypes[key];
+        if (has(shapeTypes, key) && typeof checker !== 'function') {
+          return invalidValidatorError(componentName, location, propFullName, key, getPreciseType(checker));
+        }
         if (!checker) {
           return new PropTypeError(
             'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
             '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
-            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+            '\nValid keys: ' + JSON.stringify(Object.keys(shapeTypes), null, '  ')
           );
         }
         var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
@@ -67806,6 +67949,17 @@ if (true) {
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
+
+
+/***/ }),
+
+/***/ "./node_modules/prop-types/lib/has.js":
+/*!********************************************!*\
+  !*** ./node_modules/prop-types/lib/has.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+module.exports = Function.call.bind(Object.prototype.hasOwnProperty);
 
 
 /***/ }),
@@ -94275,18 +94429,18 @@ module.exports = function isEqual(a, b) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "Helmet": () => (/* binding */ HelmetExport)
+/* harmony export */   "Helmet": () => (/* binding */ HelmetExport),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_side_effect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-side-effect */ "./node_modules/react-side-effect/lib/index.js");
-/* harmony import */ var react_side_effect__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_side_effect__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_fast_compare__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-fast-compare */ "./node_modules/react-fast-compare/index.js");
-/* harmony import */ var react_fast_compare__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_fast_compare__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var object_assign__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
-/* harmony import */ var object_assign__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(object_assign__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_side_effect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-side-effect */ "./node_modules/react-side-effect/lib/index.js");
+/* harmony import */ var react_side_effect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_side_effect__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_fast_compare__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-fast-compare */ "./node_modules/react-fast-compare/index.js");
+/* harmony import */ var react_fast_compare__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_fast_compare__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var object_assign__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
+/* harmony import */ var object_assign__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(object_assign__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -94563,7 +94717,7 @@ var getTagsFromPropsList = function getTagsFromPropsList(tagName, primaryAttribu
         var keys = Object.keys(instanceSeenTags);
         for (var i = 0; i < keys.length; i++) {
             var attributeKey = keys[i];
-            var tagUnion = object_assign__WEBPACK_IMPORTED_MODULE_4___default()({}, approvedSeenTags[attributeKey], instanceSeenTags[attributeKey]);
+            var tagUnion = object_assign__WEBPACK_IMPORTED_MODULE_3___default()({}, approvedSeenTags[attributeKey], instanceSeenTags[attributeKey]);
 
             approvedSeenTags[attributeKey] = tagUnion;
         }
@@ -94864,7 +95018,7 @@ var generateTitleAsReactComponent = function generateTitleAsReactComponent(type,
     }, _initProps[HELMET_ATTRIBUTE] = true, _initProps);
     var props = convertElementAttributestoReactProps(attributes, initProps);
 
-    return [react__WEBPACK_IMPORTED_MODULE_3__.createElement(TAG_NAMES.TITLE, props, title)];
+    return [react__WEBPACK_IMPORTED_MODULE_2__.createElement(TAG_NAMES.TITLE, props, title)];
 };
 
 var generateTagsAsReactComponent = function generateTagsAsReactComponent(type, tags) {
@@ -94886,7 +95040,7 @@ var generateTagsAsReactComponent = function generateTagsAsReactComponent(type, t
             }
         });
 
-        return react__WEBPACK_IMPORTED_MODULE_3__.createElement(type, mappedTag);
+        return react__WEBPACK_IMPORTED_MODULE_2__.createElement(type, mappedTag);
     });
 };
 
@@ -94961,7 +95115,7 @@ var Helmet = function Helmet(Component) {
         }
 
         HelmetWrapper.prototype.shouldComponentUpdate = function shouldComponentUpdate(nextProps) {
-            return !react_fast_compare__WEBPACK_IMPORTED_MODULE_2___default()(this.props, nextProps);
+            return !react_fast_compare__WEBPACK_IMPORTED_MODULE_1___default()(this.props, nextProps);
         };
 
         HelmetWrapper.prototype.mapNestedChildrenToProps = function mapNestedChildrenToProps(child, nestedChildren) {
@@ -95061,7 +95215,7 @@ var Helmet = function Helmet(Component) {
 
             var arrayTypeChildren = {};
 
-            react__WEBPACK_IMPORTED_MODULE_3__.Children.forEach(children, function (child) {
+            react__WEBPACK_IMPORTED_MODULE_2__.Children.forEach(children, function (child) {
                 if (!child || !child.props) {
                     return;
                 }
@@ -95114,7 +95268,7 @@ var Helmet = function Helmet(Component) {
                 newProps = this.mapChildrenToProps(children, newProps);
             }
 
-            return react__WEBPACK_IMPORTED_MODULE_3__.createElement(Component, newProps);
+            return react__WEBPACK_IMPORTED_MODULE_2__.createElement(Component, newProps);
         };
 
         createClass(HelmetWrapper, null, [{
@@ -95148,23 +95302,23 @@ var Helmet = function Helmet(Component) {
             }
         }]);
         return HelmetWrapper;
-    }(react__WEBPACK_IMPORTED_MODULE_3__.Component), _class.propTypes = {
-        base: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().object),
-        bodyAttributes: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().object),
-        children: prop_types__WEBPACK_IMPORTED_MODULE_0___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_0___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_0___default().node)), (prop_types__WEBPACK_IMPORTED_MODULE_0___default().node)]),
-        defaultTitle: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
-        defer: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().bool),
-        encodeSpecialCharacters: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().bool),
-        htmlAttributes: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().object),
-        link: prop_types__WEBPACK_IMPORTED_MODULE_0___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_0___default().object)),
-        meta: prop_types__WEBPACK_IMPORTED_MODULE_0___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_0___default().object)),
-        noscript: prop_types__WEBPACK_IMPORTED_MODULE_0___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_0___default().object)),
-        onChangeClientState: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().func),
-        script: prop_types__WEBPACK_IMPORTED_MODULE_0___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_0___default().object)),
-        style: prop_types__WEBPACK_IMPORTED_MODULE_0___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_0___default().object)),
-        title: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string),
-        titleAttributes: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().object),
-        titleTemplate: (prop_types__WEBPACK_IMPORTED_MODULE_0___default().string)
+    }(react__WEBPACK_IMPORTED_MODULE_2__.Component), _class.propTypes = {
+        base: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().object),
+        bodyAttributes: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().object),
+        children: prop_types__WEBPACK_IMPORTED_MODULE_4___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_4___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_4___default().node)), (prop_types__WEBPACK_IMPORTED_MODULE_4___default().node)]),
+        defaultTitle: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
+        defer: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool),
+        encodeSpecialCharacters: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool),
+        htmlAttributes: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().object),
+        link: prop_types__WEBPACK_IMPORTED_MODULE_4___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_4___default().object)),
+        meta: prop_types__WEBPACK_IMPORTED_MODULE_4___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_4___default().object)),
+        noscript: prop_types__WEBPACK_IMPORTED_MODULE_4___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_4___default().object)),
+        onChangeClientState: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func),
+        script: prop_types__WEBPACK_IMPORTED_MODULE_4___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_4___default().object)),
+        style: prop_types__WEBPACK_IMPORTED_MODULE_4___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_4___default().object)),
+        title: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string),
+        titleAttributes: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().object),
+        titleTemplate: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().string)
     }, _class.defaultProps = {
         defer: true,
         encodeSpecialCharacters: true
@@ -95195,7 +95349,7 @@ var NullComponent = function NullComponent() {
     return null;
 };
 
-var HelmetSideEffects = react_side_effect__WEBPACK_IMPORTED_MODULE_1___default()(reducePropsToState, handleClientStateChange, mapStateOnServer)(NullComponent);
+var HelmetSideEffects = react_side_effect__WEBPACK_IMPORTED_MODULE_0___default()(reducePropsToState, handleClientStateChange, mapStateOnServer)(NullComponent);
 
 var HelmetExport = Helmet(HelmetSideEffects);
 HelmetExport.renderStatic = HelmetExport.rewind;
@@ -95450,11 +95604,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/es/components/Context.js");
-/* harmony import */ var _utils_Subscription__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
-/* harmony import */ var _utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/useIsomorphicLayoutEffect */ "./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/es/components/Context.js");
+/* harmony import */ var _utils_Subscription__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
+/* harmony import */ var _utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/useIsomorphicLayoutEffect */ "./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js");
 
 
 
@@ -95466,8 +95620,7 @@ function Provider(_ref) {
       context = _ref.context,
       children = _ref.children;
   var contextValue = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
-    var subscription = (0,_utils_Subscription__WEBPACK_IMPORTED_MODULE_3__.createSubscription)(store);
-    subscription.onStateChange = subscription.notifyNestedSubs;
+    var subscription = (0,_utils_Subscription__WEBPACK_IMPORTED_MODULE_2__.createSubscription)(store);
     return {
       store: store,
       subscription: subscription
@@ -95476,8 +95629,9 @@ function Provider(_ref) {
   var previousState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(function () {
     return store.getState();
   }, [store]);
-  (0,_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_4__.useIsomorphicLayoutEffect)(function () {
+  (0,_utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_3__.useIsomorphicLayoutEffect)(function () {
     var subscription = contextValue.subscription;
+    subscription.onStateChange = subscription.notifyNestedSubs;
     subscription.trySubscribe();
 
     if (previousState !== store.getState()) {
@@ -95489,7 +95643,7 @@ function Provider(_ref) {
       subscription.onStateChange = null;
     };
   }, [contextValue, previousState]);
-  var Context = context || _Context__WEBPACK_IMPORTED_MODULE_2__.ReactReduxContext;
+  var Context = context || _Context__WEBPACK_IMPORTED_MODULE_1__.ReactReduxContext;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Context.Provider, {
     value: contextValue
   }, children);
@@ -95497,13 +95651,13 @@ function Provider(_ref) {
 
 if (true) {
   Provider.propTypes = {
-    store: prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({
-      subscribe: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired),
-      dispatch: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired),
-      getState: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().func.isRequired)
+    store: prop_types__WEBPACK_IMPORTED_MODULE_4___default().shape({
+      subscribe: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func.isRequired),
+      dispatch: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func.isRequired),
+      getState: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().func.isRequired)
     }),
-    context: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().object),
-    children: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().any)
+    context: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().object),
+    children: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().any)
   };
 }
 
@@ -95527,7 +95681,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
 /* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-is */ "./node_modules/react-redux/node_modules/react-is/index.js");
 /* harmony import */ var _utils_Subscription__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/Subscription */ "./node_modules/react-redux/es/utils/Subscription.js");
 /* harmony import */ var _utils_useIsomorphicLayoutEffect__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/useIsomorphicLayoutEffect */ "./node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js");
 /* harmony import */ var _Context__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Context */ "./node_modules/react-redux/es/components/Context.js");
@@ -96042,10 +96196,10 @@ function createConnect(_temp) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
 /* harmony export */   "whenMapDispatchToPropsIsFunction": () => (/* binding */ whenMapDispatchToPropsIsFunction),
 /* harmony export */   "whenMapDispatchToPropsIsMissing": () => (/* binding */ whenMapDispatchToPropsIsMissing),
-/* harmony export */   "whenMapDispatchToPropsIsObject": () => (/* binding */ whenMapDispatchToPropsIsObject),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "whenMapDispatchToPropsIsObject": () => (/* binding */ whenMapDispatchToPropsIsObject)
 /* harmony export */ });
 /* harmony import */ var _utils_bindActionCreators__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/bindActionCreators */ "./node_modules/react-redux/es/utils/bindActionCreators.js");
 /* harmony import */ var _wrapMapToProps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/es/connect/wrapMapToProps.js");
@@ -96079,9 +96233,9 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
 /* harmony export */   "whenMapStateToPropsIsFunction": () => (/* binding */ whenMapStateToPropsIsFunction),
-/* harmony export */   "whenMapStateToPropsIsMissing": () => (/* binding */ whenMapStateToPropsIsMissing),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "whenMapStateToPropsIsMissing": () => (/* binding */ whenMapStateToPropsIsMissing)
 /* harmony export */ });
 /* harmony import */ var _wrapMapToProps__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./wrapMapToProps */ "./node_modules/react-redux/es/connect/wrapMapToProps.js");
 
@@ -96106,11 +96260,11 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
 /* harmony export */   "defaultMergeProps": () => (/* binding */ defaultMergeProps),
-/* harmony export */   "wrapMergePropsFunc": () => (/* binding */ wrapMergePropsFunc),
 /* harmony export */   "whenMergePropsIsFunction": () => (/* binding */ whenMergePropsIsFunction),
 /* harmony export */   "whenMergePropsIsOmitted": () => (/* binding */ whenMergePropsIsOmitted),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "wrapMergePropsFunc": () => (/* binding */ wrapMergePropsFunc)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var _utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/verifyPlainObject */ "./node_modules/react-redux/es/utils/verifyPlainObject.js");
@@ -96162,9 +96316,9 @@ function whenMergePropsIsOmitted(mergeProps) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ finalPropsSelectorFactory),
 /* harmony export */   "impureFinalPropsSelectorFactory": () => (/* binding */ impureFinalPropsSelectorFactory),
-/* harmony export */   "pureFinalPropsSelectorFactory": () => (/* binding */ pureFinalPropsSelectorFactory),
-/* harmony export */   "default": () => (/* binding */ finalPropsSelectorFactory)
+/* harmony export */   "pureFinalPropsSelectorFactory": () => (/* binding */ pureFinalPropsSelectorFactory)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
 /* harmony import */ var _verifySubselectors__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./verifySubselectors */ "./node_modules/react-redux/es/connect/verifySubselectors.js");
@@ -96300,8 +96454,8 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "wrapMapToPropsConstant": () => (/* binding */ wrapMapToPropsConstant),
 /* harmony export */   "getDependsOnOwnProps": () => (/* binding */ getDependsOnOwnProps),
+/* harmony export */   "wrapMapToPropsConstant": () => (/* binding */ wrapMapToPropsConstant),
 /* harmony export */   "wrapMapToPropsFunc": () => (/* binding */ wrapMapToPropsFunc)
 /* harmony export */ });
 /* harmony import */ var _utils_verifyPlainObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/verifyPlainObject */ "./node_modules/react-redux/es/utils/verifyPlainObject.js");
@@ -96382,16 +96536,16 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Provider": () => (/* reexport safe */ _components_Provider__WEBPACK_IMPORTED_MODULE_0__["default"]),
-/* harmony export */   "connectAdvanced": () => (/* reexport safe */ _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_1__["default"]),
 /* harmony export */   "ReactReduxContext": () => (/* reexport safe */ _components_Context__WEBPACK_IMPORTED_MODULE_2__.ReactReduxContext),
 /* harmony export */   "connect": () => (/* reexport safe */ _connect_connect__WEBPACK_IMPORTED_MODULE_3__["default"]),
-/* harmony export */   "useDispatch": () => (/* reexport safe */ _hooks_useDispatch__WEBPACK_IMPORTED_MODULE_4__.useDispatch),
+/* harmony export */   "connectAdvanced": () => (/* reexport safe */ _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_1__["default"]),
 /* harmony export */   "createDispatchHook": () => (/* reexport safe */ _hooks_useDispatch__WEBPACK_IMPORTED_MODULE_4__.createDispatchHook),
-/* harmony export */   "useSelector": () => (/* reexport safe */ _hooks_useSelector__WEBPACK_IMPORTED_MODULE_5__.useSelector),
 /* harmony export */   "createSelectorHook": () => (/* reexport safe */ _hooks_useSelector__WEBPACK_IMPORTED_MODULE_5__.createSelectorHook),
-/* harmony export */   "useStore": () => (/* reexport safe */ _hooks_useStore__WEBPACK_IMPORTED_MODULE_6__.useStore),
 /* harmony export */   "createStoreHook": () => (/* reexport safe */ _hooks_useStore__WEBPACK_IMPORTED_MODULE_6__.createStoreHook),
-/* harmony export */   "shallowEqual": () => (/* reexport safe */ _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_7__["default"])
+/* harmony export */   "shallowEqual": () => (/* reexport safe */ _utils_shallowEqual__WEBPACK_IMPORTED_MODULE_7__["default"]),
+/* harmony export */   "useDispatch": () => (/* reexport safe */ _hooks_useDispatch__WEBPACK_IMPORTED_MODULE_4__.useDispatch),
+/* harmony export */   "useSelector": () => (/* reexport safe */ _hooks_useSelector__WEBPACK_IMPORTED_MODULE_5__.useSelector),
+/* harmony export */   "useStore": () => (/* reexport safe */ _hooks_useStore__WEBPACK_IMPORTED_MODULE_6__.useStore)
 /* harmony export */ });
 /* harmony import */ var _components_Provider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Provider */ "./node_modules/react-redux/es/components/Provider.js");
 /* harmony import */ var _components_connectAdvanced__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/connectAdvanced */ "./node_modules/react-redux/es/components/connectAdvanced.js");
@@ -96766,6 +96920,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Provider": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.Provider),
 /* harmony export */   "ReactReduxContext": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.ReactReduxContext),
+/* harmony export */   "batch": () => (/* reexport safe */ _utils_reactBatchedUpdates__WEBPACK_IMPORTED_MODULE_1__.unstable_batchedUpdates),
 /* harmony export */   "connect": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.connect),
 /* harmony export */   "connectAdvanced": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.connectAdvanced),
 /* harmony export */   "createDispatchHook": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.createDispatchHook),
@@ -96774,8 +96929,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "shallowEqual": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.shallowEqual),
 /* harmony export */   "useDispatch": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.useDispatch),
 /* harmony export */   "useSelector": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.useSelector),
-/* harmony export */   "useStore": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.useStore),
-/* harmony export */   "batch": () => (/* reexport safe */ _utils_reactBatchedUpdates__WEBPACK_IMPORTED_MODULE_1__.unstable_batchedUpdates)
+/* harmony export */   "useStore": () => (/* reexport safe */ _exports__WEBPACK_IMPORTED_MODULE_0__.useStore)
 /* harmony export */ });
 /* harmony import */ var _exports__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./exports */ "./node_modules/react-redux/es/exports.js");
 /* harmony import */ var _utils_reactBatchedUpdates__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/reactBatchedUpdates */ "./node_modules/react-redux/es/utils/reactBatchedUpdates.js");
@@ -96940,8 +97094,8 @@ function createSubscription(store, parentSub) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "setBatch": () => (/* binding */ setBatch),
-/* harmony export */   "getBatch": () => (/* binding */ getBatch)
+/* harmony export */   "getBatch": () => (/* binding */ getBatch),
+/* harmony export */   "setBatch": () => (/* binding */ setBatch)
 /* harmony export */ });
 // Default to a dummy "batch" implementation that just runs the callback
 function defaultNoopBatch(callback) {
@@ -97167,6 +97321,259 @@ function warning(message) {
 
 /***/ }),
 
+/***/ "./node_modules/react-redux/node_modules/react-is/cjs/react-is.development.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/react-redux/node_modules/react-is/cjs/react-is.development.js ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+/** @license React v17.0.2
+ * react-is.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+if (true) {
+  (function() {
+'use strict';
+
+// ATTENTION
+// When adding new symbols to this file,
+// Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var REACT_ELEMENT_TYPE = 0xeac7;
+var REACT_PORTAL_TYPE = 0xeaca;
+var REACT_FRAGMENT_TYPE = 0xeacb;
+var REACT_STRICT_MODE_TYPE = 0xeacc;
+var REACT_PROFILER_TYPE = 0xead2;
+var REACT_PROVIDER_TYPE = 0xeacd;
+var REACT_CONTEXT_TYPE = 0xeace;
+var REACT_FORWARD_REF_TYPE = 0xead0;
+var REACT_SUSPENSE_TYPE = 0xead1;
+var REACT_SUSPENSE_LIST_TYPE = 0xead8;
+var REACT_MEMO_TYPE = 0xead3;
+var REACT_LAZY_TYPE = 0xead4;
+var REACT_BLOCK_TYPE = 0xead9;
+var REACT_SERVER_BLOCK_TYPE = 0xeada;
+var REACT_FUNDAMENTAL_TYPE = 0xead5;
+var REACT_SCOPE_TYPE = 0xead7;
+var REACT_OPAQUE_ID_TYPE = 0xeae0;
+var REACT_DEBUG_TRACING_MODE_TYPE = 0xeae1;
+var REACT_OFFSCREEN_TYPE = 0xeae2;
+var REACT_LEGACY_HIDDEN_TYPE = 0xeae3;
+
+if (typeof Symbol === 'function' && Symbol.for) {
+  var symbolFor = Symbol.for;
+  REACT_ELEMENT_TYPE = symbolFor('react.element');
+  REACT_PORTAL_TYPE = symbolFor('react.portal');
+  REACT_FRAGMENT_TYPE = symbolFor('react.fragment');
+  REACT_STRICT_MODE_TYPE = symbolFor('react.strict_mode');
+  REACT_PROFILER_TYPE = symbolFor('react.profiler');
+  REACT_PROVIDER_TYPE = symbolFor('react.provider');
+  REACT_CONTEXT_TYPE = symbolFor('react.context');
+  REACT_FORWARD_REF_TYPE = symbolFor('react.forward_ref');
+  REACT_SUSPENSE_TYPE = symbolFor('react.suspense');
+  REACT_SUSPENSE_LIST_TYPE = symbolFor('react.suspense_list');
+  REACT_MEMO_TYPE = symbolFor('react.memo');
+  REACT_LAZY_TYPE = symbolFor('react.lazy');
+  REACT_BLOCK_TYPE = symbolFor('react.block');
+  REACT_SERVER_BLOCK_TYPE = symbolFor('react.server.block');
+  REACT_FUNDAMENTAL_TYPE = symbolFor('react.fundamental');
+  REACT_SCOPE_TYPE = symbolFor('react.scope');
+  REACT_OPAQUE_ID_TYPE = symbolFor('react.opaque.id');
+  REACT_DEBUG_TRACING_MODE_TYPE = symbolFor('react.debug_trace_mode');
+  REACT_OFFSCREEN_TYPE = symbolFor('react.offscreen');
+  REACT_LEGACY_HIDDEN_TYPE = symbolFor('react.legacy_hidden');
+}
+
+// Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
+
+var enableScopeAPI = false; // Experimental Create Event Handle API.
+
+function isValidElementType(type) {
+  if (typeof type === 'string' || typeof type === 'function') {
+    return true;
+  } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+
+
+  if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_DEBUG_TRACING_MODE_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI ) {
+    return true;
+  }
+
+  if (typeof type === 'object' && type !== null) {
+    if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_BLOCK_TYPE || type[0] === REACT_SERVER_BLOCK_TYPE) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function typeOf(object) {
+  if (typeof object === 'object' && object !== null) {
+    var $$typeof = object.$$typeof;
+
+    switch ($$typeof) {
+      case REACT_ELEMENT_TYPE:
+        var type = object.type;
+
+        switch (type) {
+          case REACT_FRAGMENT_TYPE:
+          case REACT_PROFILER_TYPE:
+          case REACT_STRICT_MODE_TYPE:
+          case REACT_SUSPENSE_TYPE:
+          case REACT_SUSPENSE_LIST_TYPE:
+            return type;
+
+          default:
+            var $$typeofType = type && type.$$typeof;
+
+            switch ($$typeofType) {
+              case REACT_CONTEXT_TYPE:
+              case REACT_FORWARD_REF_TYPE:
+              case REACT_LAZY_TYPE:
+              case REACT_MEMO_TYPE:
+              case REACT_PROVIDER_TYPE:
+                return $$typeofType;
+
+              default:
+                return $$typeof;
+            }
+
+        }
+
+      case REACT_PORTAL_TYPE:
+        return $$typeof;
+    }
+  }
+
+  return undefined;
+}
+var ContextConsumer = REACT_CONTEXT_TYPE;
+var ContextProvider = REACT_PROVIDER_TYPE;
+var Element = REACT_ELEMENT_TYPE;
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Fragment = REACT_FRAGMENT_TYPE;
+var Lazy = REACT_LAZY_TYPE;
+var Memo = REACT_MEMO_TYPE;
+var Portal = REACT_PORTAL_TYPE;
+var Profiler = REACT_PROFILER_TYPE;
+var StrictMode = REACT_STRICT_MODE_TYPE;
+var Suspense = REACT_SUSPENSE_TYPE;
+var hasWarnedAboutDeprecatedIsAsyncMode = false;
+var hasWarnedAboutDeprecatedIsConcurrentMode = false; // AsyncMode should be deprecated
+
+function isAsyncMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+      hasWarnedAboutDeprecatedIsAsyncMode = true; // Using console['warn'] to evade Babel and ESLint
+
+      console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
+    }
+  }
+
+  return false;
+}
+function isConcurrentMode(object) {
+  {
+    if (!hasWarnedAboutDeprecatedIsConcurrentMode) {
+      hasWarnedAboutDeprecatedIsConcurrentMode = true; // Using console['warn'] to evade Babel and ESLint
+
+      console['warn']('The ReactIs.isConcurrentMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
+    }
+  }
+
+  return false;
+}
+function isContextConsumer(object) {
+  return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isContextProvider(object) {
+  return typeOf(object) === REACT_PROVIDER_TYPE;
+}
+function isElement(object) {
+  return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+}
+function isForwardRef(object) {
+  return typeOf(object) === REACT_FORWARD_REF_TYPE;
+}
+function isFragment(object) {
+  return typeOf(object) === REACT_FRAGMENT_TYPE;
+}
+function isLazy(object) {
+  return typeOf(object) === REACT_LAZY_TYPE;
+}
+function isMemo(object) {
+  return typeOf(object) === REACT_MEMO_TYPE;
+}
+function isPortal(object) {
+  return typeOf(object) === REACT_PORTAL_TYPE;
+}
+function isProfiler(object) {
+  return typeOf(object) === REACT_PROFILER_TYPE;
+}
+function isStrictMode(object) {
+  return typeOf(object) === REACT_STRICT_MODE_TYPE;
+}
+function isSuspense(object) {
+  return typeOf(object) === REACT_SUSPENSE_TYPE;
+}
+
+exports.ContextConsumer = ContextConsumer;
+exports.ContextProvider = ContextProvider;
+exports.Element = Element;
+exports.ForwardRef = ForwardRef;
+exports.Fragment = Fragment;
+exports.Lazy = Lazy;
+exports.Memo = Memo;
+exports.Portal = Portal;
+exports.Profiler = Profiler;
+exports.StrictMode = StrictMode;
+exports.Suspense = Suspense;
+exports.isAsyncMode = isAsyncMode;
+exports.isConcurrentMode = isConcurrentMode;
+exports.isContextConsumer = isContextConsumer;
+exports.isContextProvider = isContextProvider;
+exports.isElement = isElement;
+exports.isForwardRef = isForwardRef;
+exports.isFragment = isFragment;
+exports.isLazy = isLazy;
+exports.isMemo = isMemo;
+exports.isPortal = isPortal;
+exports.isProfiler = isProfiler;
+exports.isStrictMode = isStrictMode;
+exports.isSuspense = isSuspense;
+exports.isValidElementType = isValidElementType;
+exports.typeOf = typeOf;
+  })();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-redux/node_modules/react-is/index.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-redux/node_modules/react-is/index.js ***!
+  \*****************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/react-is.development.js */ "./node_modules/react-redux/node_modules/react-is/cjs/react-is.development.js");
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/react-router-dom/esm/react-router-dom.js":
 /*!***************************************************************!*\
   !*** ./node_modules/react-router-dom/esm/react-router-dom.js ***!
@@ -97176,7 +97583,11 @@ function warning(message) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "BrowserRouter": () => (/* binding */ BrowserRouter),
+/* harmony export */   "HashRouter": () => (/* binding */ HashRouter),
+/* harmony export */   "Link": () => (/* binding */ Link),
 /* harmony export */   "MemoryRouter": () => (/* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_0__.MemoryRouter),
+/* harmony export */   "NavLink": () => (/* binding */ NavLink),
 /* harmony export */   "Prompt": () => (/* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_0__.Prompt),
 /* harmony export */   "Redirect": () => (/* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_0__.Redirect),
 /* harmony export */   "Route": () => (/* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_0__.Route),
@@ -97189,21 +97600,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "useLocation": () => (/* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_0__.useLocation),
 /* harmony export */   "useParams": () => (/* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_0__.useParams),
 /* harmony export */   "useRouteMatch": () => (/* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_0__.useRouteMatch),
-/* harmony export */   "withRouter": () => (/* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_0__.withRouter),
-/* harmony export */   "BrowserRouter": () => (/* binding */ BrowserRouter),
-/* harmony export */   "HashRouter": () => (/* binding */ HashRouter),
-/* harmony export */   "Link": () => (/* binding */ Link),
-/* harmony export */   "NavLink": () => (/* binding */ NavLink)
+/* harmony export */   "withRouter": () => (/* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_0__.withRouter)
 /* harmony export */ });
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var history__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! history */ "./node_modules/history/esm/history.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var history__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! history */ "./node_modules/history/esm/history.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var tiny_warning__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! tiny-warning */ "./node_modules/tiny-warning/dist/tiny-warning.esm.js");
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
 /* harmony import */ var tiny_invariant__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! tiny-invariant */ "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js");
 
 
@@ -97231,7 +97638,7 @@ var BrowserRouter = /*#__PURE__*/function (_React$Component) {
     }
 
     _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
-    _this.history = (0,history__WEBPACK_IMPORTED_MODULE_6__.createBrowserHistory)(_this.props);
+    _this.history = (0,history__WEBPACK_IMPORTED_MODULE_5__.createBrowserHistory)(_this.props);
     return _this;
   }
 
@@ -97249,11 +97656,11 @@ var BrowserRouter = /*#__PURE__*/function (_React$Component) {
 
 if (true) {
   BrowserRouter.propTypes = {
-    basename: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
-    children: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().node),
-    forceRefresh: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
-    getUserConfirmation: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func),
-    keyLength: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().number)
+    basename: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().string),
+    children: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().node),
+    forceRefresh: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().bool),
+    getUserConfirmation: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func),
+    keyLength: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().number)
   };
 
   BrowserRouter.prototype.componentDidMount = function () {
@@ -97276,7 +97683,7 @@ var HashRouter = /*#__PURE__*/function (_React$Component) {
     }
 
     _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
-    _this.history = (0,history__WEBPACK_IMPORTED_MODULE_6__.createHashHistory)(_this.props);
+    _this.history = (0,history__WEBPACK_IMPORTED_MODULE_5__.createHashHistory)(_this.props);
     return _this;
   }
 
@@ -97294,10 +97701,10 @@ var HashRouter = /*#__PURE__*/function (_React$Component) {
 
 if (true) {
   HashRouter.propTypes = {
-    basename: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
-    children: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().node),
-    getUserConfirmation: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func),
-    hashType: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(["hashbang", "noslash", "slash"])
+    basename: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().string),
+    children: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().node),
+    getUserConfirmation: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func),
+    hashType: prop_types__WEBPACK_IMPORTED_MODULE_6___default().oneOf(["hashbang", "noslash", "slash"])
   };
 
   HashRouter.prototype.componentDidMount = function () {
@@ -97309,7 +97716,7 @@ var resolveToLocation = function resolveToLocation(to, currentLocation) {
   return typeof to === "function" ? to(currentLocation) : to;
 };
 var normalizeToLocation = function normalizeToLocation(to, currentLocation) {
-  return typeof to === "string" ? (0,history__WEBPACK_IMPORTED_MODULE_6__.createLocation)(to, null, null, currentLocation) : to;
+  return typeof to === "string" ? (0,history__WEBPACK_IMPORTED_MODULE_5__.createLocation)(to, null, null, currentLocation) : to;
 };
 
 var forwardRefShim = function forwardRefShim(C) {
@@ -97330,11 +97737,11 @@ var LinkAnchor = forwardRef(function (_ref, forwardedRef) {
   var innerRef = _ref.innerRef,
       navigate = _ref.navigate,
       _onClick = _ref.onClick,
-      rest = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, ["innerRef", "navigate", "onClick"]);
+      rest = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, ["innerRef", "navigate", "onClick"]);
 
   var target = rest.target;
 
-  var props = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, rest, {
+  var props = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, rest, {
     onClick: function onClick(event) {
       try {
         if (_onClick) _onClick(event);
@@ -97380,7 +97787,7 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
       replace = _ref2.replace,
       to = _ref2.to,
       innerRef = _ref2.innerRef,
-      rest = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref2, ["component", "replace", "to", "innerRef"]);
+      rest = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref2, ["component", "replace", "to", "innerRef"]);
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router__WEBPACK_IMPORTED_MODULE_0__.__RouterContext.Consumer, null, function (context) {
     !context ?  true ? (0,tiny_invariant__WEBPACK_IMPORTED_MODULE_8__["default"])(false, "You should not use <Link> outside a <Router>") : 0 : void 0;
@@ -97388,11 +97795,11 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
     var location = normalizeToLocation(resolveToLocation(to, context.location), context.location);
     var href = location ? history.createHref(location) : "";
 
-    var props = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, rest, {
+    var props = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, rest, {
       href: href,
       navigate: function navigate() {
         var location = resolveToLocation(to, context.location);
-        var isDuplicateNavigation = (0,history__WEBPACK_IMPORTED_MODULE_6__.createPath)(context.location) === (0,history__WEBPACK_IMPORTED_MODULE_6__.createPath)(normalizeToLocation(location));
+        var isDuplicateNavigation = (0,history__WEBPACK_IMPORTED_MODULE_5__.createPath)(context.location) === (0,history__WEBPACK_IMPORTED_MODULE_5__.createPath)(normalizeToLocation(location));
         var method = replace || isDuplicateNavigation ? history.replace : history.push;
         method(location);
       }
@@ -97410,16 +97817,16 @@ var Link = forwardRef(function (_ref2, forwardedRef) {
 });
 
 if (true) {
-  var toType = prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_3___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func)]);
-  var refType = prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_3___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func), prop_types__WEBPACK_IMPORTED_MODULE_3___default().shape({
-    current: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().any)
+  var toType = prop_types__WEBPACK_IMPORTED_MODULE_6___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_6___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_6___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func)]);
+  var refType = prop_types__WEBPACK_IMPORTED_MODULE_6___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_6___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func), prop_types__WEBPACK_IMPORTED_MODULE_6___default().shape({
+    current: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().any)
   })]);
   Link.displayName = "Link";
   Link.propTypes = {
     innerRef: refType,
-    onClick: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func),
-    replace: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
-    target: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
+    onClick: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func),
+    replace: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().bool),
+    target: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().string),
     to: toType.isRequired
   };
 }
@@ -97463,7 +97870,7 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
       styleProp = _ref.style,
       to = _ref.to,
       innerRef = _ref.innerRef,
-      rest = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_5__["default"])(_ref, ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"]);
+      rest = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_4__["default"])(_ref, ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"]);
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react_router__WEBPACK_IMPORTED_MODULE_0__.__RouterContext.Consumer, null, function (context) {
     !context ?  true ? (0,tiny_invariant__WEBPACK_IMPORTED_MODULE_8__["default"])(false, "You should not use <NavLink> outside a <Router>") : 0 : void 0;
@@ -97484,10 +97891,10 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
 
     if (isActive) {
       className = joinClassnames(className, activeClassName);
-      style = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, style, activeStyle);
+      style = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, style, activeStyle);
     }
 
-    var props = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({
+    var props = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({
       "aria-current": isActive && ariaCurrent || null,
       className: className,
       style: style,
@@ -97507,18 +97914,18 @@ var NavLink = forwardRef$1(function (_ref, forwardedRef) {
 
 if (true) {
   NavLink.displayName = "NavLink";
-  var ariaCurrentType = prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(["page", "step", "location", "date", "time", "true", "false"]);
-  NavLink.propTypes = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, Link.propTypes, {
+  var ariaCurrentType = prop_types__WEBPACK_IMPORTED_MODULE_6___default().oneOf(["page", "step", "location", "date", "time", "true", "false"]);
+  NavLink.propTypes = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, Link.propTypes, {
     "aria-current": ariaCurrentType,
-    activeClassName: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
-    activeStyle: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object),
-    className: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_3___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func)]),
-    exact: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
-    isActive: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func),
-    location: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object),
-    sensitive: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
-    strict: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
-    style: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_3___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func)])
+    activeClassName: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().string),
+    activeStyle: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().object),
+    className: prop_types__WEBPACK_IMPORTED_MODULE_6___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_6___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func)]),
+    exact: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().bool),
+    isActive: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func),
+    location: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().object),
+    sensitive: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().bool),
+    strict: (prop_types__WEBPACK_IMPORTED_MODULE_6___default().bool),
+    style: prop_types__WEBPACK_IMPORTED_MODULE_6___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_6___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_6___default().func)])
   });
 }
 
@@ -97556,19 +97963,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var history__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! history */ "./node_modules/history/esm/history.js");
 /* harmony import */ var tiny_warning__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! tiny-warning */ "./node_modules/tiny-warning/dist/tiny-warning.esm.js");
-/* harmony import */ var mini_create_react_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! mini-create-react-context */ "./node_modules/mini-create-react-context/dist/esm/index.js");
+/* harmony import */ var mini_create_react_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! mini-create-react-context */ "./node_modules/mini-create-react-context/dist/esm/index.js");
 /* harmony import */ var tiny_invariant__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! tiny-invariant */ "./node_modules/tiny-invariant/dist/tiny-invariant.esm.js");
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var path_to_regexp__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! path-to-regexp */ "./node_modules/path-to-regexp/index.js");
-/* harmony import */ var path_to_regexp__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(path_to_regexp__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
-/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var path_to_regexp__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! path-to-regexp */ "./node_modules/path-to-regexp/index.js");
+/* harmony import */ var path_to_regexp__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(path_to_regexp__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_is__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js");
+/* harmony import */ var hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -97585,7 +97992,7 @@ __webpack_require__.r(__webpack_exports__);
 // TODO: Replace with React.createContext once we can assume React 16+
 
 var createNamedContext = function createNamedContext(name) {
-  var context = (0,mini_create_react_context__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  var context = (0,mini_create_react_context__WEBPACK_IMPORTED_MODULE_2__["default"])();
   context.displayName = name;
   return context;
 };
@@ -97627,13 +98034,7 @@ var Router = /*#__PURE__*/function (_React$Component) {
 
     if (!props.staticContext) {
       _this.unlisten = props.history.listen(function (location) {
-        if (_this._isMounted) {
-          _this.setState({
-            location: location
-          });
-        } else {
-          _this._pendingLocation = location;
-        }
+        _this._pendingLocation = location;
       });
     }
 
@@ -97643,7 +98044,25 @@ var Router = /*#__PURE__*/function (_React$Component) {
   var _proto = Router.prototype;
 
   _proto.componentDidMount = function componentDidMount() {
+    var _this2 = this;
+
     this._isMounted = true;
+
+    if (this.unlisten) {
+      // Any pre-mount location changes have been captured at
+      // this point, so unregister the listener.
+      this.unlisten();
+    }
+
+    if (!this.props.staticContext) {
+      this.unlisten = this.props.history.listen(function (location) {
+        if (_this2._isMounted) {
+          _this2.setState({
+            location: location
+          });
+        }
+      });
+    }
 
     if (this._pendingLocation) {
       this.setState({
@@ -97679,9 +98098,9 @@ var Router = /*#__PURE__*/function (_React$Component) {
 
 if (true) {
   Router.propTypes = {
-    children: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().node),
-    history: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object.isRequired),
-    staticContext: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object)
+    children: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().node),
+    history: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object.isRequired),
+    staticContext: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object)
   };
 
   Router.prototype.componentDidUpdate = function (prevProps) {
@@ -97722,11 +98141,11 @@ var MemoryRouter = /*#__PURE__*/function (_React$Component) {
 
 if (true) {
   MemoryRouter.propTypes = {
-    initialEntries: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().array),
-    initialIndex: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().number),
-    getUserConfirmation: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func),
-    keyLength: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().number),
-    children: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().node)
+    initialEntries: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().array),
+    initialIndex: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().number),
+    getUserConfirmation: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+    keyLength: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().number),
+    children: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().node)
   };
 
   MemoryRouter.prototype.componentDidMount = function () {
@@ -97793,9 +98212,9 @@ function Prompt(_ref) {
 }
 
 if (true) {
-  var messageType = prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string)]);
+  var messageType = prop_types__WEBPACK_IMPORTED_MODULE_8___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_8___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string)]);
   Prompt.propTypes = {
-    when: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
+    when: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
     message: messageType.isRequired
   };
 }
@@ -97806,7 +98225,7 @@ var cacheCount = 0;
 
 function compilePath(path) {
   if (cache[path]) return cache[path];
-  var generator = path_to_regexp__WEBPACK_IMPORTED_MODULE_5___default().compile(path);
+  var generator = path_to_regexp__WEBPACK_IMPORTED_MODULE_4___default().compile(path);
 
   if (cacheCount < cacheLimit) {
     cache[path] = generator;
@@ -97848,7 +98267,7 @@ function Redirect(_ref) {
     var history = context.history,
         staticContext = context.staticContext;
     var method = push ? history.push : history.replace;
-    var location = (0,history__WEBPACK_IMPORTED_MODULE_10__.createLocation)(computedMatch ? typeof to === "string" ? generatePath(to, computedMatch.params) : (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, to, {
+    var location = (0,history__WEBPACK_IMPORTED_MODULE_10__.createLocation)(computedMatch ? typeof to === "string" ? generatePath(to, computedMatch.params) : (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, to, {
       pathname: generatePath(to.pathname, computedMatch.params)
     }) : to); // When rendering in a static context,
     // set the new location immediately.
@@ -97865,7 +98284,7 @@ function Redirect(_ref) {
       onUpdate: function onUpdate(self, prevProps) {
         var prevLocation = (0,history__WEBPACK_IMPORTED_MODULE_10__.createLocation)(prevProps.to);
 
-        if (!(0,history__WEBPACK_IMPORTED_MODULE_10__.locationsAreEqual)(prevLocation, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, location, {
+        if (!(0,history__WEBPACK_IMPORTED_MODULE_10__.locationsAreEqual)(prevLocation, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, location, {
           key: prevLocation.key
         }))) {
           method(location);
@@ -97878,9 +98297,9 @@ function Redirect(_ref) {
 
 if (true) {
   Redirect.propTypes = {
-    push: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-    from: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-    to: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object)]).isRequired
+    push: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
+    from: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),
+    to: prop_types__WEBPACK_IMPORTED_MODULE_8___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_8___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object)]).isRequired
   };
 }
 
@@ -97893,7 +98312,7 @@ function compilePath$1(path, options) {
   var pathCache = cache$1[cacheKey] || (cache$1[cacheKey] = {});
   if (pathCache[path]) return pathCache[path];
   var keys = [];
-  var regexp = path_to_regexp__WEBPACK_IMPORTED_MODULE_5___default()(path, keys, options);
+  var regexp = path_to_regexp__WEBPACK_IMPORTED_MODULE_4___default()(path, keys, options);
   var result = {
     regexp: regexp,
     keys: keys
@@ -97996,7 +98415,7 @@ var Route = /*#__PURE__*/function (_React$Component) {
       var match = _this.props.computedMatch ? _this.props.computedMatch // <Switch> already computed the match for us
       : _this.props.path ? matchPath(location.pathname, _this.props) : context$1.match;
 
-      var props = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, context$1, {
+      var props = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, context$1, {
         location: location,
         match: match
       });
@@ -98022,18 +98441,18 @@ var Route = /*#__PURE__*/function (_React$Component) {
 
 if (true) {
   Route.propTypes = {
-    children: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().node)]),
+    children: prop_types__WEBPACK_IMPORTED_MODULE_8___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_8___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_8___default().node)]),
     component: function component(props, propName) {
-      if (props[propName] && !(0,react_is__WEBPACK_IMPORTED_MODULE_6__.isValidElementType)(props[propName])) {
+      if (props[propName] && !(0,react_is__WEBPACK_IMPORTED_MODULE_5__.isValidElementType)(props[propName])) {
         return new Error("Invalid prop 'component' supplied to 'Route': the prop is not a valid React component");
       }
     },
-    exact: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-    location: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object),
-    path: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().string), prop_types__WEBPACK_IMPORTED_MODULE_2___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_2___default().string))]),
-    render: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func),
-    sensitive: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool),
-    strict: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().bool)
+    exact: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
+    location: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
+    path: prop_types__WEBPACK_IMPORTED_MODULE_8___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_8___default().string), prop_types__WEBPACK_IMPORTED_MODULE_8___default().arrayOf((prop_types__WEBPACK_IMPORTED_MODULE_8___default().string))]),
+    render: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func),
+    sensitive: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool),
+    strict: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().bool)
   };
 
   Route.prototype.componentDidMount = function () {
@@ -98054,7 +98473,7 @@ function addLeadingSlash(path) {
 
 function addBasename(basename, location) {
   if (!basename) return location;
-  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, location, {
+  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, location, {
     pathname: addLeadingSlash(basename) + location.pathname
   });
 }
@@ -98063,7 +98482,7 @@ function stripBasename(basename, location) {
   if (!basename) return location;
   var base = addLeadingSlash(basename);
   if (location.pathname.indexOf(base) !== 0) return location;
-  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, location, {
+  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, location, {
     pathname: location.pathname.substr(base.length)
   });
 }
@@ -98139,7 +98558,7 @@ var StaticRouter = /*#__PURE__*/function (_React$Component) {
         context = _this$props2$context === void 0 ? {} : _this$props2$context,
         _this$props2$location = _this$props2.location,
         location = _this$props2$location === void 0 ? "/" : _this$props2$location,
-        rest = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_7__["default"])(_this$props2, ["basename", "context", "location"]);
+        rest = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_6__["default"])(_this$props2, ["basename", "context", "location"]);
 
     var history = {
       createHref: function createHref(path) {
@@ -98155,7 +98574,7 @@ var StaticRouter = /*#__PURE__*/function (_React$Component) {
       listen: this.handleListen,
       block: this.handleBlock
     };
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Router, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, rest, {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Router, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, rest, {
       history: history,
       staticContext: context
     }));
@@ -98166,9 +98585,9 @@ var StaticRouter = /*#__PURE__*/function (_React$Component) {
 
 if (true) {
   StaticRouter.propTypes = {
-    basename: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
-    context: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object),
-    location: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object)])
+    basename: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().string),
+    context: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object),
+    location: prop_types__WEBPACK_IMPORTED_MODULE_8___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_8___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object)])
   };
 
   StaticRouter.prototype.componentDidMount = function () {
@@ -98204,7 +98623,7 @@ var Switch = /*#__PURE__*/function (_React$Component) {
         if (match == null && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.isValidElement(child)) {
           element = child;
           var path = child.props.path || child.props.from;
-          match = path ? matchPath(location.pathname, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, child.props, {
+          match = path ? matchPath(location.pathname, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, child.props, {
             path: path
           })) : context.match;
         }
@@ -98221,8 +98640,8 @@ var Switch = /*#__PURE__*/function (_React$Component) {
 
 if (true) {
   Switch.propTypes = {
-    children: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().node),
-    location: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object)
+    children: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().node),
+    location: (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object)
   };
 
   Switch.prototype.componentDidUpdate = function (prevProps) {
@@ -98240,11 +98659,11 @@ function withRouter(Component) {
 
   var C = function C(props) {
     var wrappedComponentRef = props.wrappedComponentRef,
-        remainingProps = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_7__["default"])(props, ["wrappedComponentRef"]);
+        remainingProps = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_6__["default"])(props, ["wrappedComponentRef"]);
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(context.Consumer, null, function (context) {
       !context ?  true ? (0,tiny_invariant__WEBPACK_IMPORTED_MODULE_11__["default"])(false, "You should not use <" + displayName + " /> outside a <Router>") : 0 : void 0;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Component, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_4__["default"])({}, remainingProps, context, {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(Component, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({}, remainingProps, context, {
         ref: wrappedComponentRef
       }));
     });
@@ -98255,11 +98674,11 @@ function withRouter(Component) {
 
   if (true) {
     C.propTypes = {
-      wrappedComponentRef: prop_types__WEBPACK_IMPORTED_MODULE_2___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_2___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_2___default().object)])
+      wrappedComponentRef: prop_types__WEBPACK_IMPORTED_MODULE_8___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_8___default().string), (prop_types__WEBPACK_IMPORTED_MODULE_8___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_8___default().object)])
     };
   }
 
-  return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_8___default()(C, Component);
+  return hoist_non_react_statics__WEBPACK_IMPORTED_MODULE_7___default()(C, Component);
 }
 
 var useContext = react__WEBPACK_IMPORTED_MODULE_1__.useContext;
@@ -114328,25 +114747,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/** A function that accepts a potential "extra argument" value to be injected later,
+ * and returns an instance of the thunk middleware that uses that value
+ */
 function createThunkMiddleware(extraArgument) {
-  return function (_ref) {
+  // Standard Redux middleware definition pattern:
+  // See: https://redux.js.org/tutorials/fundamentals/part-4-store#writing-custom-middleware
+  var middleware = function middleware(_ref) {
     var dispatch = _ref.dispatch,
         getState = _ref.getState;
     return function (next) {
       return function (action) {
+        // The thunk middleware looks for any functions that were passed to `store.dispatch`.
+        // If this "action" is really a function, call it and return the result.
         if (typeof action === 'function') {
+          // Inject the store's `dispatch` and `getState` methods, as well as any "extra arg"
           return action(dispatch, getState, extraArgument);
-        }
+        } // Otherwise, pass the action down the middleware chain as usual
+
 
         return next(action);
       };
     };
   };
+
+  return middleware;
 }
 
-var thunk = createThunkMiddleware();
-thunk.withExtraArgument = createThunkMiddleware;
+var thunk = createThunkMiddleware(); // Attach the factory function so users can create a customized version
+// with whatever "extra arg" they want to inject into their thunks
 
+thunk.withExtraArgument = createThunkMiddleware;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (thunk);
 
 /***/ }),
@@ -114365,7 +114796,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "bindActionCreators": () => (/* binding */ bindActionCreators),
 /* harmony export */   "combineReducers": () => (/* binding */ combineReducers),
 /* harmony export */   "compose": () => (/* binding */ compose),
-/* harmony export */   "createStore": () => (/* binding */ createStore)
+/* harmony export */   "createStore": () => (/* binding */ createStore),
+/* harmony export */   "legacy_createStore": () => (/* binding */ legacy_createStore)
 /* harmony export */ });
 /* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 
@@ -114479,29 +114911,29 @@ function kindOf(val) {
 }
 
 /**
- * Creates a Redux store that holds the state tree.
- * The only way to change the data in the store is to call `dispatch()` on it.
+ * @deprecated
  *
- * There should only be a single store in your app. To specify how different
- * parts of the state tree respond to actions, you may combine several reducers
- * into a single reducer function by using `combineReducers`.
+ * **We recommend using the `configureStore` method
+ * of the `@reduxjs/toolkit` package**, which replaces `createStore`.
  *
- * @param {Function} reducer A function that returns the next state tree, given
- * the current state tree and the action to handle.
+ * Redux Toolkit is our recommended approach for writing Redux logic today,
+ * including store setup, reducers, data fetching, and more.
  *
- * @param {any} [preloadedState] The initial state. You may optionally specify it
- * to hydrate the state from the server in universal apps, or to restore a
- * previously serialized user session.
- * If you use `combineReducers` to produce the root reducer function, this must be
- * an object with the same shape as `combineReducers` keys.
+ * **For more details, please read this Redux docs page:**
+ * **https://redux.js.org/introduction/why-rtk-is-redux-today**
  *
- * @param {Function} [enhancer] The store enhancer. You may optionally specify it
- * to enhance the store with third-party capabilities such as middleware,
- * time travel, persistence, etc. The only store enhancer that ships with Redux
- * is `applyMiddleware()`.
+ * `configureStore` from Redux Toolkit is an improved version of `createStore` that
+ * simplifies setup and helps avoid common bugs.
  *
- * @returns {Store} A Redux store that lets you read the state, dispatch actions
- * and subscribe to changes.
+ * You should not be using the `redux` core package by itself today, except for learning purposes.
+ * The `createStore` method from the core `redux` package will not be removed, but we encourage
+ * all users to migrate to using Redux Toolkit for all Redux code.
+ *
+ * If you want to use `createStore` without this visual deprecation warning, use
+ * the `legacy_createStore` import instead:
+ *
+ * `import { legacy_createStore as createStore} from 'redux'`
+ *
  */
 
 function createStore(reducer, preloadedState, enhancer) {
@@ -114751,6 +115183,38 @@ function createStore(reducer, preloadedState, enhancer) {
     replaceReducer: replaceReducer
   }, _ref2[$$observable] = observable, _ref2;
 }
+/**
+ * Creates a Redux store that holds the state tree.
+ *
+ * **We recommend using `configureStore` from the
+ * `@reduxjs/toolkit` package**, which replaces `createStore`:
+ * **https://redux.js.org/introduction/why-rtk-is-redux-today**
+ *
+ * The only way to change the data in the store is to call `dispatch()` on it.
+ *
+ * There should only be a single store in your app. To specify how different
+ * parts of the state tree respond to actions, you may combine several reducers
+ * into a single reducer function by using `combineReducers`.
+ *
+ * @param {Function} reducer A function that returns the next state tree, given
+ * the current state tree and the action to handle.
+ *
+ * @param {any} [preloadedState] The initial state. You may optionally specify it
+ * to hydrate the state from the server in universal apps, or to restore a
+ * previously serialized user session.
+ * If you use `combineReducers` to produce the root reducer function, this must be
+ * an object with the same shape as `combineReducers` keys.
+ *
+ * @param {Function} [enhancer] The store enhancer. You may optionally specify it
+ * to enhance the store with third-party capabilities such as middleware,
+ * time travel, persistence, etc. The only store enhancer that ships with Redux
+ * is `applyMiddleware()`.
+ *
+ * @returns {Store} A Redux store that lets you read the state, dispatch actions
+ * and subscribe to changes.
+ */
+
+var legacy_createStore = createStore;
 
 /**
  * Prints a warning in the console if it exists.
@@ -116751,7 +117215,7 @@ module.exports = function (list, options) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ invariant)
 /* harmony export */ });
 var isProduction = "development" === 'production';
 var prefix = 'Invariant failed';
@@ -116762,10 +117226,12 @@ function invariant(condition, message) {
     if (isProduction) {
         throw new Error(prefix);
     }
-    throw new Error(prefix + ": " + (message || ''));
+    var provided = typeof message === 'function' ? message() : message;
+    var value = provided ? prefix + ": " + provided : prefix;
+    throw new Error(value);
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (invariant);
+
 
 
 /***/ }),
@@ -116896,7 +117362,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ _extends)
 /* harmony export */ });
 function _extends() {
-  _extends = Object.assign || function (target) {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
 
@@ -116909,7 +117375,6 @@ function _extends() {
 
     return target;
   };
-
   return _extends.apply(this, arguments);
 }
 
@@ -116955,14 +117420,9 @@ function ownKeys(object, enumerableOnly) {
 
   if (Object.getOwnPropertySymbols) {
     var symbols = Object.getOwnPropertySymbols(object);
-
-    if (enumerableOnly) {
-      symbols = symbols.filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(object, sym).enumerable;
-      });
-    }
-
-    keys.push.apply(keys, symbols);
+    enumerableOnly && (symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    })), keys.push.apply(keys, symbols);
   }
 
   return keys;
@@ -116970,19 +117430,12 @@ function ownKeys(object, enumerableOnly) {
 
 function _objectSpread2(target) {
   for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-
-    if (i % 2) {
-      ownKeys(Object(source), true).forEach(function (key) {
-        (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]);
-      });
-    } else if (Object.getOwnPropertyDescriptors) {
-      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
-    } else {
-      ownKeys(Object(source)).forEach(function (key) {
-        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
-      });
-    }
+    var source = null != arguments[i] ? arguments[i] : {};
+    i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {
+      (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__["default"])(target, key, source[key]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {
+      Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+    });
   }
 
   return target;
@@ -117030,11 +117483,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
 /* harmony export */ });
 function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
     o.__proto__ = p;
     return o;
   };
-
   return _setPrototypeOf(o, p);
 }
 
@@ -117221,7 +117673,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 					installedChunks[chunkId][0]();
 /******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 				installedChunks[chunkId] = 0;
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
@@ -117229,6 +117681,11 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
