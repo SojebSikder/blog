@@ -19,8 +19,7 @@ import Button from '../../components/button';
 import './style.css';
 
 // This is for post limit
-// let limit = 12;
-let limit = 2;
+let limit = 12;
 let isPostLoad = false;
 //
 
