@@ -93,16 +93,30 @@ class BlogController extends Controller
             //
         } else {
             // Uses: (web, app)
-            // Fetch all blog (web, app)
-            $result = Blog::with(array('category', 'user' => function ($query) {
-                $query->select('id', 'username', 'image');
-            }))
-                ->orderBy('created_at', 'DESC')
-                ->where('published', 1)
-                ->get();
+            // Fetch blog by limit (web, app)
+            if ($request->input('limit')) {
+                // Fetch all blog by id (web, app)
+                $data = Blog::with(array('category', 'user' => function ($query) {
+                    $query->select('id', 'username', 'image');
+                }))
+                    ->orderBy('created_at', 'DESC')
+                    ->where('published', 1)
+                    ->limit((int)$request->input('limit'))->get();
 
-            // $result->makeHidden(['user:api_token']);
-            return response()->json(['data' => $result], 200);
+                return response()->json(['data' => $data], 200);
+            } else {
+                // Uses: (web, app)
+                // Fetch all blog (web, app)
+                $result = Blog::with(array('category', 'user' => function ($query) {
+                    $query->select('id', 'username', 'image');
+                }))
+                    ->orderBy('created_at', 'DESC')
+                    ->where('published', 1)
+                    ->get();
+
+                // $result->makeHidden(['user:api_token']);
+                return response()->json(['data' => $result], 200);
+            }
         }
     }
 

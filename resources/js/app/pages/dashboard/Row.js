@@ -1,5 +1,5 @@
 // external imports
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import moment from 'moment';
@@ -18,125 +18,162 @@ import DataUtil from '../../util/Data';
 import Button from '../../components/button';
 import './style.css';
 
+// This is for post limit
+// let limit = 12;
+let limit = 2;
+let isPostLoad = false;
+//
+
 function Row(props) {
 
+    const scrollRef = useRef(null);
+
+    const getPost = (limit) => {
+        props.listBlogs(limit);
+    }
+    const updateUi = () => {
+        getPost(limit);
+    }
+
+    // Scrolling function
+    const isBottom = (el) => {
+        return el.getBoundingClientRect().bottom - 20 <= (window.innerHeight);
+    }
+    const trackScrolling = () => {
+        const wrappedElement = scrollRef.current;
+
+        if (isBottom(wrappedElement) == false) {
+            isPostLoad = false;
+        }
+        if (isPostLoad == false) {
+
+            if (!wrappedElement) return
+            if (isBottom(wrappedElement)) {
+                //
+                limit = limit + 6;
+                // Fetch Post
+                getPost(limit);
+                isPostLoad = true;
+            }
+        }
+
+    };
+
     useEffect(() => {
-        props.listBlogs();
+        // componentDidMount
+        document.addEventListener('scroll', trackScrolling);
+        updateUi();
+        // componentWillUnmount
+        return () => {
+            document.removeEventListener('scroll', trackScrolling);
+        }
     }, [])
 
-    if (props.spinner == true) {
-        return (
-            <>
-                <div className="d-flex justify-content-center" style={{ height: "500px" }}>
-                    <Spinner />
-                </div>
 
-            </>
-        );
-    } else {
-        return (
 
-            <>
-                {props.blogs.map((blog) => {
-                    return (
-                        <div key={blog.id}>
-                            <div className="d-flex justify-content-center">
-                                <div className="card" style={{
-                                    // width: "18rem" 
-                                    // width: "50%",
-                                    // width: "80%",
-                                    width: "30rem",
-                                }}>
+    return (
 
-                                    {
-                                        blog.image == null ? "" :
+        <>
+            {props.blogs.map((blog) => {
+                return (
+                    <div ref={scrollRef} id="body" key={blog.id}>
+                        <div className="d-flex justify-content-center">
+                            <div className="card" style={{
+                                // width: "18rem" 
+                                // width: "50%",
+                                // width: "80%",
+                                width: "30rem",
+                            }}>
+
+                                {
+                                    blog.image == null ? "" :
+                                        <img
+                                            style={{
+                                                width: "200px",
+                                                margin: "0 auto",
+                                            }}
+                                            src={Constant.BLOG_URL + blog.image}
+                                            className="card-img-top"
+                                            alt={blog.title}
+                                        />
+                                }
+                                <div className="card-body">
+                                    <h5 className="title card-title">{blog.title}</h5>
+
+
+                                    <div>
+                                        {/* Author Profile photo */}
+
+                                        {blog.user == null ? (
                                             <img
-                                                style={{
-                                                    width: "200px",
-                                                    margin: "0 auto",
-                                                }}
-                                                src={Constant.BLOG_URL + blog.image}
-                                                className="card-img-top"
-                                                alt={blog.title}
+                                                src={Constant.PROFILE_URL + "logo.png"}
+                                                className="profile-min card-img-top"
+                                                style={{ display: "inline", }}
+
                                             />
-                                    }
-                                    <div className="card-body">
-                                        <h5 className="title card-title">{blog.title}</h5>
+                                        ) : (
+                                            <>
+                                                <Link to={"/user/" + blog.user.username}>
+                                                    {blog.user.image == null ? "" : (
+                                                        <>
+                                                            <img
+                                                                src={Constant.PROFILE_URL + blog.user.image}
+                                                                className="profile-min card-img-top"
+                                                                alt={blog.user.username}
+                                                                style={{ display: "inline", }}
+                                                            />
+                                                        </>
 
+                                                    )}
+                                                </Link>
 
-                                        <div>
-                                            {/* Author Profile photo */}
+                                                <Link
+                                                    style={{
+                                                        margin: "10px",
+                                                        textDecoration: "none",
+                                                        fontSize: "14px",
+                                                    }}
+                                                    to={"/user/" + blog.user.username}
+                                                >
+                                                    {blog.user.username}
+                                                </Link>
+                                                <span
+                                                    style={{
+                                                        margin: "10px",
+                                                        textDecoration: "none",
+                                                        fontSize: "14px",
+                                                    }}
+                                                >
+                                                    <a>
+                                                        <p style={{ display: "inline", }}>
+                                                            <span style={{ margin: "0 7px", }}>·</span>
+                                                            {moment(blog.created_at, "YYYY-MM-DD hh:mm:s").fromNow()}
+                                                        </p>
+                                                        <p style={{ display: "inline", }}>
+                                                            <span style={{ margin: "0 7px", }}>·</span>
+                                                            {DataUtil.date(blog.created_at)}
+                                                        </p>
+                                                    </a>
+                                                </span>
+                                                <span
+                                                    style={{
+                                                        margin: "10px",
+                                                        textDecoration: "none",
+                                                        fontSize: "14px",
+                                                    }}
+                                                >
+                                                    <a>
+                                                        <p style={{ display: "inline", }}>
+                                                            <span style={{ margin: "0 7px", }}>·</span>
+                                                            {DataUtil.readingTime(blog.body)} min read
+                                                        </p>
+                                                    </a>
+                                                </span>
+                                            </>
+                                        )}
 
-                                            {blog.user == null ? (
-                                                <img
-                                                    src={Constant.PROFILE_URL + "logo.png"}
-                                                    className="profile-min card-img-top"
-                                                    style={{ display: "inline", }}
-
-                                                />
-                                            ) : (
-                                                <>
-                                                    <Link to={"/user/" + blog.user.username}>
-                                                        {blog.user.image == null ? "" : (
-                                                            <>
-                                                                <img
-                                                                    src={Constant.PROFILE_URL + blog.user.image}
-                                                                    className="profile-min card-img-top"
-                                                                    alt={blog.user.username}
-                                                                    style={{ display: "inline", }}
-                                                                />
-                                                            </>
-
-                                                        )}
-                                                    </Link>
-
-                                                    <Link
-                                                        style={{
-                                                            margin: "10px",
-                                                            textDecoration: "none",
-                                                            fontSize: "14px",
-                                                        }}
-                                                        to={"/user/" + blog.user.username}
-                                                    >
-                                                        {blog.user.username}
-                                                    </Link>
-                                                    <span
-                                                        style={{
-                                                            margin: "10px",
-                                                            textDecoration: "none",
-                                                            fontSize: "14px",
-                                                        }}
-                                                    >
-                                                        <a>
-                                                            <p style={{ display: "inline", }}>
-                                                                <span style={{ margin: "0 7px", }}>·</span>
-                                                                {moment(blog.created_at, "YYYY-MM-DD hh:mm:s").fromNow()}
-                                                            </p>
-                                                            <p style={{ display: "inline", }}>
-                                                                <span style={{ margin: "0 7px", }}>·</span>
-                                                                {DataUtil.date(blog.created_at)}
-                                                            </p>
-                                                        </a>
-                                                    </span>
-                                                    <span
-                                                        style={{
-                                                            margin: "10px",
-                                                            textDecoration: "none",
-                                                            fontSize: "14px",
-                                                        }}
-                                                    >
-                                                        <a>
-                                                            <p style={{ display: "inline", }}>
-                                                                <span style={{ margin: "0 7px", }}>·</span>
-                                                                {DataUtil.readingTime(blog.body)} min read
-                                                            </p>
-                                                        </a>
-                                                    </span>
-                                                </>
-                                            )}
-
-                                            {/* Share kit */}
-                                            {/* <div
+                                        {/* Share kit */}
+                                        {/* <div
                                                 style={{ display: "inline", }}
                                                 className="dropdown"
                                             >
@@ -163,44 +200,53 @@ function Row(props) {
 
                                                 </ul>
                                             </div> */}
-                                            {/* End Share Kit */}
-
-                                        </div>
-
-
-                                        {/* <p className="card-text">{blog.body}</p> */}
-                                        <Markdown>
-                                            {DataUtil.textShorten(blog.body, 400)}
-                                        </Markdown>
-                                        <br />
-                                        <br />
-
-                                        <Button
-                                            isLink="true"
-                                            to={"/blog/" + blog.user.username + "/" + blog.name}
-                                            className="btn btn-primary"
-                                            // style={{
-                                            //     textDecoration: "none"
-                                            // }}
-                                            style={{
-                                                textDecoration: "none"
-                                            }}
-                                        >
-                                            Read more
-                                        </Button>
-
+                                        {/* End Share Kit */}
 
                                     </div>
+
+
+                                    {/* <p className="card-text">{blog.body}</p> */}
+                                    <Markdown>
+                                        {DataUtil.textShorten(blog.body, 400)}
+                                    </Markdown>
+                                    <br />
+                                    <br />
+
+                                    <Button
+                                        isLink="true"
+                                        to={"/blog/" + blog.user.username + "/" + blog.name}
+                                        className="btn btn-primary"
+                                        // style={{
+                                        //     textDecoration: "none"
+                                        // }}
+                                        style={{
+                                            textDecoration: "none"
+                                        }}
+                                    >
+                                        Read more
+                                    </Button>
+
+
                                 </div>
                             </div>
-                            <br />
                         </div>
-                    )
-                })}
+                        <br />
+                    </div>
+                )
+            })}
 
-            </>
-        )
-    }
+            {
+                (props.spinner == true) ? <>
+                    <div className="d-flex justify-content-center" style={{ height: "200px" }}>
+                        <Spinner />
+                    </div>
+
+                </> : ""
+            }
+
+
+        </>
+    )
 }
 
 
